@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<EmBlocks_project_file>
+	<FileVersion major="1" minor="0" />
+	<Project>
+		<Option title="blink" />
+		<Option pch_mode="2" />
+		<Option compiler="armgcc_eb" />
+		<Option virtualFolders="em_lib\;bsp\;" />
+		<Build>
+			<Target title="blink">
+				<Option output="blink.elf" />
+				<Option object_output=".\obj\" />
+				<Option type="0" />
+				<Option compiler="armgcc_eb" />
+				<Device>
+					<Add option="$device=cortex-m3" />
+					<Add option="$lscript=../../../../../Device/EnergyMicro/EFM32GG/Source/GCC/efm32gg.ld" />
+				</Device>
+				<Compiler>
+					<Add option="-fdata-sections" />
+					<Add option="-ffunction-sections" />
+					<Add option="-fomit-frame-pointer" />
+					<Add option="-O0" />
+					<Add option="-g2" />
+					<Add option="-DEFM32GG990F1024" />
+					<Add option="-DDEBUG_EFM" />
+					<Add directory="..\" />
+					<Add directory="..\..\..\..\..\CMSIS\Include" />
+					<Add directory="..\..\..\..\..\Device\EnergyMicro\EFM32GG\Include" />
+					<Add directory="..\..\..\..\..\emlib\inc" />
+					<Add directory="..\..\..\..\common\bsp" />
+					<Add directory="..\..\..\config" />
+					<Add directory="..\..\..\..\common\drivers" />
+				</Compiler>
+				<Linker>
+					<Add option="-eb_start_files" />
+					<Add option="-Wl,--gc-sections" />
+				</Linker>
+			</Target>
+		</Build>
+		<Unit filename="..\activity_app.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\activity_app.h" />
+		<Unit filename="..\blink.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\common\bsp\bsp_bcc.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="bsp\" />
+		</Unit>
+		<Unit filename="..\..\..\..\common\bsp\bsp_stk.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="bsp\" />
+		</Unit>
+		<Unit filename="..\..\..\..\common\bsp\bsp_stk_leds.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="bsp\" />
+		</Unit>
+		<Unit filename="..\..\..\..\common\bsp\bsp_trace.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="bsp\" />
+		</Unit>
+		<Unit filename="..\buttons.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\buttons.h" />
+		<Unit filename="..\clock.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\clock.h" />
+		<Unit filename="..\..\..\..\..\emlib\src\em_assert.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="em_lib\" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\emlib\src\em_cmu.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="em_lib\" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\emlib\src\em_ebi.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="em_lib\" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\emlib\src\em_emu.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="em_lib\" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\emlib\src\em_gpio.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="em_lib\" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\emlib\src\em_lcd.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="em_lib\" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\emlib\src\em_pcnt.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="em_lib\" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\emlib\src\em_rtc.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="em_lib\" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\emlib\src\em_system.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="em_lib\" />
+		</Unit>
+		<Unit filename="..\globals.h" />
+		<Unit filename="..\pomodoro_app.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\pomodoro_app.h" />
+		<Unit filename="..\..\..\..\common\drivers\segmentlcd.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="bsp\" />
+		</Unit>
+		<Unit filename="..\..\..\..\common\drivers\segmentlcd.h" />
+		<Unit filename="..\setup_alarm_app.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\setup_time_app.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\setup_time_app.h" />
+		<Unit filename="..\..\..\..\..\Device\EnergyMicro\EFM32GG\Source\GCC\startup_efm32gg.S">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\state_machine.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\state_machine.h" />
+		<Unit filename="..\..\..\..\..\Device\EnergyMicro\EFM32GG\Source\system_efm32gg.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="bsp\" />
+		</Unit>
+		<Unit filename="..\variables.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger>
+				<target_debugging_settings target="blink" active_interface="J-link">
+					<debug_interface interface_id="J-link" ip_address="localhost" ip_port="2331" path="%Software\SEGGER\J-Link:InstallPath%" executable="JLinkGDBServer.exe" description="EFM32GG990F1024.svd" dont_start_server="false" backoff_time="2000" options="14" active_family="Energy Micro">
+						<family_options family_id="Energy Micro">
+							<option opt_id="ID_DEVICE" opt_value="EFM32GG990F1024" />
+							<option opt_id="ID_JTAG_SWD" opt_value="swd" />
+							<option opt_id="ID_SPEED" opt_value="1000" />
+							<option opt_id="ID_AUTO_SPEED" opt_value="1" />
+							<option opt_id="ID_RESET_TYPE" opt_value="0" />
+							<option opt_id="ID_VECTOR_START" opt_value="0x00000000" />
+							<option opt_id="ID_LOAD_PROGRAM" opt_value="1" />
+							<option opt_id="ID_FLASH_DOWNLOAD" opt_value="1" />
+							<option opt_id="ID_FLASH_BREAK" opt_value="1" />
+							<option opt_id="ID_RAM_EXEC" opt_value="0" />
+							<option opt_id="ID_NCACHE_CHECK" opt_value="0" />
+							<option opt_id="ID_NCACHE_BASE" opt_value="" />
+							<option opt_id="ID_NCACHE_LENGTH" opt_value="" />
+						</family_options>
+					</debug_interface>
+				</target_debugging_settings>
+			</debugger>
+			<envvars />
+			<DoxyBlocks>
+				<comment_style block="0" line="0" />
+				<doxyfile_project />
+				<doxyfile_build />
+				<doxyfile_warnings />
+				<doxyfile_output />
+				<doxyfile_dot />
+				<general />
+			</DoxyBlocks>
+		</Extensions>
+	</Project>
+</EmBlocks_project_file>
