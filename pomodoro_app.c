@@ -1,3 +1,12 @@
+/**************************************************************************//**
+ * @file pomodoro_app.c
+ * @brief handles all pomodoro timer application, 
+ * more info: http://en.wikipedia.org/wiki/Pomodoro_Technique
+ * @author Alexandr D.  sasha.engineer@gmail.com
+ * @version 
+ ******************************************************************************/
+
+
 #include "bsp.h"
 #include "clock.h"
 #include "state_machine.h"
@@ -15,10 +24,17 @@ enum pomodoro_state_t
     pomodoro_short_brake,
     pomodoro_long_brake
 };
-
 static enum pomodoro_state_t pomodoro_state = pomodoro_off;
 
 
+/********************************************//**
+ * \brief state machine which switch pomodoro_state and show info on the screen
+ *
+ * \param 
+ * \param 
+ * \return 
+ *
+ ***********************************************/      
 void pomodoroApp(void)
 {
     static uint8_t pomodoros = 0;
@@ -99,6 +115,14 @@ void pomodoroApp(void)
 }
 
 
+/********************************************//**
+ * \brief show current pomodoro conter state and remaining time on the screen,
+ * current version use segment LCD screen
+ * \param 
+ * \param 
+ * \return 
+ * 
+ ***********************************************/      
 void drawPomodoroScreen(void)
 {
     switch(pomodoro_state)
@@ -132,6 +156,14 @@ void drawPomodoroScreen(void)
 }
 
 
+/********************************************//**
+ * \brief set time to switch pomodoro state, similar to alarm
+ * turn timer on
+ * \param uint8_t time  - shows how long this state will be active
+ * \param 
+ * \return 
+ *
+ ***********************************************/      
 void updatePomodoroTime(uint8_t time)
 {
     pomodoro.active = true;
@@ -152,6 +184,14 @@ void updatePomodoroTime(uint8_t time)
 }
 
 
+/********************************************//**
+ * \brief turn pomodoro timer off
+ *
+ * \param 
+ * \param 
+ * \return 
+ *
+ ***********************************************/      
 void stopPomodoro(void)
 {
     pomodoro_state = pomodoro_off;  // TODO maybe replace .active with _state
@@ -159,6 +199,15 @@ void stopPomodoro(void)
 }
 
 
+/********************************************//**
+ * \brief check how much current state will be active,
+ * if it's time to switch to another state show pomodoro screen with notification,
+ * can switch to this screen from another applications
+ * \param 
+ * \param 
+ * \return 
+ *
+ ***********************************************/      
 void checkPomodoro(void)
 {
     if(pomodoro.active &&

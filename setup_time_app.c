@@ -1,3 +1,12 @@
+/**************************************************************************//**
+ * @file setup_time_app.c
+ * @brief this file handles everything in set alarm app, 
+ * but alarm check and run functions are in clock.c(time_management)
+ * @author Alexandr D.  sasha.engineer@gmail.com
+ * @version 
+ ******************************************************************************/
+
+
 #include "buttons.h"
 #include "setup_time_app.h"
 #include "bsp.h"
@@ -11,7 +20,14 @@
 enum setup_state_t clock_setup_state;
 
 
-
+/********************************************//**
+ * \brief state machine handles buttons, show information on the screen,
+ * clock_setup_state is shared with setup_alarm_app
+ * \param 
+ * \param 
+ * \return 
+ *
+ ***********************************************/      
 void setupTimeApp(void)
 {
     if( button == BUTTON_A)
@@ -39,6 +55,15 @@ void setupTimeApp(void)
 }
 
 
+/********************************************//**
+ * \brief switch states in safe way, check for overflow
+ * the difference  between this function and the same one in setup_alarm_app.c 
+ * is max and min conditions
+ * \param 
+ * \param 
+ * \return 
+ *
+ ***********************************************/      
 void nextTimeSetupState(void)
 {
     if(clock_setup_state == week_days)

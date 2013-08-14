@@ -1,7 +1,7 @@
 # depslib dependency file v1.0
-1368044082 source:c:\users\alexander\appdata\roaming\energymicro\device\energymicro\efm32gg\source\gcc\startup_efm32gg.s
+1376409622 source:c:\users\alexander\appdata\roaming\energymicro\device\energymicro\efm32gg\source\gcc\startup_efm32gg.s
 
-1368044082 source:c:\users\alexander\appdata\roaming\energymicro\device\energymicro\efm32gg\source\system_efm32gg.c
+1376409621 source:c:\users\alexander\appdata\roaming\energymicro\device\energymicro\efm32gg\source\system_efm32gg.c
 	<stdint.h>
 	"em_device.h"
 
@@ -1959,12 +1959,12 @@
 	"efm32gg_af_ports.h"
 	"efm32gg_af_pins.h"
 
-1368044095 source:c:\users\alexander\appdata\roaming\energymicro\emlib\src\em_assert.c
+1376409621 source:c:\users\alexander\appdata\roaming\energymicro\emlib\src\em_assert.c
 	"em_assert.h"
 
 1368044094 c:\users\alexander\appdata\roaming\energymicro\emlib\inc\em_assert.h
 
-1368044095 source:c:\users\alexander\appdata\roaming\energymicro\emlib\src\em_cmu.c
+1376409621 source:c:\users\alexander\appdata\roaming\energymicro\emlib\src\em_cmu.c
 	"em_device.h"
 	"em_cmu.h"
 	"em_assert.h"
@@ -1984,7 +1984,7 @@
 	"em_device.h"
 	"em_bitband.h"
 
-1368044095 source:c:\users\alexander\appdata\roaming\energymicro\emlib\src\em_ebi.c
+1376409621 source:c:\users\alexander\appdata\roaming\energymicro\emlib\src\em_ebi.c
 	"em_ebi.h"
 	"em_assert.h"
 	"em_bitband.h"
@@ -1995,12 +1995,12 @@
 	<stdint.h>
 	<stdbool.h>
 
-1368044095 source:c:\users\alexander\appdata\roaming\energymicro\emlib\src\em_emu.c
+1376409622 source:c:\users\alexander\appdata\roaming\energymicro\emlib\src\em_emu.c
 	"em_emu.h"
 	"em_cmu.h"
 	"em_assert.h"
 
-1368044095 source:c:\users\alexander\appdata\roaming\energymicro\emlib\src\em_gpio.c
+1376409621 source:c:\users\alexander\appdata\roaming\energymicro\emlib\src\em_gpio.c
 	"em_gpio.h"
 	"em_bitband.h"
 	"em_assert.h"
@@ -2011,7 +2011,7 @@
 	"em_bitband.h"
 	"em_assert.h"
 
-1368044094 source:c:\users\alexander\appdata\roaming\energymicro\emlib\src\em_system.c
+1376409621 source:c:\users\alexander\appdata\roaming\energymicro\emlib\src\em_system.c
 	"em_device.h"
 	"em_system.h"
 	"em_assert.h"
@@ -2073,7 +2073,7 @@
 
 1375812572 c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\config\traceconfig.h
 
-1368043007 source:c:\users\alexander\appdata\roaming\energymicro\kits\common\bsp\bsp_bcc.c
+1376409622 source:c:\users\alexander\appdata\roaming\energymicro\kits\common\bsp\bsp_bcc.c
 	<string.h>
 	"em_device.h"
 	"em_cmu.h"
@@ -2081,7 +2081,7 @@
 	"em_usart.h"
 	"bsp.h"
 
-1368043008 source:c:\users\alexander\appdata\roaming\energymicro\kits\common\bsp\bsp_stk.c
+1376409622 source:c:\users\alexander\appdata\roaming\energymicro\kits\common\bsp\bsp_stk.c
 	<string.h>
 	"em_device.h"
 	"em_cmu.h"
@@ -2089,13 +2089,13 @@
 	"bsp.h"
 	"em_ebi.h"
 
-1368043008 source:c:\users\alexander\appdata\roaming\energymicro\kits\common\bsp\bsp_stk_leds.c
+1376409622 source:c:\users\alexander\appdata\roaming\energymicro\kits\common\bsp\bsp_stk_leds.c
 	"em_device.h"
 	"em_cmu.h"
 	"em_gpio.h"
 	"bsp.h"
 
-1368043008 source:c:\users\alexander\appdata\roaming\energymicro\kits\common\bsp\bsp_trace.c
+1376409622 source:c:\users\alexander\appdata\roaming\energymicro\kits\common\bsp\bsp_trace.c
 	<stdbool.h>
 	"em_device.h"
 	"em_gpio.h"
@@ -2134,7 +2134,7 @@
 1374520599 c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\examples\blink\buttons.h
 	"bsp.h"
 
-1368044094 source:c:\users\alexander\appdata\roaming\energymicro\emlib\src\em_rtc.c
+1376409621 source:c:\users\alexander\appdata\roaming\energymicro\emlib\src\em_rtc.c
 	"em_rtc.h"
 	"em_assert.h"
 	"em_bitband.h"
@@ -2156,7 +2156,7 @@
 
 1374432249 c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\examples\blink\pomodoro.h
 
-1368044095 source:c:\users\alexander\appdata\roaming\energymicro\emlib\src\em_lcd.c
+1376409621 source:c:\users\alexander\appdata\roaming\energymicro\emlib\src\em_lcd.c
 	"em_lcd.h"
 	"em_assert.h"
 	"em_bitband.h"
@@ -2166,7 +2166,7 @@
 	<stdint.h>
 	<stdbool.h>
 
-1375813430 source:c:\users\alexander\appdata\roaming\energymicro\kits\common\drivers\segmentlcd.c
+1376409621 source:c:\users\alexander\appdata\roaming\energymicro\kits\common\drivers\segmentlcd.c
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
@@ -2176,7 +2176,7 @@
 	"em_gpio.h"
 	"segmentlcd.h"
 
-1368043030 c:\users\alexander\appdata\roaming\energymicro\kits\common\drivers\segmentlcd.h
+1376409621 c:\users\alexander\appdata\roaming\energymicro\kits\common\drivers\segmentlcd.h
 	<stdint.h>
 	<stdbool.h>
 	"segmentlcdconfig.h"
@@ -2208,7 +2208,7 @@
 	"clock.h"
 	"segmentlcd.h"
 
-1368044094 source:c:\users\alexander\appdata\roaming\energymicro\emlib\src\em_pcnt.c
+1376409621 source:c:\users\alexander\appdata\roaming\energymicro\emlib\src\em_pcnt.c
 	"em_pcnt.h"
 	"em_cmu.h"
 	"em_assert.h"
@@ -2318,6 +2318,89 @@
 	"activity.h"
 
 1374603261 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\otm\variables.c
+	"clock.h"
+	<stdbool.h>
+
+1376421691 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\activity_app.c
+	"em_pcnt.h"
+	"em_cmu.h"
+	"em_gpio.h"
+	"clock.h"
+	"activity_app.h"
+	"buttons.h"
+
+1376503221 c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\clock.h
+	"bsp.h"
+
+1376503108 c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\activity_app.h
+
+1374520599 c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\buttons.h
+	"bsp.h"
+
+1376498243 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\blink.c
+	<stdint.h>
+	<stdbool.h>
+	"em_device.h"
+	"em_chip.h"
+	"em_cmu.h"
+	"em_emu.h"
+	"bsp.h"
+	"bsp_trace.h"
+	"state_machine.h"
+	"clock.h"
+	"setup_time_app.h"
+	"buttons.h"
+	"activity_app.h"
+
+1374604058 c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\state_machine.h
+
+1374520189 c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\setup_time_app.h
+
+1376499633 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\buttons.c
+	"em_gpio.h"
+	"em_cmu.h"
+	"state_machine.h"
+	"buttons.h"
+	"clock.h"
+
+1376503124 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\clock.c
+	"em_rtc.h"
+	"em_cmu.h"
+	"clock.h"
+	"pomodoro_app.h"
+	"segmentlcd.h"
+	"activity_app.h"
+
+1374432249 c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\pomodoro_app.h
+
+1376502816 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\pomodoro_app.c
+	"bsp.h"
+	"clock.h"
+	"state_machine.h"
+	"buttons.h"
+	"pomodoro_app.h"
+	"segmentlcd.h"
+
+1376503123 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\setup_alarm_app.c
+	"buttons.h"
+	"setup_time_app.h"
+	"clock.h"
+	"segmentlcd.h"
+
+1376409622 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\setup_time_app.c
+	"buttons.h"
+	"setup_time_app.h"
+	"bsp.h"
+	"clock.h"
+
+1376409622 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\state_machine.c
+	"bsp.h"
+	"state_machine.h"
+	"buttons.h"
+	"clock.h"
+	"activity_app.h"
+
+1374603261 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\variables.c
 	"clock.h"
 	<stdbool.h>
 

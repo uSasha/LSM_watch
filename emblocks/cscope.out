@@ -1,4 +1,4 @@
-cscope 15 $HOME\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\examples\blink\emblocks"               0000124147
+cscope 15 $HOME\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\emblocks"               0000133424
 	@C:\Users\Alexander\AppData\Roaming\energymicro\Device\EnergyMicro\EFM32GG\Source\GCC\startup_efm32gg.S
 
 32 .
@@ -3785,127 +3785,127 @@ _CMU_CTRL_HFCLKDIV_MASK
 _CMU_CTRL_HFCLKDIV_SHIFT
 ));
 
-1058 #i‡
+1059 #i‡
 	`deföed
 (
 _CMU_HFPERCLKEN0_USART0_MASK
 ) || \
 
-1059 
+1060 
 	`deföed
 (
 _CMU_HFPERCLKEN0_USART1_MASK
 ) || \
 
-1060 
+1061 
 	`deföed
 (
 _CMU_HFPERCLKEN0_USART2_MASK
 ) || \
 
-1061 
+1062 
 	`deföed
 (
 _CMU_HFPERCLKEN0_UART0_MASK
 ) || \
 
-1062 
+1063 
 	`deföed
 (
 _CMU_HFPERCLKEN0_UART1_MASK
 ) || \
 
-1063 
+1064 
 	`deföed
 (
 _CMU_HFPERCLKEN0_TIMER0_MASK
 ) || \
 
-1064 
+1065 
 	`deföed
 (
 _CMU_HFPERCLKEN0_TIMER1_MASK
 ) || \
 
-1065 
+1066 
 	`deföed
 (
 _CMU_HFPERCLKEN0_TIMER2_MASK
 ) || \
 
-1066 
+1067 
 	`deföed
 (
 _CMU_HFPERCLKEN0_TIMER3_MASK
 ) || \
 
-1067 
+1068 
 	`deföed
 (
 _CMU_HFPERCLKEN0_ACMP0_MASK
 ) || \
 
-1068 
+1069 
 	`deföed
 (
 _CMU_HFPERCLKEN0_ACMP1_MASK
 ) || \
 
-1069 
+1070 
 	`deföed
 (
 _CMU_HFPERCLKEN0_DAC0_MASK
 ) || \
 
-1070 
+1071 
 	`deföed
 (
 _CMU_HFPERCLKEN0_ADC0_MASK
 ) || \
 
-1071 
+1072 
 	`deföed
 (
 _CMU_HFPERCLKEN0_I2C0_MASK
 ) || \
 
-1072 
+1073 
 	`deföed
 (
 _CMU_HFPERCLKEN0_I2C1_MASK
 ) || \
 
-1073 
+1074 
 	`deföed
 (
 PRS_PRESENT
 ) || \
 
-1074 
+1075 
 	`deföed
 (
 VCMP_PRESENT
 )|| \
 
-1075 
+1076 
 	`deföed
 (
 GPIO_PRESENT
 )
 
-1076 (
+1077 (
 CMU_HFPER_CLK_BRANCH
  << 
 CMU_CLK_BRANCH_POS
 ):
 
-1078 
+1079 
 ªt
  = 
 	`Sy°emHFClockGë
 ();
 
-1079 #i‡
+1080 #i‡
 	`deföed
  (
 _EFM32_GIANT_FAMILY
@@ -3913,7 +3913,7 @@ _EFM32_GIANT_FAMILY
 _EFM32_WONDER_FAMILY
 )
 
-1081 
+1082 
 ªt
  =Ñë / (1 + ((
 CMU
@@ -3923,11 +3923,11 @@ CTRL
 _CMU_CTRL_HFCLKDIV_MASK
 ) >>
 
-1082 
+1083 
 _CMU_CTRL_HFCLKDIV_SHIFT
 ));
 
-1084 
+1085 
 ªt
  >>(
 CMU
@@ -3937,53 +3937,53 @@ HFPERCLKDIV
 _CMU_HFPERCLKDIV_HFPERCLKDIV_MASK
 ) >>
 
-1085 
+1086 
 _CMU_HFPERCLKDIV_HFPERCLKDIV_SHIFT
 ;
 
-1089 #i‡
+1091 #i‡
 	`deföed
 (
 AES_PRESENT
 ) || \
 
-1090 
+1092 
 	`deföed
 (
 DMA_PRESENT
 ) || \
 
-1091 
+1093 
 	`deföed
 (
 EBI_PRESENT
 ) || \
 
-1092 
+1094 
 	`deföed
 (
 USB_PRESENT
 )
 
-1093 (
+1095 (
 CMU_HFCORE_CLK_BRANCH
  << 
 CMU_CLK_BRANCH_POS
 ):
 
-1095 
+1097 
 ªt
  = 
 	`Sy°emC‹eClockGë
 ();
 
-1099 (
+1102 (
 CMU_LFA_CLK_BRANCH
  << 
 CMU_CLK_BRANCH_POS
 ):
 
-1101 
+1104 
 ªt
  = 
 	`CMU_LFClkGë
@@ -3991,19 +3991,19 @@ CMU_CLK_BRANCH_POS
 CMU_LFA
 );
 
-1103 #i‡
+1107 #i‡
 	`deföed
 (
 _CMU_LFACLKEN0_RTC_MASK
 )
 
-1104 (
+1108 (
 CMU_RTC_CLK_BRANCH
  << 
 CMU_CLK_BRANCH_POS
 ):
 
-1106 
+1110 
 ªt
  = 
 	`CMU_LFClkGë
@@ -4011,7 +4011,7 @@ CMU_CLK_BRANCH_POS
 CMU_LFA
 );
 
-1107 
+1111 
 ªt
  >>(
 CMU
@@ -4021,23 +4021,23 @@ LFAPRESC0
 _CMU_LFAPRESC0_RTC_MASK
 ) >>
 
-1108 
+1112 
 _CMU_LFAPRESC0_RTC_SHIFT
 ;
 
-1111 #i‡
+1116 #i‡
 	`deföed
 (
 _CMU_LFACLKEN0_LETIMER0_MASK
 )
 
-1112 (
+1117 (
 CMU_LETIMER_CLK_BRANCH
  << 
 CMU_CLK_BRANCH_POS
 ):
 
-1114 
+1119 
 ªt
  = 
 	`CMU_LFClkGë
@@ -4045,7 +4045,7 @@ CMU_CLK_BRANCH_POS
 CMU_LFA
 );
 
-1115 
+1120 
 ªt
  >>(
 CMU
@@ -4055,23 +4055,23 @@ LFAPRESC0
 _CMU_LFAPRESC0_LETIMER0_MASK
 ) >>
 
-1116 
+1121 
 _CMU_LFAPRESC0_LETIMER0_SHIFT
 ;
 
-1119 #i‡
+1125 #i‡
 	`deföed
 (
 _CMU_LFACLKEN0_LCD_MASK
 )
 
-1120 (
+1126 (
 CMU_LCDPRE_CLK_BRANCH
  << 
 CMU_CLK_BRANCH_POS
 ):
 
-1122 
+1128 
 ªt
  = 
 	`CMU_LFClkGë
@@ -4079,7 +4079,7 @@ CMU_CLK_BRANCH_POS
 CMU_LFA
 );
 
-1123 
+1129 
 ªt
  >>((
 CMU
@@ -4089,7 +4089,7 @@ LFAPRESC0
 _CMU_LFAPRESC0_LCD_MASK
 ) >>
 
-1124 
+1130 
 _CMU_LFAPRESC0_LCD_SHIFT
 Ë+ 
 	`CMU_DivToLog2
@@ -4097,13 +4097,13 @@ _CMU_LFAPRESC0_LCD_SHIFT
 cmuClkDiv_16
 );
 
-1127 (
+1134 (
 CMU_LCD_CLK_BRANCH
  << 
 CMU_CLK_BRANCH_POS
 ):
 
-1129 
+1136 
 ªt
  = 
 	`CMU_LFClkGë
@@ -4111,7 +4111,7 @@ CMU_CLK_BRANCH_POS
 CMU_LFA
 );
 
-1130 
+1137 
 ªt
  >>(
 CMU
@@ -4121,11 +4121,11 @@ LFAPRESC0
 _CMU_LFAPRESC0_LCD_MASK
 ) >>
 
-1131 
+1138 
 _CMU_LFAPRESC0_LCD_SHIFT
 ;
 
-1132 
+1139 
 ªt
  /(1 + ((
 CMU
@@ -4135,23 +4135,23 @@ LCDCTRL
 _CMU_LCDCTRL_FDIV_MASK
 ) >>
 
-1133 
+1140 
 _CMU_LCDCTRL_FDIV_SHIFT
 ));
 
-1136 #i‡
+1144 #i‡
 	`deföed
 (
 _CMU_LFACLKEN0_LESENSE_MASK
 )
 
-1137 (
+1145 (
 CMU_LESENSE_CLK_BRANCH
  << 
 CMU_CLK_BRANCH_POS
 ):
 
-1139 
+1147 
 ªt
  = 
 	`CMU_LFClkGë
@@ -4159,7 +4159,7 @@ CMU_CLK_BRANCH_POS
 CMU_LFA
 );
 
-1140 
+1148 
 ªt
  >>(
 CMU
@@ -4169,17 +4169,17 @@ LFAPRESC0
 _CMU_LFAPRESC0_LESENSE_MASK
 ) >>
 
-1141 
+1149 
 _CMU_LFAPRESC0_LESENSE_SHIFT
 ;
 
-1144 (
+1153 (
 CMU_LFB_CLK_BRANCH
  << 
 CMU_CLK_BRANCH_POS
 ):
 
-1146 
+1155 
 ªt
  = 
 	`CMU_LFClkGë
@@ -4187,19 +4187,19 @@ CMU_CLK_BRANCH_POS
 CMU_LFB
 );
 
-1148 #i‡
+1158 #i‡
 	`deföed
 (
 _CMU_LFBCLKEN0_LEUART0_MASK
 )
 
-1149 (
+1159 (
 CMU_LEUART0_CLK_BRANCH
  << 
 CMU_CLK_BRANCH_POS
 ):
 
-1151 
+1161 
 ªt
  = 
 	`CMU_LFClkGë
@@ -4207,7 +4207,7 @@ CMU_CLK_BRANCH_POS
 CMU_LFB
 );
 
-1152 
+1162 
 ªt
  >>(
 CMU
@@ -4217,23 +4217,23 @@ LFBPRESC0
 _CMU_LFBPRESC0_LEUART0_MASK
 ) >>
 
-1153 
+1163 
 _CMU_LFBPRESC0_LEUART0_SHIFT
 ;
 
-1156 #i‡
+1167 #i‡
 	`deföed
 (
 _CMU_LFBCLKEN0_LEUART1_MASK
 )
 
-1157 (
+1168 (
 CMU_LEUART1_CLK_BRANCH
  << 
 CMU_CLK_BRANCH_POS
 ):
 
-1159 
+1170 
 ªt
  = 
 	`CMU_LFClkGë
@@ -4241,7 +4241,7 @@ CMU_CLK_BRANCH_POS
 CMU_LFB
 );
 
-1160 
+1171 
 ªt
  >>(
 CMU
@@ -4251,69 +4251,69 @@ LFBPRESC0
 _CMU_LFBPRESC0_LEUART1_MASK
 ) >>
 
-1161 
+1172 
 _CMU_LFBPRESC0_LEUART1_SHIFT
 ;
 
-1165 (
+1177 (
 CMU_DBG_CLK_BRANCH
  << 
 CMU_CLK_BRANCH_POS
 ):
 
-1167 
+1179 
 ªt
  = 
 	`CMU_DBGClkGë
 ();
 
-1170 (
+1183 (
 CMU_AUX_CLK_BRANCH
  << 
 CMU_CLK_BRANCH_POS
 ):
 
-1172 
+1185 
 ªt
  = 
 	`CMU_AUXClkGë
 ();
 
-1175 #i‡
+1189 #i‡
 	`deföed
 (
 USB_PRESENT
 )
 
-1176 (
+1190 (
 CMU_USBC_CLK_BRANCH
  << 
 CMU_CLK_BRANCH_POS
 ):
 
-1178 
+1192 
 ªt
  = 
 	`CMU_USBCClkGë
 ();
 
-1183 
+1198 
 	`EFM_ASSERT
 (0);
 
-1184 
+1199 
 ªt
  = 0;
 
-1187  
+1203  
 ªt
 ;
 
-1188 
+1204 
 	}
 }
 
-1207 
+1223 
 CMU_Sñe˘_Ty≥Def
  
 	$CMU_ClockSñe˘Gë
@@ -4323,7 +4323,7 @@ CMU_Clock_Ty≥Def
 ˛ock
 )
 
-1209 
+1225 
 CMU_Sñe˘_Ty≥Def
  
 ªt
@@ -4331,13 +4331,13 @@ CMU_Sñe˘_Ty≥Def
 cmuSñe˘_DißbÀd
 ;
 
-1210 
+1226 
 uöt32_t
  
 £lReg
 ;
 
-1212 
+1228 
 £lReg
  = (
 ˛ock
@@ -4347,15 +4347,15 @@ CMU_SEL_REG_POS
 CMU_SEL_REG_MASK
 ;
 
-1214 
+1230 
 £lReg
 )
 
-1216 
+1232 
 CMU_HFCLKSEL_REG
 :
 
-1217 
+1233 
 CMU
 ->
 STATUS
@@ -4365,53 +4365,53 @@ CMU_STATUS_HFRCOSEL
 CMU_STATUS_HFXOSEL
  |
 
-1218 
+1234 
 CMU_STATUS_LFRCOSEL
  | 
 CMU_STATUS_LFXOSEL
 ))
 
-1220 
+1236 
 CMU_STATUS_LFXOSEL
 :
 
-1221 
+1237 
 ªt
  = 
 cmuSñe˘_LFXO
 ;
 
-1224 
+1240 
 CMU_STATUS_LFRCOSEL
 :
 
-1225 
+1241 
 ªt
  = 
 cmuSñe˘_LFRCO
 ;
 
-1228 
+1244 
 CMU_STATUS_HFXOSEL
 :
 
-1229 
+1245 
 ªt
  = 
 cmuSñe˘_HFXO
 ;
 
-1233 
+1249 
 ªt
  = 
 cmuSñe˘_HFRCO
 ;
 
-1238 
+1254 
 CMU_LFACLKSEL_REG
 :
 
-1239 
+1255 
 CMU
 ->
 LFCLKSEL
@@ -4419,37 +4419,37 @@ LFCLKSEL
 _CMU_LFCLKSEL_LFA_MASK
 )
 
-1241 
+1257 
 CMU_LFCLKSEL_LFA_LFRCO
 :
 
-1242 
+1258 
 ªt
  = 
 cmuSñe˘_LFRCO
 ;
 
-1245 
+1261 
 CMU_LFCLKSEL_LFA_LFXO
 :
 
-1246 
+1262 
 ªt
  = 
 cmuSñe˘_LFXO
 ;
 
-1249 
+1265 
 CMU_LFCLKSEL_LFA_HFCORECLKLEDIV2
 :
 
-1250 
+1266 
 ªt
  = 
 cmuSñe˘_CORELEDIV2
 ;
 
-1254 #i‡
+1270 #i‡
 	`deföed
 (
 _EFM32_TINY_FAMILY
@@ -4459,7 +4459,7 @@ _EFM32_GIANT_FAMILY
 _EFM32_WONDER_FAMILY
 )
 
-1255 i‡(
+1271 i‡(
 CMU
 ->
 LFCLKSEL
@@ -4467,23 +4467,23 @@ LFCLKSEL
 _CMU_LFCLKSEL_LFAE_MASK
 )
 
-1257 
+1273 
 ªt
  = 
 cmuSñe˘_ULFRCO
 ;
 
-1261 
+1277 
 ªt
  = 
 cmuSñe˘_DißbÀd
 ;
 
-1267 
+1283 
 CMU_LFBCLKSEL_REG
 :
 
-1268 
+1284 
 CMU
 ->
 LFCLKSEL
@@ -4491,37 +4491,37 @@ LFCLKSEL
 _CMU_LFCLKSEL_LFB_MASK
 )
 
-1270 
+1286 
 CMU_LFCLKSEL_LFB_LFRCO
 :
 
-1271 
+1287 
 ªt
  = 
 cmuSñe˘_LFRCO
 ;
 
-1274 
+1290 
 CMU_LFCLKSEL_LFB_LFXO
 :
 
-1275 
+1291 
 ªt
  = 
 cmuSñe˘_LFXO
 ;
 
-1278 
+1294 
 CMU_LFCLKSEL_LFB_HFCORECLKLEDIV2
 :
 
-1279 
+1295 
 ªt
  = 
 cmuSñe˘_CORELEDIV2
 ;
 
-1283 #i‡
+1299 #i‡
 	`deföed
 (
 _EFM32_TINY_FAMILY
@@ -4531,7 +4531,7 @@ _EFM32_GIANT_FAMILY
 _EFM32_WONDER_FAMILY
 )
 
-1284 i‡(
+1300 i‡(
 CMU
 ->
 LFCLKSEL
@@ -4539,23 +4539,23 @@ LFCLKSEL
 _CMU_LFCLKSEL_LFBE_MASK
 )
 
-1286 
+1302 
 ªt
  = 
 cmuSñe˘_ULFRCO
 ;
 
-1290 
+1306 
 ªt
  = 
 cmuSñe˘_DißbÀd
 ;
 
-1296 
+1312 
 CMU_DBGCLKSEL_REG
 :
 
-1297 #i‡
+1313 #i‡
 	`deföed
 (
 _EFM32_TINY_FAMILY
@@ -4565,7 +4565,7 @@ _EFM32_GIANT_FAMILY
 _EFM32_WONDER_FAMILY
 )
 
-1298 
+1314 
 CMU
 ->
 CTRL
@@ -4573,49 +4573,49 @@ CTRL
 _CMU_CTRL_DBGCLK_MASK
 )
 
-1300 
+1316 
 CMU_CTRL_DBGCLK_AUXHFRCO
 :
 
-1301 
+1317 
 ªt
  = 
 cmuSñe˘_AUXHFRCO
 ;
 
-1304 
+1320 
 CMU_CTRL_DBGCLK_HFCLK
 :
 
-1305 
+1321 
 ªt
  = 
 cmuSñe˘_HFCLK
 ;
 
-1309 #i‡
+1325 #i‡
 	`deföed
 (
 _EFM32_GECKO_FAMILY
 )
 
-1310 
+1326 
 ªt
  = 
 cmuSñe˘_AUXHFRCO
 ;
 
-1315 #i‡
+1331 #i‡
 	`deföed
 (
 USB_PRESENT
 )
 
-1316 
+1332 
 CMU_USBCCLKSEL_REG
 :
 
-1317 
+1333 
 CMU
 ->
 STATUS
@@ -4623,69 +4623,69 @@ STATUS
 CMU_STATUS_USBCHFCLKSEL
  |
 
-1318 
+1334 
 CMU_STATUS_USBCLFXOSEL
  |
 
-1319 
+1335 
 CMU_STATUS_USBCLFRCOSEL
 ))
 
-1321 
+1337 
 CMU_STATUS_USBCHFCLKSEL
 :
 
-1322 
+1338 
 ªt
  = 
 cmuSñe˘_HFCLK
 ;
 
-1325 
+1341 
 CMU_STATUS_USBCLFXOSEL
 :
 
-1326 
+1342 
 ªt
  = 
 cmuSñe˘_LFXO
 ;
 
-1329 
+1345 
 CMU_STATUS_USBCLFRCOSEL
 :
 
-1330 
+1346 
 ªt
  = 
 cmuSñe˘_LFRCO
 ;
 
-1334 
+1350 
 ªt
  = 
 cmuSñe˘_DißbÀd
 ;
 
-1341 
+1357 
 	`EFM_ASSERT
 (0);
 
-1342 
+1358 
 ªt
  = 
 cmuSñe˘_Eº‹
 ;
 
-1346  
+1362  
 ªt
 ;
 
-1347 
+1363 
 	}
 }
 
-1384 
+1400 
 	$CMU_ClockSñe˘Së
 (
 CMU_Clock_Ty≥Def
@@ -4697,7 +4697,7 @@ CMU_Sñe˘_Ty≥Def
 ªf
 )
 
-1386 
+1402 
 uöt32_t
  
 £À˘
@@ -4705,7 +4705,7 @@ uöt32_t
 cmuOsc_HFRCO
 ;
 
-1387 
+1403 
 CMU_Osc_Ty≥Def
  
 osc
@@ -4713,19 +4713,19 @@ osc
 cmuOsc_HFRCO
 ;
 
-1388 
+1404 
 uöt32_t
  
 ‰eq
 ;
 
-1389 
+1405 
 uöt32_t
  
 £lReg
 ;
 
-1390 #i‡
+1406 #i‡
 	`deföed
 (
 _EFM32_TINY_FAMILY
@@ -4735,19 +4735,19 @@ _EFM32_GIANT_FAMILY
 _EFM32_WONDER_FAMILY
 )
 
-1391 
+1407 
 uöt32_t
  
 lfExãnded
  = 0;
 
-1393 
+1409 
 uöt32_t
  
 tmp
 ;
 
-1395 
+1411 
 £lReg
  = (
 ˛ock
@@ -4757,67 +4757,67 @@ CMU_SEL_REG_POS
 CMU_SEL_REG_MASK
 ;
 
-1397 
+1413 
 £lReg
 )
 
-1399 
+1415 
 CMU_HFCLKSEL_REG
 :
 
-1400 
+1416 
 ªf
 )
 
-1402 
+1418 
 cmuSñe˘_LFXO
 :
 
-1403 
+1419 
 £À˘
  = 
 CMU_CMD_HFCLKSEL_LFXO
 ;
 
-1404 
+1420 
 osc
  = 
 cmuOsc_LFXO
 ;
 
-1407 
+1423 
 cmuSñe˘_LFRCO
 :
 
-1408 
+1424 
 £À˘
  = 
 CMU_CMD_HFCLKSEL_LFRCO
 ;
 
-1409 
+1425 
 osc
  = 
 cmuOsc_LFRCO
 ;
 
-1412 
+1428 
 cmuSñe˘_HFXO
 :
 
-1413 
+1429 
 £À˘
  = 
 CMU_CMD_HFCLKSEL_HFXO
 ;
 
-1414 
+1430 
 osc
  = 
 cmuOsc_HFXO
 ;
 
-1415 #i‡
+1431 #i‡
 	`deföed
 (
 _EFM32_GIANT_FAMILY
@@ -4825,13 +4825,13 @@ _EFM32_GIANT_FAMILY
 _EFM32_WONDER_FAMILY
 )
 
-1418 if(
+1434 if(
 	`Sy°emHFXOClockGë
 (Ë> 
 CMU_MAX_FREQ_HFLE
 )
 
-1420 
+1436 
 CMU
 ->
 CTRL
@@ -4839,15 +4839,15 @@ CTRL
 _CMU_CTRL_HFXOBUFCUR_MASK
 ) |
 
-1421 
+1437 
 CMU_CTRL_HFXOBUFCUR_BOOSTABOVE32MHZ
  |
 
-1423 
+1439 
 CMU_CTRL_HFLE
 ;
 
-1427 i‡(
+1443 i‡(
 CMU
 ->
 HFCORECLKEN0
@@ -4855,7 +4855,7 @@ HFCORECLKEN0
 CMU_HFCORECLKEN0_LE
 )
 
-1429 
+1445 
 	`BITBAND_PîùhîÆ
 (&(
 CMU
@@ -4863,11 +4863,11 @@ CMU
 HFCORECLKDIV
 ),
 
-1430 
+1446 
 _CMU_HFCORECLKDIV_HFCORECLKLEDIV_SHIFT
 , 1);
 
-1435 
+1453 
 CMU
 ->
 CTRL
@@ -4875,27 +4875,27 @@ CTRL
 _CMU_CTRL_HFXOBUFCUR_MASK
 ) |
 
-1436 
+1454 
 CMU_CTRL_HFXOBUFCUR_BOOSTUPTO32MHZ
 ;
 
-1441 
+1459 
 cmuSñe˘_HFRCO
 :
 
-1442 
+1460 
 £À˘
  = 
 CMU_CMD_HFCLKSEL_HFRCO
 ;
 
-1443 
+1461 
 osc
  = 
 cmuOsc_HFRCO
 ;
 
-1446 #i‡
+1464 #i‡
 	`deföed
 (
 _EFM32_TINY_FAMILY
@@ -4905,19 +4905,19 @@ _EFM32_GIANT_FAMILY
 _EFM32_WONDER_FAMILY
 )
 
-1447 
+1465 
 cmuSñe˘_ULFRCO
 :
 
-1449 
+1467 
 	`EFM_ASSERT
 (0);
 
-1454 
+1472 
 	`EFM_ASSERT
 (0);
 
-1459 
+1477 
 	`CMU_Oscûœt‹E«bÀ
 (
 osc
@@ -4925,11 +4925,11 @@ osc
 åue
 ,Årue);
 
-1462 
+1480 
 	`CMU_FœshWaôSèãMax
 ();
 
-1465 
+1483 
 CMU
 ->
 CMD
@@ -4937,49 +4937,49 @@ CMD
 £À˘
 ;
 
-1468 
+1486 
 	`EMU_Upd©eOscC⁄fig
 ();
 
-1472 
+1490 
 ‰eq
  = 
 	`Sy°emC‹eClockGë
 ();
 
-1475 
+1493 
 	`CMU_FœshWaôSèãC⁄åﬁ
 (
 ‰eq
 );
 
-1478 
+1496 
 CMU_LFACLKSEL_REG
 :
 
-1479 
+1497 
 CMU_LFBCLKSEL_REG
 :
 
-1481 
+1499 
 ªf
 )
 
-1483 
+1501 
 cmuSñe˘_DißbÀd
 :
 
-1484 
+1502 
 tmp
  = 
 _CMU_LFCLKSEL_LFA_DISABLED
 ;
 
-1487 
+1505 
 cmuSñe˘_LFXO
 :
 
-1489 
+1507 
 	`CMU_Oscûœt‹E«bÀ
 (
 cmuOsc_LFXO
@@ -4987,17 +4987,17 @@ cmuOsc_LFXO
 åue
 ,Årue);
 
-1490 
+1508 
 tmp
  = 
 _CMU_LFCLKSEL_LFA_LFXO
 ;
 
-1493 
+1511 
 cmuSñe˘_LFRCO
 :
 
-1495 
+1513 
 	`CMU_Oscûœt‹E«bÀ
 (
 cmuOsc_LFRCO
@@ -5005,17 +5005,17 @@ cmuOsc_LFRCO
 åue
 ,Årue);
 
-1496 
+1514 
 tmp
  = 
 _CMU_LFCLKSEL_LFA_LFRCO
 ;
 
-1499 
+1517 
 cmuSñe˘_CORELEDIV2
 :
 
-1501 
+1519 
 	`BITBAND_PîùhîÆ
 (&(
 CMU
@@ -5025,13 +5025,13 @@ HFCORECLKEN0
 _CMU_HFCORECLKEN0_LE_SHIFT
 , 1);
 
-1502 
+1520 
 tmp
  = 
 _CMU_LFCLKSEL_LFA_HFCORECLKLEDIV2
 ;
 
-1503 #i‡
+1521 #i‡
 	`deföed
 (
 _EFM32_GIANT_FAMILY
@@ -5039,19 +5039,19 @@ _EFM32_GIANT_FAMILY
 _EFM32_WONDER_FAMILY
 )
 
-1505 
+1523 
 ‰eq
  = 
 	`Sy°emC‹eClockGë
 ();
 
-1506 if(
+1524 if(
 ‰eq
  > 
 CMU_MAX_FREQ_HFLE
 )
 
-1509 
+1527 
 	`BITBAND_PîùhîÆ
 (&(
 CMU
@@ -5061,7 +5061,7 @@ CTRL
 _CMU_CTRL_HFLE_SHIFT
 , 1);
 
-1512 
+1530 
 	`BITBAND_PîùhîÆ
 (&(
 CMU
@@ -5069,11 +5069,11 @@ CMU
 HFCORECLKDIV
 ),
 
-1513 
+1531 
 _CMU_HFCORECLKDIV_HFCORECLKLEDIV_SHIFT
 , 1);
 
-1518 #i‡
+1536 #i‡
 	`deföed
 (
 _EFM32_TINY_FAMILY
@@ -5083,31 +5083,31 @@ _EFM32_GIANT_FAMILY
 _EFM32_WONDER_FAMILY
 )
 
-1519 
+1537 
 cmuSñe˘_ULFRCO
 :
 
-1521 
+1539 
 tmp
  = 
 _CMU_LFCLKSEL_LFA_DISABLED
 ;
 
-1522 
+1540 
 lfExãnded
  = 1;
 
-1528 
+1546 
 	`EFM_ASSERT
 (0);
 
-1533 i‡(
+1551 i‡(
 £lReg
  =
 CMU_LFACLKSEL_REG
 )
 
-1535 #i‡
+1553 #i‡
 	`deföed
 (
 _EFM32_TINY_FAMILY
@@ -5117,7 +5117,7 @@ _EFM32_GIANT_FAMILY
 _EFM32_WONDER_FAMILY
 )
 
-1536 
+1554 
 CMU
 ->
 LFCLKSEL
@@ -5127,7 +5127,7 @@ _CMU_LFCLKSEL_LFA_MASK
 _CMU_LFCLKSEL_LFAE_MASK
 ) ) |
 
-1537 (
+1555 (
 tmp
  << 
 _CMU_LFCLKSEL_LFA_SHIFT
@@ -5137,7 +5137,7 @@ lfExãnded
 _CMU_LFCLKSEL_LFAE_SHIFT
 );
 
-1539 
+1557 
 CMU
 ->
 LFCLKSEL
@@ -5145,13 +5145,13 @@ LFCLKSEL
 _CMU_LFCLKSEL_LFA_MASK
 ) |
 
-1540 (
+1558 (
 tmp
  << 
 _CMU_LFCLKSEL_LFA_SHIFT
 );
 
-1545 #i‡
+1563 #i‡
 	`deföed
 (
 _EFM32_TINY_FAMILY
@@ -5161,7 +5161,7 @@ _EFM32_GIANT_FAMILY
 _EFM32_WONDER_FAMILY
 )
 
-1546 
+1564 
 CMU
 ->
 LFCLKSEL
@@ -5171,7 +5171,7 @@ _CMU_LFCLKSEL_LFB_MASK
 _CMU_LFCLKSEL_LFBE_MASK
 ) ) |
 
-1547 (
+1565 (
 tmp
  << 
 _CMU_LFCLKSEL_LFB_SHIFT
@@ -5181,7 +5181,7 @@ lfExãnded
 _CMU_LFCLKSEL_LFBE_SHIFT
 );
 
-1549 
+1567 
 CMU
 ->
 LFCLKSEL
@@ -5189,13 +5189,13 @@ LFCLKSEL
 _CMU_LFCLKSEL_LFB_MASK
 ) |
 
-1550 (
+1568 (
 tmp
  << 
 _CMU_LFCLKSEL_LFB_SHIFT
 );
 
-1555 #i‡
+1573 #i‡
 	`deföed
 (
 _EFM32_TINY_FAMILY
@@ -5205,19 +5205,19 @@ _EFM32_GIANT_FAMILY
 _EFM32_WONDER_FAMILY
 )
 
-1556 
+1574 
 CMU_DBGCLKSEL_REG
 :
 
-1557 
+1575 
 ªf
 )
 
-1559 
+1577 
 cmuSñe˘_AUXHFRCO
 :
 
-1561 
+1579 
 CMU
 ->
 CTRL
@@ -5227,11 +5227,11 @@ _CMU_CTRL_DBGCLK_MASK
 CMU_CTRL_DBGCLK_AUXHFRCO
 ;
 
-1564 
+1582 
 cmuSñe˘_HFCLK
 :
 
-1566 
+1584 
 CMU
 ->
 CTRL
@@ -5241,29 +5241,29 @@ _CMU_CTRL_DBGCLK_MASK
 CMU_CTRL_DBGCLK_HFCLK
 ;
 
-1571 
+1589 
 	`EFM_ASSERT
 (0);
 
-1577 #i‡
+1595 #i‡
 	`deföed
 (
 USB_PRESENT
 )
 
-1578 
+1596 
 CMU_USBCCLKSEL_REG
 :
 
-1579 
+1597 
 ªf
 )
 
-1582 
+1600 
 cmuSñe˘_HFCLK
 :
 
-1585 
+1603 
 CMU
 ->
 CMD
@@ -5271,7 +5271,7 @@ CMD
 CMU_CMD_USBCCLKSEL_HFCLKNODIV
 ;
 
-1587 (
+1605 (
 CMU
 ->
 STATUS
@@ -5279,11 +5279,11 @@ STATUS
 CMU_STATUS_USBCHFCLKSEL
 )==0);
 
-1590 
+1608 
 cmuSñe˘_LFXO
 :
 
-1594 
+1612 
 	`CMU_Oscûœt‹E«bÀ
 (
 cmuOsc_LFXO
@@ -5291,7 +5291,7 @@ cmuOsc_LFXO
 åue
 ,Årue);
 
-1597 
+1615 
 CMU
 ->
 CMD
@@ -5299,7 +5299,7 @@ CMD
 CMU_CMD_USBCCLKSEL_LFXO
 ;
 
-1600 (
+1618 (
 CMU
 ->
 STATUS
@@ -5307,11 +5307,11 @@ STATUS
 CMU_STATUS_USBCLFXOSEL
 )==0);
 
-1603 
+1621 
 cmuSñe˘_LFRCO
 :
 
-1607 
+1625 
 	`CMU_Oscûœt‹E«bÀ
 (
 cmuOsc_LFRCO
@@ -5319,7 +5319,7 @@ cmuOsc_LFRCO
 åue
 ,Årue);
 
-1610 
+1628 
 CMU
 ->
 CMD
@@ -5327,7 +5327,7 @@ CMD
 CMU_CMD_USBCCLKSEL_LFRCO
 ;
 
-1613 (
+1631 (
 CMU
 ->
 STATUS
@@ -5335,19 +5335,19 @@ STATUS
 CMU_STATUS_USBCLFRCOSEL
 )==0);
 
-1618 
+1636 
 	`EFM_ASSERT
 (0);
 
-1626 
+1644 
 	`EFM_ASSERT
 (0);
 
-1629 
+1647 
 	}
 }
 
-1661 
+1679 
 	$CMU_FªezeE«bÀ
 (
 boﬁ
@@ -5355,17 +5355,17 @@ boﬁ
 íabÀ
 )
 
-1663 i‡(
+1681 i‡(
 íabÀ
 )
 
-1672 
+1690 
 CMU
 ->
 SYNCBUSY
 )
 
-1675 
+1693 
 CMU
 ->
 FREEZE
@@ -5373,17 +5373,17 @@ FREEZE
 CMU_FREEZE_REGFREEZE
 ;
 
-1679 
+1697 
 CMU
 ->
 FREEZE
  = 0;
 
-1681 
+1699 
 	}
 }
 
-1684 #i‡
+1702 #i‡
 deföed
 (
 _EFM32_TINY_FAMILY
@@ -5393,13 +5393,13 @@ _EFM32_GIANT_FAMILY
 _EFM32_WONDER_FAMILY
 )
 
-1692 
+1710 
 CMU_AUXHFRCOB™d_Ty≥Def
  
 	$CMU_AUXHFRCOB™dGë
 ()
 
-1694  (
+1712  (
 CMU_AUXHFRCOB™d_Ty≥Def
 )((
 CMU
@@ -5409,15 +5409,15 @@ AUXHFRCOCTRL
 _CMU_AUXHFRCOCTRL_BAND_MASK
 ) >>
 
-1695 
+1713 
 _CMU_AUXHFRCOCTRL_BAND_SHIFT
 );
 
-1696 
+1714 
 	}
 }
 
-1706 
+1724 
 	$CMU_AUXHFRCOB™dSë
 (
 CMU_AUXHFRCOB™d_Ty≥Def
@@ -5425,21 +5425,21 @@ CMU_AUXHFRCOB™d_Ty≥Def
 b™d
 )
 
-1708 
+1726 
 uöt32_t
  
 tunög
 ;
 
-1711 
+1729 
 b™d
 )
 
-1713 
+1731 
 cmuAUXHFRCOB™d_1MHz
 :
 
-1714 
+1732 
 tunög
  = (
 DEVINFO
@@ -5449,15 +5449,15 @@ AUXHFRCOCAL0
 _DEVINFO_AUXHFRCOCAL0_BAND1_MASK
 ) >>
 
-1715 
+1733 
 _DEVINFO_AUXHFRCOCAL0_BAND1_SHIFT
 ;
 
-1718 
+1736 
 cmuAUXHFRCOB™d_7MHz
 :
 
-1719 
+1737 
 tunög
  = (
 DEVINFO
@@ -5467,15 +5467,15 @@ AUXHFRCOCAL0
 _DEVINFO_AUXHFRCOCAL0_BAND7_MASK
 ) >>
 
-1720 
+1738 
 _DEVINFO_AUXHFRCOCAL0_BAND7_SHIFT
 ;
 
-1723 
+1741 
 cmuAUXHFRCOB™d_11MHz
 :
 
-1724 
+1742 
 tunög
  = (
 DEVINFO
@@ -5485,15 +5485,15 @@ AUXHFRCOCAL0
 _DEVINFO_AUXHFRCOCAL0_BAND11_MASK
 ) >>
 
-1725 
+1743 
 _DEVINFO_AUXHFRCOCAL0_BAND11_SHIFT
 ;
 
-1728 
+1746 
 cmuAUXHFRCOB™d_14MHz
 :
 
-1729 
+1747 
 tunög
  = (
 DEVINFO
@@ -5503,15 +5503,15 @@ AUXHFRCOCAL0
 _DEVINFO_AUXHFRCOCAL0_BAND14_MASK
 ) >>
 
-1730 
+1748 
 _DEVINFO_AUXHFRCOCAL0_BAND14_SHIFT
 ;
 
-1733 
+1751 
 cmuAUXHFRCOB™d_21MHz
 :
 
-1734 
+1752 
 tunög
  = (
 DEVINFO
@@ -5521,15 +5521,15 @@ AUXHFRCOCAL1
 _DEVINFO_AUXHFRCOCAL1_BAND21_MASK
 ) >>
 
-1735 
+1753 
 _DEVINFO_AUXHFRCOCAL1_BAND21_SHIFT
 ;
 
-1738 
+1756 
 cmuAUXHFRCOB™d_28MHz
 :
 
-1739 
+1757 
 tunög
  = (
 DEVINFO
@@ -5539,49 +5539,49 @@ AUXHFRCOCAL1
 _DEVINFO_AUXHFRCOCAL1_BAND28_MASK
 ) >>
 
-1740 
+1758 
 _DEVINFO_AUXHFRCOCAL1_BAND28_SHIFT
 ;
 
-1744 
+1762 
 	`EFM_ASSERT
 (0);
 
-1749 
+1767 
 CMU
 ->
 AUXHFRCOCTRL
  = (CMU->AUXHFRCOCTRL &
 
-1750 ~(
+1768 ~(
 _CMU_AUXHFRCOCTRL_BAND_MASK
  | 
 _CMU_AUXHFRCOCTRL_TUNING_MASK
 )) |
 
-1751 (
+1769 (
 b™d
  << 
 _CMU_AUXHFRCOCTRL_BAND_SHIFT
 ) |
 
-1752 (
+1770 (
 tunög
  << 
 _CMU_AUXHFRCOCTRL_TUNING_SHIFT
 );
 
-1754 
+1772 
 	}
 }
 
-1765 
+1783 
 CMU_HFRCOB™d_Ty≥Def
  
 	$CMU_HFRCOB™dGë
 ()
 
-1767  (
+1785  (
 CMU_HFRCOB™d_Ty≥Def
 )((
 CMU
@@ -5591,15 +5591,15 @@ HFRCOCTRL
 _CMU_HFRCOCTRL_BAND_MASK
 ) >>
 
-1768 
+1786 
 _CMU_HFRCOCTRL_BAND_SHIFT
 );
 
-1769 
+1787 
 	}
 }
 
-1780 
+1798 
 	$CMU_HFRCOB™dSë
 (
 CMU_HFRCOB™d_Ty≥Def
@@ -5607,33 +5607,33 @@ CMU_HFRCOB™d_Ty≥Def
 b™d
 )
 
-1782 
+1800 
 uöt32_t
  
 tunög
 ;
 
-1783 
+1801 
 uöt32_t
  
 ‰eq
 ;
 
-1784 
+1802 
 CMU_Sñe˘_Ty≥Def
  
 osc
 ;
 
-1787 
+1805 
 b™d
 )
 
-1789 
+1807 
 cmuHFRCOB™d_1MHz
 :
 
-1790 
+1808 
 tunög
  = (
 DEVINFO
@@ -5643,15 +5643,15 @@ HFRCOCAL0
 _DEVINFO_HFRCOCAL0_BAND1_MASK
 ) >>
 
-1791 
+1809 
 _DEVINFO_HFRCOCAL0_BAND1_SHIFT
 ;
 
-1794 
+1812 
 cmuHFRCOB™d_7MHz
 :
 
-1795 
+1813 
 tunög
  = (
 DEVINFO
@@ -5661,15 +5661,15 @@ HFRCOCAL0
 _DEVINFO_HFRCOCAL0_BAND7_MASK
 ) >>
 
-1796 
+1814 
 _DEVINFO_HFRCOCAL0_BAND7_SHIFT
 ;
 
-1799 
+1817 
 cmuHFRCOB™d_11MHz
 :
 
-1800 
+1818 
 tunög
  = (
 DEVINFO
@@ -5679,15 +5679,15 @@ HFRCOCAL0
 _DEVINFO_HFRCOCAL0_BAND11_MASK
 ) >>
 
-1801 
+1819 
 _DEVINFO_HFRCOCAL0_BAND11_SHIFT
 ;
 
-1804 
+1822 
 cmuHFRCOB™d_14MHz
 :
 
-1805 
+1823 
 tunög
  = (
 DEVINFO
@@ -5697,15 +5697,15 @@ HFRCOCAL0
 _DEVINFO_HFRCOCAL0_BAND14_MASK
 ) >>
 
-1806 
+1824 
 _DEVINFO_HFRCOCAL0_BAND14_SHIFT
 ;
 
-1809 
+1827 
 cmuHFRCOB™d_21MHz
 :
 
-1810 
+1828 
 tunög
  = (
 DEVINFO
@@ -5715,15 +5715,15 @@ HFRCOCAL1
 _DEVINFO_HFRCOCAL1_BAND21_MASK
 ) >>
 
-1811 
+1829 
 _DEVINFO_HFRCOCAL1_BAND21_SHIFT
 ;
 
-1814 
+1832 
 cmuHFRCOB™d_28MHz
 :
 
-1815 
+1833 
 tunög
  = (
 DEVINFO
@@ -5733,15 +5733,15 @@ HFRCOCAL1
 _DEVINFO_HFRCOCAL1_BAND28_MASK
 ) >>
 
-1816 
+1834 
 _DEVINFO_HFRCOCAL1_BAND28_SHIFT
 ;
 
-1820 
+1838 
 	`EFM_ASSERT
 (0);
 
-1825 
+1843 
 osc
  = 
 	`CMU_ClockSñe˘Gë
@@ -5749,69 +5749,69 @@ osc
 cmuClock_HF
 );
 
-1826 i‡(
+1844 i‡(
 osc
  =
 cmuSñe˘_HFRCO
 )
 
-1829 
+1847 
 	`CMU_FœshWaôSèãMax
 ();
 
-1833 
+1851 
 CMU
 ->
 HFRCOCTRL
  = (CMU->HFRCOCTRL &
 
-1834 ~(
+1852 ~(
 _CMU_HFRCOCTRL_BAND_MASK
  | 
 _CMU_HFRCOCTRL_TUNING_MASK
 )) |
 
-1835 (
+1853 (
 b™d
  << 
 _CMU_HFRCOCTRL_BAND_SHIFT
 ) |
 
-1836 (
+1854 (
 tunög
  << 
 _CMU_HFRCOCTRL_TUNING_SHIFT
 );
 
-1839 i‡(
+1857 i‡(
 osc
  =
 cmuSñe˘_HFRCO
 )
 
-1845 
+1863 
 ‰eq
  = 
 	`Sy°emC‹eClockGë
 ();
 
-1848 
+1866 
 	`CMU_FœshWaôSèãC⁄åﬁ
 (
 ‰eq
 );
 
-1850 
+1868 
 	}
 }
 
-1863 
+1881 
 uöt32_t
  
 	$CMU_HFRCOSèπupDñayGë
 ()
 
-1865 ((
+1883 ((
 CMU
 ->
 HFRCOCTRL
@@ -5819,15 +5819,15 @@ HFRCOCTRL
 _CMU_HFRCOCTRL_SUDELAY_MASK
 ) >>
 
-1866 
+1884 
 _CMU_HFRCOCTRL_SUDELAY_SHIFT
 );
 
-1867 
+1885 
 	}
 }
 
-1880 
+1898 
 	$CMU_HFRCOSèπupDñaySë
 (
 uöt32_t
@@ -5835,13 +5835,13 @@ uöt32_t
 dñay
 )
 
-1882 
+1900 
 	`EFM_ASSERT
 (
 dñay
  <= 31);
 
-1884 
+1902 
 dñay
  &(
 _CMU_HFRCOCTRL_SUDELAY_MASK
@@ -5849,7 +5849,7 @@ _CMU_HFRCOCTRL_SUDELAY_MASK
 _CMU_HFRCOCTRL_SUDELAY_SHIFT
 );
 
-1885 
+1903 
 CMU
 ->
 HFRCOCTRL
@@ -5857,29 +5857,29 @@ HFRCOCTRL
 _CMU_HFRCOCTRL_SUDELAY_MASK
 )) |
 
-1886 (
+1904 (
 dñay
  << 
 _CMU_HFRCOCTRL_SUDELAY_SHIFT
 );
 
-1887 
+1905 
 	}
 }
 
-1897 
+1915 
 uöt32_t
  
 	$CMU_LCDClkFDIVGë
 ()
 
-1899 #i‡
+1917 #i‡
 	`deföed
 (
 LCD_PRESENT
 )
 
-1900 ((
+1918 ((
 CMU
 ->
 LCDCTRL
@@ -5889,11 +5889,11 @@ _CMU_LCDCTRL_FDIV_MASK
 _CMU_LCDCTRL_FDIV_SHIFT
 );
 
-1904 
+1922 
 	}
 }
 
-1920 
+1938 
 	$CMU_LCDClkFDIVSë
 (
 uöt32_t
@@ -5901,13 +5901,13 @@ uöt32_t
 div
 )
 
-1922 #i‡
+1940 #i‡
 	`deföed
 (
 LCD_PRESENT
 )
 
-1923 
+1941 
 	`EFM_ASSERT
 (
 div
@@ -5915,7 +5915,7 @@ div
 cmuClkDiv_128
 );
 
-1926 i‡(
+1944 i‡(
 CMU
 ->
 LFACLKEN0
@@ -5923,19 +5923,19 @@ LFACLKEN0
 CMU_LFACLKEN0_LCD
 )
 
-1931 
+1949 
 div
  <<
 _CMU_LCDCTRL_FDIV_SHIFT
 ;
 
-1932 
+1950 
 div
  &
 _CMU_LCDCTRL_FDIV_MASK
 ;
 
-1933 
+1951 
 CMU
 ->
 LCDCTRL
@@ -5945,15 +5945,15 @@ _CMU_LCDCTRL_FDIV_MASK
 div
 ;
 
-1935 ()
+1953 ()
 div
 ;
 
-1937 
+1955 
 	}
 }
 
-1964 
+1982 
 	$CMU_Oscûœt‹E«bÀ
 (
 CMU_Osc_Ty≥Def
@@ -5967,157 +5967,157 @@ boﬁ
 waô
 )
 
-1966 
+1984 
 uöt32_t
  
 °©us
 ;
-
-1967 
-uöt32_t
- 
-íBô
-;
-
-1968 
-uöt32_t
- 
-disBô
-;
-
-1970 
-osc
-)
-
-1972 
-cmuOsc_HFRCO
-:
-
-1973 
-íBô
- = 
-CMU_OSCENCMD_HFRCOEN
-;
-
-1974 
-disBô
- = 
-CMU_OSCENCMD_HFRCODIS
-;
-
-1975 
-°©us
- = 
-CMU_STATUS_HFRCORDY
-;
-
-1978 
-cmuOsc_HFXO
-:
-
-1979 
-íBô
- = 
-CMU_OSCENCMD_HFXOEN
-;
-
-1980 
-disBô
- = 
-CMU_OSCENCMD_HFXODIS
-;
-
-1981 
-°©us
- = 
-CMU_STATUS_HFXORDY
-;
-
-1984 
-cmuOsc_AUXHFRCO
-:
 
 1985 
+uöt32_t
+ 
 íBô
- = 
-CMU_OSCENCMD_AUXHFRCOEN
 ;
 
 1986 
+uöt32_t
+ 
 disBô
- = 
-CMU_OSCENCMD_AUXHFRCODIS
 ;
 
-1987 
-°©us
- = 
-CMU_STATUS_AUXHFRCORDY
-;
+1988 
+osc
+)
 
 1990 
-cmuOsc_LFRCO
+cmuOsc_HFRCO
 :
 
 1991 
 íBô
  = 
-CMU_OSCENCMD_LFRCOEN
+CMU_OSCENCMD_HFRCOEN
 ;
 
 1992 
 disBô
  = 
-CMU_OSCENCMD_LFRCODIS
+CMU_OSCENCMD_HFRCODIS
 ;
 
 1993 
 °©us
  = 
-CMU_STATUS_LFRCORDY
+CMU_STATUS_HFRCORDY
 ;
 
 1996 
-cmuOsc_LFXO
+cmuOsc_HFXO
 :
 
 1997 
 íBô
  = 
-CMU_OSCENCMD_LFXOEN
+CMU_OSCENCMD_HFXOEN
 ;
 
 1998 
 disBô
  = 
-CMU_OSCENCMD_LFXODIS
+CMU_OSCENCMD_HFXODIS
 ;
 
 1999 
 °©us
  = 
+CMU_STATUS_HFXORDY
+;
+
+2002 
+cmuOsc_AUXHFRCO
+:
+
+2003 
+íBô
+ = 
+CMU_OSCENCMD_AUXHFRCOEN
+;
+
+2004 
+disBô
+ = 
+CMU_OSCENCMD_AUXHFRCODIS
+;
+
+2005 
+°©us
+ = 
+CMU_STATUS_AUXHFRCORDY
+;
+
+2008 
+cmuOsc_LFRCO
+:
+
+2009 
+íBô
+ = 
+CMU_OSCENCMD_LFRCOEN
+;
+
+2010 
+disBô
+ = 
+CMU_OSCENCMD_LFRCODIS
+;
+
+2011 
+°©us
+ = 
+CMU_STATUS_LFRCORDY
+;
+
+2014 
+cmuOsc_LFXO
+:
+
+2015 
+íBô
+ = 
+CMU_OSCENCMD_LFXOEN
+;
+
+2016 
+disBô
+ = 
+CMU_OSCENCMD_LFXODIS
+;
+
+2017 
+°©us
+ = 
 CMU_STATUS_LFXORDY
 ;
 
-2002 #i‡
+2020 #i‡
 deföed
  
 _CMU_LFCLKSEL_LFAE_ULFRCO
 
 
-2003 
+2021 
 cmuOsc_ULFRCO
 :
 
-2010 
+2028 
 	`EFM_ASSERT
 (0);
 
-2014 i‡(
+2032 i‡(
 íabÀ
 )
 
-2016 
+2034 
 CMU
 ->
 OSCENCMD
@@ -6125,11 +6125,11 @@ OSCENCMD
 íBô
 ;
 
-2019 i‡(
+2037 i‡(
 waô
 )
 
-2021 !(
+2039 !(
 CMU
 ->
 STATUS
@@ -6137,7 +6137,7 @@ STATUS
 °©us
 ))
 
-2027 
+2045 
 CMU
 ->
 OSCENCMD
@@ -6145,15 +6145,15 @@ OSCENCMD
 disBô
 ;
 
-2031 
+2049 
 	`EMU_Upd©eOscC⁄fig
 ();
 
-2032 
+2050 
 	}
 }
 
-2048 
+2066 
 uöt32_t
  
 	$CMU_Oscûœt‹TunögGë
@@ -6163,21 +6163,21 @@ CMU_Osc_Ty≥Def
 osc
 )
 
-2050 
+2068 
 uöt32_t
  
 ªt
 ;
 
-2052 
+2070 
 osc
 )
 
-2054 
+2072 
 cmuOsc_LFRCO
 :
 
-2055 
+2073 
 ªt
  = (
 CMU
@@ -6187,15 +6187,15 @@ LFRCOCTRL
 _CMU_LFRCOCTRL_TUNING_MASK
 ) >>
 
-2056 
+2074 
 _CMU_LFRCOCTRL_TUNING_SHIFT
 ;
 
-2059 
+2077 
 cmuOsc_HFRCO
 :
 
-2060 
+2078 
 ªt
  = (
 CMU
@@ -6205,15 +6205,15 @@ HFRCOCTRL
 _CMU_HFRCOCTRL_TUNING_MASK
 ) >>
 
-2061 
+2079 
 _CMU_HFRCOCTRL_TUNING_SHIFT
 ;
 
-2064 
+2082 
 cmuOsc_AUXHFRCO
 :
 
-2065 
+2083 
 ªt
  = (
 CMU
@@ -6223,27 +6223,27 @@ AUXHFRCOCTRL
 _CMU_AUXHFRCOCTRL_TUNING_MASK
 ) >>
 
-2066 
+2084 
 _CMU_AUXHFRCOCTRL_TUNING_SHIFT
 ;
 
-2070 
+2088 
 	`EFM_ASSERT
 (0);
 
-2071 
+2089 
 ªt
  = 0;
 
-2075 (
+2093 (
 ªt
 );
 
-2076 
+2094 
 	}
 }
 
-2097 
+2115 
 	$CMU_Oscûœt‹TunögSë
 (
 CMU_Osc_Ty≥Def
@@ -6255,15 +6255,15 @@ uöt32_t
 vÆ
 )
 
-2099 
+2117 
 osc
 )
 
-2101 
+2119 
 cmuOsc_LFRCO
 :
 
-2102 
+2120 
 	`EFM_ASSERT
 (
 vÆ
@@ -6273,7 +6273,7 @@ _CMU_LFRCOCTRL_TUNING_MASK
 _CMU_LFRCOCTRL_TUNING_SHIFT
 ));
 
-2104 
+2122 
 vÆ
  &(
 _CMU_LFRCOCTRL_TUNING_MASK
@@ -6281,7 +6281,7 @@ _CMU_LFRCOCTRL_TUNING_MASK
 _CMU_LFRCOCTRL_TUNING_SHIFT
 );
 
-2105 
+2123 
 CMU
 ->
 LFRCOCTRL
@@ -6289,17 +6289,17 @@ LFRCOCTRL
 _CMU_LFRCOCTRL_TUNING_MASK
 )) |
 
-2106 (
+2124 (
 vÆ
  << 
 _CMU_LFRCOCTRL_TUNING_SHIFT
 );
 
-2109 
+2127 
 cmuOsc_HFRCO
 :
 
-2110 
+2128 
 	`EFM_ASSERT
 (
 vÆ
@@ -6309,7 +6309,7 @@ _CMU_HFRCOCTRL_TUNING_MASK
 _CMU_HFRCOCTRL_TUNING_SHIFT
 ));
 
-2112 
+2130 
 vÆ
  &(
 _CMU_HFRCOCTRL_TUNING_MASK
@@ -6317,7 +6317,7 @@ _CMU_HFRCOCTRL_TUNING_MASK
 _CMU_HFRCOCTRL_TUNING_SHIFT
 );
 
-2113 
+2131 
 CMU
 ->
 HFRCOCTRL
@@ -6325,17 +6325,17 @@ HFRCOCTRL
 _CMU_HFRCOCTRL_TUNING_MASK
 )) |
 
-2114 (
+2132 (
 vÆ
  << 
 _CMU_HFRCOCTRL_TUNING_SHIFT
 );
 
-2117 
+2135 
 cmuOsc_AUXHFRCO
 :
 
-2118 
+2136 
 	`EFM_ASSERT
 (
 vÆ
@@ -6345,19 +6345,19 @@ _CMU_AUXHFRCOCTRL_TUNING_MASK
 _CMU_AUXHFRCOCTRL_TUNING_SHIFT
 ));
 
-2120 
+2138 
 vÆ
  <<
 _CMU_AUXHFRCOCTRL_TUNING_SHIFT
 ;
 
-2121 
+2139 
 vÆ
  &
 _CMU_AUXHFRCOCTRL_TUNING_MASK
 ;
 
-2122 
+2140 
 CMU
 ->
 AUXHFRCOCTRL
@@ -6367,15 +6367,15 @@ _CMU_AUXHFRCOCTRL_TUNING_MASK
 vÆ
 ;
 
-2126 
+2144 
 	`EFM_ASSERT
 (0);
 
-2129 
+2147 
 	}
 }
 
-2143 
+2161 
 boﬁ
  
 	$CMU_PCNTClockExã∫ÆGë
@@ -6383,29 +6383,29 @@ boﬁ
 ö°
 )
 
-2145 
+2163 
 boﬁ
  
 ªt
 ;
 
-2146 
+2164 
 uöt32_t
  
 £âög
 ;
 
-2148 
+2166 
 ö°
 )
 
-2150 #i‡
+2168 #i‡
 	`deföed
 (
 _CMU_PCNTCTRL_PCNT0CLKEN_MASK
 )
 
-2152 
+2170 
 £âög
  = 
 CMU
@@ -6415,13 +6415,13 @@ PCNTCTRL
 CMU_PCNTCTRL_PCNT0CLKSEL_PCNT0S0
 ;
 
-2155 #i‡
+2173 #i‡
 	`deföed
 (
 _CMU_PCNTCTRL_PCNT1CLKEN_MASK
 )
 
-2157 
+2175 
 £âög
  = 
 CMU
@@ -6431,13 +6431,13 @@ PCNTCTRL
 CMU_PCNTCTRL_PCNT1CLKSEL_PCNT1S0
 ;
 
-2160 #i‡
+2178 #i‡
 	`deföed
 (
 _CMU_PCNTCTRL_PCNT2CLKEN_MASK
 )
 
-2162 
+2180 
 £âög
  = 
 CMU
@@ -6447,35 +6447,35 @@ PCNTCTRL
 CMU_PCNTCTRL_PCNT2CLKSEL_PCNT2S0
 ;
 
-2169 
+2187 
 £âög
  = 0;
 
-2173 i‡(
+2191 i‡(
 £âög
 )
 
-2175 
+2193 
 ªt
  = 
 åue
 ;
 
-2179 
+2197 
 ªt
  = 
 Ál£
 ;
 
-2181  
+2199  
 ªt
 ;
 
-2182 
+2200 
 	}
 }
 
-2195 
+2213 
 	$CMU_PCNTClockExã∫ÆSë
 (
 ö°
@@ -6485,19 +6485,19 @@ boﬁ
 exã∫Æ
 )
 
-2197 #i‡
+2215 #i‡
 	`deföed
 (
 PCNT_PRESENT
 )
 
-2198 
+2216 
 uöt32_t
  
 £âög
  = 0;
 
-2200 
+2218 
 	`EFM_ASSERT
 (
 ö°
@@ -6505,15 +6505,15 @@ uöt32_t
 PCNT_COUNT
 );
 
-2202 i‡(
+2220 i‡(
 exã∫Æ
 )
 
-2204 
+2222 
 £âög
  = 1;
 
-2207 
+2225 
 	`BITBAND_PîùhîÆ
 (&(
 CMU
@@ -6525,15 +6525,15 @@ PCNTCTRL
 £âög
 );
 
-2210 ()
+2228 ()
 ö°
 ;
 
-2211 ()
+2229 ()
 exã∫Æ
 ;
 
-2213 
+2231 
 	}
 }
 
@@ -13469,6 +13469,1140 @@ büsLevñ
 	}
 }
 
+	@C:\Users\Alexander\AppData\Roaming\energymicro\emlib\src\em_pcnt.c
+
+33 
+	~"em_p˙t.h
+"
+
+34 
+	~"em_cmu.h
+"
+
+35 
+	~"em_as£π.h
+"
+
+36 
+	~"em_bôb™d.h
+"
+
+57 #i‡(
+PCNT_COUNT
+ == 1)
+
+58 
+	#PCNT_REF_VALID
+(
+ªf
+Ë(‘efË=
+PCNT0
+)
+
+	)
+
+59 #ñi‡(
+PCNT_COUNT
+ == 2)
+
+60 
+	#PCNT_REF_VALID
+(
+ªf
+Ë((‘efË=
+PCNT0
+Ë|| (‘efË=
+PCNT1
+))
+
+	)
+
+61 #ñi‡(
+PCNT_COUNT
+ == 3)
+
+62 
+	#PCNT_REF_VALID
+(
+ªf
+Ë((‘efË=
+PCNT0
+Ë|| (‘efË=
+PCNT1
+) || \
+
+63 ((
+ªf
+Ë=
+PCNT2
+))
+
+	)
+
+65 #îr‹ 
+Undeföed
+ 
+numbî
+ 
+of
+ 
+pul£
+ 
+cou¡îs
+ (
+PCNT
+).
+
+87 
+__STATIC_INLINE
+ 
+	$PCNT_M≠
+(
+PCNT_Ty≥Def
+ *
+p˙t
+)
+
+89 (((
+uöt32_t
+)
+p˙t
+ - 
+PCNT0_BASE
+) / 0x400);
+
+90 
+	}
+}
+
+104 
+__STATIC_INLINE
+ 
+	$PCNT_Sync
+(
+PCNT_Ty≥Def
+ *
+p˙t
+, 
+uöt32_t
+ 
+mask
+)
+
+108 i‡(
+p˙t
+->
+FREEZE
+ & 
+PCNT_FREEZE_REGFREEZE
+)
+
+115 
+p˙t
+->
+SYNCBUSY
+ & 
+mask
+)
+
+117 
+	}
+}
+
+139 
+	$PCNT_Cou¡îRe£t
+(
+PCNT_Ty≥Def
+ *
+p˙t
+)
+
+141 
+	`EFM_ASSERT
+(
+	`PCNT_REF_VALID
+(
+p˙t
+));
+
+144 
+	`BITBAND_PîùhîÆ
+(&(
+p˙t
+->
+CTRL
+), 
+_PCNT_CTRL_RSTEN_SHIFT
+, 1);
+
+147 
+	`BITBAND_PîùhîÆ
+(&(
+p˙t
+->
+CTRL
+), 
+_PCNT_CTRL_RSTEN_SHIFT
+, 0);
+
+148 
+	}
+}
+
+175 
+	$PCNT_Cou¡îT›Së
+(
+PCNT_Ty≥Def
+ *
+p˙t
+, 
+uöt32_t
+ 
+cou¡
+, uöt32_à
+t›
+)
+
+177 
+uöt32_t
+ 
+˘æ
+;
+
+179 
+	`EFM_ASSERT
+(
+	`PCNT_REF_VALID
+(
+p˙t
+));
+
+182 
+˘æ
+ = 
+p˙t
+->
+CTRL
+;
+
+185 i‡((
+˘æ
+ & 
+_PCNT_CTRL_MODE_MASK
+Ë!
+PCNT_CTRL_MODE_DISABLE
+)
+
+187 
+	`PCNT_Sync
+(
+p˙t
+, 
+PCNT_SYNCBUSY_CTRL
+);
+
+188 
+p˙t
+->
+CTRL
+ = (
+˘æ
+ & ~
+_PCNT_CTRL_MODE_MASK
+Ë| 
+PCNT_CTRL_MODE_DISABLE
+;
+
+192 
+	`PCNT_Sync
+(
+p˙t
+, 
+PCNT_SYNCBUSY_TOPB
+);
+
+193 
+p˙t
+->
+TOPB
+ = 
+cou¡
+;
+
+196 
+	`PCNT_Sync
+(
+p˙t
+, 
+PCNT_SYNCBUSY_TOPB
+ | 
+PCNT_SYNCBUSY_CMD
+);
+
+199 
+p˙t
+->
+CMD
+ = 
+PCNT_CMD_LTOPBIM
+;
+
+200 
+	`PCNT_Sync
+(
+p˙t
+, 
+PCNT_SYNCBUSY_CMD
+);
+
+203 
+p˙t
+->
+CMD
+ = 
+PCNT_CMD_LCNTIM
+;
+
+208 i‡(
+t›
+ !
+cou¡
+)
+
+211 
+	`PCNT_Sync
+(
+p˙t
+, 
+PCNT_SYNCBUSY_CMD
+);
+
+215 
+p˙t
+->
+TOPB
+ = 
+t›
+;
+
+218 
+	`PCNT_Sync
+(
+p˙t
+, 
+PCNT_SYNCBUSY_TOPB
+ | 
+PCNT_SYNCBUSY_CMD
+);
+
+219 
+p˙t
+->
+CMD
+ = 
+PCNT_CMD_LTOPBIM
+;
+
+223 i‡((
+˘æ
+ & 
+_PCNT_CTRL_MODE_MASK
+Ë!
+PCNT_CTRL_MODE_DISABLE
+)
+
+225 
+	`PCNT_Sync
+(
+p˙t
+, 
+PCNT_SYNCBUSY_CTRL
+ | 
+PCNT_SYNCBUSY_CMD
+);
+
+226 
+p˙t
+->
+CTRL
+ = 
+˘æ
+;
+
+228 
+	}
+}
+
+253 
+	$PCNT_E«bÀ
+(
+PCNT_Ty≥Def
+ *
+p˙t
+, 
+PCNT_Mode_Ty≥Def
+ 
+mode
+)
+
+255 
+uöt32_t
+ 
+tmp
+;
+
+257 
+	`EFM_ASSERT
+(
+	`PCNT_REF_VALID
+(
+p˙t
+));
+
+260 
+tmp
+ = 
+p˙t
+->
+CTRL
+ & ~
+_PCNT_CTRL_MODE_MASK
+;
+
+261 
+tmp
+ |(
+uöt32_t
+)
+mode
+ << 
+_PCNT_CTRL_MODE_SHIFT
+;
+
+264 
+	`PCNT_Sync
+(
+p˙t
+, 
+PCNT_SYNCBUSY_CTRL
+);
+
+265 
+p˙t
+->
+CTRL
+ = 
+tmp
+;
+
+266 
+	}
+}
+
+268 #i‡(
+deföed
+ (
+_EFM32_TINY_FAMILY
+Ë|| deföed (
+_EFM32_GIANT_FAMILY
+Ë|| deföed (
+_EFM32_WONDER_FAMILY
+))
+
+285 
+	$PCNT_PRSI≈utE«bÀ
+(
+PCNT_Ty≥Def
+ *
+p˙t
+,
+
+286 
+PCNT_PRSI≈ut_Ty≥Def
+ 
+¥sI≈ut
+,
+
+287 
+boﬁ
+ 
+íabÀ
+)
+
+289 
+	`EFM_ASSERT
+(
+	`PCNT_REF_VALID
+(
+p˙t
+));
+
+292 
+¥sI≈ut
+)
+
+295 
+p˙tPRSI≈utS0
+:
+
+297 
+	`BITBAND_PîùhîÆ
+(&(
+p˙t
+->
+INPUT
+), 
+_PCNT_INPUT_S0PRSEN_SHIFT
+, (
+uöt32_t
+)
+íabÀ
+);
+
+302 
+p˙tPRSI≈utS1
+:
+
+304 
+	`BITBAND_PîùhîÆ
+(&(
+p˙t
+->
+INPUT
+), 
+_PCNT_INPUT_S1PRSEN_SHIFT
+, (
+uöt32_t
+)
+íabÀ
+);
+
+311 
+	`EFM_ASSERT
+(0);
+
+315 
+	}
+}
+
+346 
+	$PCNT_FªezeE«bÀ
+(
+PCNT_Ty≥Def
+ *
+p˙t
+, 
+boﬁ
+ 
+íabÀ
+)
+
+348 
+	`EFM_ASSERT
+(
+	`PCNT_REF_VALID
+(
+p˙t
+));
+
+350 i‡(
+íabÀ
+)
+
+359 
+p˙t
+->
+SYNCBUSY
+)
+
+362 
+p˙t
+->
+FREEZE
+ = 
+PCNT_FREEZE_REGFREEZE
+;
+
+366 
+p˙t
+->
+FREEZE
+ = 0;
+
+368 
+	}
+}
+
+410 
+	$PCNT_Inô
+(
+PCNT_Ty≥Def
+ *
+p˙t
+, c⁄° 
+PCNT_Inô_Ty≥Def
+ *
+öô
+)
+
+412 
+ö°
+;
+
+413 
+uöt32_t
+ 
+tmp
+;
+
+415 
+	`EFM_ASSERT
+(
+	`PCNT_REF_VALID
+(
+p˙t
+));
+
+418 
+ö°
+ = 
+	`PCNT_M≠
+(
+p˙t
+);
+
+420 #i‡(
+	`deföed
+ (
+_EFM32_TINY_FAMILY
+Ë|| deföed (
+_EFM32_GIANT_FAMILY
+Ë|| deföed (
+_EFM32_WONDER_FAMILY
+))
+
+424 
+tmp
+ = 
+p˙t
+->
+INPUT
+ & ~(
+_PCNT_INPUT_S0PRSSEL_MASK
+ | 
+_PCNT_INPUT_S1PRSSEL_MASK
+);
+
+425 
+tmp
+ |((
+uöt32_t
+)
+öô
+->
+s0PRS
+ << 
+_PCNT_INPUT_S0PRSSEL_SHIFT
+) |
+
+426 ((
+uöt32_t
+)
+öô
+->
+s1PRS
+ << 
+_PCNT_INPUT_S1PRSSEL_SHIFT
+);
+
+427 
+p˙t
+->
+INPUT
+ = 
+tmp
+;
+
+431 
+tmp
+ = 0;
+
+432 i‡(
+öô
+->
+√gEdge
+)
+
+434 
+tmp
+ |
+PCNT_CTRL_EDGE_NEG
+;
+
+437 i‡(
+öô
+->
+cou¡Down
+)
+
+439 
+tmp
+ |
+PCNT_CTRL_CNTDIR_DOWN
+;
+
+442 i‡(
+öô
+->
+fûãr
+)
+
+444 
+tmp
+ |
+PCNT_CTRL_FILT
+;
+
+447 #i‡(
+	`deföed
+ (
+_EFM32_TINY_FAMILY
+Ë|| deföed (
+_EFM32_GIANT_FAMILY
+Ë|| deföed (
+_EFM32_WONDER_FAMILY
+))
+
+448 i‡(
+öô
+->
+hy°
+)
+
+450 
+tmp
+ |
+PCNT_CTRL_HYST
+;
+
+453 i‡(
+öô
+->
+s1C¡Dú
+)
+
+455 
+tmp
+ |
+PCNT_CTRL_S1CDIR
+;
+
+459 
+tmp
+ |
+öô
+->
+˙tEvít
+ << 
+_PCNT_CTRL_CNTEV_SHIFT
+;
+
+460 
+tmp
+ |
+öô
+->
+auxC¡Evít
+ << 
+_PCNT_CTRL_AUXCNTEV_SHIFT
+;
+
+465 
+	`BITBAND_PîùhîÆ
+(&(
+p˙t
+->
+CTRL
+), 
+_PCNT_CTRL_RSTEN_SHIFT
+, 1);
+
+468 
+	`CMU_PCNTClockExã∫ÆSë
+(
+ö°
+, 
+Ál£
+);
+
+471 
+öô
+->
+mode
+)
+
+473 
+p˙tModeExtSögÀ
+:
+
+474 
+p˙tModeExtQuad
+:
+
+475 
+tmp
+ |
+öô
+->
+mode
+ << 
+_PCNT_CTRL_MODE_SHIFT
+;
+
+481 
+	`PCNT_Sync
+(
+p˙t
+, 
+PCNT_SYNCBUSY_CTRL
+);
+
+485 
+p˙t
+->
+CTRL
+ = 
+PCNT_CTRL_RSTEN
+;
+
+488 
+	`PCNT_Sync
+(
+p˙t
+, 
+PCNT_SYNCBUSY_CTRL
+);
+
+491 
+	`CMU_PCNTClockExã∫ÆSë
+(
+ö°
+, 
+åue
+);
+
+497 
+p˙t
+->
+TOPB
+ = 
+öô
+->
+t›
+;
+
+500 
+p˙t
+->
+CMD
+ = 
+PCNT_CMD_LTOPBIM
+;
+
+506 
+p˙t
+->
+CTRL
+ = 
+tmp
+;
+
+518 i‡((
+p˙t
+->
+CTRL
+ & 
+_PCNT_CTRL_MODE_MASK
+Ë!
+PCNT_CTRL_MODE_DISABLE
+)
+
+523 
+p˙t
+->
+CTRL
+ = 
+tmp
+ | 
+PCNT_CTRL_MODE_DISABLE
+ | 
+PCNT_CTRL_RSTEN
+;
+
+527 
+	`PCNT_Sync
+(
+p˙t
+, 
+PCNT_SYNCBUSY_CTRL
+);
+
+531 
+	`BITBAND_PîùhîÆ
+(&(
+p˙t
+->
+CTRL
+), 
+_PCNT_CTRL_RSTEN_SHIFT
+, 0);
+
+534 
+	`PCNT_Cou¡îT›Së
+(
+p˙t
+, 
+öô
+->
+cou¡î
+, inô->
+t›
+);
+
+537 i‡(
+öô
+->
+mode
+ =
+p˙tModeOvsSögÀ
+)
+
+539 
+	`PCNT_Sync
+(
+p˙t
+, 
+PCNT_SYNCBUSY_CTRL
+);
+
+540 
+p˙t
+->
+CTRL
+ = 
+tmp
+ | (
+öô
+->
+mode
+ << 
+_PCNT_CTRL_MODE_SHIFT
+);
+
+544 
+	}
+}
+
+563 
+	$PCNT_Re£t
+(
+PCNT_Ty≥Def
+ *
+p˙t
+)
+
+565 
+ö°
+;
+
+567 
+	`EFM_ASSERT
+(
+	`PCNT_REF_VALID
+(
+p˙t
+));
+
+570 
+ö°
+ = 
+	`PCNT_M≠
+(
+p˙t
+);
+
+572 
+p˙t
+->
+IEN
+ = 
+_PCNT_IEN_RESETVALUE
+;
+
+579 
+	`BITBAND_PîùhîÆ
+(&(
+p˙t
+->
+CTRL
+), 
+_PCNT_CTRL_RSTEN_SHIFT
+, 1);
+
+582 
+	`CMU_PCNTClockExã∫ÆSë
+(
+ö°
+, 
+Ál£
+);
+
+584 
+	`PCNT_T›Buf„rSë
+(
+p˙t
+, 
+_PCNT_TOPB_RESETVALUE
+);
+
+587 
+p˙t
+->
+CTRL
+ = 
+_PCNT_CTRL_RESETVALUE
+ | 
+PCNT_CTRL_RSTEN
+;
+
+590 
+	`PCNT_Sync
+(
+p˙t
+, 
+PCNT_SYNCBUSY_CTRL
+);
+
+591 
+	`BITBAND_PîùhîÆ
+(&(
+p˙t
+->
+CTRL
+), 
+_PCNT_CTRL_RSTEN_SHIFT
+, 0);
+
+594 
+p˙t
+->
+IFC
+ = 
+_PCNT_IFC_MASK
+;
+
+597 
+	}
+}
+
+616 
+	$PCNT_T›Buf„rSë
+(
+PCNT_Ty≥Def
+ *
+p˙t
+, 
+uöt32_t
+ 
+vÆ
+)
+
+618 
+	`EFM_ASSERT
+(
+	`PCNT_REF_VALID
+(
+p˙t
+));
+
+621 
+	`PCNT_Sync
+(
+p˙t
+, 
+PCNT_SYNCBUSY_TOPB
+);
+
+622 
+p˙t
+->
+TOPB
+ = 
+vÆ
+;
+
+623 
+	}
+}
+
+642 
+	$PCNT_T›Së
+(
+PCNT_Ty≥Def
+ *
+p˙t
+, 
+uöt32_t
+ 
+vÆ
+)
+
+644 
+	`EFM_ASSERT
+(
+	`PCNT_REF_VALID
+(
+p˙t
+));
+
+649 
+	`PCNT_Sync
+(
+p˙t
+, 
+PCNT_SYNCBUSY_TOPB
+);
+
+650 
+p˙t
+->
+TOPB
+ = 
+vÆ
+;
+
+653 
+	`PCNT_Sync
+(
+p˙t
+, 
+PCNT_SYNCBUSY_TOPB
+ | 
+PCNT_SYNCBUSY_CMD
+);
+
+654 
+p˙t
+->
+CMD
+ = 
+PCNT_CMD_LTOPBIM
+;
+
+655 
+	}
+}
+
 	@C:\Users\Alexander\AppData\Roaming\energymicro\emlib\src\em_rtc.c
 
 33 
@@ -14081,7 +15215,347 @@ p
 	}
 }
 
-	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\examples\blink\blink.c
+	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\activity_app.c
+
+8 
+	~"em_p˙t.h
+"
+
+9 
+	~"em_cmu.h
+"
+
+10 
+	~"em_gpio.h
+"
+
+11 
+	~"˛ock.h
+"
+
+12 
+	~"a˘ivôy_≠p.h
+"
+
+13 
+	~"buâ⁄s.h
+"
+
+16 
+uöt8_t
+ 
+	ga˘ivôy
+[7];
+
+27 
+	$öôCou¡î
+()
+
+30 
+	`CMU_ClockE«bÀ
+(
+cmuClock_CORELE
+, 
+åue
+);
+
+31 
+	`CMU_ClockE«bÀ
+(
+cmuClock_GPIO
+, 
+åue
+);
+
+32 
+	`CMU_ClockE«bÀ
+(
+cmuClock_PCNT1
+, 
+åue
+);
+
+35 
+	`GPIO_PöModeSë
+(
+ACTIVITY_PORT
+, 
+ACTIVITY_PIN
+, 
+gpioModeI≈utPuŒ
+, 0);
+
+38 
+PCNT_Inô_Ty≥Def
+ 
+p˙tInô
+ =
+
+40 .
+mode
+ = 
+p˙tModeOvsSögÀ
+,
+
+41 .
+cou¡î
+ = 0,
+
+42 .
+t›
+ = 10,
+
+43 .
+√gEdge
+ = 
+Ál£
+,
+
+44 .
+cou¡Down
+ = 
+Ál£
+,
+
+45 .
+fûãr
+ = 
+Ál£
+,
+
+49 
+	`PCNT_Inô
+(
+PCNT1
+, &
+p˙tInô
+);
+
+52 
+	`PCNT_I¡E«bÀ
+(
+PCNT1
+, 0x2);
+
+55 
+	`NVIC_E«bÀIRQ
+(
+PCNT1_IRQn
+);
+
+58 
+PCNT1
+->
+ROUTE
+ = 
+PCNT_ROUTE_LOCATION_LOC0
+;
+
+59 
+	}
+}
+
+70 
+	$öôA˘ivôy
+()
+
+72 
+	`öôCou¡î
+();
+
+75 
+uöt8_t
+ 
+i
+;
+
+76 
+i
+ = 0; i < 7; i++)
+
+78 
+a˘ivôy
+[
+i
+] = 0;
+
+80 
+	}
+}
+
+91 
+	$˛órA˘ivôy
+(
+uöt8_t
+ 
+wday
+)
+
+93 
+a˘ivôy
+[
+wday
+] = 0;
+
+94 
+	}
+}
+
+105 
+	$døwA˘ivôyS¸ìn
+()
+
+107 
+	`SegmítLCD_NumbîOff
+();
+
+108 
+	`SegmítLCD_Wrôe
+("Actvty");
+
+109 
+	`SegmítLCD_Numbî
+(
+a˘ivôy
+[
+cuºítTime
+.
+tm_wday
+]);
+
+110 
+	}
+}
+
+121 
+	$a˘ivôyAµ
+()
+
+123 if–
+buâ⁄
+ =
+BUTTON_A
+)
+
+125 
+buâ⁄
+ = 
+NO_BUTTON
+;
+
+126 
+	`√xtSèã
+();
+
+128 if(
+buâ⁄
+ =
+BUTTON_B
+)
+
+130 
+buâ⁄
+ = 
+NO_BUTTON
+;
+
+131 
+	`¥eviousSèã
+();
+
+135 
+buâ⁄
+ = 
+NO_BUTTON
+;
+
+136 
+	`døwA˘ivôyS¸ìn
+();
+
+137 
+	`EMU_E¡îEM2
+(
+åue
+);
+
+139 
+	}
+}
+
+146 
+	$PCNT1_IRQH™dÀr
+()
+
+149 
+	`PCNT_I¡CÀ¨
+(
+PCNT1
+, 0x2);
+
+151 
+a˘ivôy
+[
+cuºítTime
+.
+tm_wday
+]++;
+
+152 
+	}
+}
+
+	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\activity_app.h
+
+1 #i‚de‡
+ACTIVITY_H_INCLUDED
+
+
+2 
+	#ACTIVITY_H_INCLUDED
+
+
+	)
+
+8 
+	#ACTIVITY_PORT
+ 
+gpioP‹tC
+
+
+	)
+
+9 
+	#ACTIVITY_PIN
+ 4
+
+	)
+
+10 
+	#ACTIVITY_COUNTER
+ 
+cmuClock_PCNT1
+
+
+	)
+
+13 
+öôA˘ivôy
+();
+
+14 
+˛órA˘ivôy
+(
+uöt8_t
+ 
+wday
+);
+
+15 
+a˘ivôyAµ
+();
+
+	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\blink.c
 
 35 
 	~<°döt.h
@@ -14131,13 +15605,17 @@ p
 	~"buâ⁄s.h
 "
 
-48 vﬁ©ûê
+47 
+	~"a˘ivôy_≠p.h
+"
+
+49 vﬁ©ûê
 uöt32_t
  
 	gmsTicks
 ;
 
-50 
+51 
 Dñay
 (
 uöt32_t
@@ -14145,19 +15623,19 @@ uöt32_t
 dlyTicks
 );
 
-56 
+57 
 	$SysTick_H™dÀr
 ()
 
-58 
+59 
 msTicks
 ++;
 
-59 
+60 
 	}
 }
 
-66 
+67 
 	$Dñay
 (
 uöt32_t
@@ -14165,19 +15643,19 @@ uöt32_t
 dlyTicks
 )
 
-68 
+69 
 uöt32_t
  
 curTicks
 ;
 
-70 
+71 
 curTicks
  = 
 msTicks
 ;
 
-71 (
+72 (
 msTicks
  - 
 curTicks
@@ -14185,139 +15663,301 @@ curTicks
 dlyTicks
 ) ;
 
-72 
+73 
 	}
 }
 
-79 
+83 
+	$£tupSWO
+()
+
+86 
+CMU
+->
+HFPERCLKEN0
+ |
+CMU_HFPERCLKEN0_GPIO
+;
+
+88 
+GPIO
+->
+ROUTE
+ |
+GPIO_ROUTE_SWOPEN
+;
+
+89 #i‡
+	`deföed
+(
+_EFM32_GIANT_FAMILY
+Ë|| deföed(
+_EFM32_WONDER_FAMILY
+Ë|| deföed(
+_EFM32_LEOPARD_FAMILY
+)
+
+91 
+GPIO
+->
+ROUTE
+ = (GPIO->ROUTE & ~(
+_GPIO_ROUTE_SWLOCATION_MASK
+)Ë| 
+GPIO_ROUTE_SWLOCATION_LOC0
+;
+
+94 
+GPIO
+->
+P
+[5].
+MODEL
+ &~(
+_GPIO_P_MODEL_MODE2_MASK
+);
+
+95 
+GPIO
+->
+P
+[5].
+MODEL
+ |
+GPIO_P_MODEL_MODE2_PUSHPULL
+;
+
+98 
+GPIO
+->
+ROUTE
+ = (GPIO->ROUTE & ~(
+_GPIO_ROUTE_SWLOCATION_MASK
+)Ë| 
+GPIO_ROUTE_SWLOCATION_LOC1
+;
+
+100 
+GPIO
+->
+P
+[2].
+MODEH
+ &~(
+_GPIO_P_MODEH_MODE15_MASK
+);
+
+101 
+GPIO
+->
+P
+[2].
+MODEH
+ |
+GPIO_P_MODEH_MODE15_PUSHPULL
+;
+
+104 
+CMU
+->
+OSCENCMD
+ = 
+CMU_OSCENCMD_AUXHFRCOEN
+;
+
+106 !(
+CMU
+->
+STATUS
+ & 
+CMU_STATUS_AUXHFRCORDY
+));
+
+109 
+C‹eDebug
+->
+DHCSR
+ |= 1;
+
+110 
+C‹eDebug
+->
+DEMCR
+ |
+C‹eDebug_DEMCR_TRCENA_Msk
+;
+
+113 
+DWT
+->
+CTRL
+ = 0x400113FF;
+
+115 
+TPI
+->
+ACPR
+ = 0xf;
+
+117 
+TPI
+->
+SPPR
+ = 2;
+
+119 
+ITM
+->
+LAR
+ = 0xC5ACCE55;
+
+120 
+ITM
+->
+TCR
+ = 0x10009;
+
+121 
+	}
+}
+
+130 
 	$maö
 ()
 
-82 
+133 
 	`CHIP_Inô
 ();
 
-85 
+136 
 	`BSP_Tø˚ProfûîSëup
 ();
 
-88 
+139 
+	`£tupSWO
+();
+
+141 
 	`BSP_LedsInô
 ();
 
-89 
+142 
 	`öôBuâ⁄s
 ();
 
-90 
+143 
 	`öôClock
 ();
 
-91 
+144 
+	`öôA˘ivôy
+();
+
+145 
 	`öôV¨übÀs
 ();
 
-92 
+146 
 	`SegmítLCD_Inô
 (
 Ál£
 );
 
-94 
+148 
 °©e
  = 
 maö_s¸ìn
 ;
 
-100 if(
+154 if(
 s¸ìn_nŸifiˇti⁄
  =
 åue
 )
 
-102 
+156 
 	`EMU_E¡îEM2
 (
 åue
 );
 
-103 
+157 
 buâ⁄
  = 
 NO_BUTTON
 ;
 
-106 
+161 
 °©e
 )
 
-108 
+163 
 maö_s¸ìn
 :
 
-109 
+164 
 	`maöS¸ìnAµ
 ();
 
-111 
+166 
 pomod‹o_s¸ìn
 :
 
-112 
+167 
 	`pomod‹oAµ
 ();
 
-114 
+169 
 a˘ivôy_s¸ìn
 :
 
-115 
+170 
 	`a˘ivôyAµ
 ();
 
-117 
+172 
 time_£tup_s¸ìn
 :
 
-118 
+173 
 	`£tupTimeAµ
 ();
 
-120 
+175 
 Æ¨m_£tup_s¸ìn
 :
 
-121 
+176 
 	`£tupAœrmAµ
 ();
 
-126 
+181 
 	}
 }
 
-	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\examples\blink\buttons.c
+	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\buttons.c
 
-1 
+8 
 	~"em_gpio.h
 "
 
-2 
+9 
 	~"em_cmu.h
 "
 
-3 
+10 
 	~"°©e_machöe.h
 "
 
-4 
+11 
 	~"buâ⁄s.h
 "
 
-5 
+12 
 	~"˛ock.h
 "
 
-9 vﬁ©ûê
+15 vﬁ©ûê
 uöt8_t
  
 	gbuâ⁄
@@ -14325,11 +15965,11 @@ uöt8_t
 NO_BUTTON
 ;
 
-11 
+26 
 	$öôBuâ⁄s
-()
+()
 
-13 
+28 
 	`CMU_ClockE«bÀ
 (
 cmuClock_GPIO
@@ -14337,7 +15977,7 @@ cmuClock_GPIO
 åue
 );
 
-14 
+29 
 	`GPIO_PöModeSë
 (
 BUTTON_A_PORT
@@ -14347,7 +15987,7 @@ BUTTON_A_PIN
 gpioModeI≈ut
 , 1);
 
-15 
+30 
 	`GPIO_I¡C⁄fig
 (
 BUTTON_A_PORT
@@ -14359,7 +15999,7 @@ BUTTON_A_PIN
 åue
 ,Årue);
 
-17 
+32 
 	`GPIO_PöModeSë
 (
 BUTTON_B_PORT
@@ -14369,7 +16009,7 @@ BUTTON_B_PIN
 gpioModeI≈ut
 , 1);
 
-18 
+33 
 	`GPIO_I¡C⁄fig
 (
 BUTTON_B_PORT
@@ -14381,87 +16021,87 @@ BUTTON_B_PIN
 åue
 ,Årue);
 
-21 
+36 
 	`NVIC_CÀ¨PídögIRQ
 (
 GPIO_EVEN_IRQn
 );
 
-22 
+37 
 	`NVIC_E«bÀIRQ
 (
 GPIO_EVEN_IRQn
 );
 
-23 
+38 
 	`NVIC_CÀ¨PídögIRQ
 (
 GPIO_ODD_IRQn
 );
 
-24 
+39 
 	`NVIC_E«bÀIRQ
 (
 GPIO_ODD_IRQn
 );
 
-25 
+40 
 	}
 }
 
-28 
+51 
 	$GPIO_EVEN_IRQH™dÀr
 ()
 
-30 
+53 
 	`GPIO_I¡CÀ¨
 (1 << 
 BUTTON_B_PIN
 );
 
-31 
+54 
 buâ⁄
  = 
 BUTTON_A
 ;
 
-32 
+55 
 s¸ìn_nŸifiˇti⁄
  = 
 Ál£
 ;
 
-33 
+56 
 	}
 }
 
-36 
+67 
 	$GPIO_ODD_IRQH™dÀr
 ()
 
-38 
+69 
 	`GPIO_I¡CÀ¨
 (1 << 
 BUTTON_A_PIN
 );
 
-39 
+70 
 buâ⁄
  = 
 BUTTON_B
 ;
 
-40 
+71 
 s¸ìn_nŸifiˇti⁄
  = 
 Ál£
 ;
 
-41 
+72 
 	}
 }
 
-	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\examples\blink\buttons.h
+	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\buttons.h
 
 1 #i‚de‡
 BUTTONS_H_INCLUDED
@@ -14539,7 +16179,7 @@ buâ⁄
 öôBuâ⁄s
 ();
 
-	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\examples\blink\clock.c
+	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\clock.c
 
 1 
 	~"em_πc.h
@@ -14561,39 +16201,43 @@ buâ⁄
 	~"£gmíécd.h
 "
 
-8 
+6 
+	~"a˘ivôy_≠p.h
+"
+
+9 
 	#RTC_COUNT_BETWEEN_WAKEUP
  1
 
-9 
+10 
 
 	)
 
-11 
+12 
 tm
  
 	gcuºítTime
 ;
 
-12 
+13 
 tm
  
 	gÆ¨m1
 ;
 
-13 
+14 
 tm
  
 	gÆ¨m2
 ;
 
-14 
+15 
 tm
  
 	gpomod‹o
 ;
 
-15 
+16 
 boﬁ
  
 	gs¸ìn_nŸifiˇti⁄
@@ -14601,11 +16245,11 @@ boﬁ
 Ál£
 ;
 
-18 
+19 
 	$öôClock
 ()
 
-22 
+23 
 	`CMU_Oscûœt‹E«bÀ
 (
 cmuOsc_LFXO
@@ -14613,7 +16257,7 @@ cmuOsc_LFXO
 åue
 ,Årue);
 
-25 
+26 
 	`CMU_ClockSñe˘Së
 (
 cmuClock_LFA
@@ -14621,7 +16265,7 @@ cmuClock_LFA
 cmuSñe˘_LFXO
 );
 
-26 
+27 
 	`CMU_ClockE«bÀ
 (
 cmuClock_RTC
@@ -14629,7 +16273,7 @@ cmuClock_RTC
 åue
 );
 
-28 
+29 
 	`CMU_ClockE«bÀ
 (
 cmuClock_CORELE
@@ -14637,7 +16281,7 @@ cmuClock_CORELE
 åue
 );
 
-32 
+33 
 	`CMU_ClockDivSë
 (
 cmuClock_RTC
@@ -14645,25 +16289,25 @@ cmuClock_RTC
 cmuClkDiv_32768
 );
 
-33 
+34 
 	`RTC_Com∑ªSë
 (0, 
 RTC_COUNT_BETWEEN_WAKEUP
 );
 
-34 
+35 
 	`RTC_I¡E«bÀ
 (
 RTC_IFC_COMP0
 );
 
-37 
+38 
 	`NVIC_E«bÀIRQ
 (
 RTC_IRQn
 );
 
-39 
+40 
 RTC_Inô_Ty≥Def
  
 πcInô
@@ -14671,31 +16315,31 @@ RTC_Inô_Ty≥Def
 RTC_INIT_DEFAULT
 ;
 
-40 
+41 
 	`RTC_Inô
 (&
 πcInô
 );
 
-41 
+42 
 	}
 }
 
-44 
+45 
 	$RTC_IRQH™dÀr
 ()
 
-46 
+47 
 	`RTC_I¡CÀ¨
 (
 RTC_IF_COMP0
 );
 
-47 
+48 
 	`upd©eTime
 ();
 
-49 
+50 
 uöt8_t
  
 Æ¨m
@@ -14703,29 +16347,29 @@ uöt8_t
 	`checkAœrms
 ();
 
-50 if(
+51 if(
 Æ¨m
 )
 
-52 
+53 
 	`runAœrm
 (
 Æ¨m
 );
 
-55 
+56 
 	`checkPomod‹o
 ();
 
-56 
+57 
 	}
 }
 
-59 
+60 
 	$upd©eTime
 ()
 
-61 
+62 
 	`ö¸emítPoöt
 (
 £c⁄ds
@@ -14733,17 +16377,17 @@ uöt8_t
 cuºítTime
 );
 
-62 
+63 
 	}
 }
 
-65 
+66 
 uöt8_t
  
 	$checkAœrms
 ()
 
-67 if((
+68 if((
 Æ¨m1
 .
 tm_£c
@@ -14751,7 +16395,7 @@ tm_£c
 cuºítTime
 .tm_sec) &&
 
-68 (
+69 (
 Æ¨m1
 .
 tm_mö
@@ -14759,7 +16403,7 @@ tm_mö
 cuºítTime
 .tm_min) &&
 
-69 (
+70 (
 Æ¨m1
 .
 tm_hour
@@ -14767,7 +16411,7 @@ tm_hour
 cuºítTime
 .tm_hour) &&
 
-70 ((
+71 ((
 Æ¨m1
 .
 tm_wday
@@ -14775,13 +16419,13 @@ tm_wday
 cuºítTime
 .tm_wday) ||álarm1.tm_wday == 8) &&
 
-71 (
+72 (
 Æ¨m1
 .
 a˘ive
 ))
 
-76 if((
+77 if((
 Æ¨m2
 .
 tm_£c
@@ -14789,7 +16433,7 @@ tm_£c
 cuºítTime
 .tm_sec) &&
 
-77 (
+78 (
 Æ¨m2
 .
 tm_mö
@@ -14797,7 +16441,7 @@ tm_mö
 cuºítTime
 .tm_min) &&
 
-78 (
+79 (
 Æ¨m2
 .
 tm_hour
@@ -14805,7 +16449,7 @@ tm_hour
 cuºítTime
 .tm_hour) &&
 
-79 ((
+80 ((
 Æ¨m2
 .
 tm_wday
@@ -14813,17 +16457,17 @@ tm_wday
 cuºítTime
 .tm_wday) ||álarm2.tm_wday == 8) &&
 
-80 (
+81 (
 Æ¨m2
 .
 a˘ive
 ))
 
-86 
+87 
 	}
 }
 
-89 
+90 
 	$runAœrm
 (
 uöt8_t
@@ -14831,15 +16475,15 @@ uöt8_t
 Æ¨m
 )
 
-91 
+92 
 Æ¨m
 )
 
-94 
+95 
 Æ¨m
  = 0;
 
-95 
+96 
 Æ¨m1
 .
 a˘ive
@@ -14847,13 +16491,9 @@ a˘ive
 Ál£
 ;
 
-96 
+97 
 	`SegmítLCD_Wrôe
 ("ALARM 1");
-
-97 
-	`BSP_LedSë
-(0);
 
 98 
 s¸ìn_nŸifiˇti⁄
@@ -14878,20 +16518,16 @@ a˘ive
 ("ALARM 2");
 
 104 
-	`BSP_LedSë
-(1);
-
-105 
 s¸ìn_nŸifiˇti⁄
  = 
 åue
 ;
 
-108 
+107 
 	}
 }
 
-111 
+110 
 	$ö¸emítPoöt
 (
 £tup_°©e_t
@@ -14903,13 +16539,19 @@ tm
 somëhög
 )
 
-113 
+112 
 poöts
 )
 
-115 
+114 
 £c⁄ds
 :
+
+115 
+somëhög
+->
+tm_£c
+++;
 
 116 
 somëhög
@@ -14917,83 +16559,85 @@ somëhög
 tm_£c
 ++;
 
-117 
-somëhög
-->
-tm_£c
-++;
-
-118 i‡(
+117 i‡(
 somëhög
 ->
 tm_£c
  < 60)
 
-124 
+123 
 somëhög
 ->
 tm_£c
  = 0;
 
-126 
+125 
 möuãs
 :
 
-127 
+126 
 somëhög
 ->
 tm_mö
 ++;
 
-128 i‡(
+127 i‡(
 somëhög
 ->
 tm_mö
  < 60)
 
-134 
+133 
 somëhög
 ->
 tm_mö
  = 0;
 
-136 
+135 
 hours
 :
 
-137 
+136 
 somëhög
 ->
 tm_hour
 ++;
 
-138 i‡(
+137 i‡(
 somëhög
 ->
 tm_hour
  < 24)
 
-144 
+143 
 somëhög
 ->
 tm_hour
  = 0;
 
-146 
+145 
 wìk_days
 :
 
-147 
+146 
 somëhög
 ->
 tm_wday
 ++;
 
-148 
+147 
 somëhög
 ->
 tm_wday
  %= 7;
+
+148 
+	`˛órA˘ivôy
+(
+somëhög
+->
+tm_wday
+);
 
 151 
 a˘ive
@@ -15013,7 +16657,7 @@ a˘ive
 Ál£
 ;
 
-157 
+158 
 somëhög
 ->
 a˘ive
@@ -15021,11 +16665,11 @@ a˘ive
 åue
 ;
 
-160 
+161 
 	}
 }
 
-163 
+164 
 	$de¸emítPoöt
 (
 £tup_°©e_t
@@ -15037,103 +16681,103 @@ tm
 somëhög
 )
 
-165 
+166 
 poöts
 )
 
-167 
+168 
 £c⁄ds
 :
 
-168 
+169 
 somëhög
 ->
 tm_£c
 --;
 
-169 i‡(
+170 i‡(
 somëhög
 ->
 tm_£c
  >= 0)
 
-175 
+176 
 somëhög
 ->
 tm_£c
  = 59;
 
-177 
+178 
 möuãs
 :
 
-178 
+179 
 somëhög
 ->
 tm_mö
 --;
 
-179 i‡(
+180 i‡(
 somëhög
 ->
 tm_mö
  >= 0)
 
-185 
+186 
 somëhög
 ->
 tm_mö
  = 59;
 
-187 
+188 
 hours
 :
 
-188 
+189 
 somëhög
 ->
 tm_hour
 --;
 
-189 i‡(
+190 i‡(
 somëhög
 ->
 tm_hour
  >= 0)
 
-195 
+196 
 somëhög
 ->
 tm_hour
  = 23;
 
-197 
+198 
 wìk_days
 :
 
-198 
+199 
 somëhög
 ->
 tm_wday
 --;
 
-199 i‡(
+200 i‡(
 somëhög
 ->
 tm_wday
  < 0)
 
-201 
+202 
 somëhög
 ->
 tm_wday
  = 6;
 
-206 
+207 
 	}
 }
 
-	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\examples\blink\clock.h
+	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\clock.h
 
 1 #i‚de‡
 CLOCK_H_INCLUDED
@@ -15183,65 +16827,65 @@ s¸ìn_nŸifiˇti⁄
 	stm
 
 
-21 
+22 
 	mtm_£c
 ;
 
-22 
+23 
 	mtm_mö
 ;
 
-23 
+24 
 	mtm_hour
 ;
 
-24 
+25 
 	mtm_wday
 ;
 
-25 
+26 
 boﬁ
  
 	ma˘ive
 ;
 
-28 
+29 
 £tup_°©e_t
  
 ˛ock_£tup_°©e
 ;
 
-29 
+30 
 	e£tup_°©e_t
  { 
 	m£c⁄ds
 ,
 
-30 
+31 
 	mmöuãs
 ,
 
-31 
+32 
 	mhours
 ,
 
-32 
+33 
 	mwìk_days
 ,
 
-33 
+34 
 	ma˘ive
- };
 
-36 
+
+38 
 öôClock
 ();
 
-37 
+39 
 upd©eTime
 ();
 
-38 
+40 
 ö¸emítPoöt
 (
 £tup_°©e_t
@@ -15253,7 +16897,7 @@ tm
 somëhög
 );
 
-39 
+41 
 de¸emítPoöt
 (
 £tup_°©e_t
@@ -15265,7 +16909,7 @@ tm
 somëhög
 );
 
-41 
+43 
 runAœrm
 (
 uöt8_t
@@ -15273,13 +16917,13 @@ uöt8_t
 Æ¨m
 );
 
-42 
+44 
 uöt8_t
  
 checkAœrms
 ();
 
-	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\examples\blink\globals.h
+	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\globals.h
 
 2 vﬁ©ûê
 uöt8_t
@@ -15293,7 +16937,7 @@ uöt32_t
 time
 ;
 
-	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\examples\blink\pomodoro_app.c
+	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\pomodoro_app.c
 
 1 
 	~"b•.h
@@ -15459,183 +17103,183 @@ pomod‹o_°©e
 pomod‹o_l⁄g_bøke
 ;
 
-54 
+55 
 	`upd©ePomod‹oTime
 (
 SHORT_BRAKE_TIME
 );
 
-55 
+56 
 pomod‹o_°©e
  = 
 pomod‹o_sh‹t_bøke
 ;
 
-59 
+60 
 pomod‹o_sh‹t_bøke
 :
 
-60 if(
+61 if(
 buâ⁄
  =
 BUTTON_B
 )
 
-62 
+63 
 buâ⁄
  = 
 NO_BUTTON
 ;
 
-63 
+64 
 	`°›Pomod‹o
 ();
 
-65 if(
+66 if(
 pomod‹o_timeout
  =
 åue
 )
 
-67 
+68 
 pomod‹o_timeout
  = 
 Ál£
 ;
 
-68 
+69 
 	`upd©ePomod‹oTime
 (
 POMODORO_WORK_TIME
 );
 
-69 
+70 
 pomod‹o_°©e
  = 
 pomod‹o_a˘ive
 ;
 
-72 
+73 
 pomod‹o_l⁄g_bøke
 :
 
-73 if(
+74 if(
 buâ⁄
  =
 BUTTON_B
 )
 
-75 
+76 
 buâ⁄
  = 
 NO_BUTTON
 ;
 
-76 
+77 
 	`°›Pomod‹o
 ();
 
-78 if(
+79 if(
 pomod‹o_timeout
  =
 åue
 )
 
-80 
+81 
 pomod‹o_timeout
  = 
 Ál£
 ;
 
-81 
+82 
 	`upd©ePomod‹oTime
 (
 POMODORO_WORK_TIME
 );
 
-82 
+83 
 pomod‹o_°©e
  = 
 pomod‹o_a˘ive
 ;
 
-87 if–
+88 if–
 buâ⁄
  =
 BUTTON_A
 )
 
-89 
+90 
 buâ⁄
  = 
 NO_BUTTON
 ;
 
-90 
+91 
 	`√xtSèã
 ();
 
-93 
+95 
 buâ⁄
  = 
 NO_BUTTON
 ;
 
-94 
+96 
 	`døwPomod‹oS¸ìn
 ();
 
-95 
+97 
 	`EMU_E¡îEM2
 (
 åue
 );
 
-97 
+99 
 	}
 }
 
-100 
+102 
 	$døwPomod‹oS¸ìn
 ()
 
-102 
+104 
 pomod‹o_°©e
 )
 
-104 
+106 
 pomod‹o_a˘ive
 :
 
-105 
+107 
 	`SegmítLCD_Wrôe
 ("Work");
 
-107 
+109 
 pomod‹o_sh‹t_bøke
 :
 
-108 
+110 
 	`SegmítLCD_Wrôe
 ("Break");
 
-110 
+112 
 pomod‹o_l⁄g_bøke
 :
 
-111 
+113 
 	`SegmítLCD_Wrôe
 ("Break");
 
-113 
+115 
 pomod‹o_off
 :
 
-114 
+116 
 	`SegmítLCD_Wrôe
 ("OFF");
 
-117 
+119 
 öt8_t
  
 time_bef‹e_√xt_°©e
@@ -15647,35 +17291,35 @@ tm_mö
 cuºítTime
 .tm_min;
 
-118 if(
+120 if(
 time_bef‹e_√xt_°©e
  < 0)
 
-120 
+122 
 time_bef‹e_√xt_°©e
  += 59;
 
-122 if(
+124 if(
 pomod‹o_°©e
  !
 pomod‹o_off
 )
 
-124 
+126 
 	`SegmítLCD_Numbî
 (
 time_bef‹e_√xt_°©e
 );
 
-127 
+130 
 	`SegmítLCD_NumbîOff
 ();
 
-129 
+132 
 	}
 }
 
-132 
+135 
 	$upd©ePomod‹oTime
 (
 uöt8_t
@@ -15683,7 +17327,7 @@ uöt8_t
 time
 )
 
-134 
+137 
 pomod‹o
 .
 a˘ive
@@ -15691,7 +17335,7 @@ a˘ive
 åue
 ;
 
-135 
+138 
 pomod‹o
 .
 tm_£c
@@ -15699,7 +17343,7 @@ tm_£c
 cuºítTime
 .tm_sec;
 
-137 if(
+140 if(
 cuºítTime
 .
 tm_mö
@@ -15707,7 +17351,7 @@ tm_mö
 time
  >= 59)
 
-139 
+142 
 pomod‹o
 .
 tm_mö
@@ -15717,7 +17361,7 @@ cuºítTime
 time
  - 59;
 
-140 
+143 
 pomod‹o
 .
 tm_hour
@@ -15725,7 +17369,7 @@ tm_hour
 cuºítTime
 .tm_hour;
 
-141 
+144 
 	`ö¸emítPoöt
 (
 hours
@@ -15733,13 +17377,13 @@ hours
 pomod‹o
 );
 
-142 
+145 
 pomod‹o
 .
 tm_wday
  = 0;
 
-145 
+149 
 pomod‹o
 .
 tm_mö
@@ -15749,7 +17393,7 @@ cuºítTime
 time
 ;
 
-146 
+150 
 pomod‹o
 .
 tm_hour
@@ -15757,21 +17401,21 @@ tm_hour
 cuºítTime
 .tm_hour;
 
-148 
+152 
 	}
 }
 
-151 
+155 
 	$°›Pomod‹o
 ()
 
-153 
+157 
 pomod‹o_°©e
  = 
 pomod‹o_off
 ;
 
-154 
+158 
 pomod‹o
 .
 a˘ive
@@ -15779,21 +17423,21 @@ a˘ive
 Ál£
 ;
 
-155 
+159 
 	}
 }
 
-158 
+162 
 	$checkPomod‹o
 ()
 
-160 if(
+164 if(
 pomod‹o
 .
 a˘ive
  &&
 
-161 (
+165 (
 pomod‹o
 .
 tm_£c
@@ -15801,7 +17445,7 @@ tm_£c
 cuºítTime
 .tm_sec) &&
 
-162 (
+166 (
 pomod‹o
 .
 tm_mö
@@ -15809,7 +17453,7 @@ tm_mö
 cuºítTime
 .tm_min) &&
 
-163 (
+167 (
 pomod‹o
 .
 tm_hour
@@ -15817,23 +17461,23 @@ tm_hour
 cuºítTime
 .tm_hour))
 
-165 
+169 
 pomod‹o_timeout
  = 
 åue
 ;
 
-166 
+170 
 °©e
  = 
 pomod‹o_s¸ìn
 ;
 
-168 
+172 
 	}
 }
 
-	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\examples\blink\pomodoro_app.h
+	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\pomodoro_app.h
 
 1 #i‚de‡
 POMODORO_H_INCLUDED
@@ -15889,7 +17533,7 @@ checkPomod‹o
 døwPomod‹oS¸ìn
 ();
 
-	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\examples\blink\setup_alarm_app.c
+	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\setup_alarm_app.c
 
 1 
 	~"buâ⁄s.h
@@ -15940,7 +17584,7 @@ tm
 ;
 
 15 
-	$£tupTimeAµ
+	$£tupAœrmAµ
 ()
 
 17 if–
@@ -15959,41 +17603,41 @@ NO_BUTTON
 	`√xtSèã
 ();
 
-21 }if(
+22 if(
 buâ⁄
  =
 BUTTON_B
 )
 
-23 
+24 
 buâ⁄
  = 
 NO_BUTTON
 ;
 
-24 
+25 
 	`√xtAœrmSëupSèã
 ();
 
-25 }if(
+27 if(
 buâ⁄
  =
 BUTTON_C
 )
 
-27 
+29 
 buâ⁄
  = 
 NO_BUTTON
 ;
 
-29 if(
+31 if(
 ˛ock_£tup_°©e
  =
 a˘ive
 )
 
-31 if(
+33 if(
 p_Æ¨m
 ->
 a˘ive
@@ -16001,7 +17645,7 @@ a˘ive
 åue
 )
 
-33 
+35 
 p_Æ¨m
 ->
 a˘ive
@@ -16009,7 +17653,7 @@ a˘ive
 Ál£
 ;
 
-36 
+39 
 p_Æ¨m
 ->
 a˘ive
@@ -16017,7 +17661,7 @@ a˘ive
 åue
 ;
 
-40 
+44 
 	`ö¸emítPoöt
 (
 ˛ock_£tup_°©e
@@ -16025,77 +17669,77 @@ a˘ive
 p_Æ¨m
 );
 
-44 
+49 
 buâ⁄
  = 
 NO_BUTTON
 ;
 
-45 
+50 
 	`døwSëupAœrmS¸ìn
 ();
 
-46 
+51 
 	`EMU_E¡îEM2
 (
 åue
 );
 
-48 
+53 
 	}
 }
 
-51 
+56 
 	$√xtAœrmSëupSèã
 ()
 
-53 if(
+58 if(
 ˛ock_£tup_°©e
  =
 LAST_SETUP_STATE
 )
 
-55 
+60 
 ˛ock_£tup_°©e
  = 
 FIRST_SETUP_STATE
 ;
 
-58 
+64 
 ˛ock_£tup_°©e
 ++;
 
-60 
+66 
 	}
 }
 
-63 
+69 
 	$døwSëupAœrmS¸ìn
 ()
 
-65 
+71 
 	`SegmítLCD_NumbîOff
 ();
 
-66 if(
+72 if(
 p_Æ¨m
  =&
 Æ¨m1
 )
 
-68 
+74 
 	`SegmítLCD_Wrôe
 ("Alarm_1");
 
-71 
+78 
 	`SegmítLCD_Wrôe
 ("Alarm_2");
 
-73 
+80 
 	}
 }
 
-	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\examples\blink\setup_time_app.c
+	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\setup_time_app.c
 
 1 
 	~"buâ⁄s.h
@@ -16136,7 +17780,7 @@ wìk_days
 ;
 
 15 
-	$£tupAœrmAµ
+	$£tupTimeAµ
 ()
 
 17 if–
@@ -16155,35 +17799,35 @@ NO_BUTTON
 	`√xtSèã
 ();
 
-21 }if(
+22 if(
 buâ⁄
  =
 BUTTON_B
 )
 
-23 
+24 
 buâ⁄
  = 
 NO_BUTTON
 ;
 
-24 
+25 
 	`√xtTimeSëupSèã
 ();
 
-25 }if(
+27 if(
 buâ⁄
  =
 BUTTON_C
 )
 
-27 
+29 
 buâ⁄
  = 
 NO_BUTTON
 ;
 
-28 
+30 
 	`ö¸emítPoöt
 (
 ˛ock_£tup_°©e
@@ -16191,51 +17835,55 @@ NO_BUTTON
 cuºítTime
 );
 
-31 
+34 
+	`SegmítLCD_NumbîOff
+();
+
+35 
 buâ⁄
  = 
 NO_BUTTON
 ;
 
-32 
+36 
 	`SegmítLCD_Wrôe
 ("Setup_T");
 
-33 
+37 
 	`EMU_E¡îEM2
 (
 åue
 );
 
-35 
+39 
 	}
 }
 
-38 
+42 
 	$√xtTimeSëupSèã
 ()
 
-40 if(
+44 if(
 ˛ock_£tup_°©e
  =
 wìk_days
 )
 
-42 
+46 
 ˛ock_£tup_°©e
  = 
 möuãs
 ;
 
-45 
+50 
 ˛ock_£tup_°©e
 ++;
 
-47 
+52 
 	}
 }
 
-	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\examples\blink\setup_time_app.h
+	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\setup_time_app.h
 
 1 #i‚de‡
 SETUP_TIME_APP_H_INCLUDED
@@ -16255,7 +17903,7 @@ SETUP_TIME_APP_H_INCLUDED
 √xtTimeSëupSèã
 ();
 
-	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\examples\blink\state_machine.c
+	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\state_machine.c
 
 1 
 	~"b•.h
@@ -16273,7 +17921,11 @@ SETUP_TIME_APP_H_INCLUDED
 	~"˛ock.h
 "
 
-8 vﬁ©ûê
+5 
+	~"a˘ivôy_≠p.h
+"
+
+9 vﬁ©ûê
 °©e_machöe
  
 	g°©e
@@ -16281,179 +17933,115 @@ SETUP_TIME_APP_H_INCLUDED
 maö_s¸ìn
 ;
 
-11 
+12 
 	$maöS¸ìnAµ
 ()
 
-13 if–
+14 if–
 buâ⁄
  =
 BUTTON_A
 )
 
-15 
+16 
 buâ⁄
  = 
 NO_BUTTON
 ;
 
-16 
+17 
 	`√xtSèã
 ();
 
-18 if(
+19 if(
 buâ⁄
  =
 BUTTON_B
 )
 
-20 
+21 
 buâ⁄
  = 
 NO_BUTTON
 ;
 
-21 
+22 
 	`¥eviousSèã
 ();
 
-24 
+26 
 buâ⁄
  = 
 NO_BUTTON
 ;
 
-25 
+27 
 	`SegmítLCD_Wrôe
 ("Main");
 
-26 
-	`EMU_E¡îEM2
-(
-åue
-);
-
 28 
-	}
-}
-
-31 
-	$a˘ivôyAµ
-()
-
-33 
-	`BSP_LedCÀ¨
-(0);
-
-34 
-	`BSP_LedSë
-(1);
-
-36 if–
-buâ⁄
- =
-BUTTON_A
-)
-
-38 
-buâ⁄
- = 
-NO_BUTTON
-;
-
-39 
-	`√xtSèã
-();
-
-41 if(
-buâ⁄
- =
-BUTTON_B
-)
-
-43 
-buâ⁄
- = 
-NO_BUTTON
-;
-
-44 
-	`¥eviousSèã
-();
-
-47 
-buâ⁄
- = 
-NO_BUTTON
-;
-
-48 
-	`SegmítLCD_Wrôe
-("Actvty");
-
-49 
 	`EMU_E¡îEM2
 (
 åue
 );
 
-51 
+30 
 	}
 }
 
-54 
+33 
 	$√xtSèã
 ()
 
-56 i‡(
+35 i‡(
 °©e
  =
 LAST_STATE
 )
 
-58 
+37 
 °©e
  = 
 FIRST_STATE
 ;
 
-62 
+41 
 °©e
 ++;
 
-66 
+45 
 ˛ock_£tup_°©e
  = 1;
 
-67 
+46 
 	}
 }
 
-70 
+49 
 	$¥eviousSèã
 ()
 
-72 i‡(
+51 i‡(
 °©e
  =
 FIRST_STATE
 )
 
-74 
+53 
 °©e
  = 
 LAST_STATE
 ;
 
-78 
+57 
 °©e
 --;
 
-80 
+59 
 	}
 }
 
-	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\examples\blink\state_machine.h
+	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\state_machine.h
 
 1 
 	#FIRST_STATE
@@ -16521,7 +18109,7 @@ a˘ivôyAµ
 ¥eviousSèã
 ();
 
-	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\examples\blink\variables.c
+	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\variables.c
 
 1 
 	~"˛ock.h
@@ -17287,12 +18875,8 @@ EBI_Inô_Ty≥Def
 ebiC⁄fig
  =
 
-90 { 
-ebiModeD8A8
-,
-
 91 
-ebiA˘iveLow
+ebiModeD8A8
 ,
 
 92 
@@ -17316,30 +18900,30 @@ ebiA˘iveLow
 ,
 
 97 
-Ál£
+ebiA˘iveLow
 ,
 
 98 
-åue
+Ál£
 ,
 
 99 
-Ál£
-,
-
-100 
 åue
 ,
 
-101 
-EBI_BANK0
-,
-
-105 
+100 
 Ál£
 ,
 
-109 
+101 
+åue
+,
+
+102 
+EBI_BANK0
+,
+
+106 
 Ál£
 ,
 
@@ -17351,7 +18935,7 @@ EBI_BANK0
 Ál£
 ,
 
-115 
+112 
 Ál£
 ,
 
@@ -17360,22 +18944,26 @@ EBI_BANK0
 ,
 
 117 
-ebiALowA24
+Ál£
 ,
 
 118 
-ebiAHighA26
+ebiALowA24
 ,
 
 119 
-ebiLoˇti⁄1
+ebiAHighA26
 ,
 
 120 
+ebiLoˇti⁄1
+,
+
+121 
 åue
 ,
 
-124 
+125 
 	`CMU_ClockE«bÀ
 (
 cmuClock_HFPER
@@ -17383,7 +18971,7 @@ cmuClock_HFPER
 åue
 );
 
-125 
+126 
 	`CMU_ClockE«bÀ
 (
 cmuClock_GPIO
@@ -17391,7 +18979,7 @@ cmuClock_GPIO
 åue
 );
 
-126 
+127 
 	`CMU_ClockE«bÀ
 (
 cmuClock_EBI
@@ -17399,7 +18987,7 @@ cmuClock_EBI
 åue
 );
 
-130 
+131 
 	`GPIO_PöModeSë
 (
 gpioP‹tC
@@ -17407,7 +18995,7 @@ gpioP‹tC
 gpioModePushPuŒ
 , 0);
 
-131 
+132 
 	`GPIO_PöModeSë
 (
 gpioP‹tC
@@ -17415,7 +19003,7 @@ gpioP‹tC
 gpioModePushPuŒ
 , 0);
 
-134 
+135 
 	`GPIO_PöModeSë
 (
 gpioP‹tD
@@ -17423,7 +19011,7 @@ gpioP‹tD
 gpioModePushPuŒ
 , 0);
 
-135 
+136 
 	`GPIO_PöModeSë
 (
 gpioP‹tD
@@ -17431,7 +19019,7 @@ gpioP‹tD
 gpioModePushPuŒ
 , 1);
 
-136 
+137 
 	`GPIO_PöModeSë
 (
 gpioP‹tD
@@ -17439,19 +19027,11 @@ gpioP‹tD
 gpioModeI≈ut
 , 0);
 
-139 
-	`GPIO_PöModeSë
-(
-gpioP‹tE
-, 8, 
-gpioModePushPuŒ
-, 0);
-
 140 
 	`GPIO_PöModeSë
 (
 gpioP‹tE
-, 9, 
+, 8, 
 gpioModePushPuŒ
 , 0);
 
@@ -17459,7 +19039,7 @@ gpioModePushPuŒ
 	`GPIO_PöModeSë
 (
 gpioP‹tE
-, 10, 
+, 9, 
 gpioModePushPuŒ
 , 0);
 
@@ -17467,7 +19047,7 @@ gpioModePushPuŒ
 	`GPIO_PöModeSë
 (
 gpioP‹tE
-, 11, 
+, 10, 
 gpioModePushPuŒ
 , 0);
 
@@ -17475,7 +19055,7 @@ gpioModePushPuŒ
 	`GPIO_PöModeSë
 (
 gpioP‹tE
-, 12, 
+, 11, 
 gpioModePushPuŒ
 , 0);
 
@@ -17483,7 +19063,7 @@ gpioModePushPuŒ
 	`GPIO_PöModeSë
 (
 gpioP‹tE
-, 13, 
+, 12, 
 gpioModePushPuŒ
 , 0);
 
@@ -17491,7 +19071,7 @@ gpioModePushPuŒ
 	`GPIO_PöModeSë
 (
 gpioP‹tE
-, 14, 
+, 13, 
 gpioModePushPuŒ
 , 0);
 
@@ -17499,11 +19079,19 @@ gpioModePushPuŒ
 	`GPIO_PöModeSë
 (
 gpioP‹tE
+, 14, 
+gpioModePushPuŒ
+, 0);
+
+147 
+	`GPIO_PöModeSë
+(
+gpioP‹tE
 , 15, 
 gpioModePushPuŒ
 , 0);
 
-149 
+150 
 	`GPIO_PöModeSë
 (
 gpioP‹tF
@@ -17511,7 +19099,7 @@ gpioP‹tF
 gpioModePushPuŒ
 , 1);
 
-150 
+151 
 	`GPIO_PöModeSë
 (
 gpioP‹tF
@@ -17519,7 +19107,7 @@ gpioP‹tF
 gpioModePushPuŒ
 , 1);
 
-153 
+154 
 	`GPIO_PöModeSë
 (
 gpioP‹tB
@@ -17527,13 +19115,13 @@ gpioP‹tB
 gpioModePushPuŒ
 , 1);
 
-155 
+156 
 	`EBI_Inô
 (&
 ebiC⁄fig
 );
 
-156 
+157 
 EBI
 ->
 NANDCTRL
@@ -17543,41 +19131,41 @@ EBI_NANDCTRL_BANKSEL_BANK0
 EBI_NANDCTRL_EN
 );
 
-158  
+159  
 BSP_STATUS_OK
 ;
 
-160  
+161  
 BSP_STATUS_NOT_IMPLEMENTED
 ;
 
-162 
+163 
 	}
 }
 
-174 
+175 
 	$BSP_EbiDeInô
 ( )
 
-176 #i‡
+177 #i‡
 	`deföed
 –
 BSP_STK_USE_EBI
  )
 
-177  
+178  
 BSP_STATUS_OK
 ;
 
-179  
+180  
 BSP_STATUS_NOT_IMPLEMENTED
 ;
 
-181 
+182 
 	}
 }
 
-192 
+193 
 	$BSP_Inô
 –
 uöt32_t
@@ -17585,39 +19173,39 @@ uöt32_t
 Êags
  )
 
-194 i‡–
+195 i‡–
 Êags
  & 
 BSP_INIT_BCC
  )
 
-196 
+197 
 	`BSP_BccInô
 ();
 
-199  
+200  
 BSP_STATUS_OK
 ;
 
-200 
+201 
 	}
 }
 
-213 
+214 
 	$BSP_CuºítGë
 ( )
 
-215 
+216 
 BCP_Packë
  
 pkt
 ;
 
-216 *
+217 *
 pcuºít
 ;
 
-218 
+219 
 pkt
 .
 ty≥
@@ -17625,25 +19213,25 @@ ty≥
 BSP_BCP_CURRENT_REQ
 ;
 
-219 
+220 
 pkt
 .
 ∑ylﬂdLígth
  = 0;
 
-222 
+223 
 	`BSP_BccPackëSíd
 –&
 pkt
  );
 
-223 
+224 
 	`BSP_BccPackëRe˚ive
 –&
 pkt
  );
 
-226 
+227 
 pcuºít
  = (*)
 pkt
@@ -17651,7 +19239,7 @@ pkt
 d©a
 ;
 
-227 i‡–
+228 i‡–
 pkt
 .
 ty≥
@@ -17659,33 +19247,33 @@ ty≥
 BSP_BCP_CURRENT_REPLY
  )
 
-229 *
+230 *
 pcuºít
  = 0.0f;
 
-232  *
+233  *
 pcuºít
 ;
 
-233 
+234 
 	}
 }
 
-245 
+246 
 	$BSP_VﬁègeGë
 ( )
 
-247 
+248 
 BCP_Packë
  
 pkt
 ;
 
-248 *
+249 *
 pvﬁège
 ;
 
-250 
+251 
 pkt
 .
 ty≥
@@ -17693,25 +19281,25 @@ ty≥
 BSP_BCP_VOLTAGE_REQ
 ;
 
-251 
+252 
 pkt
 .
 ∑ylﬂdLígth
  = 0;
 
-254 
+255 
 	`BSP_BccPackëSíd
 –&
 pkt
  );
 
-255 
+256 
 	`BSP_BccPackëRe˚ive
 –&
 pkt
  );
 
-258 
+259 
 pvﬁège
  = (*)
 pkt
@@ -17719,7 +19307,7 @@ pkt
 d©a
 ;
 
-259 i‡–
+260 i‡–
 pkt
 .
 ty≥
@@ -17727,15 +19315,15 @@ ty≥
 BSP_BCP_VOLTAGE_REPLY
  )
 
-261 *
+262 *
 pvﬁège
  = 0.0f;
 
-264  *
+265  *
 pvﬁège
 ;
 
-265 
+266 
 	}
 }
 
@@ -18547,15 +20135,15 @@ EFM_DISPLAY_DEF
 uöt16_t
  
 	gEFM_AÕhabë
-[] = {
+[] =
 
-240 c⁄° 
+241 c⁄° 
 uöt16_t
  
 	gEFM_Numbîs
-[] = {
+[] =
 
-262 c⁄° 
+264 c⁄° 
 uöt16_t
  
 	gsignIndex
@@ -18563,7 +20151,7 @@ uöt16_t
 EFM_Numbîs
 )/(uint16_t) - 1 ;
 
-264 c⁄° 
+266 c⁄° 
 LCD_Inô_Ty≥Def
  
 	glcdInô
@@ -18571,43 +20159,43 @@ LCD_Inô_Ty≥Def
 LCD_INIT_DEF
 ;
 
-271 
+273 
 	$SegmítLCD_AŒOff
 ()
 
-274 
+276 
 	`LCD_ALL_SEGMENTS_OFF
 ();
 
-275 
+277 
 	}
 }
 
-281 
+283 
 	$SegmítLCD_AŒOn
 ()
 
-283 
+285 
 	`LCD_ALL_SEGMENTS_ON
 ();
 
-284 
+286 
 	}
 }
 
-290 
+292 
 	$SegmítLCD_AÕhaNumbîOff
 ()
 
-292 
+294 
 	`LCD_ALPHA_NUMBER_OFF
 ();
 
-294 
+296 
 	}
 }
 
-302 
+304 
 	$SegmítLCD_ARög
 (
 ™um
@@ -18615,7 +20203,7 @@ LCD_INIT_DEF
 ⁄
 )
 
-304 
+306 
 uöt32_t
  
 com
@@ -18623,7 +20211,7 @@ com
 bô
 ;
 
-306 
+308 
 com
  = 
 EFM_Di•œy
@@ -18633,7 +20221,7 @@ ARög
 ™um
 ];
 
-307 
+309 
 bô
  = 
 EFM_Di•œy
@@ -18643,11 +20231,11 @@ ARög
 ™um
 ];
 
-309 i‡(
+311 i‡(
 ⁄
 )
 
-311 
+313 
 	`LCD_SegmítSë
 (
 com
@@ -18657,7 +20245,7 @@ bô
 åue
 );
 
-315 
+317 
 	`LCD_SegmítSë
 (
 com
@@ -18667,17 +20255,17 @@ bô
 Ál£
 );
 
-317 
+319 
 	}
 }
 
-324 
+326 
 	$SegmítLCD_B©ãry
 (
 b©ãryLevñ
 )
 
-326 
+328 
 uöt32_t
  
 com
@@ -18685,31 +20273,31 @@ com
 bô
 ;
 
-327 
+329 
 i
 , 
 ⁄
 ;
 
-329 
+331 
 i
  = 0; i < 4; i++)
 
-331 i‡(
+333 i‡(
 i
  < 
 b©ãryLevñ
 )
 
-333 
+335 
 ⁄
  = 1;
 
-337 
+339 
 ⁄
  = 0;
 
-339 
+341 
 com
  = 
 EFM_Di•œy
@@ -18719,7 +20307,7 @@ B©ãry
 i
 ];
 
-340 
+342 
 bô
  = 
 EFM_Di•œy
@@ -18729,11 +20317,11 @@ B©ãry
 i
 ];
 
-342 i‡(
+344 i‡(
 ⁄
 )
 
-344 
+346 
 	`LCD_SegmítSë
 (
 com
@@ -18743,7 +20331,7 @@ bô
 åue
 );
 
-348 
+350 
 	`LCD_SegmítSë
 (
 com
@@ -18753,27 +20341,27 @@ bô
 Ál£
 );
 
-351 
+353 
 	}
 }
 
-357 
+359 
 	$SegmítLCD_DißbÀ
 ()
 
-360 
+362 
 	`LCD_E«bÀ
 (
 Ál£
 );
 
-363 
+365 
 	`LCD_SyncBusyDñay
 (
 LCD_SYNCBUSY_CTRL
 );
 
-366 
+368 
 	`CMU_ClockE«bÀ
 (
 cmuClock_LCD
@@ -18781,17 +20369,17 @@ cmuClock_LCD
 Ál£
 );
 
-369 
+371 
 CMU
 ->
 LCDCTRL
  = 0;
 
-370 
+372 
 	}
 }
 
-378 
+380 
 	$SegmítLCD_E√rgyMode
 (
 em
@@ -18799,7 +20387,7 @@ em
 ⁄
 )
 
-380 
+382 
 uöt32_t
  
 com
@@ -18807,7 +20395,7 @@ com
 bô
 ;
 
-382 
+384 
 com
  = 
 EFM_Di•œy
@@ -18817,7 +20405,7 @@ EMode
 em
 ];
 
-383 
+385 
 bô
  = 
 EFM_Di•œy
@@ -18827,11 +20415,11 @@ EMode
 em
 ];
 
-385 i‡(
+387 i‡(
 ⁄
 )
 
-387 
+389 
 	`LCD_SegmítSë
 (
 com
@@ -18841,7 +20429,7 @@ bô
 åue
 );
 
-391 
+393 
 	`LCD_SegmítSë
 (
 com
@@ -18851,11 +20439,11 @@ bô
 Ál£
 );
 
-393 
+395 
 	}
 }
 
-400 
+402 
 	$SegmítLCD_Inô
 (
 boﬁ
@@ -18863,7 +20451,7 @@ boﬁ
 u£Boo°
 )
 
-404 
+406 
 	`CMU_ClockE«bÀ
 (
 cmuClock_CORELE
@@ -18871,7 +20459,7 @@ cmuClock_CORELE
 åue
 );
 
-407 
+409 
 	`CMU_ClockSñe˘Së
 (
 cmuClock_LFA
@@ -18879,7 +20467,7 @@ cmuClock_LFA
 cmuSñe˘_LFRCO
 );
 
-410 
+412 
 	`CMU_ClockDivSë
 (
 cmuClock_LCD¥e
@@ -18887,13 +20475,13 @@ cmuClock_LCD¥e
 LCD_CMU_CLK_PRE
 );
 
-413 
+415 
 	`CMU_LCDClkFDIVSë
 (
 LCD_CMU_CLK_DIV
 );
 
-416 
+418 
 	`CMU_ClockE«bÀ
 (
 cmuClock_LCD
@@ -18901,41 +20489,41 @@ cmuClock_LCD
 åue
 );
 
-418 
+420 
 	`LCD_DISPLAY_ENABLE
 ();
 
-421 
+423 
 	`LCD_I¡DißbÀ
 (0xFFFFFFFF);
 
-424 
+426 
 	`LCD_Inô
 (&
 lcdInô
 );
 
-427 
+429 
 	`LCD_SEGMENTS_ENABLE
 ();
 
-430 i‡(
+432 i‡(
 u£Boo°
 )
 
-432 
+434 
 	`LCD_VBoo°Së
 (
 LCD_BOOST_LEVEL
 );
 
-433 
+435 
 	`LCD_VLCDSñe˘
 (
 lcdVLCDSñVExtBoo°
 );
 
-434 
+436 
 CMU
 ->
 LCDCTRL
@@ -18943,19 +20531,19 @@ LCDCTRL
 CMU_LCDCTRL_VBOOSTEN
 ;
 
-438 
+440 
 	`SegmítLCD_AŒOff
 ();
 
-440 
+442 
 	`LCD_SyncBusyDñay
 (0xFFFFFFFF);
 
-441 
+443 
 	}
 }
 
-450 
+452 
 	$SegmítLCD_LowîHex
 –
 uöt32_t
@@ -18963,41 +20551,41 @@ uöt32_t
 num
  )
 
-452 
+454 
 i
 ;
 
-453 
+455 
 °r
 [7];
 
-454 
+456 
 uöt32_t
  
 nibbÀ
 ;
 
-456 
+458 
 	`SegmítLCD_Symbﬁ
 (
 LCD_SYMBOL_MINUS
 , 0);
 
-458  
+460  
 i
 =6; i>=0; i-- )
 
-460 
+462 
 nibbÀ
  = 
 num
  & 0xF;
 
-462 i‡–
+464 i‡–
 nibbÀ
  < 10 )
 
-463 
+465 
 °r
 [
 i
@@ -19005,27 +20593,27 @@ i
 nibbÀ
  + '0';
 
-464 i‡–
-nibbÀ
- == 11 )
-
-465 
-°r
-[
-i
-] = 'b';
-
 466 i‡–
 nibbÀ
- == 13 )
+ == 11 )
 
 467 
 °r
 [
 i
-] = 'd';
+] = 'b';
+
+468 i‡–
+nibbÀ
+ == 13 )
 
 469 
+°r
+[
+i
+] = 'd';
+
+471 
 °r
 [
 i
@@ -19033,79 +20621,79 @@ i
 nibbÀ
  - 10) + 'A';
 
-471 
+473 
 num
  >>= 4;
 
-474 
+476 
 	`SegmítLCD_Wrôe
 (
 °r
 );
 
-475 
+477 
 	}
 }
 
-481 
+483 
 	$SegmítLCD_LowîNumbî
 –
 num
  )
 
-483 
+485 
 i
 ;
 
-484 
+486 
 °r
 [7];
 
-486 
+488 
 	`SegmítLCD_Symbﬁ
 (
 LCD_SYMBOL_MINUS
 , 0);
 
-488 i‡––
+490 i‡––
 num
  > 9999999 ) || (Çum < -9999999 ) )
 
-490 
+492 
 	`SegmítLCD_Wrôe
 ("Ovrflow");
 
-494 i‡–
+496 i‡–
 num
  < 0 )
 
-496 
+498 
 	`SegmítLCD_Symbﬁ
 (
 LCD_SYMBOL_MINUS
 , 1);
 
-497 
+499 
 num
  = -num;
 
-500  
+502  
 i
 =6; i>=0; i-- )
 
-502 i‡––
+504 i‡––
 i
  < 6 ) && ( 
 num
  == 0 ) )
 
-504 
+506 
 °r
 [
 i
 ] = ' ';
 
-508 
+510 
 °r
 [
 i
@@ -19113,27 +20701,27 @@ i
 num
  % 10) + '0';
 
-509 
+511 
 num
  /= 10;
 
-513 
+515 
 	`SegmítLCD_Wrôe
 (
 °r
 );
 
-514 
+516 
 	}
 }
 
-521 
+523 
 	$SegmítLCD_Numbî
 (
 vÆue
 )
 
-523 
+525 
 i
 , 
 com
@@ -19147,75 +20735,75 @@ div
 √g
 ;
 
-524 
+526 
 uöt16_t
  
 bô∑âîn
 ;
 
-525 
+527 
 uöt16_t
  
 num
 ;
 
-528 i‡(
+530 i‡(
 vÆue
  >= 9999)
 
-530 
+532 
 vÆue
  = 9999;
 
-532 i‡(
+534 i‡(
 vÆue
  <= -1000)
 
-534 
+536 
 vÆue
  = -999;
 
-536 i‡(
+538 i‡(
 vÆue
  < 0)
 
-538 
+540 
 vÆue
  = 
 	`abs
 (value);
 
-539 
+541 
 √g
  = 1;
 
-543 
+545 
 √g
  = 0;
 
-547 
+549 
 	`LCD_SyncBusyDñay
 (0xFFFFFFFF);
 
-550 
+552 
 	`LCD_FªezeE«bÀ
 (
 åue
 );
 
-553 
+555 
 	`SegmítLCD_NumbîOff
 ();
 
-556 
+558 
 div
  = 1;
 
-557 
+559 
 digô
  = 0; digit < 4; digit++)
 
-559 
+561 
 num
  = (
 vÆue
@@ -19223,7 +20811,7 @@ vÆue
 div
 ) % 10;
 
-560 i‡((
+562 i‡((
 √g
  =1Ë&& (
 digô
@@ -19233,7 +20821,7 @@ num
 signIndex
 ;
 
-562 
+564 
 bô∑âîn
  = 
 EFM_Numbîs
@@ -19241,11 +20829,11 @@ EFM_Numbîs
 num
 ];
 
-563 
+565 
 i
  = 0; i < 7; i++)
 
-565 
+567 
 bô
  = 
 EFM_Di•œy
@@ -19257,7 +20845,7 @@ digô
 i
 ];
 
-566 
+568 
 com
  = 
 EFM_Di•œy
@@ -19269,13 +20857,13 @@ digô
 i
 ];
 
-567 i‡(
+569 i‡(
 bô∑âîn
  & (1 << 
 i
 ))
 
-569 
+571 
 	`LCD_SegmítSë
 (
 com
@@ -19285,33 +20873,33 @@ bô
 åue
 );
 
-572 
+574 
 div
  = div * 10;
 
-575 
+577 
 	`LCD_FªezeE«bÀ
 (
 Ál£
 );
 
-576 
+578 
 	}
 }
 
-582 
+584 
 	$SegmítLCD_NumbîOff
 ()
 
-585 
+587 
 	`LCD_NUMBER_OFF
 ();
 
-587 
+589 
 	}
 }
 
-595 
+597 
 	$SegmítLCD_Symbﬁ
 (
 lcdSymbﬁ
@@ -19321,399 +20909,399 @@ s
 ⁄
 )
 
-597 
+599 
 com
  = 0;
 
-598 
+600 
 bô
  = 0;
 
-600 
+602 
 s
 )
 
-602 
+604 
 LCD_SYMBOL_GECKO
 :
 
-603 
+605 
 com
  = 
 LCD_SYMBOL_GECKO_COM
 ;
 
-604 
+606 
 bô
  = 
 LCD_SYMBOL_GECKO_SEG
 ;
 
-606 
+608 
 LCD_SYMBOL_ANT
 :
 
-607 
+609 
 com
  = 
 LCD_SYMBOL_ANT_COM
 ;
 
-608 
+610 
 bô
  = 
 LCD_SYMBOL_ANT_SEG
 ;
 
-610 
+612 
 LCD_SYMBOL_PAD0
 :
 
-611 
+613 
 com
  = 
 LCD_SYMBOL_PAD0_COM
 ;
 
-612 
+614 
 bô
  = 
 LCD_SYMBOL_PAD0_SEG
 ;
 
-614 
+616 
 LCD_SYMBOL_PAD1
 :
 
-615 
+617 
 com
  = 
 LCD_SYMBOL_PAD1_COM
 ;
 
-616 
+618 
 bô
  = 
 LCD_SYMBOL_PAD1_SEG
 ;
 
-618 
+620 
 LCD_SYMBOL_EFM32
 :
 
-619 
+621 
 com
  = 
 LCD_SYMBOL_EFM32_COM
 ;
 
-620 
+622 
 bô
  = 
 LCD_SYMBOL_EFM32_SEG
 ;
 
-622 
+624 
 LCD_SYMBOL_MINUS
 :
 
-623 
+625 
 com
  = 
 LCD_SYMBOL_MINUS_COM
 ;
 
-624 
+626 
 bô
  = 
 LCD_SYMBOL_MINUS_SEG
 ;
 
-626 
+628 
 LCD_SYMBOL_COL3
 :
 
-627 
+629 
 com
  = 
 LCD_SYMBOL_COL3_COM
 ;
 
-628 
+630 
 bô
  = 
 LCD_SYMBOL_COL3_SEG
 ;
 
-630 
+632 
 LCD_SYMBOL_COL5
 :
 
-631 
+633 
 com
  = 
 LCD_SYMBOL_COL5_COM
 ;
 
-632 
+634 
 bô
  = 
 LCD_SYMBOL_COL5_SEG
 ;
 
-634 
+636 
 LCD_SYMBOL_COL10
 :
 
-635 
+637 
 com
  = 
 LCD_SYMBOL_COL10_COM
 ;
 
-636 
+638 
 bô
  = 
 LCD_SYMBOL_COL10_SEG
 ;
 
-638 #ifde‡
+640 #ifde‡
 LCD_SYMBOL_DEGC_SEG
 
 
-639 
+641 
 LCD_SYMBOL_DEGC
 :
 
-640 
+642 
 com
  = 
 LCD_SYMBOL_DEGC_COM
 ;
 
-641 
+643 
 bô
  = 
 LCD_SYMBOL_DEGC_SEG
 ;
 
-644 #ifde‡
+646 #ifde‡
 LCD_SYMBOL_DEGF_SEG
 
 
-645 
+647 
 LCD_SYMBOL_DEGF
 :
 
-646 
+648 
 com
  = 
 LCD_SYMBOL_DEGF_COM
 ;
 
-647 
+649 
 bô
  = 
 LCD_SYMBOL_DEGF_SEG
 ;
 
-650 #ifde‡
+652 #ifde‡
 LCD_SYMBOL_DP2_SEG
 
 
-651 
+653 
 LCD_SYMBOL_DP2
 :
 
-652 
+654 
 com
  = 
 LCD_SYMBOL_DP2_COM
 ;
 
-653 
+655 
 bô
  = 
 LCD_SYMBOL_DP2_SEG
 ;
 
-656 #ifde‡
+658 #ifde‡
 LCD_SYMBOL_DP3_SEG
 
 
-657 
+659 
 LCD_SYMBOL_DP3
 :
 
-658 
+660 
 com
  = 
 LCD_SYMBOL_DP3_COM
 ;
 
-659 
+661 
 bô
  = 
 LCD_SYMBOL_DP3_SEG
 ;
 
-662 #ifde‡
+664 #ifde‡
 LCD_SYMBOL_DP4_SEG
 
 
-663 
+665 
 LCD_SYMBOL_DP4
 :
 
-664 
+666 
 com
  = 
 LCD_SYMBOL_DP4_COM
 ;
 
-665 
+667 
 bô
  = 
 LCD_SYMBOL_DP4_SEG
 ;
 
-668 #ifde‡
+670 #ifde‡
 LCD_SYMBOL_DP5_SEG
 
 
-669 
+671 
 LCD_SYMBOL_DP5
 :
 
-670 
+672 
 com
  = 
 LCD_SYMBOL_DP5_COM
 ;
 
-671 
+673 
 bô
  = 
 LCD_SYMBOL_DP5_SEG
 ;
 
-674 
+676 
 LCD_SYMBOL_DP6
 :
 
-675 
+677 
 com
  = 
 LCD_SYMBOL_DP6_COM
 ;
 
-676 
+678 
 bô
  = 
 LCD_SYMBOL_DP6_SEG
 ;
 
-678 
+680 
 LCD_SYMBOL_DP10
 :
 
-679 
+681 
 com
  = 
 LCD_SYMBOL_DP10_COM
 ;
 
-680 
+682 
 bô
  = 
 LCD_SYMBOL_DP10_SEG
 ;
 
-682 #ifde‡
+684 #ifde‡
 LCD_SYMBOL_AM_SEG
 
 
-683 
+685 
 LCD_SYMBOL_AM
 :
 
-684 
+686 
 com
  = 
 LCD_SYMBOL_AM_COM
 ;
 
-685 
+687 
 bô
  = 
 LCD_SYMBOL_AM_SEG
 ;
 
-688 #ifde‡
+690 #ifde‡
 LCD_SYMBOL_PM_SEG
 
 
-689 
+691 
 LCD_SYMBOL_PM
 :
 
-690 
+692 
 com
  = 
 LCD_SYMBOL_PM_COM
 ;
 
-691 
+693 
 bô
  = 
 LCD_SYMBOL_PM_SEG
 ;
 
-694 #ifde‡
+696 #ifde‡
 LCD_SYMBOL_MICROAMP_SEG
 
 
-695 
+697 
 LCD_SYMBOL_MICROAMP
 :
 
-696 
+698 
 com
  = 
 LCD_SYMBOL_MICROAMP_COM
 ;
 
-697 
+699 
 bô
  = 
 LCD_SYMBOL_MICROAMP_SEG
 ;
 
-700 #ifde‡
+702 #ifde‡
 LCD_SYMBOL_MILLIAMP_SEG
 
 
-701 
+703 
 LCD_SYMBOL_MILLIAMP
 :
 
-702 
+704 
 com
  = 
 LCD_SYMBOL_MILLIAMP_COM
 ;
 
-703 
+705 
 bô
  = 
 LCD_SYMBOL_MILLIAMP_SEG
 ;
 
-708 i‡(
+710 i‡(
 ⁄
 )
 
-710 
+712 
 	`LCD_SegmítSë
 (
 com
@@ -19723,7 +21311,7 @@ bô
 åue
 );
 
-714 
+716 
 	`LCD_SegmítSë
 (
 com
@@ -19733,11 +21321,11 @@ bô
 Ál£
 );
 
-716 
+718 
 	}
 }
 
-723 
+725 
 	$SegmítLCD_Unsig√dHex
 (
 uöt16_t
@@ -19745,7 +21333,7 @@ uöt16_t
 vÆue
 )
 
-725 
+727 
 num
 , 
 i
@@ -19757,39 +21345,39 @@ bô
 digô
 ;
 
-726 
+728 
 uöt16_t
  
 bô∑âîn
 ;
 
-729 i‡(
+731 i‡(
 vÆue
  >= 0xffff)
 
-731 
+733 
 vÆue
  = 0xffff;
 
-735 
+737 
 	`LCD_SyncBusyDñay
 (0xFFFFFFFF);
 
-738 
+740 
 	`LCD_FªezeE«bÀ
 (
 åue
 );
 
-741 
+743 
 	`SegmítLCD_NumbîOff
 ();
 
-743 
+745 
 digô
  = 0; digit < 4; digit++)
 
-745 
+747 
 num
  = (
 vÆue
@@ -19797,7 +21385,7 @@ vÆue
 digô
 )) & 0x0f;
 
-746 
+748 
 bô∑âîn
  = 
 EFM_Numbîs
@@ -19805,11 +21393,11 @@ EFM_Numbîs
 num
 ];
 
-747 
+749 
 i
  = 0; i < 7; i++)
 
-749 
+751 
 bô
  = 
 EFM_Di•œy
@@ -19821,7 +21409,7 @@ digô
 i
 ];
 
-750 
+752 
 com
  = 
 EFM_Di•œy
@@ -19833,13 +21421,13 @@ digô
 i
 ];
 
-751 i‡(
+753 i‡(
 bô∑âîn
  & (1 << 
 i
 ))
 
-753 
+755 
 	`LCD_SegmítSë
 (
 com
@@ -19849,23 +21437,23 @@ bô
 åue
 );
 
-759 
+761 
 	`LCD_FªezeE«bÀ
 (
 Ál£
 );
 
-760 
+762 
 	}
 }
 
-767 
+769 
 	$SegmítLCD_Wrôe
 (*
 °rög
 )
 
-769 
+771 
 d©a
 , 
 Àngth
@@ -19873,13 +21461,13 @@ d©a
 ödex
 ;
 
-770 
+772 
 uöt16_t
  
 bôfõld
 ;
 
-771 
+773 
 uöt32_t
  
 com
@@ -19887,11 +21475,11 @@ com
 bô
 ;
 
-772 
+774 
 i
 ;
 
-774 
+776 
 Àngth
  = 
 	`°æí
@@ -19899,49 +21487,49 @@ i
 °rög
 );
 
-775 
+777 
 ödex
  = 0;
 
-778 
+780 
 	`LCD_SyncBusyDñay
 (0xFFFFFFFF);
 
-781 
+783 
 	`LCD_FªezeE«bÀ
 (
 åue
 );
 
-784 
+786 
 	`SegmítLCD_AÕhaNumbîOff
 ();
 
-787 
+789 
 ödex
  = 0; index < 7; index++)
 
-789 i‡(
+791 i‡(
 ödex
  < 
 Àngth
 )
 
-791 
+793 
 d©a
  = (Ë*
 °rög
 ;
 
-795 
+797 
 d©a
  = 0x20;
 
-798 
+800 
 d©a
  = data - 0x20;
 
-800 
+802 
 bôfõld
  = 
 EFM_AÕhabë
@@ -19949,11 +21537,11 @@ EFM_AÕhabë
 d©a
 ];
 
-802 
+804 
 i
  = 0; i < 14; i++)
 
-804 
+806 
 bô
  = 
 EFM_Di•œy
@@ -19965,7 +21553,7 @@ Text
 i
 ];
 
-805 
+807 
 com
  = 
 EFM_Di•œy
@@ -19977,13 +21565,13 @@ Text
 i
 ];
 
-807 i‡(
+809 i‡(
 bôfõld
  & (1 << 
 i
 ))
 
-810 
+812 
 	`LCD_SegmítSë
 (
 com
@@ -19993,17 +21581,17 @@ bô
 åue
 );
 
-813 
+815 
 °rög
 ++;
 
-816 
+818 
 	`LCD_FªezeE«bÀ
 (
 Ál£
 );
 
-817 
+819 
 	}
 }
 
@@ -20137,8 +21725,8 @@ __˝lu•lus
 1
 .
 0
-30
-2537
+33
+2912
 C:\Users\Alexander\AppData\Roaming\energymicro\Device\EnergyMicro\EFM32GG\Source\GCC\startup_efm32gg.S
 C:\Users\Alexander\AppData\Roaming\energymicro\Device\EnergyMicro\EFM32GG\Source\system_efm32gg.c
 C:\Users\Alexander\AppData\Roaming\energymicro\emlib\src\em_assert.c
@@ -20147,22 +21735,25 @@ C:\Users\Alexander\AppData\Roaming\energymicro\emlib\src\em_ebi.c
 C:\Users\Alexander\AppData\Roaming\energymicro\emlib\src\em_emu.c
 C:\Users\Alexander\AppData\Roaming\energymicro\emlib\src\em_gpio.c
 C:\Users\Alexander\AppData\Roaming\energymicro\emlib\src\em_lcd.c
+C:\Users\Alexander\AppData\Roaming\energymicro\emlib\src\em_pcnt.c
 C:\Users\Alexander\AppData\Roaming\energymicro\emlib\src\em_rtc.c
 C:\Users\Alexander\AppData\Roaming\energymicro\emlib\src\em_system.c
-C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\examples\blink\blink.c
-C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\examples\blink\buttons.c
-C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\examples\blink\buttons.h
-C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\examples\blink\clock.c
-C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\examples\blink\clock.h
-C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\examples\blink\globals.h
-C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\examples\blink\pomodoro_app.c
-C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\examples\blink\pomodoro_app.h
-C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\examples\blink\setup_alarm_app.c
-C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\examples\blink\setup_time_app.c
-C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\examples\blink\setup_time_app.h
-C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\examples\blink\state_machine.c
-C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\examples\blink\state_machine.h
-C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\examples\blink\variables.c
+C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\activity_app.c
+C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\activity_app.h
+C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\blink.c
+C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\buttons.c
+C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\buttons.h
+C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\clock.c
+C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\clock.h
+C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\globals.h
+C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\pomodoro_app.c
+C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\pomodoro_app.h
+C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\setup_alarm_app.c
+C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\setup_time_app.c
+C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\setup_time_app.h
+C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\state_machine.c
+C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\state_machine.h
+C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\variables.c
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\common\bsp\bsp_bcc.c
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\common\bsp\bsp_stk.c
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\common\bsp\bsp_stk_leds.c

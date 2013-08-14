@@ -1,7 +1,25 @@
+/**************************************************************************//**
+ * @file variables.c
+ * @brief init all globals in one place,
+ * made to find and modify initial value of global variables easily
+ * @author Alexandr D.  sasha.engineer@gmail.com
+ * @version 
+ ******************************************************************************/
+
+
 #include "clock.h"
 #include <stdbool.h>
 
 
+/********************************************//**
+ * \brief initialize all global variables
+ *
+ * \param 
+ * \param 
+ * \return 
+ *
+ ***********************************************/      
+ //TODO add MORE globals
 initVariables()
 {
     currentTime.tm_sec          = 0;

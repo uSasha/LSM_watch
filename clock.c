@@ -1,9 +1,18 @@
+/**************************************************************************//**
+ * @file clock.c
+ * @brief simple buttons driver
+ * @author Alexandr D.  sasha.engineer@gmail.com
+ * @version 
+ ******************************************************************************/
+// TODO rename clock files to time_management or something more meaningful 
+
 #include "em_rtc.h"
 #include "em_cmu.h"
 #include "clock.h"
 #include "pomodoro_app.h"
 #include "segmentlcd.h"
 #include "activity_app.h"
+
 
 //#define RTC_COUNT_BETWEEN_WAKEUP    59      // interrupt every 60 seconds
 #define RTC_COUNT_BETWEEN_WAKEUP    1      // interrupt every 2 seconds
@@ -16,6 +25,14 @@ struct tm pomodoro;
 bool screen_notification = false;
 
 
+/********************************************//**
+ * \brief configure RTC to run from 32K external crystal
+ * configure RTC divider to count seconds
+ * \param 
+ * \param 
+ * \return 
+ *
+ ***********************************************/      
 void initClock(void)
 {
     // set RTC to generate interrupts every second time and date will be maintained by software
@@ -42,6 +59,14 @@ void initClock(void)
 }
 
 
+/********************************************//**
+ * \brief update time, check alarms, clear flag
+ *
+ * \param 
+ * \param 
+ * \return 
+ *
+ ***********************************************/      
 void RTC_IRQHandler(void)
 {
     RTC_IntClear(RTC_IF_COMP0);
@@ -57,12 +82,28 @@ void RTC_IRQHandler(void)
 }
 
 
+/********************************************//**
+ * \brief increment seconds in currentTime structure
+ * maybe should be inline
+ * \param 
+ * \param 
+ * \return 
+ *
+ ***********************************************/      
 void updateTime(void)
 {
     incrementPoint(seconds, &currentTime);
 }
 
 
+/********************************************//**
+ * \brief check all alarms 
+ *
+ * \param 
+ * \param 
+ * \return alarm number, if 0 - no alarms fires
+ *
+ ***********************************************/      
 uint8_t checkAlarms(void)
 {
     if((alarm1.tm_sec == currentTime.tm_sec) &&
@@ -87,6 +128,15 @@ uint8_t checkAlarms(void)
 }
 
 
+/********************************************//**
+ * \brief run alarm, show alarm screen, 
+ *  turn on screen_notification flag, which prevents screen updates by apps 
+ *  and should be turned off by press buttons in GPIO irq handler
+ * \param 
+ * \param 
+ * \return 
+ *
+ ***********************************************/      
 void runAlarm(uint8_t alarm)
 {
     switch (alarm)
@@ -107,6 +157,15 @@ void runAlarm(uint8_t alarm)
 }
 
 
+/********************************************//**
+ * \brief increment one point of any time structure(currentTime, any alarms etc)
+ * checks for seconds/minutes/hours/day overflows and handle them correctly
+ * clears daily activity on day incrementation
+ * \param enum setup_state_t points - point to be incremented(second, minutes etc.)
+ * \param struct tm *something - time structure(current time, alarm etc.)
+ * \return 
+ *
+ ***********************************************/      
 void incrementPoint(enum setup_state_t points, struct tm *something)
 {
     switch (points)
@@ -161,6 +220,15 @@ void incrementPoint(enum setup_state_t points, struct tm *something)
 }
 
 
+/********************************************//**
+ * \brief decrement one point of any time structure(currentTime, any alarms etc)
+ * checks for seconds/minutes/hours/day underflows and handle them correctly
+ * clears daily activity on day decrementation
+ * \param enum setup_state_t points - point to be incremented(second, minutes etc.)
+ * \param struct tm *something - time structure(current time, alarm etc.)
+ * \return 
+ *
+ ***********************************************/      
 void decrementPoint(enum setup_state_t points, struct tm *something)
 {
     switch (points)
@@ -201,6 +269,7 @@ void decrementPoint(enum setup_state_t points, struct tm *something)
         {
             something->tm_wday = 6;
         }
+        clearActivity(something->tm_wday);
 //      activity[calendar.tm_wday] = 0;   // delete this day activity, othervice we will increment last week activity
         break;
     }

@@ -1,3 +1,10 @@
+/**************************************************************************//**
+ * @file activity_app.c
+ * @brief log daily activity
+ * @author Alexandr D.  sasha.engineer@gmail.com
+ * @version 
+ ******************************************************************************/
+
 #include "em_pcnt.h"
 #include "em_cmu.h"
 #include "em_gpio.h"
@@ -8,6 +15,15 @@
 
 uint8_t activity[7];
 
+
+/********************************************//**
+ * \brief setup counter to count external pulses
+ *
+ * \param ACTIVITY_PORT - defined in activity.h
+ * \param ACTIVITY_PIN  - defined in activity.h
+ * \return 
+ *
+ ***********************************************/      
 void initCounter(void)
 {
     /* Enabling all necessary clocks */
@@ -42,6 +58,15 @@ void initCounter(void)
     PCNT1->ROUTE = PCNT_ROUTE_LOCATION_LOC0;
 }
 
+
+/********************************************//**
+ * \brief init counter and clear all weekly activities
+ *
+ * \param 
+ * \param 
+ * \return 
+ *
+ ***********************************************/      
 void initActivity(void)
 {
     initCounter();
@@ -54,12 +79,29 @@ void initActivity(void)
     }
 }
 
+
+/********************************************//**
+ * \brief clear daily activity
+ *
+ * \param wday - day of the week between 0 and 6
+ * \param 
+ * \return 
+ *
+ ***********************************************/      
 void clearActivity(uint8_t wday)
 {
     activity[wday] = 0;
 }
 
 
+/********************************************//**
+ * \brief draw and output activity app screen
+ *  current version use segment LCD
+ * \param 
+ * \param 
+ * \return 
+ *
+ ***********************************************/      
 void drawActivityScreen(void)
 {
     SegmentLCD_NumberOff();
@@ -67,6 +109,15 @@ void drawActivityScreen(void)
     SegmentLCD_Number(activity[currentTime.tm_wday]);
 }
 
+
+/********************************************//**
+ * \brief main loop of activity app check buttons, 
+ *  change states accordingly and go to EM2 if nothing happens
+ *
+ * \param void
+ * \return void
+ *
+ ***********************************************/     
 void activityApp(void)
 {
     if( button == BUTTON_A)
