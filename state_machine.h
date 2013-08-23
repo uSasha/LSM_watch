@@ -14,6 +14,6 @@ enum  state_machine
 extern volatile enum state_machine state;
 
 
-void mainScreenApp(void);   //TODO make separate file for main screen 
+void mainScreenApp(void);   
 void nextState(void);
 void previousState(void);

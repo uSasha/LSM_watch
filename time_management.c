@@ -1,6 +1,6 @@
 /**************************************************************************//**
- * @file clock.c
- * @brief simple buttons driver     //TODO REDOO
+ * @file time_management.c
+ * @brief keep timing and check for alarms and time based events     
  * @author Alexandr D.  sasha.engineer@gmail.com
  * @version 
  ******************************************************************************/

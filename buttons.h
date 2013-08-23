@@ -15,7 +15,7 @@
 #define BUTTON_B        2
 #define BUTTON_C        3
 
-#include "bsp.h"    //NOTE check is it really needed
+#include "bsp.h"   
 
 
 

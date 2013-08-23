@@ -198,7 +198,7 @@ void updatePomodoroTime(uint8_t time)
  ***********************************************/      
 void stopPomodoro(void)
 {
-    pomodoro_state = pomodoro_off;  // TODO maybe replace .active with _state
+    pomodoro_state = pomodoro_off; 
     pomodoro.active = false;
 }
 
