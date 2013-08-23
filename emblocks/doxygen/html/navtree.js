@@ -1,10 +1,6 @@
 var NAVTREE =
 [
   [ "lifestyle monitoring watch", "index.html", [
-    [ "Data Structures", null, [
-      [ "Data Structures", "annotated.html", "annotated" ],
-      [ "Data Structure Index", "classes.html", null ]
-    ] ],
     [ "Files", null, [
       [ "File List", "files.html", "files" ],
       [ "Globals", "globals.html", [

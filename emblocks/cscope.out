@@ -1,4 +1,4 @@
-cscope 15 $HOME\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\emblocks"               0000133424
+cscope 15 $HOME\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\emblocks"               0000133639
 	@C:\Users\Alexander\AppData\Roaming\energymicro\Device\EnergyMicro\EFM32GG\Source\GCC\startup_efm32gg.S
 
 32 .
@@ -15230,7 +15230,7 @@ p
 "
 
 11 
-	~"şock.h
+	~"time_mªagem’t.h
 "
 
 12 
@@ -15594,7 +15594,7 @@ aùiv™yAµ
 "
 
 44 
-	~"şock.h
+	~"time_mªagem’t.h
 "
 
 45 
@@ -15954,7 +15954,7 @@ time_£tup_sü“n
 "
 
 12 
-	~"şock.h
+	~"time_mªagem’t.h
 "
 
 15 vŞ©
@@ -16049,55 +16049,55 @@ GPIO_ODD_IRQn
 	}
 }
 
-51 
+52 
 	$GPIO_EVEN_IRQHªdËr
 ()
 
-53 
+54 
 	`GPIO_IÁCË¬
 (1 << 
 BUTTON_B_PIN
 );
 
-54 
+55 
 bu‰Ú
  = 
 BUTTON_A
 ;
 
-55 
+56 
 sü“n_nÙifiÿtiÚ
  = 
 çl£
 ;
 
-56 
+57 
 	}
 }
 
-67 
+69 
 	$GPIO_ODD_IRQHªdËr
 ()
 
-69 
+71 
 	`GPIO_IÁCË¬
 (1 << 
 BUTTON_A_PIN
 );
 
-70 
+72 
 bu‰Ú
  = 
 BUTTON_B
 ;
 
-71 
+73 
 sü“n_nÙifiÿtiÚ
  = 
 çl£
 ;
 
-72 
+74 
 	}
 }
 
@@ -16179,65 +16179,1251 @@ bu‰Ú
 š™Bu‰Ús
 ();
 
-	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\clock.c
+	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\globals.h
 
-1 
-	~"em_¹c.h
+2 vŞ©
+ušt8_t
+ 
+bu‰Ú
+;
+
+3 vŞ©
+ušt32_t
+ 
+time
+;
+
+	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\pomodoro_app.c
+
+10 
+	~"b¥.h
 "
 
-2 
-	~"em_cmu.h
+11 
+	~"time_mªagem’t.h
 "
 
-3 
-	~"şock.h
+12 
+	~"¡©e_machše.h
 "
 
-4 
+13 
+	~"bu‰Ús.h
+"
+
+14 
 	~"pomodÜo_­p.h
 "
 
-5 
+15 
 	~"£gm’cd.h
 "
 
-6 
-	~"aùiv™y_­p.h
-"
+17 
+upd©ePomodÜoTime
+(
+ušt8_t
+ 
+time
+);
 
-9 
-	#RTC_COUNT_BETWEEN_WAKEUP
- 1
+18 
+¡İPomodÜo
+();
 
-10 
+19 
+d¿wPomodÜoSü“n
+();
+
+22 
+boŞ
+ 
+	gpomodÜo_timeout
+ = 
+çl£
+;
+
+24 
+	epomodÜo_¡©e_t
+
+
+26 
+	mpomodÜo_off
+,
+
+27 
+	mpomodÜo_aùive
+,
+
+28 
+	mpomodÜo_shÜt_b¿ke
+,
+
+29 
+	mpomodÜo_lÚg_b¿ke
+
+
+31 
+pomodÜo_¡©e_t
+ 
+	gpomodÜo_¡©e
+ = 
+pomodÜo_off
+;
+
+42 
+	$pomodÜoAµ
+()
+
+44 
+ušt8_t
+ 
+pomodÜos
+ = 0;
+
+46 
+pomodÜo_¡©e
+)
+
+48 
+pomodÜo_off
+:
+
+49 if(
+bu‰Ú
+ =ğ
+BUTTON_B
+)
+
+51 
+bu‰Ú
+ = 
+NO_BUTTON
+;
+
+52 
+	`upd©ePomodÜoTime
+(
+POMODORO_WORK_TIME
+);
+
+53 
+pomodÜo_¡©e
+ = 
+pomodÜo_aùive
+;
+
+56 
+pomodÜo_aùive
+:
+
+57 if(
+bu‰Ú
+ =ğ
+BUTTON_B
+)
+
+59 
+bu‰Ú
+ = 
+NO_BUTTON
+;
+
+60 
+pomodÜos
+ = 0;
+
+61 
+	`¡İPomodÜo
+();
+
+63 if(
+pomodÜo_timeout
+ =ğ
+Œue
+)
+
+65 
+pomodÜo_timeout
+ = 
+çl£
+;
+
+66 
+pomodÜos
+++;
+
+67 if(
+pomodÜos
+ >ğ
+POMODOROS_TO_LONG_BRAKE
+)
+
+69 
+pomodÜos
+ = 0;
+
+70 
+	`upd©ePomodÜoTime
+(
+LONG_BRAKE_TIME
+);
+
+71 
+pomodÜo_¡©e
+ = 
+pomodÜo_lÚg_b¿ke
+;
+
+75 
+	`upd©ePomodÜoTime
+(
+SHORT_BRAKE_TIME
+);
+
+76 
+pomodÜo_¡©e
+ = 
+pomodÜo_shÜt_b¿ke
+;
+
+80 
+pomodÜo_shÜt_b¿ke
+:
+
+81 if(
+bu‰Ú
+ =ğ
+BUTTON_B
+)
+
+83 
+bu‰Ú
+ = 
+NO_BUTTON
+;
+
+84 
+	`¡İPomodÜo
+();
+
+86 if(
+pomodÜo_timeout
+ =ğ
+Œue
+)
+
+88 
+pomodÜo_timeout
+ = 
+çl£
+;
+
+89 
+	`upd©ePomodÜoTime
+(
+POMODORO_WORK_TIME
+);
+
+90 
+pomodÜo_¡©e
+ = 
+pomodÜo_aùive
+;
+
+93 
+pomodÜo_lÚg_b¿ke
+:
+
+94 if(
+bu‰Ú
+ =ğ
+BUTTON_B
+)
+
+96 
+bu‰Ú
+ = 
+NO_BUTTON
+;
+
+97 
+	`¡İPomodÜo
+();
+
+99 if(
+pomodÜo_timeout
+ =ğ
+Œue
+)
+
+101 
+pomodÜo_timeout
+ = 
+çl£
+;
+
+102 
+	`upd©ePomodÜoTime
+(
+POMODORO_WORK_TIME
+);
+
+103 
+pomodÜo_¡©e
+ = 
+pomodÜo_aùive
+;
+
+108 ifĞ
+bu‰Ú
+ =ğ
+BUTTON_A
+)
+
+110 
+bu‰Ú
+ = 
+NO_BUTTON
+;
+
+111 
+	`ÃxtS‹
+();
+
+115 
+bu‰Ú
+ = 
+NO_BUTTON
+;
+
+116 
+	`d¿wPomodÜoSü“n
+();
+
+117 
+	`EMU_EÁ”EM2
+(
+Œue
+);
+
+119 
+	}
+}
+
+130 
+	$d¿wPomodÜoSü“n
+()
+
+132 
+pomodÜo_¡©e
+)
+
+134 
+pomodÜo_aùive
+:
+
+135 
+	`Segm’tLCD_Wr™e
+("Work");
+
+137 
+pomodÜo_shÜt_b¿ke
+:
+
+138 
+	`Segm’tLCD_Wr™e
+("Break");
+
+140 
+pomodÜo_lÚg_b¿ke
+:
+
+141 
+	`Segm’tLCD_Wr™e
+("Break");
+
+143 
+pomodÜo_off
+:
+
+144 
+	`Segm’tLCD_Wr™e
+("OFF");
+
+147 
+št8_t
+ 
+time_befÜe_Ãxt_¡©e
+ = 
+pomodÜo
+.
+tm_mš
+ - 
+cu¼’tTime
+.tm_min;
+
+148 if(
+time_befÜe_Ãxt_¡©e
+ < 0)
+
+150 
+time_befÜe_Ãxt_¡©e
+ += 59;
+
+152 if(
+pomodÜo_¡©e
+ !ğ
+pomodÜo_off
+)
+
+154 
+	`Segm’tLCD_Numb”
+(
+time_befÜe_Ãxt_¡©e
+);
+
+158 
+	`Segm’tLCD_Numb”Off
+();
+
+160 
+	}
+}
+
+171 
+	$upd©ePomodÜoTime
+(
+ušt8_t
+ 
+time
+)
+
+173 
+pomodÜo
+.
+aùive
+ = 
+Œue
+;
+
+174 
+pomodÜo
+.
+tm_£c
+ = 
+cu¼’tTime
+.tm_sec;
+
+176 if(
+cu¼’tTime
+.
+tm_mš
+ + 
+time
+ >= 59)
+
+178 
+pomodÜo
+.
+tm_mš
+ = 
+cu¼’tTime
+.tm_mš + 
+time
+ - 59;
+
+179 
+pomodÜo
+.
+tm_hour
+ = 
+cu¼’tTime
+.tm_hour;
+
+180 
+	`šüem’tPošt
+(
+hours
+, &
+pomodÜo
+);
+
+181 
+pomodÜo
+.
+tm_wday
+ = 0;
+
+185 
+pomodÜo
+.
+tm_mš
+ = 
+cu¼’tTime
+.tm_mš + 
+time
+;
+
+186 
+pomodÜo
+.
+tm_hour
+ = 
+cu¼’tTime
+.tm_hour;
+
+188 
+	}
+}
+
+199 
+	$¡İPomodÜo
+()
+
+201 
+pomodÜo_¡©e
+ = 
+pomodÜo_off
+;
+
+202 
+pomodÜo
+.
+aùive
+ = 
+çl£
+;
+
+203 
+	}
+}
+
+215 
+	$checkPomodÜo
+()
+
+217 if(
+pomodÜo
+.
+aùive
+ &&
+
+218 (
+pomodÜo
+.
+tm_£c
+ <ğ
+cu¼’tTime
+.tm_sec) &&
+
+219 (
+pomodÜo
+.
+tm_mš
+ <ğ
+cu¼’tTime
+.tm_min) &&
+
+220 (
+pomodÜo
+.
+tm_hour
+ =ğ
+cu¼’tTime
+.tm_hour))
+
+222 
+pomodÜo_timeout
+ = 
+Œue
+;
+
+223 
+¡©e
+ = 
+pomodÜo_sü“n
+;
+
+225 
+	}
+}
+
+	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\pomodoro_app.h
+
+1 #iâdeà
+POMODORO_H_INCLUDED
+
+
+2 
+	#POMODORO_H_INCLUDED
+
 
 	)
 
-12 
+9 
+	#POMODORO_WORK_TIME
+ 25
+
+	)
+
+10 
+	#SHORT_BRAKE_TIME
+ 5
+
+	)
+
+11 
+	#LONG_BRAKE_TIME
+ 25
+
+	)
+
+12 
+	#POMODOROS_TO_LONG_BRAKE
+ 4
+
+	)
+
+14 
+checkPomodÜo
+();
+
+	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\setup_alarm_app.c
+
+10 
+	~"bu‰Ús.h
+"
+
+11 
+	~"£tup_time_­p.h
+"
+
+12 
+	~"time_mªagem’t.h
+"
+
+13 
+	~"£gm’cd.h
+"
+
+15 
+	#FIRST_SETUP_STATE
+ 
+mšu‹s
+
+
+	)
+
+16 
+	#LAST_SETUP_STATE
+ 
+aùive
+
+
+	)
+
+19 
+tm
+ * 
+	gp_®¬m
+ = &
+®¬m1
+;
+
+22 
+d¿wS‘upAÏrmSü“n
+();
+
+23 
+ÃxtAÏrmS‘upS‹
+();
+
+34 
+	$£tupAÏrmAµ
+()
+
+36 ifĞ
+bu‰Ú
+ =ğ
+BUTTON_A
+)
+
+38 
+bu‰Ú
+ = 
+NO_BUTTON
+;
+
+39 
+	`ÃxtS‹
+();
+
+41 if(
+bu‰Ú
+ =ğ
+BUTTON_B
+)
+
+43 
+bu‰Ú
+ = 
+NO_BUTTON
+;
+
+44 
+	`ÃxtAÏrmS‘upS‹
+();
+
+46 if(
+bu‰Ú
+ =ğ
+BUTTON_C
+)
+
+48 
+bu‰Ú
+ = 
+NO_BUTTON
+;
+
+50 if(
+şock_£tup_¡©e
+ =ğ
+aùive
+)
+
+52 if(
+p_®¬m
+->
+aùive
+ =ğ
+Œue
+)
+
+54 
+p_®¬m
+->
+aùive
+ = 
+çl£
+;
+
+58 
+p_®¬m
+->
+aùive
+ = 
+Œue
+;
+
+63 
+	`šüem’tPošt
+(
+şock_£tup_¡©e
+, 
+p_®¬m
+);
+
+68 
+bu‰Ú
+ = 
+NO_BUTTON
+;
+
+69 
+	`d¿wS‘upAÏrmSü“n
+();
+
+70 
+	`EMU_EÁ”EM2
+(
+Œue
+);
+
+72 
+	}
+}
+
+83 
+	$ÃxtAÏrmS‘upS‹
+()
+
+85 if(
+şock_£tup_¡©e
+ =ğ
+LAST_SETUP_STATE
+)
+
+87 
+şock_£tup_¡©e
+ = 
+FIRST_SETUP_STATE
+;
+
+91 
+şock_£tup_¡©e
+++;
+
+93 
+	}
+}
+
+104 
+	$d¿wS‘upAÏrmSü“n
+()
+
+106 
+	`Segm’tLCD_Numb”Off
+();
+
+107 if(
+p_®¬m
+ =ğ&
+®¬m1
+)
+
+109 
+	`Segm’tLCD_Wr™e
+("Alarm_1");
+
+113 
+	`Segm’tLCD_Wr™e
+("Alarm_2");
+
+115 
+	}
+}
+
+	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\setup_time_app.c
+
+10 
+	~"bu‰Ús.h
+"
+
+11 
+	~"£tup_time_­p.h
+"
+
+12 
+	~"b¥.h
+"
+
+13 
+	~"time_mªagem’t.h
+"
+
+16 
+	#FIRST_SETUP_STATE
+ 
+mšu‹s
+
+
+	)
+
+17 
+	#LAST_SETUP_STATE
+ 
+w“k_days
+
+
+	)
+
+20 
+£tup_¡©e_t
+ 
+	gşock_£tup_¡©e
+;
+
+31 
+	$£tupTimeAµ
+()
+
+33 ifĞ
+bu‰Ú
+ =ğ
+BUTTON_A
+)
+
+35 
+bu‰Ú
+ = 
+NO_BUTTON
+;
+
+36 
+	`ÃxtS‹
+();
+
+38 if(
+bu‰Ú
+ =ğ
+BUTTON_B
+)
+
+40 
+bu‰Ú
+ = 
+NO_BUTTON
+;
+
+41 
+	`ÃxtTimeS‘upS‹
+();
+
+43 if(
+bu‰Ú
+ =ğ
+BUTTON_C
+)
+
+45 
+bu‰Ú
+ = 
+NO_BUTTON
+;
+
+46 
+	`šüem’tPošt
+(
+şock_£tup_¡©e
+, &
+cu¼’tTime
+);
+
+50 
+	`Segm’tLCD_Numb”Off
+();
+
+51 
+bu‰Ú
+ = 
+NO_BUTTON
+;
+
+52 
+	`Segm’tLCD_Wr™e
+("Setup_T");
+
+53 
+	`EMU_EÁ”EM2
+(
+Œue
+);
+
+55 
+	}
+}
+
+67 
+	$ÃxtTimeS‘upS‹
+()
+
+69 if(
+şock_£tup_¡©e
+ =ğ
+w“k_days
+)
+
+71 
+şock_£tup_¡©e
+ = 
+mšu‹s
+;
+
+75 
+şock_£tup_¡©e
+++;
+
+77 
+	}
+}
+
+	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\setup_time_app.h
+
+1 #iâdeà
+SETUP_TIME_APP_H_INCLUDED
+
+
+2 
+	#SETUP_TIME_APP_H_INCLUDED
+
+
+	)
+
+8 
+£tupTimeAµ
+();
+
+9 
+ÃxtTimeS‘upS‹
+();
+
+	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\state_machine.c
+
+10 
+	~"b¥.h
+"
+
+11 
+	~"¡©e_machše.h
+"
+
+12 
+	~"bu‰Ús.h
+"
+
+13 
+	~"time_mªagem’t.h
+"
+
+14 
+	~"aùiv™y_­p.h
+"
+
+18 vŞ©
+¡©e_machše
+ 
+	g¡©e
+ = 
+maš_sü“n
+;
+
+29 
+	$mašSü“nAµ
+()
+
+31 ifĞ
+bu‰Ú
+ =ğ
+BUTTON_A
+)
+
+33 
+bu‰Ú
+ = 
+NO_BUTTON
+;
+
+34 
+	`ÃxtS‹
+();
+
+36 if(
+bu‰Ú
+ =ğ
+BUTTON_B
+)
+
+38 
+bu‰Ú
+ = 
+NO_BUTTON
+;
+
+39 
+	`´eviousS‹
+();
+
+43 
+bu‰Ú
+ = 
+NO_BUTTON
+;
+
+44 
+	`Segm’tLCD_Wr™e
+("Main");
+
+45 
+	`EMU_EÁ”EM2
+(
+Œue
+);
+
+47 
+	}
+}
+
+58 
+	$ÃxtS‹
+()
+
+60 ià(
+¡©e
+ =ğ
+LAST_STATE
+)
+
+62 
+¡©e
+ = 
+FIRST_STATE
+;
+
+66 
+¡©e
+++;
+
+70 
+şock_£tup_¡©e
+ = 1;
+
+71 
+	}
+}
+
+82 
+	$´eviousS‹
+()
+
+84 ià(
+¡©e
+ =ğ
+FIRST_STATE
+)
+
+86 
+¡©e
+ = 
+LAST_STATE
+;
+
+90 
+¡©e
+--;
+
+92 
+	}
+}
+
+	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\state_machine.h
+
+1 
+	#FIRST_STATE
+ 
+maš_sü“n
+
+
+	)
+
+2 
+	#LAST_STATE
+ 
+®¬m_£tup_sü“n
+
+
+	)
+
+5 
+	e¡©e_machše
+
+
+7 
+	mmaš_sü“n
+,
+
+8 
+	mpomodÜo_sü“n
+,
+
+9 
+	maùiv™y_sü“n
+,
+
+10 
+	mtime_£tup_sü“n
+,
+
+11 
+	m®¬m_£tup_sü“n
+
+
+14 vŞ©
+¡©e_machše
+ 
+¡©e
+;
+
+17 
+mašSü“nAµ
+();
+
+18 
+aùiv™yAµ
+();
+
+19 
+£tupTimeAµ
+();
+
+20 
+ÃxtS‹
+();
+
+21 
+´eviousS‹
+();
+
+	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\time_management.c
+
+9 
+	~"em_¹c.h
+"
+
+10 
+	~"em_cmu.h
+"
+
+11 
+	~"time_mªagem’t.h
+"
+
+12 
+	~"pomodÜo_­p.h
+"
+
+13 
+	~"£gm’cd.h
+"
+
+14 
+	~"aùiv™y_­p.h
+"
+
+18 
+	#RTC_COUNT_BETWEEN_WAKEUP
+ 1
+
+19 
+
+	)
+
+21 
 tm
  
 	gcu¼’tTime
 ;
 
-13 
+22 
 tm
  
 	g®¬m1
 ;
 
-14 
+23 
 tm
  
 	g®¬m2
 ;
 
-15 
+24 
 tm
  
 	gpomodÜo
 ;
 
-16 
+25 
 boŞ
  
 	gsü“n_nÙifiÿtiÚ
@@ -16245,11 +17431,11 @@ boŞ
 çl£
 ;
 
-19 
+36 
 	$š™Clock
 ()
 
-23 
+40 
 	`CMU_OscÏtÜEÇbË
 (
 cmuOsc_LFXO
@@ -16257,7 +17443,7 @@ cmuOsc_LFXO
 Œue
 ,rue);
 
-26 
+43 
 	`CMU_ClockS–eùS‘
 (
 cmuClock_LFA
@@ -16265,7 +17451,7 @@ cmuClock_LFA
 cmuS–eù_LFXO
 );
 
-27 
+44 
 	`CMU_ClockEÇbË
 (
 cmuClock_RTC
@@ -16273,7 +17459,7 @@ cmuClock_RTC
 Œue
 );
 
-29 
+46 
 	`CMU_ClockEÇbË
 (
 cmuClock_CORELE
@@ -16281,7 +17467,7 @@ cmuClock_CORELE
 Œue
 );
 
-33 
+50 
 	`CMU_ClockDivS‘
 (
 cmuClock_RTC
@@ -16289,25 +17475,25 @@ cmuClock_RTC
 cmuClkDiv_32768
 );
 
-34 
+51 
 	`RTC_Com·»S‘
 (0, 
 RTC_COUNT_BETWEEN_WAKEUP
 );
 
-35 
+52 
 	`RTC_IÁEÇbË
 (
 RTC_IFC_COMP0
 );
 
-38 
+55 
 	`NVIC_EÇbËIRQ
 (
 RTC_IRQn
 );
 
-40 
+57 
 RTC_In™_Ty³Def
  
 ¹cIn™
@@ -16315,31 +17501,31 @@ RTC_In™_Ty³Def
 RTC_INIT_DEFAULT
 ;
 
-41 
+58 
 	`RTC_In™
 (&
 ¹cIn™
 );
 
-42 
+59 
 	}
 }
 
-45 
+70 
 	$RTC_IRQHªdËr
 ()
 
-47 
+72 
 	`RTC_IÁCË¬
 (
 RTC_IF_COMP0
 );
 
-48 
+73 
 	`upd©eTime
 ();
 
-50 
+75 
 ušt8_t
  
 ®¬m
@@ -16347,29 +17533,29 @@ ušt8_t
 	`checkAÏrms
 ();
 
-51 if(
+76 if(
 ®¬m
 )
 
-53 
+78 
 	`runAÏrm
 (
 ®¬m
 );
 
-56 
+81 
 	`checkPomodÜo
 ();
 
-57 
+82 
 	}
 }
 
-60 
+93 
 	$upd©eTime
 ()
 
-62 
+95 
 	`šüem’tPošt
 (
 £cÚds
@@ -16377,17 +17563,17 @@ ušt8_t
 cu¼’tTime
 );
 
-63 
+96 
 	}
 }
 
-66 
+107 
 ušt8_t
  
 	$checkAÏrms
 ()
 
-68 if((
+109 if((
 ®¬m1
 .
 tm_£c
@@ -16395,7 +17581,7 @@ tm_£c
 cu¼’tTime
 .tm_sec) &&
 
-69 (
+110 (
 ®¬m1
 .
 tm_mš
@@ -16403,7 +17589,7 @@ tm_mš
 cu¼’tTime
 .tm_min) &&
 
-70 (
+111 (
 ®¬m1
 .
 tm_hour
@@ -16411,7 +17597,7 @@ tm_hour
 cu¼’tTime
 .tm_hour) &&
 
-71 ((
+112 ((
 ®¬m1
 .
 tm_wday
@@ -16419,13 +17605,13 @@ tm_wday
 cu¼’tTime
 .tm_wday) ||‡larm1.tm_wday == 8) &&
 
-72 (
+113 (
 ®¬m1
 .
 aùive
 ))
 
-77 if((
+118 if((
 ®¬m2
 .
 tm_£c
@@ -16433,7 +17619,7 @@ tm_£c
 cu¼’tTime
 .tm_sec) &&
 
-78 (
+119 (
 ®¬m2
 .
 tm_mš
@@ -16441,7 +17627,7 @@ tm_mš
 cu¼’tTime
 .tm_min) &&
 
-79 (
+120 (
 ®¬m2
 .
 tm_hour
@@ -16449,7 +17635,7 @@ tm_hour
 cu¼’tTime
 .tm_hour) &&
 
-80 ((
+121 ((
 ®¬m2
 .
 tm_wday
@@ -16457,17 +17643,17 @@ tm_wday
 cu¼’tTime
 .tm_wday) ||‡larm2.tm_wday == 8) &&
 
-81 (
+122 (
 ®¬m2
 .
 aùive
 ))
 
-87 
+128 
 	}
 }
 
-90 
+140 
 	$runAÏrm
 (
 ušt8_t
@@ -16475,15 +17661,15 @@ ušt8_t
 ®¬m
 )
 
-92 
+142 
 ®¬m
 )
 
-95 
+145 
 ®¬m
  = 0;
 
-96 
+146 
 ®¬m1
 .
 aùive
@@ -16491,21 +17677,21 @@ aùive
 çl£
 ;
 
-97 
+147 
 	`Segm’tLCD_Wr™e
 ("ALARM 1");
 
-98 
+148 
 sü“n_nÙifiÿtiÚ
  = 
 Œue
 ;
 
-101 
+151 
 ®¬m
  = 0;
 
-102 
+152 
 ®¬m2
 .
 aùive
@@ -16513,21 +17699,21 @@ aùive
 çl£
 ;
 
-103 
+153 
 	`Segm’tLCD_Wr™e
 ("ALARM 2");
 
-104 
+154 
 sü“n_nÙifiÿtiÚ
  = 
 Œue
 ;
 
-107 
+157 
 	}
 }
 
-110 
+169 
 	$šüem’tPošt
 (
 £tup_¡©e_t
@@ -16539,99 +17725,99 @@ tm
 som‘hšg
 )
 
-112 
+171 
 pošts
 )
 
-114 
+173 
 £cÚds
 :
 
-115 
+174 
 som‘hšg
 ->
 tm_£c
 ++;
 
-116 
+175 
 som‘hšg
 ->
 tm_£c
 ++;
 
-117 ià(
+176 ià(
 som‘hšg
 ->
 tm_£c
  < 60)
 
-123 
+182 
 som‘hšg
 ->
 tm_£c
  = 0;
 
-125 
+184 
 mšu‹s
 :
 
-126 
+185 
 som‘hšg
 ->
 tm_mš
 ++;
 
-127 ià(
+186 ià(
 som‘hšg
 ->
 tm_mš
  < 60)
 
-133 
+192 
 som‘hšg
 ->
 tm_mš
  = 0;
 
-135 
+194 
 hours
 :
 
-136 
+195 
 som‘hšg
 ->
 tm_hour
 ++;
 
-137 ià(
+196 ià(
 som‘hšg
 ->
 tm_hour
  < 24)
 
-143 
+202 
 som‘hšg
 ->
 tm_hour
  = 0;
 
-145 
+204 
 w“k_days
 :
 
-146 
+205 
 som‘hšg
 ->
 tm_wday
 ++;
 
-147 
+206 
 som‘hšg
 ->
 tm_wday
  %= 7;
 
-148 
+207 
 	`ş—rAùiv™y
 (
 som‘hšg
@@ -16639,17 +17825,17 @@ som‘hšg
 tm_wday
 );
 
-151 
+210 
 aùive
 :
 
-152 if(
+211 if(
 som‘hšg
 ->
 aùive
 )
 
-154 
+213 
 som‘hšg
 ->
 aùive
@@ -16657,7 +17843,7 @@ aùive
 çl£
 ;
 
-158 
+217 
 som‘hšg
 ->
 aùive
@@ -16665,11 +17851,11 @@ aùive
 Œue
 ;
 
-161 
+220 
 	}
 }
 
-164 
+232 
 	$deüem’tPošt
 (
 £tup_¡©e_t
@@ -16681,103 +17867,111 @@ tm
 som‘hšg
 )
 
-166 
+234 
 pošts
 )
 
-168 
+236 
 £cÚds
 :
 
-169 
+237 
 som‘hšg
 ->
 tm_£c
 --;
 
-170 ià(
+238 ià(
 som‘hšg
 ->
 tm_£c
  >= 0)
 
-176 
+244 
 som‘hšg
 ->
 tm_£c
  = 59;
 
-178 
+246 
 mšu‹s
 :
 
-179 
+247 
 som‘hšg
 ->
 tm_mš
 --;
 
-180 ià(
+248 ià(
 som‘hšg
 ->
 tm_mš
  >= 0)
 
-186 
+254 
 som‘hšg
 ->
 tm_mš
  = 59;
 
-188 
+256 
 hours
 :
 
-189 
+257 
 som‘hšg
 ->
 tm_hour
 --;
 
-190 ià(
+258 ià(
 som‘hšg
 ->
 tm_hour
  >= 0)
 
-196 
+264 
 som‘hšg
 ->
 tm_hour
  = 23;
 
-198 
+266 
 w“k_days
 :
 
-199 
+267 
 som‘hšg
 ->
 tm_wday
 --;
 
-200 ià(
+268 ià(
 som‘hšg
 ->
 tm_wday
  < 0)
 
-202 
+270 
 som‘hšg
 ->
 tm_wday
  = 6;
 
-207 
+272 
+	`ş—rAùiv™y
+(
+som‘hšg
+->
+tm_wday
+);
+
+276 
 	}
 }
 
-	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\clock.h
+	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\time_management.h
 
 1 #iâdeà
 CLOCK_H_INCLUDED
@@ -16923,1231 +18117,45 @@ ušt8_t
 checkAÏrms
 ();
 
-	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\globals.h
-
-2 vŞ©
-ušt8_t
- 
-bu‰Ú
-;
-
-3 vŞ©
-ušt32_t
- 
-time
-;
-
-	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\pomodoro_app.c
-
-1 
-	~"b¥.h
-"
-
-2 
-	~"şock.h
-"
-
-3 
-	~"¡©e_machše.h
-"
-
-4 
-	~"bu‰Ús.h
-"
-
-5 
-	~"pomodÜo_­p.h
-"
-
-6 
-	~"£gm’cd.h
-"
-
-9 
-boŞ
- 
-	gpomodÜo_timeout
- = 
-çl£
-;
-
-11 
-	epomodÜo_¡©e_t
-
-
-13 
-	mpomodÜo_off
-,
-
-14 
-	mpomodÜo_aùive
-,
-
-15 
-	mpomodÜo_shÜt_b¿ke
-,
-
-16 
-	mpomodÜo_lÚg_b¿ke
-
-
-19 
-pomodÜo_¡©e_t
- 
-	gpomodÜo_¡©e
- = 
-pomodÜo_off
-;
-
-22 
-	$pomodÜoAµ
-()
-
-24 
-ušt8_t
- 
-pomodÜos
- = 0;
-
-26 
-pomodÜo_¡©e
-)
-
-28 
-pomodÜo_off
-:
-
-29 if(
-bu‰Ú
- =ğ
-BUTTON_B
-)
-
-31 
-bu‰Ú
- = 
-NO_BUTTON
-;
-
-32 
-	`upd©ePomodÜoTime
-(
-POMODORO_WORK_TIME
-);
-
-33 
-pomodÜo_¡©e
- = 
-pomodÜo_aùive
-;
-
-36 
-pomodÜo_aùive
-:
-
-37 if(
-bu‰Ú
- =ğ
-BUTTON_B
-)
-
-39 
-bu‰Ú
- = 
-NO_BUTTON
-;
-
-40 
-pomodÜos
- = 0;
-
-41 
-	`¡İPomodÜo
-();
-
-43 if(
-pomodÜo_timeout
- =ğ
-Œue
-)
-
-45 
-pomodÜo_timeout
- = 
-çl£
-;
-
-46 
-pomodÜos
-++;
-
-47 if(
-pomodÜos
- >ğ
-POMODOROS_TO_LONG_BRAKE
-)
-
-49 
-pomodÜos
- = 0;
-
-50 
-	`upd©ePomodÜoTime
-(
-LONG_BRAKE_TIME
-);
-
-51 
-pomodÜo_¡©e
- = 
-pomodÜo_lÚg_b¿ke
-;
-
-55 
-	`upd©ePomodÜoTime
-(
-SHORT_BRAKE_TIME
-);
-
-56 
-pomodÜo_¡©e
- = 
-pomodÜo_shÜt_b¿ke
-;
-
-60 
-pomodÜo_shÜt_b¿ke
-:
-
-61 if(
-bu‰Ú
- =ğ
-BUTTON_B
-)
-
-63 
-bu‰Ú
- = 
-NO_BUTTON
-;
-
-64 
-	`¡İPomodÜo
-();
-
-66 if(
-pomodÜo_timeout
- =ğ
-Œue
-)
-
-68 
-pomodÜo_timeout
- = 
-çl£
-;
-
-69 
-	`upd©ePomodÜoTime
-(
-POMODORO_WORK_TIME
-);
-
-70 
-pomodÜo_¡©e
- = 
-pomodÜo_aùive
-;
-
-73 
-pomodÜo_lÚg_b¿ke
-:
-
-74 if(
-bu‰Ú
- =ğ
-BUTTON_B
-)
-
-76 
-bu‰Ú
- = 
-NO_BUTTON
-;
-
-77 
-	`¡İPomodÜo
-();
-
-79 if(
-pomodÜo_timeout
- =ğ
-Œue
-)
-
-81 
-pomodÜo_timeout
- = 
-çl£
-;
-
-82 
-	`upd©ePomodÜoTime
-(
-POMODORO_WORK_TIME
-);
-
-83 
-pomodÜo_¡©e
- = 
-pomodÜo_aùive
-;
-
-88 ifĞ
-bu‰Ú
- =ğ
-BUTTON_A
-)
-
-90 
-bu‰Ú
- = 
-NO_BUTTON
-;
-
-91 
-	`ÃxtS‹
-();
-
-95 
-bu‰Ú
- = 
-NO_BUTTON
-;
-
-96 
-	`d¿wPomodÜoSü“n
-();
-
-97 
-	`EMU_EÁ”EM2
-(
-Œue
-);
-
-99 
-	}
-}
-
-102 
-	$d¿wPomodÜoSü“n
-()
-
-104 
-pomodÜo_¡©e
-)
-
-106 
-pomodÜo_aùive
-:
-
-107 
-	`Segm’tLCD_Wr™e
-("Work");
-
-109 
-pomodÜo_shÜt_b¿ke
-:
-
-110 
-	`Segm’tLCD_Wr™e
-("Break");
-
-112 
-pomodÜo_lÚg_b¿ke
-:
-
-113 
-	`Segm’tLCD_Wr™e
-("Break");
-
-115 
-pomodÜo_off
-:
-
-116 
-	`Segm’tLCD_Wr™e
-("OFF");
-
-119 
-št8_t
- 
-time_befÜe_Ãxt_¡©e
- = 
-pomodÜo
-.
-tm_mš
- - 
-cu¼’tTime
-.tm_min;
-
-120 if(
-time_befÜe_Ãxt_¡©e
- < 0)
-
-122 
-time_befÜe_Ãxt_¡©e
- += 59;
-
-124 if(
-pomodÜo_¡©e
- !ğ
-pomodÜo_off
-)
-
-126 
-	`Segm’tLCD_Numb”
-(
-time_befÜe_Ãxt_¡©e
-);
-
-130 
-	`Segm’tLCD_Numb”Off
-();
-
-132 
-	}
-}
-
-135 
-	$upd©ePomodÜoTime
-(
-ušt8_t
- 
-time
-)
-
-137 
-pomodÜo
-.
-aùive
- = 
-Œue
-;
-
-138 
-pomodÜo
-.
-tm_£c
- = 
-cu¼’tTime
-.tm_sec;
-
-140 if(
-cu¼’tTime
-.
-tm_mš
- + 
-time
- >= 59)
-
-142 
-pomodÜo
-.
-tm_mš
- = 
-cu¼’tTime
-.tm_mš + 
-time
- - 59;
-
-143 
-pomodÜo
-.
-tm_hour
- = 
-cu¼’tTime
-.tm_hour;
-
-144 
-	`šüem’tPošt
-(
-hours
-, &
-pomodÜo
-);
-
-145 
-pomodÜo
-.
-tm_wday
- = 0;
-
-149 
-pomodÜo
-.
-tm_mš
- = 
-cu¼’tTime
-.tm_mš + 
-time
-;
-
-150 
-pomodÜo
-.
-tm_hour
- = 
-cu¼’tTime
-.tm_hour;
-
-152 
-	}
-}
-
-155 
-	$¡İPomodÜo
-()
-
-157 
-pomodÜo_¡©e
- = 
-pomodÜo_off
-;
-
-158 
-pomodÜo
-.
-aùive
- = 
-çl£
-;
-
-159 
-	}
-}
-
-162 
-	$checkPomodÜo
-()
-
-164 if(
-pomodÜo
-.
-aùive
- &&
-
-165 (
-pomodÜo
-.
-tm_£c
- <ğ
-cu¼’tTime
-.tm_sec) &&
-
-166 (
-pomodÜo
-.
-tm_mš
- <ğ
-cu¼’tTime
-.tm_min) &&
-
-167 (
-pomodÜo
-.
-tm_hour
- =ğ
-cu¼’tTime
-.tm_hour))
-
-169 
-pomodÜo_timeout
- = 
-Œue
-;
-
-170 
-¡©e
- = 
-pomodÜo_sü“n
-;
-
-172 
-	}
-}
-
-	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\pomodoro_app.h
-
-1 #iâdeà
-POMODORO_H_INCLUDED
-
-
-2 
-	#POMODORO_H_INCLUDED
-
-
-	)
-
-9 
-	#POMODORO_WORK_TIME
- 25
-
-	)
-
-10 
-	#SHORT_BRAKE_TIME
- 5
-
-	)
-
-11 
-	#LONG_BRAKE_TIME
- 25
-
-	)
-
-12 
-	#POMODOROS_TO_LONG_BRAKE
- 4
-
-	)
-
-14 
-upd©ePomodÜoTime
-(
-ušt8_t
- 
-time
-);
-
-15 
-¡İPomodÜo
-();
-
-16 
-checkPomodÜo
-();
-
-17 
-d¿wPomodÜoSü“n
-();
-
-	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\setup_alarm_app.c
-
-1 
-	~"bu‰Ús.h
-"
-
-2 
-	~"£tup_time_­p.h
-"
-
-3 
-	~"şock.h
-"
-
-4 
-	~"£gm’cd.h
-"
-
-6 
-	#FIRST_SETUP_STATE
- 
-mšu‹s
-
-
-	)
-
-7 
-	#LAST_SETUP_STATE
- 
-aùive
-
-
-	)
-
-9 
-d¿wS‘upAÏrmSü“n
-();
-
-10 
-ÃxtAÏrmS‘upS‹
-();
-
-12 
-tm
- * 
-	gp_®¬m
- = &
-®¬m1
-;
-
-15 
-	$£tupAÏrmAµ
-()
-
-17 ifĞ
-bu‰Ú
- =ğ
-BUTTON_A
-)
-
-19 
-bu‰Ú
- = 
-NO_BUTTON
-;
-
-20 
-	`ÃxtS‹
-();
-
-22 if(
-bu‰Ú
- =ğ
-BUTTON_B
-)
-
-24 
-bu‰Ú
- = 
-NO_BUTTON
-;
-
-25 
-	`ÃxtAÏrmS‘upS‹
-();
-
-27 if(
-bu‰Ú
- =ğ
-BUTTON_C
-)
-
-29 
-bu‰Ú
- = 
-NO_BUTTON
-;
-
-31 if(
-şock_£tup_¡©e
- =ğ
-aùive
-)
-
-33 if(
-p_®¬m
-->
-aùive
- =ğ
-Œue
-)
-
-35 
-p_®¬m
-->
-aùive
- = 
-çl£
-;
-
-39 
-p_®¬m
-->
-aùive
- = 
-Œue
-;
-
-44 
-	`šüem’tPošt
-(
-şock_£tup_¡©e
-, 
-p_®¬m
-);
-
-49 
-bu‰Ú
- = 
-NO_BUTTON
-;
-
-50 
-	`d¿wS‘upAÏrmSü“n
-();
-
-51 
-	`EMU_EÁ”EM2
-(
-Œue
-);
-
-53 
-	}
-}
-
-56 
-	$ÃxtAÏrmS‘upS‹
-()
-
-58 if(
-şock_£tup_¡©e
- =ğ
-LAST_SETUP_STATE
-)
-
-60 
-şock_£tup_¡©e
- = 
-FIRST_SETUP_STATE
-;
-
-64 
-şock_£tup_¡©e
-++;
-
-66 
-	}
-}
-
-69 
-	$d¿wS‘upAÏrmSü“n
-()
-
-71 
-	`Segm’tLCD_Numb”Off
-();
-
-72 if(
-p_®¬m
- =ğ&
-®¬m1
-)
-
-74 
-	`Segm’tLCD_Wr™e
-("Alarm_1");
-
-78 
-	`Segm’tLCD_Wr™e
-("Alarm_2");
-
-80 
-	}
-}
-
-	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\setup_time_app.c
-
-1 
-	~"bu‰Ús.h
-"
-
-2 
-	~"£tup_time_­p.h
-"
-
-3 
-	~"b¥.h
-"
-
-4 
-	~"şock.h
-"
-
-7 
-	#FIRST_SETUP_STATE
- 
-mšu‹s
-
-
-	)
-
-8 
-	#LAST_SETUP_STATE
- 
-w“k_days
-
-
-	)
-
-11 
-£tup_¡©e_t
- 
-	gşock_£tup_¡©e
-;
-
-15 
-	$£tupTimeAµ
-()
-
-17 ifĞ
-bu‰Ú
- =ğ
-BUTTON_A
-)
-
-19 
-bu‰Ú
- = 
-NO_BUTTON
-;
-
-20 
-	`ÃxtS‹
-();
-
-22 if(
-bu‰Ú
- =ğ
-BUTTON_B
-)
-
-24 
-bu‰Ú
- = 
-NO_BUTTON
-;
-
-25 
-	`ÃxtTimeS‘upS‹
-();
-
-27 if(
-bu‰Ú
- =ğ
-BUTTON_C
-)
-
-29 
-bu‰Ú
- = 
-NO_BUTTON
-;
-
-30 
-	`šüem’tPošt
-(
-şock_£tup_¡©e
-, &
-cu¼’tTime
-);
-
-34 
-	`Segm’tLCD_Numb”Off
-();
-
-35 
-bu‰Ú
- = 
-NO_BUTTON
-;
-
-36 
-	`Segm’tLCD_Wr™e
-("Setup_T");
-
-37 
-	`EMU_EÁ”EM2
-(
-Œue
-);
-
-39 
-	}
-}
-
-42 
-	$ÃxtTimeS‘upS‹
-()
-
-44 if(
-şock_£tup_¡©e
- =ğ
-w“k_days
-)
-
-46 
-şock_£tup_¡©e
- = 
-mšu‹s
-;
-
-50 
-şock_£tup_¡©e
-++;
-
-52 
-	}
-}
-
-	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\setup_time_app.h
-
-1 #iâdeà
-SETUP_TIME_APP_H_INCLUDED
-
-
-2 
-	#SETUP_TIME_APP_H_INCLUDED
-
-
-	)
-
-8 
-£tupTimeAµ
-();
-
-9 
-ÃxtTimeS‘upS‹
-();
-
-	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\state_machine.c
-
-1 
-	~"b¥.h
-"
-
-2 
-	~"¡©e_machše.h
-"
-
-3 
-	~"bu‰Ús.h
-"
-
-4 
-	~"şock.h
-"
-
-5 
-	~"aùiv™y_­p.h
-"
-
-9 vŞ©
-¡©e_machše
- 
-	g¡©e
- = 
-maš_sü“n
-;
-
-12 
-	$mašSü“nAµ
-()
-
-14 ifĞ
-bu‰Ú
- =ğ
-BUTTON_A
-)
-
-16 
-bu‰Ú
- = 
-NO_BUTTON
-;
-
-17 
-	`ÃxtS‹
-();
-
-19 if(
-bu‰Ú
- =ğ
-BUTTON_B
-)
-
-21 
-bu‰Ú
- = 
-NO_BUTTON
-;
-
-22 
-	`´eviousS‹
-();
-
-26 
-bu‰Ú
- = 
-NO_BUTTON
-;
-
-27 
-	`Segm’tLCD_Wr™e
-("Main");
-
-28 
-	`EMU_EÁ”EM2
-(
-Œue
-);
-
-30 
-	}
-}
-
-33 
-	$ÃxtS‹
-()
-
-35 ià(
-¡©e
- =ğ
-LAST_STATE
-)
-
-37 
-¡©e
- = 
-FIRST_STATE
-;
-
-41 
-¡©e
-++;
-
-45 
-şock_£tup_¡©e
- = 1;
-
-46 
-	}
-}
-
-49 
-	$´eviousS‹
-()
-
-51 ià(
-¡©e
- =ğ
-FIRST_STATE
-)
-
-53 
-¡©e
- = 
-LAST_STATE
-;
-
-57 
-¡©e
---;
-
-59 
-	}
-}
-
-	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\state_machine.h
-
-1 
-	#FIRST_STATE
- 
-maš_sü“n
-
-
-	)
-
-2 
-	#LAST_STATE
- 
-®¬m_£tup_sü“n
-
-
-	)
-
-5 
-	e¡©e_machše
-
-
-7 
-	mmaš_sü“n
-,
-
-8 
-	mpomodÜo_sü“n
-,
-
-9 
-	maùiv™y_sü“n
-,
-
-10 
-	mtime_£tup_sü“n
-,
-
-11 
-	m®¬m_£tup_sü“n
-
-
-14 vŞ©
-¡©e_machše
- 
-¡©e
-;
-
-17 
-mašSü“nAµ
-();
-
-18 
-aùiv™yAµ
-();
-
-19 
-£tupTimeAµ
-();
-
-20 
-ÃxtS‹
-();
-
-21 
-´eviousS‹
-();
-
 	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\variables.c
 
-1 
-	~"şock.h
+10 
+	~"time_mªagem’t.h
 "
 
-2 
+11 
 	~<¡dboŞ.h
 >
 
-5 
+23 
 	$š™V¬ŸbËs
 ()
 
-7 
+25 
 cu¼’tTime
 .
 tm_£c
  = 0;
 
-8 
+26 
 cu¼’tTime
 .
 tm_mš
  = 0;
 
-9 
+27 
 cu¼’tTime
 .
 tm_hour
  = 0;
 
-10 
+28 
 cu¼’tTime
 .
 tm_wday
  = 0;
 
-11 
+29 
 cu¼’tTime
 .
 aùive
@@ -18155,31 +18163,31 @@ aùive
 çl£
 ;
 
-13 
+31 
 ®¬m1
 .
 tm_£c
  = 10;
 
-14 
+32 
 ®¬m1
 .
 tm_mš
  = 0;
 
-15 
+33 
 ®¬m1
 .
 tm_hour
  = 0;
 
-16 
+34 
 ®¬m1
 .
 tm_wday
  = 0;
 
-17 
+35 
 ®¬m1
 .
 aùive
@@ -18187,31 +18195,31 @@ aùive
 çl£
 ;
 
-19 
+37 
 ®¬m2
 .
 tm_£c
  = 7;
 
-20 
+38 
 ®¬m2
 .
 tm_mš
  = 0;
 
-21 
+39 
 ®¬m2
 .
 tm_hour
  = 0;
 
-22 
+40 
 ®¬m2
 .
 tm_wday
  = 8;
 
-23 
+41 
 ®¬m2
 .
 aùive
@@ -18219,31 +18227,31 @@ aùive
 çl£
 ;
 
-25 
+43 
 pomodÜo
 .
 tm_£c
  = 30;
 
-26 
+44 
 pomodÜo
 .
 tm_mš
  = 0;
 
-27 
+45 
 pomodÜo
 .
 tm_hour
  = 0;
 
-28 
+46 
 pomodÜo
 .
 tm_wday
  = 0;
 
-29 
+47 
 pomodÜo
 .
 aùive
@@ -18251,7 +18259,7 @@ aùive
 çl£
 ;
 
-30 
+48 
 	}
 }
 
@@ -21726,7 +21734,7 @@ __ılu¥lus
 .
 0
 33
-2912
+2932
 C:\Users\Alexander\AppData\Roaming\energymicro\Device\EnergyMicro\EFM32GG\Source\GCC\startup_efm32gg.S
 C:\Users\Alexander\AppData\Roaming\energymicro\Device\EnergyMicro\EFM32GG\Source\system_efm32gg.c
 C:\Users\Alexander\AppData\Roaming\energymicro\emlib\src\em_assert.c
@@ -21743,8 +21751,6 @@ C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\blink.c
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\buttons.c
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\buttons.h
-C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\clock.c
-C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\clock.h
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\globals.h
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\pomodoro_app.c
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\pomodoro_app.h
@@ -21753,6 +21759,8 @@ C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\setup_time_app.h
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\state_machine.c
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\state_machine.h
+C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\time_management.c
+C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\time_management.h
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\variables.c
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\common\bsp\bsp_bcc.c
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\common\bsp\bsp_stk.c

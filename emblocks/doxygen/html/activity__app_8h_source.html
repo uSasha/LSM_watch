@@ -44,7 +44,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -90,7 +89,7 @@ $(document).ready(function(){initNavTree('activity__app_8h_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -119,15 +118,14 @@ $(document).ready(function(){initNavTree('activity__app_8h_source.html','');});
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keywordtype">void</span> <a class="code" href="activity__app_8c.html#a0902bf13f3d591b647df86e51d6aa2b7" title="init counter and clear all weekly activities ">initActivity</a>(<span class="keywordtype">void</span>);</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keywordtype">void</span> <a class="code" href="activity__app_8c.html#aeef2b900caf13e8acee178b1894a7748" title="clear daily activity ">clearActivity</a>(uint8_t wday);</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keywordtype">void</span> <a class="code" href="activity__app_8c.html#a792e28484ee2ee4793961084c5b19444" title="main loop of activity app check buttons, change states accordingly and go to EM2 if nothing happens ...">activityApp</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;uint8_t <a class="code" href="clock_8c.html#a2741b41821ccc271d25beb8ceb0a1b33" title="check all alarms ">checkAlarms</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">void</span> <a class="code" href="clock_8c.html#a69b4bc7eab0c60f6bfde5dae550ac4b1" title="run alarm, show alarm screen, turn on screen_notification flag, which prevents screen updates by apps...">runAlarm</a>(uint8_t alarm);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>activity_app.h</b></li>
-    <li class="footer">Generated on Wed Aug 14 2013 22:43:10 for lifestyle monitoring watch by
+    <li class="footer">Generated on Mon Aug 19 2013 23:35:29 for lifestyle monitoring watch by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

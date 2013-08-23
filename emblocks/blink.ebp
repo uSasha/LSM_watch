@@ -65,10 +65,6 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="..\buttons.h" />
-		<Unit filename="..\clock.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\clock.h" />
 		<Unit filename="..\..\..\..\..\emlib\src\em_assert.c">
 			<Option compilerVar="CC" />
 			<Option virtualFolder="em_lib\" />
@@ -106,6 +102,10 @@
 			<Option virtualFolder="em_lib\" />
 		</Unit>
 		<Unit filename="..\globals.h" />
+		<Unit filename="..\main_screen_app.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\main_screen_app.h" />
 		<Unit filename="..\pomodoro_app.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -133,6 +133,10 @@
 			<Option compilerVar="CC" />
 			<Option virtualFolder="bsp\" />
 		</Unit>
+		<Unit filename="..\time_management.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\time_management.h" />
 		<Unit filename="..\variables.c">
 			<Option compilerVar="CC" />
 		</Unit>

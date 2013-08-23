@@ -44,7 +44,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -90,7 +89,7 @@ $(document).ready(function(){initNavTree('state__machine_8h_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -120,18 +119,16 @@ $(document).ready(function(){initNavTree('state__machine_8h_source.html','');});
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">extern</span> <span class="keyword">volatile</span> <span class="keyword">enum</span> state_machine state;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">void</span> <a class="code" href="state__machine_8c.html#a8d4fcc8fd309524c4bd9f4a2db1f8b95" title="the screen which is active by default or after some time without user actions, show main screen...">mainScreenApp</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">void</span> <a class="code" href="activity__app_8c.html#a792e28484ee2ee4793961084c5b19444" title="main loop of activity app check buttons, change states accordingly and go to EM2 if nothing happens ...">activityApp</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">void</span> <a class="code" href="setup__time__app_8c.html#a57de873871e6dc6f66463cfdc771640a" title="state machine handles buttons, show information on the screen, clock_setup_state is shared with setup...">setupTimeApp</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">void</span> <a class="code" href="state__machine_8c.html#a060060f8a265d6bb3f8373a608e9f091" title="increment states in safe way, check for overflow ">nextState</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">void</span> <a class="code" href="state__machine_8c.html#a24a3b4c2345e2962ff5a8e3aa6ecaa08" title="decrement states in safe way, check for underflow ">previousState</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">void</span> mainScreenApp(<span class="keywordtype">void</span>);   <span class="comment">//TODO make separate file for main screen </span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">void</span> <a class="code" href="state__machine_8c.html#a060060f8a265d6bb3f8373a608e9f091" title="increment states in safe way, check for overflow ">nextState</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">void</span> <a class="code" href="state__machine_8c.html#a24a3b4c2345e2962ff5a8e3aa6ecaa08" title="decrement states in safe way, check for underflow ">previousState</a>(<span class="keywordtype">void</span>);</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>state_machine.h</b></li>
-    <li class="footer">Generated on Wed Aug 14 2013 22:43:10 for lifestyle monitoring watch by
+    <li class="footer">Generated on Mon Aug 19 2013 23:35:29 for lifestyle monitoring watch by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

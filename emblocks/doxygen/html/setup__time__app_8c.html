@@ -44,7 +44,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -90,7 +89,7 @@ $(document).ready(function(){initNavTree('setup__time__app_8c.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -109,12 +108,12 @@ $(document).ready(function(){initNavTree('setup__time__app_8c.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>this file handles everything in set alarm app, but alarm check and run functions are in clock.c(time_management)  
+<p>this file handles everything in set alarm app, but alarm check and run functions are in time_management.c(time_management)  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;buttons.h&quot;</code><br/>
 <code>#include &quot;setup_time_app.h&quot;</code><br/>
 <code>#include &quot;bsp.h&quot;</code><br/>
-<code>#include &quot;clock.h&quot;</code><br/>
+<code>#include &quot;time_management.h&quot;</code><br/>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
@@ -127,12 +126,12 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a321c11e1ae730f5357a111ca66898271"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="setup__time__app_8c.html#a321c11e1ae730f5357a111ca66898271">nextTimeSetupState</a> (void)</td></tr>
+<tr class="memdesc:a321c11e1ae730f5357a111ca66898271"><td class="mdescLeft">&#160;</td><td class="mdescRight">switch states in safe way, check for overflow the difference between this function and the same one in <a class="el" href="setup__alarm__app_8c.html" title="this file handles everything in set alarm app, but alarm check and run functions are in time_manageme...">setup_alarm_app.c</a> is max and min conditions  <a href="#a321c11e1ae730f5357a111ca66898271">More...</a><br/></td></tr>
+<tr class="separator:a321c11e1ae730f5357a111ca66898271"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57de873871e6dc6f66463cfdc771640a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="setup__time__app_8c.html#a57de873871e6dc6f66463cfdc771640a">setupTimeApp</a> (void)</td></tr>
 <tr class="memdesc:a57de873871e6dc6f66463cfdc771640a"><td class="mdescLeft">&#160;</td><td class="mdescRight">state machine handles buttons, show information on the screen, clock_setup_state is shared with setup_alarm_app  <a href="#a57de873871e6dc6f66463cfdc771640a">More...</a><br/></td></tr>
 <tr class="separator:a57de873871e6dc6f66463cfdc771640a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a321c11e1ae730f5357a111ca66898271"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="setup__time__app_8c.html#a321c11e1ae730f5357a111ca66898271">nextTimeSetupState</a> (void)</td></tr>
-<tr class="memdesc:a321c11e1ae730f5357a111ca66898271"><td class="mdescLeft">&#160;</td><td class="mdescRight">switch states in safe way, check for overflow the difference between this function and the same one in <a class="el" href="setup__alarm__app_8c.html" title="this file handles everything in set alarm app, but alarm check and run functions are in clock...">setup_alarm_app.c</a> is max and min conditions  <a href="#a321c11e1ae730f5357a111ca66898271">More...</a><br/></td></tr>
-<tr class="separator:a321c11e1ae730f5357a111ca66898271"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -141,7 +140,7 @@ enum setup_state_t&#160;</td><td class="memItemRight" valign="bottom"><b>clock_s
 <tr class="separator:aafcb6e560b65540a73d128e32d74bd6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>this file handles everything in set alarm app, but alarm check and run functions are in clock.c(time_management) </p>
+<div class="textblock"><p>this file handles everything in set alarm app, but alarm check and run functions are in time_management.c(time_management) </p>
 <dl class="section author"><dt>Author</dt><dd>Alexandr D. <a href="#" onclick="location.href='mai'+'lto:'+'sas'+'ha'+'.en'+'gi'+'nee'+'r@'+'gma'+'il'+'.co'+'m'; return false;">sasha<span style="display: none;">.nosp@m.</span>.eng<span style="display: none;">.nosp@m.</span>ineer<span style="display: none;">.nosp@m.</span>@gma<span style="display: none;">.nosp@m.</span>il.co<span style="display: none;">.nosp@m.</span>m</a> </dd></dl>
 <dl class="section version"><dt>Version</dt><dd></dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
@@ -159,7 +158,7 @@ enum setup_state_t&#160;</td><td class="memItemRight" valign="bottom"><b>clock_s
       </table>
 </div><div class="memdoc">
 
-<p>switch states in safe way, check for overflow the difference between this function and the same one in <a class="el" href="setup__alarm__app_8c.html" title="this file handles everything in set alarm app, but alarm check and run functions are in clock...">setup_alarm_app.c</a> is max and min conditions </p>
+<p>switch states in safe way, check for overflow the difference between this function and the same one in <a class="el" href="setup__alarm__app_8c.html" title="this file handles everything in set alarm app, but alarm check and run functions are in time_manageme...">setup_alarm_app.c</a> is max and min conditions </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">\param</td><td></td></tr>
@@ -201,7 +200,7 @@ enum setup_state_t&#160;</td><td class="memItemRight" valign="bottom"><b>clock_s
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="setup__time__app_8c.html">setup_time_app.c</a></li>
-    <li class="footer">Generated on Wed Aug 14 2013 22:43:10 for lifestyle monitoring watch by
+    <li class="footer">Generated on Mon Aug 19 2013 23:35:29 for lifestyle monitoring watch by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

@@ -1,7 +1,7 @@
 /**************************************************************************//**
  * @file setup_time_app.c
  * @brief this file handles everything in set alarm app, 
- * but alarm check and run functions are in clock.c(time_management)
+ * but alarm check and run functions are in time_management.c(time_management)
  * @author Alexandr D.  sasha.engineer@gmail.com
  * @version 
  ******************************************************************************/
@@ -10,12 +10,13 @@
 #include "buttons.h"
 #include "setup_time_app.h"
 #include "bsp.h"
-#include "clock.h"
+#include "time_management.h"
 
 
 #define FIRST_SETUP_STATE       minutes
 #define LAST_SETUP_STATE        week_days
 
+void nextTimeSetupState(void);
 
 enum setup_state_t clock_setup_state;
 

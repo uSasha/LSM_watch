@@ -9,7 +9,7 @@
 #include "em_cmu.h"
 #include "state_machine.h"
 #include "buttons.h"
-#include "clock.h"
+#include "time_management.h"
 
 
 volatile uint8_t button = NO_BUTTON;

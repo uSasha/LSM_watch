@@ -13,7 +13,7 @@ extern struct tm currentTime;
 extern struct tm alarm1;
 extern struct tm alarm2;
 extern struct tm pomodoro;
-extern bool screen_notification;        //NOTE is it the right place?
+extern bool screen_notification;        
 
 
 struct tm
@@ -36,9 +36,5 @@ enum setup_state_t { seconds,
 
 
 void initClock(void);
-void updateTime(void);
 void incrementPoint(enum setup_state_t points, struct tm *something);
 void decrementPoint(enum setup_state_t points, struct tm *something);
-
-void runAlarm(uint8_t alarm);
-uint8_t checkAlarms(void);

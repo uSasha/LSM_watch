@@ -44,7 +44,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -90,7 +89,7 @@ $(document).ready(function(){initNavTree('files.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -111,17 +110,15 @@ $(document).ready(function(){initNavTree('files.html','');});
 <tr id="row_2_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="blink_8c.html" target="_self">blink.c</a></td><td class="desc">Simple LED Blink Demo for EFM32GG_STK3700 </td></tr>
 <tr id="row_3_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="buttons_8c.html" target="_self">buttons.c</a></td><td class="desc">Simple buttons driver </td></tr>
 <tr id="row_4_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="buttons_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><b>buttons.h</b></td><td class="desc"></td></tr>
-<tr id="row_5_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="clock_8c.html" target="_self">clock.c</a></td><td class="desc">Simple buttons driver </td></tr>
-<tr id="row_6_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="clock_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><b>clock.h</b></td><td class="desc"></td></tr>
-<tr id="row_7_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="globals_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><b>globals.h</b></td><td class="desc"></td></tr>
-<tr id="row_8_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="pomodoro__app_8c.html" target="_self">pomodoro_app.c</a></td><td class="desc">Handles all pomodoro timer application, more info: <a href="http://en.wikipedia.org/wiki/Pomodoro_Technique">http://en.wikipedia.org/wiki/Pomodoro_Technique</a> </td></tr>
-<tr id="row_9_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="pomodoro__app_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><b>pomodoro_app.h</b></td><td class="desc"></td></tr>
-<tr id="row_10_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="setup__alarm__app_8c.html" target="_self">setup_alarm_app.c</a></td><td class="desc">This file handles everything in set alarm app, but alarm check and run functions are in clock.c(time_management) </td></tr>
-<tr id="row_11_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="setup__time__app_8c.html" target="_self">setup_time_app.c</a></td><td class="desc">This file handles everything in set alarm app, but alarm check and run functions are in clock.c(time_management) </td></tr>
-<tr id="row_12_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="setup__time__app_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><b>setup_time_app.h</b></td><td class="desc"></td></tr>
-<tr id="row_13_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="state__machine_8c.html" target="_self">state_machine.c</a></td><td class="desc">Root menu state machine handling </td></tr>
-<tr id="row_14_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="state__machine_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><b>state_machine.h</b></td><td class="desc"></td></tr>
-<tr id="row_15_"><td class="entry"><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="variables_8c.html" target="_self">variables.c</a></td><td class="desc">Init all globals in one place, made to find and modify initial value of global variables easily </td></tr>
+<tr id="row_5_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="globals_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><b>globals.h</b></td><td class="desc"></td></tr>
+<tr id="row_6_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="pomodoro__app_8c.html" target="_self">pomodoro_app.c</a></td><td class="desc">Handles all pomodoro timer application, more info: <a href="http://en.wikipedia.org/wiki/Pomodoro_Technique">http://en.wikipedia.org/wiki/Pomodoro_Technique</a> </td></tr>
+<tr id="row_7_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="pomodoro__app_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><b>pomodoro_app.h</b></td><td class="desc"></td></tr>
+<tr id="row_8_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="setup__alarm__app_8c.html" target="_self">setup_alarm_app.c</a></td><td class="desc">This file handles everything in set alarm app, but alarm check and run functions are in time_management.c(time_management) </td></tr>
+<tr id="row_9_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="setup__time__app_8c.html" target="_self">setup_time_app.c</a></td><td class="desc">This file handles everything in set alarm app, but alarm check and run functions are in time_management.c(time_management) </td></tr>
+<tr id="row_10_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="setup__time__app_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><b>setup_time_app.h</b></td><td class="desc"></td></tr>
+<tr id="row_11_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="state__machine_8c.html" target="_self">state_machine.c</a></td><td class="desc">Root menu state machine handling </td></tr>
+<tr id="row_12_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="state__machine_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><b>state_machine.h</b></td><td class="desc"></td></tr>
+<tr id="row_13_"><td class="entry"><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="variables_8c.html" target="_self">variables.c</a></td><td class="desc">Init all globals in one place, made to find and modify initial value of global variables easily </td></tr>
 </table>
 </div><!-- directory -->
 </div><!-- contents -->
@@ -129,7 +126,7 @@ $(document).ready(function(){initNavTree('files.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Aug 14 2013 22:43:11 for lifestyle monitoring watch by
+    <li class="footer">Generated on Mon Aug 19 2013 23:35:29 for lifestyle monitoring watch by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

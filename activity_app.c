@@ -8,10 +8,13 @@
 #include "em_pcnt.h"
 #include "em_cmu.h"
 #include "em_gpio.h"
-#include "clock.h"
+#include "time_management.h"
 #include "activity_app.h"
 #include "buttons.h"
 
+void initCounter(void);
+void drawActivityScreen(void);
+void PCNT1_IRQHandler(void);
 
 uint8_t activity[7];
 

@@ -44,7 +44,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -90,7 +89,7 @@ $(document).ready(function(){initNavTree('setup__alarm__app_8c.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -108,11 +107,11 @@ $(document).ready(function(){initNavTree('setup__alarm__app_8c.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>this file handles everything in set alarm app, but alarm check and run functions are in clock.c(time_management)  
+<p>this file handles everything in set alarm app, but alarm check and run functions are in time_management.c(time_management)  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;buttons.h&quot;</code><br/>
 <code>#include &quot;setup_time_app.h&quot;</code><br/>
-<code>#include &quot;clock.h&quot;</code><br/>
+<code>#include &quot;time_management.h&quot;</code><br/>
 <code>#include &quot;segmentlcd.h&quot;</code><br/>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -137,7 +136,7 @@ Functions</h2></td></tr>
 <tr class="separator:a251e5a2f2aef4e642e7411b461aba4d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>this file handles everything in set alarm app, but alarm check and run functions are in clock.c(time_management) </p>
+<div class="textblock"><p>this file handles everything in set alarm app, but alarm check and run functions are in time_management.c(time_management) </p>
 <dl class="section author"><dt>Author</dt><dd>Alexandr D. <a href="#" onclick="location.href='mai'+'lto:'+'sas'+'ha'+'.en'+'gi'+'nee'+'r@'+'gma'+'il'+'.co'+'m'; return false;">sasha<span style="display: none;">.nosp@m.</span>.eng<span style="display: none;">.nosp@m.</span>ineer<span style="display: none;">.nosp@m.</span>@gma<span style="display: none;">.nosp@m.</span>il.co<span style="display: none;">.nosp@m.</span>m</a> </dd></dl>
 <dl class="section version"><dt>Version</dt><dd></dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
@@ -222,7 +221,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="setup__alarm__app_8c.html">setup_alarm_app.c</a></li>
-    <li class="footer">Generated on Wed Aug 14 2013 22:43:10 for lifestyle monitoring watch by
+    <li class="footer">Generated on Mon Aug 19 2013 23:35:29 for lifestyle monitoring watch by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

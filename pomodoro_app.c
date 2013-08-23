@@ -8,11 +8,15 @@
 
 
 #include "bsp.h"
-#include "clock.h"
+#include "time_management.h"
 #include "state_machine.h"
 #include "buttons.h"
 #include "pomodoro_app.h"
 #include "segmentlcd.h"
+
+void updatePomodoroTime(uint8_t time);
+void stopPomodoro(void);
+void drawPomodoroScreen(void);
 
 
 bool pomodoro_timeout = false;
@@ -60,7 +64,7 @@ void pomodoroApp(void)
         {
             pomodoro_timeout = false;
             pomodoros++;
-            if(pomodoros >= POMODOROS_TO_LONG_BRAKE)  //TODO check number of pomodoros till long break
+            if(pomodoros >= POMODOROS_TO_LONG_BRAKE) 
             {
                 pomodoros = 0;
                 updatePomodoroTime(LONG_BRAKE_TIME);

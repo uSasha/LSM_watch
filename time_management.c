@@ -1,14 +1,13 @@
 /**************************************************************************//**
  * @file clock.c
- * @brief simple buttons driver
+ * @brief simple buttons driver     //TODO REDOO
  * @author Alexandr D.  sasha.engineer@gmail.com
  * @version 
  ******************************************************************************/
-// TODO rename clock files to time_management or something more meaningful 
 
 #include "em_rtc.h"
 #include "em_cmu.h"
-#include "clock.h"
+#include "time_management.h"
 #include "pomodoro_app.h"
 #include "segmentlcd.h"
 #include "activity_app.h"
@@ -17,6 +16,9 @@
 //#define RTC_COUNT_BETWEEN_WAKEUP    59      // interrupt every 60 seconds
 #define RTC_COUNT_BETWEEN_WAKEUP    1      // interrupt every 2 seconds
 
+uint8_t checkAlarms(void);
+void runAlarm(uint8_t alarm);
+void updateTime(void);  // replace ot make it inline
 
 struct tm currentTime;
 struct tm alarm1;

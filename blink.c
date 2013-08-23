@@ -41,7 +41,7 @@
 #include "bsp.h"
 #include "bsp_trace.h"
 #include "state_machine.h"
-#include "clock.h"
+#include "time_management.h"
 #include "setup_time_app.h"
 #include "buttons.h"
 #include "activity_app.h"
@@ -150,7 +150,7 @@ int main(void)
     /* Infinite blink loop */
     while (1)
     {
-        //NOTE maybe button A must be checked here
+        //NOTE maybe button A(change state) must be checked here
         if(screen_notification == true)    // don't update screen until user reaction
         {
             EMU_EnterEM2(true);

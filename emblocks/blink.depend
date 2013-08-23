@@ -2321,23 +2321,23 @@
 	"clock.h"
 	<stdbool.h>
 
-1376421691 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\activity_app.c
+1376939699 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\activity_app.c
 	"em_pcnt.h"
 	"em_cmu.h"
 	"em_gpio.h"
-	"clock.h"
+	"time_management.h"
 	"activity_app.h"
 	"buttons.h"
 
-1376503221 c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\clock.h
+1376506158 c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\clock.h
 	"bsp.h"
 
-1376503108 c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\activity_app.h
+1376506145 c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\activity_app.h
 
-1374520599 c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\buttons.h
+1376939109 c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\buttons.h
 	"bsp.h"
 
-1376498243 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\blink.c
+1376939382 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\blink.c
 	<stdint.h>
 	<stdbool.h>
 	"em_device.h"
@@ -2347,23 +2347,23 @@
 	"bsp.h"
 	"bsp_trace.h"
 	"state_machine.h"
-	"clock.h"
+	"time_management.h"
 	"setup_time_app.h"
 	"buttons.h"
 	"activity_app.h"
 
-1374604058 c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\state_machine.h
+1376940034 c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\state_machine.h
 
-1374520189 c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\setup_time_app.h
+1376939926 c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\setup_time_app.h
 
-1376499633 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\buttons.c
+1376939409 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\buttons.c
 	"em_gpio.h"
 	"em_cmu.h"
 	"state_machine.h"
 	"buttons.h"
-	"clock.h"
+	"time_management.h"
 
-1376503124 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\clock.c
+1376504589 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\clock.c
 	"em_rtc.h"
 	"em_cmu.h"
 	"clock.h"
@@ -2371,36 +2371,55 @@
 	"segmentlcd.h"
 	"activity_app.h"
 
-1374432249 c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\pomodoro_app.h
+1376940226 c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\pomodoro_app.h
 
-1376502816 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\pomodoro_app.c
+1376939570 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\pomodoro_app.c
 	"bsp.h"
-	"clock.h"
+	"time_management.h"
 	"state_machine.h"
 	"buttons.h"
 	"pomodoro_app.h"
 	"segmentlcd.h"
 
-1376503123 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\setup_alarm_app.c
+1376939435 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\setup_alarm_app.c
 	"buttons.h"
 	"setup_time_app.h"
-	"clock.h"
+	"time_management.h"
 	"segmentlcd.h"
 
-1376409622 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\setup_time_app.c
+1376939923 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\setup_time_app.c
 	"buttons.h"
 	"setup_time_app.h"
 	"bsp.h"
-	"clock.h"
+	"time_management.h"
 
-1376409622 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\state_machine.c
+1376940698 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\state_machine.c
 	"bsp.h"
 	"state_machine.h"
 	"buttons.h"
-	"clock.h"
+	"time_management.h"
+	"activity_app.h"
+	"main_screen_app.h"
+
+1376939444 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\variables.c
+	"time_management.h"
+	<stdbool.h>
+
+1376940348 c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\time_management.h
+	"bsp.h"
+
+1376940444 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\time_management.c
+	"em_rtc.h"
+	"em_cmu.h"
+	"time_management.h"
+	"pomodoro_app.h"
+	"segmentlcd.h"
 	"activity_app.h"
 
-1374603261 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\variables.c
-	"clock.h"
-	<stdbool.h>
+1376940698 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\main_screen_app.c
+	"time_management.h"
+	"activity_app.h"
+	"buttons.h"
+
+1376940698 c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\main_screen_app.h
 

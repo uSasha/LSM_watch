@@ -5,8 +5,6 @@ var files =
     [ "blink.c", "blink_8c.html", "blink_8c" ],
     [ "buttons.c", "buttons_8c.html", "buttons_8c" ],
     [ "buttons.h", "buttons_8h_source.html", null ],
-    [ "clock.c", "clock_8c.html", "clock_8c" ],
-    [ "clock.h", "clock_8h_source.html", null ],
     [ "globals.h", "globals_8h_source.html", null ],
     [ "pomodoro_app.c", "pomodoro__app_8c.html", "pomodoro__app_8c" ],
     [ "pomodoro_app.h", "pomodoro__app_8h_source.html", null ],
