@@ -2363,7 +2363,7 @@
 
 1377258515 c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\setup_time_app.h
 
-1377443441 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\buttons.c
+1377446935 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\buttons.c
 	"em_gpio.h"
 	"em_cmu.h"
 	"state_machine.h"

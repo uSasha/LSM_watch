@@ -193,13 +193,18 @@ void PCNT1_IRQHandler(void)
  ******************************************************************************/
 void initAccel(void)
 {
-  writeRegister(DATA_FORMAT, 0x01);     // 
-  writeRegister(THRESH_ACT, SENSITIVITY);   // activity  treshold 
-  writeRegister(ACT_INACT_CTL, 0x70);  // define active all axes 
-  writeRegister(INT_ENABLE, 0x10);      // enable Activity interrupt
-  writeRegister(INT_MAP, 0x00);         // all active interrupt to pin 1
-//  writeRegister(BW_RATE, 0x11);         // set lowest possible consumption datarate 23 uA
-  writeRegister(POWER_CTL, 0x08);  // Measurement mode 
+    writeRegister(DATA_FORMAT, 0x01);     // 
+    writeRegister(THRESH_ACT, SENSITIVITY);   // activity  treshold 
+    writeRegister(ACT_INACT_CTL, 0x70);  // define active all axes 
+    writeRegister(INT_ENABLE, 0x10);      // enable Activity interrupt
+    writeRegister(INT_MAP, 0x00);         // all active interrupt to pin 1
+    //  writeRegister(BW_RATE, 0x11);         // set lowest possible consumption datarate 23 uA
+    writeRegister(POWER_CTL, 0x08);  // Measurement mode 
+  
+    while( !(values[0] & ACT_INT_MASK) )   
+    {
+        readRegister(INT_SOURCE, 1, values);
+    }
 }
 
 
