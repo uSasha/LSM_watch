@@ -8,6 +8,9 @@
 #include "time_management.h"
 #include "activity_app.h"
 #include "buttons.h"
+#include "state_machine.h"
+#include "segmentlcd.h"
+#include "em_emu.h"
 
 /********************************************//**
  * \brief the screen which is active by default or after some time without user actions,
@@ -27,7 +30,7 @@ void mainScreenApp(void)
     else if(button == BUTTON_B)
     {
         button = NO_BUTTON;
-        previousState();
+//        previousState();
     }
     else
     {

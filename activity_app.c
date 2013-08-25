@@ -8,13 +8,20 @@
 #include "em_pcnt.h"
 #include "em_cmu.h"
 #include "em_gpio.h"
+#include "em_emu.h"
 #include "time_management.h"
 #include "activity_app.h"
 #include "buttons.h"
+#include "ADXL345.h"
+#include "segmentlcd.h"
+#include "state_machine.h"
 
 void initCounter(void);
 void drawActivityScreen(void);
 void PCNT1_IRQHandler(void);
+void initSPI(void);
+void initAccel(void);
+void initAccelInterrupt(void);
 
 uint8_t activity[7];
 
@@ -80,6 +87,30 @@ void initActivity(void)
     {
         activity[i] = 0;
     }
+    
+    initSPI();
+    initAccel();
+    initAccelInterrupt();   //ADXL345 special
+}
+
+
+/********************************************//**
+ * \brief ADXL can't automatically clear activity interrupt, 
+ *  we have to do it manually
+ * \param 
+ * \param 
+ * \return 
+ *
+ ***********************************************/      
+void initAccelInterrupt(void)
+{
+    /* Configure interrurp pin from accel, and enable interrupt on rising edge */
+    GPIO_PinModeSet(ACCEL_INT_PORT , ACCEL_INT_PIN, gpioModeInput, 0);
+    GPIO_IntConfig(ACCEL_INT_PORT, ACCEL_INT_PIN, true, false, true);  
+    
+    /* Clear and enable interrupts */
+    NVIC_ClearPendingIRQ(GPIO_EVEN_IRQn);
+    NVIC_EnableIRQ(GPIO_EVEN_IRQn); 
 }
 
 
@@ -131,7 +162,7 @@ void activityApp(void)
     else if(button == BUTTON_B)
     {
         button = NO_BUTTON;
-        previousState();
+//        previousState();
     }
     else
     {
@@ -152,4 +183,52 @@ void PCNT1_IRQHandler(void)
     PCNT_IntClear(PCNT1, 0x2);
 
     activity[currentTime.tm_wday]++;
+}
+
+
+/******************************************************************************
+ * @brief init accelerometer to output interrupt on any activity 
+ * 
+ *
+ ******************************************************************************/
+void initAccel(void)
+{
+  writeRegister(DATA_FORMAT, 0x01);     // 
+  writeRegister(THRESH_ACT, SENSITIVITY);   // activity  treshold 
+  writeRegister(ACT_INACT_CTL, 0x70);  // define active all axes 
+  writeRegister(INT_ENABLE, 0x10);      // enable Activity interrupt
+  writeRegister(INT_MAP, 0x00);         // all active interrupt to pin 1
+//  writeRegister(BW_RATE, 0x11);         // set lowest possible consumption datarate 23 uA
+  writeRegister(POWER_CTL, 0x08);  // Measurement mode 
+}
+
+
+
+/******************************************************************************
+ * @brief init USART1 in SPI mode
+ * 
+ *
+ ******************************************************************************/
+void initSPI(void)
+{
+  // Setup clock
+  CMU_ClockEnable(CMUCLOCK_ACCEL_USART, true);
+
+  // Setup GPIO's 
+  GPIO_PinModeSet( ACCEL_MOSI_PORT, ACCEL_MOSI_PIN, gpioModePushPull, 0 );         // mosi
+  GPIO_PinModeSet( ACCEL_MISO_PORT, ACCEL_MISO_PIN, gpioModeInput,    0 );         // miso
+  GPIO_PinModeSet( ACCEL_CLK_PORT, ACCEL_CLK_PIN, gpioModePushPull, 0 );         // clk
+  GPIO_PinModeSet( ACCEL_CS_PORT, ACCEL_CS_PIN, gpioModePushPull, 0 );         // cs
+
+  // init USART as SPI
+  USART_InitSync_TypeDef usartInit = USART_INITSYNC_DEFAULT;
+  usartInit.baudrate = BAUDRATE;
+  usartInit.msbf = true;
+  usartInit.clockMode = usartClockMode3; 	
+
+  USART_InitSync(ACCEL_USART, &usartInit);
+
+  //route USART1 to expansion header
+  ACCEL_USART->ROUTE = (USART_ROUTE_CLKPEN | USART_ROUTE_TXPEN | USART_ROUTE_RXPEN | ACCER_USART_LOC);
+  ACCEL_USART->CMD |= USART_CMD_RXBLOCKEN;  
 }

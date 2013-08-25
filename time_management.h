@@ -19,10 +19,10 @@ extern bool screen_notification;
 struct tm
 {
     /* date and time components */
-    int tm_sec;
-    int tm_min;
-    int tm_hour;
-    int tm_wday;
+    uint8_t tm_sec;
+    uint8_t tm_min;
+    uint8_t tm_hour;
+    uint8_t tm_wday;
     bool active;  // only for alarms
 };
 

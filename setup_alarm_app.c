@@ -11,6 +11,8 @@
 #include "setup_time_app.h"
 #include "time_management.h"
 #include "segmentlcd.h"
+#include "state_machine.h"
+#include "em_emu.h"
 
 #define FIRST_SETUP_STATE       minutes
 #define LAST_SETUP_STATE        active
@@ -21,6 +23,7 @@ static struct tm * p_alarm = &alarm1;
 
 void drawSetupAlarmScreen(void);
 void nextAlarmSetupState(void);
+void drawSetupAlarmScreen(void);
 
 
 /********************************************//**

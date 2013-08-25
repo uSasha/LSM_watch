@@ -10,7 +10,7 @@
 #include "state_machine.h"
 #include "buttons.h"
 #include "time_management.h"
-
+#include "ADXL345.h"    
 
 volatile uint8_t button = NO_BUTTON;
 
@@ -51,9 +51,29 @@ void initButtons(void)
  ***********************************************/                                  
 void GPIO_EVEN_IRQHandler() // button A was pressed
 {
-    GPIO_IntClear(1 << BUTTON_B_PIN); /**< clear interrupt */
-    button = BUTTON_A;
-    screen_notification = false;
+    if(GPIO_IntGet() & (1 << BUTTON_B_PIN))
+    {
+        GPIO_IntClear(1 << BUTTON_B_PIN);
+        button = BUTTON_B;
+        screen_notification = false;
+    }else
+   
+    if(GPIO_IntGet() & (1 << ACCEL_INT_PIN))    // NOTE only for ADXL345, 
+                        //because it cant clear activity int automatically
+    {
+        /* Clear interrupt for GPIO port PB_EVEN_PIN */
+        GPIO_IntClear( 1 << ACCEL_INT_PIN );
+        
+        values[0] = 0;      //read interrupt register to clear interrupt
+        while( !(values[0] & ACT_INT_MASK) )   
+        {
+          readRegister(INT_SOURCE, 1, values);
+        }
+    }else
+    {
+        // wrong interrupt
+        // TODO handle wring IRQ
+    }
 }
 
 
@@ -68,7 +88,14 @@ void GPIO_EVEN_IRQHandler() // button A was pressed
  ***********************************************/      
 void GPIO_ODD_IRQHandler()  // button B was pressed
 {
-    GPIO_IntClear(1 << BUTTON_A_PIN);
-    button = BUTTON_B;
-    screen_notification = false;
+    if(GPIO_IntGet() & (1 << BUTTON_A_PIN))
+    {
+        GPIO_IntClear(1 << BUTTON_A_PIN); /**< clear interrupt */
+        button = BUTTON_A;
+        screen_notification = false;
+    }else
+    {
+        // wrong interrupt
+        // TODO handle wring IRQ
+    }
 }

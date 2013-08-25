@@ -13,6 +13,7 @@
 #include "buttons.h"
 #include "pomodoro_app.h"
 #include "segmentlcd.h"
+#include "em_emu.h"
 
 void updatePomodoroTime(uint8_t time);
 void stopPomodoro(void);

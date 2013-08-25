@@ -20,7 +20,7 @@
  *
  ***********************************************/      
  //TODO add MORE globals
-initVariables()
+void initVariables(void)
 {
     currentTime.tm_sec          = 0;
     currentTime.tm_min          = 0;

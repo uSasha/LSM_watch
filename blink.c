@@ -44,7 +44,10 @@
 #include "time_management.h"
 #include "setup_time_app.h"
 #include "buttons.h"
+#include "segmentlcd.h"
+#include "pomodoro_app.h"
 #include "activity_app.h"
+#include "variables.h"
 
 volatile uint32_t msTicks; /* counts 1ms timeTicks */
 
@@ -131,7 +134,7 @@ int main(void)
 {
     /* Chip errata */
     CHIP_Init();
-
+// TODO add auto go back to main menu after 20seconds of inactivity
     /* If first word of user data page is non-zero, enable eA Profiler trace */
     BSP_TraceProfilerSetup();
 

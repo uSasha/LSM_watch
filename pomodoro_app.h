@@ -11,3 +11,4 @@
 #define POMODOROS_TO_LONG_BRAKE 4
 
 void checkPomodoro(void);
+void pomodoroApp(void);

@@ -24,6 +24,7 @@
 					<Add option="-g2" />
 					<Add option="-DEFM32GG990F1024" />
 					<Add option="-DDEBUG_EFM" />
+					<Add option="-std=c99" />
 					<Add directory="..\" />
 					<Add directory="..\..\..\..\..\CMSIS\Include" />
 					<Add directory="..\..\..\..\..\Device\EnergyMicro\EFM32GG\Include" />
@@ -38,6 +39,11 @@
 				</Linker>
 			</Target>
 		</Build>
+		<Unit filename="..\ADXL345.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="bsp\" />
+		</Unit>
+		<Unit filename="..\ADXL345.h" />
 		<Unit filename="..\activity_app.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -101,6 +107,10 @@
 			<Option compilerVar="CC" />
 			<Option virtualFolder="em_lib\" />
 		</Unit>
+		<Unit filename="..\..\..\..\..\emlib\src\em_usart.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="em_lib\" />
+		</Unit>
 		<Unit filename="..\globals.h" />
 		<Unit filename="..\main_screen_app.c">
 			<Option compilerVar="CC" />
@@ -140,6 +150,7 @@
 		<Unit filename="..\variables.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="..\variables.h" />
 		<Extensions>
 			<code_completion />
 			<debugger>

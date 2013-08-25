@@ -11,7 +11,9 @@
 #include "setup_time_app.h"
 #include "bsp.h"
 #include "time_management.h"
-
+#include "state_machine.h"
+#include "segmentlcd.h"
+#include "em_emu.h"
 
 #define FIRST_SETUP_STATE       minutes
 #define LAST_SETUP_STATE        week_days

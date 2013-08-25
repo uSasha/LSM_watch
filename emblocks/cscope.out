@@ -1,4 +1,4 @@
-cscope 15 $HOME\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\emblocks"               0000133639
+cscope 15 $HOME\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\emblocks"               0000137881
 	@C:\Users\Alexander\AppData\Roaming\energymicro\Device\EnergyMicro\EFM32GG\Source\GCC\startup_efm32gg.S
 
 32 .
@@ -15215,6 +15215,372 @@ p
 	}
 }
 
+	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\ADXL345.c
+
+1 
+	~"ADXL345.h
+"
+
+2 
+	~"em_u§¹.h
+"
+
+3 
+	~"em_gpio.h
+"
+
+4 
+	~"aùiv™y_­p.h
+"
+
+6 
+	gv®ues
+[10];
+
+15 
+	$wr™eRegi¡”
+(
+»gi¡”Add»ss
+, 
+v®ue
+)
+
+17 
+	`GPIO_PšOutCË¬
+(
+ACCEL_CS_PORT
+, 
+ACCEL_CS_PIN
+);
+
+19 
+	`USART_Tx
+Ð
+ACCEL_USART
+, 
+»gi¡”Add»ss
+);
+
+20 
+	`USART_Tx
+Ð
+ACCEL_USART
+, 
+v®ue
+);
+
+22 !(
+	`USART_StusG‘
+Ð
+ACCEL_USART
+ ) & 
+USART_STATUS_TXC
+));
+
+24 
+	`GPIO_PšOutS‘
+(
+ACCEL_CS_PORT
+, 
+ACCEL_CS_PIN
+);
+
+25 
+	}
+}
+
+33 
+	$»adRegi¡”
+(
+»gi¡”Add»ss
+, 
+numBy‹s
+, * 
+v®ues
+)
+
+35 
+add»ss
+ = 0x80 | 
+»gi¡”Add»ss
+;
+
+36 if(
+numBy‹s
+ > 1)
+add»ss
+ =‡ddress | 0x40;
+
+38 
+	`GPIO_PšOutCË¬
+(
+ACCEL_CS_PORT
+, 
+ACCEL_CS_PIN
+);
+
+40 
+ACCEL_USART
+->
+CMD
+ |ð
+USART_CMD_RXBLOCKEN
+;
+
+41 
+	`USART_Tx
+Ð
+ACCEL_USART
+, 
+add»ss
+ );
+
+42 
+ACCEL_USART
+->
+CMD
+ |ð
+USART_CMD_RXBLOCKDIS
+;
+
+44  
+i
+=0; i<
+numBy‹s
+; i++ )
+
+46 
+	`USART_Tx
+Ð
+ACCEL_USART
+, 
+DUMMY
+ );
+
+47 !(
+ACCEL_USART
+->
+STATUS
+ & 
+USART_STATUS_RXDATAV
+));
+
+48 
+v®ues
+[
+i
+] = 
+	`USART_Rx
+Ð
+ACCEL_USART
+ );
+
+51 !(
+	`USART_StusG‘
+Ð
+ACCEL_USART
+ ) & 
+USART_STATUS_TXC
+));
+
+53 
+ACCEL_USART
+->
+CMD
+ |ð
+USART_CMD_RXBLOCKEN
+;
+
+54 
+	`GPIO_PšOutS‘
+(
+ACCEL_CS_PORT
+, 
+ACCEL_CS_PIN
+);
+
+55 
+	}
+}
+
+	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\ADXL345.h
+
+1 #iâdeà
+ADXL345_H_INCLUDED
+
+
+2 
+	#ADXL345_H_INCLUDED
+
+
+	)
+
+9 
+	#DEVID_ACCEL
+ 0x00
+
+10 
+	#THRESH_TAP
+ 0x1D
+
+11 
+	#OFSX
+ 0x1E
+
+12 
+	#OFSY
+ 0x1F
+
+13 
+	#OFSZ
+ 0x20
+
+14 
+	#DURATION
+ 0x21
+
+15 
+	#LATENT
+ 0x22
+
+16 
+	#WINDOW
+ 0x23
+
+17 
+	#THRESH_ACT
+ 0x24
+
+18 
+	#THRESH_INACT
+ 0x25
+
+19 
+	#TIME_INACT
+ 0x26
+
+20 
+	#ACT_INACT_CTL
+ 0x27
+
+21 
+	#THRESH_FF
+ 0x28
+
+22 
+	#TIME_FF
+ 0x29
+
+23 
+	#TAP_AXES
+ 0x2A
+
+24 
+	#ACT_TAP_STATUS
+ 0x2B
+
+25 
+	#BW_RATE
+ 0x2C
+
+26 
+	#POWER_CTL
+ 0x2D
+
+27 
+	#INT_ENABLE
+ 0x2E
+
+28 
+	#INT_MAP
+ 0x2F
+
+29 
+	#INT_SOURCE
+ 0x30
+
+30 
+	#DATA_FORMAT
+ 0x31
+
+31 
+	#DATAX0
+ 0x32
+
+32 
+	#DATAX1
+ 0x33
+
+33 
+	#DATAY0
+ 0x34
+
+34 
+	#DATAY1
+ 0x35
+
+35 
+	#DATAZ0
+ 0x36
+
+36 
+	#DATAZ1
+ 0x37
+
+37 
+	#FIFO_CTL
+ 0x38
+
+38 
+	#FIFO_STATUS
+ 0x39
+
+39 
+	#DUMMY
+ 0x00
+
+40 
+	#SENSITIVITY
+ 0x22
+
+41 
+	#ACT_INT_MASK
+ 0x10
+
+42 
+	#BAUDRATE
+ 10000000
+
+43 
+	#INTS_PER_KM
+ 1205
+
+44 
+
+	)
+
+48 
+»adRegi¡”
+(
+»gi¡”Add»ss
+, 
+numBy‹s
+, * 
+v®ues
+);
+
+50 
+wr™eRegi¡”
+(
+»gi¡”Add»ss
+, 
+v®ue
+);
+
+52 
+v®ues
+[10];
+
 	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\activity_app.c
 
 8 
@@ -15241,17 +15607,37 @@ p
 	~"bu‰Ús.h
 "
 
-16 
+14 
+	~"š™.h
+"
+
+15 
+	~"acûl.h
+"
+
+17 
+š™CouÁ”
+();
+
+18 
+d¿wAùiv™ySü“n
+();
+
+19 
+PCNT1_IRQHªdËr
+();
+
+21 
 ušt8_t
  
 	gaùiv™y
 [7];
 
-27 
+32 
 	$š™CouÁ”
 ()
 
-30 
+35 
 	`CMU_ClockEÇbË
 (
 cmuClock_CORELE
@@ -15259,7 +15645,7 @@ cmuClock_CORELE
 Œue
 );
 
-31 
+36 
 	`CMU_ClockEÇbË
 (
 cmuClock_GPIO
@@ -15267,7 +15653,7 @@ cmuClock_GPIO
 Œue
 );
 
-32 
+37 
 	`CMU_ClockEÇbË
 (
 cmuClock_PCNT1
@@ -15275,7 +15661,7 @@ cmuClock_PCNT1
 Œue
 );
 
-35 
+40 
 	`GPIO_PšModeS‘
 (
 ACTIVITY_PORT
@@ -15285,45 +15671,45 @@ ACTIVITY_PIN
 gpioModeIÅutPuÎ
 , 0);
 
-38 
+43 
 PCNT_In™_Ty³Def
  
 pútIn™
  =
 
-40 .
+45 .
 mode
  = 
 pútModeOvsSšgË
 ,
 
-41 .
+46 .
 couÁ”
  = 0,
 
-42 .
+47 .
 tÝ
  = 10,
 
-43 .
+48 .
 ÃgEdge
  = 
 çl£
 ,
 
-44 .
+49 .
 couÁDown
  = 
 çl£
 ,
 
-45 .
+50 .
 fž‹r
  = 
 çl£
 ,
 
-49 
+54 
 	`PCNT_In™
 (
 PCNT1
@@ -15331,19 +15717,19 @@ PCNT1
 pútIn™
 );
 
-52 
+57 
 	`PCNT_IÁEÇbË
 (
 PCNT1
 , 0x2);
 
-55 
+60 
 	`NVIC_EÇbËIRQ
 (
 PCNT1_IRQn
 );
 
-58 
+63 
 PCNT1
 ->
 ROUTE
@@ -15351,39 +15737,39 @@ ROUTE
 PCNT_ROUTE_LOCATION_LOC0
 ;
 
-59 
+64 
 	}
 }
 
-70 
+75 
 	$š™Aùiv™y
 ()
 
-72 
+77 
 	`š™CouÁ”
 ();
 
-75 
+80 
 ušt8_t
  
 i
 ;
 
-76 
+81 
 i
  = 0; i < 7; i++)
 
-78 
+83 
 aùiv™y
 [
 i
 ] = 0;
 
-80 
+85 
 	}
 }
 
-91 
+96 
 	$þ—rAùiv™y
 (
 ušt8_t
@@ -15391,29 +15777,29 @@ ušt8_t
 wday
 )
 
-93 
+98 
 aùiv™y
 [
 wday
 ] = 0;
 
-94 
+99 
 	}
 }
 
-105 
+110 
 	$d¿wAùiv™ySü“n
 ()
 
-107 
+112 
 	`Segm’tLCD_Numb”Off
 ();
 
-108 
+113 
 	`Segm’tLCD_Wr™e
 ("Actvty");
 
-109 
+114 
 	`Segm’tLCD_Numb”
 (
 aùiv™y
@@ -15423,34 +15809,18 @@ cu¼’tTime
 tm_wday
 ]);
 
-110 
+115 
 	}
 }
 
-121 
+126 
 	$aùiv™yAµ
 ()
 
-123 ifÐ
+128 ifÐ
 bu‰Ú
  =ð
 BUTTON_A
-)
-
-125 
-bu‰Ú
- = 
-NO_BUTTON
-;
-
-126 
-	`ÃxtS‹
-();
-
-128 if(
-bu‰Ú
- =ð
-BUTTON_B
 )
 
 130 
@@ -15460,8 +15830,14 @@ NO_BUTTON
 ;
 
 131 
-	`´eviousS‹
+	`ÃxtS‹
 ();
+
+133 if(
+bu‰Ú
+ =ð
+BUTTON_B
+)
 
 135 
 bu‰Ú
@@ -15470,30 +15846,40 @@ NO_BUTTON
 ;
 
 136 
+	`´eviousS‹
+();
+
+140 
+bu‰Ú
+ = 
+NO_BUTTON
+;
+
+141 
 	`d¿wAùiv™ySü“n
 ();
 
-137 
+142 
 	`EMU_EÁ”EM2
 (
 Œue
 );
 
-139 
+144 
 	}
 }
 
-146 
+151 
 	$PCNT1_IRQHªdËr
 ()
 
-149 
+154 
 	`PCNT_IÁCË¬
 (
 PCNT1
 , 0x2);
 
-151 
+156 
 aùiv™y
 [
 cu¼’tTime
@@ -15501,7 +15887,171 @@ cu¼’tTime
 tm_wday
 ]++;
 
-152 
+157 
+	}
+}
+
+165 
+	$š™Acûl
+()
+
+167 
+	`wr™eRegi¡”
+(
+DATA_FORMAT
+, 0x01);
+
+168 
+	`wr™eRegi¡”
+(
+THRESH_ACT
+, 
+SENSITIVITY
+);
+
+169 
+	`wr™eRegi¡”
+(
+ACT_INACT_CTL
+, 0x70);
+
+170 
+	`wr™eRegi¡”
+(
+INT_ENABLE
+, 0x10);
+
+171 
+	`wr™eRegi¡”
+(
+INT_MAP
+, 0x00);
+
+173 
+	`wr™eRegi¡”
+(
+POWER_CTL
+, 0x08);
+
+174 
+	}
+}
+
+183 
+	$š™SPI
+()
+
+186 
+	`CMU_ClockEÇbË
+(
+CMUCLOCK_ACCEL_USART
+, 
+Œue
+);
+
+189 
+	`GPIO_PšModeS‘
+Ð
+ACCEL_MOSI_PORT
+, 
+ACCEL_MOSI_PIN
+, 
+gpioModePushPuÎ
+, 0 );
+
+190 
+	`GPIO_PšModeS‘
+Ð
+ACCEL_MISO_PORT
+, 
+ACCEL_MISO_PIN
+, 
+gpioModeIÅut
+, 0 );
+
+191 
+	`GPIO_PšModeS‘
+Ð
+ACCEL_CLK_PORT
+, 
+ACCEL_CLK_PIN
+, 
+gpioModePushPuÎ
+, 0 );
+
+192 
+	`GPIO_PšModeS‘
+Ð
+ACCEL_CS_PORT
+, 
+ACCEL_CS_PIN
+, 
+gpioModePushPuÎ
+, 0 );
+
+195 
+USART_In™Sync_Ty³Def
+ 
+u§¹In™
+ = 
+USART_INITSYNC_DEFAULT
+;
+
+196 
+u§¹In™
+.
+baud¿‹
+ = 
+BAUDRATE
+;
+
+197 
+u§¹In™
+.
+msbf
+ = 
+Œue
+;
+
+198 
+u§¹In™
+.
+þockMode
+ = 
+u§¹ClockMode3
+;
+
+200 
+	`USART_In™Sync
+(
+ACCEL_USART
+, &
+u§¹In™
+);
+
+203 
+ACCEL_USART
+->
+ROUTE
+ = (
+USART_ROUTE_CLKPEN
+ | 
+USART_ROUTE_TXPEN
+ | 
+USART_ROUTE_RXPEN
+ | 
+ACCER_USART_LOC
+);
+
+204 
+ACCEL_USART
+->
+CMD
+ |ð
+USART_CMD_RXBLOCKEN
+;
+
+205 
 	}
 }
 
@@ -15539,11 +16089,77 @@ cmuClock_PCNT1
 
 	)
 
-13 
+13 
+	#ACCEL_USART
+
+
+	)
+
+14 
+	#CMUCLOCK_ACCEL_USART
+
+
+	)
+
+15 
+	#ACCEL_CS_PORT
+
+
+	)
+
+16 
+	#ACCEL_CS_PIN
+
+
+	)
+
+17 
+	#ACCEL_MOSI_PORT
+
+
+	)
+
+18 
+	#ACCEL_MOSI_PIN
+
+
+	)
+
+19 
+	#ACCEL_MISO_PORT
+
+
+	)
+
+20 
+	#ACCEL_MISO_PIN
+
+
+	)
+
+21 
+	#ACCEL_CLK_PORT
+
+
+	)
+
+22 
+	#ACCEL_CLK_PIN
+
+
+	)
+
+23 
+	#ACCER_USART_LOC
+
+
+	)
+
+26 
 š™Aùiv™y
 ();
 
-14 
+27 
 þ—rAùiv™y
 (
 ušt8_t
@@ -15551,7 +16167,7 @@ ušt8_t
 wday
 );
 
-15 
+28 
 aùiv™yAµ
 ();
 
@@ -16193,6 +16809,92 @@ ušt32_t
 time
 ;
 
+	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\main_screen_app.c
+
+8 
+	~"time_mªagem’t.h
+"
+
+9 
+	~"aùiv™y_­p.h
+"
+
+10 
+	~"bu‰Ús.h
+"
+
+20 
+	$mašSü“nAµ
+()
+
+22 ifÐ
+bu‰Ú
+ =ð
+BUTTON_A
+)
+
+24 
+bu‰Ú
+ = 
+NO_BUTTON
+;
+
+25 
+	`ÃxtS‹
+();
+
+27 if(
+bu‰Ú
+ =ð
+BUTTON_B
+)
+
+29 
+bu‰Ú
+ = 
+NO_BUTTON
+;
+
+30 
+	`´eviousS‹
+();
+
+34 
+bu‰Ú
+ = 
+NO_BUTTON
+;
+
+35 
+	`Segm’tLCD_Wr™e
+("Main");
+
+36 
+	`EMU_EÁ”EM2
+(
+Œue
+);
+
+38 
+	}
+}
+
+	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\main_screen_app.h
+
+1 #iâdeà
+MAIN_SCREEN_APP_H_INCLUDED
+
+
+2 
+	#MAIN_SCREEN_APP_H_INCLUDED
+
+
+	)
+
+8 
+mašSü“nAµ
+();
+
 	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\pomodoro_app.c
 
 10 
@@ -16761,31 +17463,31 @@ POMODORO_H_INCLUDED
 
 	)
 
-9 
+8 
 	#POMODORO_WORK_TIME
  25
 
 	)
 
-10 
+9 
 	#SHORT_BRAKE_TIME
  5
 
 	)
 
-11 
+10 
 	#LONG_BRAKE_TIME
  25
 
 	)
 
-12 
+11 
 	#POMODOROS_TO_LONG_BRAKE
  4
 
 	)
 
-14 
+13 
 checkPomodÜo
 ();
 
@@ -17029,61 +17731,65 @@ w“k_days
 
 	)
 
-20 
+19 
+ÃxtTimeS‘upS‹
+();
+
+21 
 £tup_¡©e_t
  
 	gþock_£tup_¡©e
 ;
 
-31 
+32 
 	$£tupTimeAµ
 ()
 
-33 ifÐ
+34 ifÐ
 bu‰Ú
  =ð
 BUTTON_A
 )
 
-35 
+36 
 bu‰Ú
  = 
 NO_BUTTON
 ;
 
-36 
+37 
 	`ÃxtS‹
 ();
 
-38 if(
+39 if(
 bu‰Ú
  =ð
 BUTTON_B
 )
 
-40 
+41 
 bu‰Ú
  = 
 NO_BUTTON
 ;
 
-41 
+42 
 	`ÃxtTimeS‘upS‹
 ();
 
-43 if(
+44 if(
 bu‰Ú
  =ð
 BUTTON_C
 )
 
-45 
+46 
 bu‰Ú
  = 
 NO_BUTTON
 ;
 
-46 
+47 
 	`šüem’tPošt
 (
 þock_£tup_¡©e
@@ -17091,51 +17797,51 @@ NO_BUTTON
 cu¼’tTime
 );
 
-50 
+51 
 	`Segm’tLCD_Numb”Off
 ();
 
-51 
+52 
 bu‰Ú
  = 
 NO_BUTTON
 ;
 
-52 
+53 
 	`Segm’tLCD_Wr™e
 ("Setup_T");
 
-53 
+54 
 	`EMU_EÁ”EM2
 (
 Œue
 );
 
-55 
+56 
 	}
 }
 
-67 
+68 
 	$ÃxtTimeS‘upS‹
 ()
 
-69 if(
+70 if(
 þock_£tup_¡©e
  =ð
 w“k_days
 )
 
-71 
+72 
 þock_£tup_¡©e
  = 
 mšu‹s
 ;
 
-75 
+76 
 þock_£tup_¡©e
 ++;
 
-77 
+78 
 	}
 }
 
@@ -17156,7 +17862,7 @@ SETUP_TIME_APP_H_INCLUDED
 ();
 
 9 
-ÃxtTimeS‘upS‹
+£tupAÏrmAµ
 ();
 
 	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\state_machine.c
@@ -17181,6 +17887,10 @@ SETUP_TIME_APP_H_INCLUDED
 	~"aùiv™y_­p.h
 "
 
+15 
+	~"maš_sü“n_­p.h
+"
+
 18 vÞ©ž
 ¡©e_machše
  
@@ -17189,111 +17899,55 @@ SETUP_TIME_APP_H_INCLUDED
 maš_sü“n
 ;
 
-29 
-	$mašSü“nAµ
-()
-
-31 ifÐ
-bu‰Ú
- =ð
-BUTTON_A
-)
-
-33 
-bu‰Ú
- = 
-NO_BUTTON
-;
-
-34 
-	`ÃxtS‹
-();
-
-36 if(
-bu‰Ú
- =ð
-BUTTON_B
-)
-
-38 
-bu‰Ú
- = 
-NO_BUTTON
-;
-
-39 
-	`´eviousS‹
-();
-
-43 
-bu‰Ú
- = 
-NO_BUTTON
-;
-
-44 
-	`Segm’tLCD_Wr™e
-("Main");
-
-45 
-	`EMU_EÁ”EM2
-(
-Œue
-);
-
-47 
-	}
-}
-
-58 
+30 
 	$ÃxtS‹
 ()
 
-60 ià(
+32 ià(
 ¡©e
  =ð
 LAST_STATE
 )
 
-62 
+34 
 ¡©e
  = 
 FIRST_STATE
 ;
 
-66 
+38 
 ¡©e
 ++;
 
-70 
+41 
 þock_£tup_¡©e
  = 1;
 
-71 
+42 
 	}
 }
 
-82 
+53 
 	$´eviousS‹
 ()
 
-84 ià(
+55 ià(
 ¡©e
  =ð
 FIRST_STATE
 )
 
-86 
+57 
 ¡©e
  = 
 LAST_STATE
 ;
 
-90 
+61 
 ¡©e
 --;
 
-92 
+63 
 	}
 }
 
@@ -17350,80 +18004,90 @@ mašSü“nAµ
 ();
 
 18 
-aùiv™yAµ
-();
-
-19 
-£tupTimeAµ
-();
-
-20 
 ÃxtS‹
 ();
 
-21 
+19 
 ´eviousS‹
 ();
 
 	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\time_management.c
 
-9 
+8 
 	~"em_¹c.h
 "
 
-10 
+9 
 	~"em_cmu.h
 "
 
-11 
+10 
 	~"time_mªagem’t.h
 "
 
-12 
+11 
 	~"pomodÜo_­p.h
 "
 
-13 
+12 
 	~"£gm’Žcd.h
 "
 
-14 
+13 
 	~"aùiv™y_­p.h
 "
 
-18 
+17 
 	#RTC_COUNT_BETWEEN_WAKEUP
  1
 
-19 
+18 
 
 	)
 
-21 
+19 
+ušt8_t
+ 
+checkAÏrms
+();
+
+20 
+runAÏrm
+(
+ušt8_t
+ 
+®¬m
+);
+
+21 
+upd©eTime
+();
+
+23 
 tm
  
 	gcu¼’tTime
 ;
 
-22 
+24 
 tm
  
 	g®¬m1
 ;
 
-23 
+25 
 tm
  
 	g®¬m2
 ;
 
-24 
+26 
 tm
  
 	gpomodÜo
 ;
 
-25 
+27 
 boÞ
  
 	gsü“n_nÙifiÿtiÚ
@@ -17431,11 +18095,11 @@ boÞ
 çl£
 ;
 
-36 
+38 
 	$š™Clock
 ()
 
-40 
+42 
 	`CMU_OscžÏtÜEÇbË
 (
 cmuOsc_LFXO
@@ -17443,7 +18107,7 @@ cmuOsc_LFXO
 Œue
 ,rue);
 
-43 
+45 
 	`CMU_ClockS–eùS‘
 (
 cmuClock_LFA
@@ -17451,7 +18115,7 @@ cmuClock_LFA
 cmuS–eù_LFXO
 );
 
-44 
+46 
 	`CMU_ClockEÇbË
 (
 cmuClock_RTC
@@ -17459,7 +18123,7 @@ cmuClock_RTC
 Œue
 );
 
-46 
+48 
 	`CMU_ClockEÇbË
 (
 cmuClock_CORELE
@@ -17467,7 +18131,7 @@ cmuClock_CORELE
 Œue
 );
 
-50 
+52 
 	`CMU_ClockDivS‘
 (
 cmuClock_RTC
@@ -17475,25 +18139,25 @@ cmuClock_RTC
 cmuClkDiv_32768
 );
 
-51 
+53 
 	`RTC_Com·»S‘
 (0, 
 RTC_COUNT_BETWEEN_WAKEUP
 );
 
-52 
+54 
 	`RTC_IÁEÇbË
 (
 RTC_IFC_COMP0
 );
 
-55 
+57 
 	`NVIC_EÇbËIRQ
 (
 RTC_IRQn
 );
 
-57 
+59 
 RTC_In™_Ty³Def
  
 ¹cIn™
@@ -17501,31 +18165,31 @@ RTC_In™_Ty³Def
 RTC_INIT_DEFAULT
 ;
 
-58 
+60 
 	`RTC_In™
 (&
 ¹cIn™
 );
 
-59 
+61 
 	}
 }
 
-70 
+72 
 	$RTC_IRQHªdËr
 ()
 
-72 
+74 
 	`RTC_IÁCË¬
 (
 RTC_IF_COMP0
 );
 
-73 
+75 
 	`upd©eTime
 ();
 
-75 
+77 
 ušt8_t
  
 ®¬m
@@ -17533,29 +18197,29 @@ ušt8_t
 	`checkAÏrms
 ();
 
-76 if(
+78 if(
 ®¬m
 )
 
-78 
+80 
 	`runAÏrm
 (
 ®¬m
 );
 
-81 
+83 
 	`checkPomodÜo
 ();
 
-82 
+84 
 	}
 }
 
-93 
+95 
 	$upd©eTime
 ()
 
-95 
+97 
 	`šüem’tPošt
 (
 £cÚds
@@ -17563,17 +18227,17 @@ ušt8_t
 cu¼’tTime
 );
 
-96 
+98 
 	}
 }
 
-107 
+109 
 ušt8_t
  
 	$checkAÏrms
 ()
 
-109 if((
+111 if((
 ®¬m1
 .
 tm_£c
@@ -17581,7 +18245,7 @@ tm_£c
 cu¼’tTime
 .tm_sec) &&
 
-110 (
+112 (
 ®¬m1
 .
 tm_mš
@@ -17589,7 +18253,7 @@ tm_mš
 cu¼’tTime
 .tm_min) &&
 
-111 (
+113 (
 ®¬m1
 .
 tm_hour
@@ -17597,7 +18261,7 @@ tm_hour
 cu¼’tTime
 .tm_hour) &&
 
-112 ((
+114 ((
 ®¬m1
 .
 tm_wday
@@ -17605,13 +18269,13 @@ tm_wday
 cu¼’tTime
 .tm_wday) ||‡larm1.tm_wday == 8) &&
 
-113 (
+115 (
 ®¬m1
 .
 aùive
 ))
 
-118 if((
+120 if((
 ®¬m2
 .
 tm_£c
@@ -17619,7 +18283,7 @@ tm_£c
 cu¼’tTime
 .tm_sec) &&
 
-119 (
+121 (
 ®¬m2
 .
 tm_mš
@@ -17627,7 +18291,7 @@ tm_mš
 cu¼’tTime
 .tm_min) &&
 
-120 (
+122 (
 ®¬m2
 .
 tm_hour
@@ -17635,7 +18299,7 @@ tm_hour
 cu¼’tTime
 .tm_hour) &&
 
-121 ((
+123 ((
 ®¬m2
 .
 tm_wday
@@ -17643,17 +18307,17 @@ tm_wday
 cu¼’tTime
 .tm_wday) ||‡larm2.tm_wday == 8) &&
 
-122 (
+124 (
 ®¬m2
 .
 aùive
 ))
 
-128 
+130 
 	}
 }
 
-140 
+142 
 	$runAÏrm
 (
 ušt8_t
@@ -17661,15 +18325,15 @@ ušt8_t
 ®¬m
 )
 
-142 
+144 
 ®¬m
 )
 
-145 
+147 
 ®¬m
  = 0;
 
-146 
+148 
 ®¬m1
 .
 aùive
@@ -17677,21 +18341,21 @@ aùive
 çl£
 ;
 
-147 
+149 
 	`Segm’tLCD_Wr™e
 ("ALARM 1");
 
-148 
+150 
 sü“n_nÙifiÿtiÚ
  = 
 Œue
 ;
 
-151 
+153 
 ®¬m
  = 0;
 
-152 
+154 
 ®¬m2
 .
 aùive
@@ -17699,21 +18363,21 @@ aùive
 çl£
 ;
 
-153 
+155 
 	`Segm’tLCD_Wr™e
 ("ALARM 2");
 
-154 
+156 
 sü“n_nÙifiÿtiÚ
  = 
 Œue
 ;
 
-157 
+159 
 	}
 }
 
-169 
+171 
 	$šüem’tPošt
 (
 £tup_¡©e_t
@@ -17725,99 +18389,99 @@ tm
 som‘hšg
 )
 
-171 
+173 
 pošts
 )
 
-173 
+175 
 £cÚds
 :
 
-174 
+176 
 som‘hšg
 ->
 tm_£c
 ++;
 
-175 
+177 
 som‘hšg
 ->
 tm_£c
 ++;
 
-176 ià(
+178 ià(
 som‘hšg
 ->
 tm_£c
  < 60)
 
-182 
+184 
 som‘hšg
 ->
 tm_£c
  = 0;
 
-184 
+186 
 mšu‹s
 :
 
-185 
+187 
 som‘hšg
 ->
 tm_mš
 ++;
 
-186 ià(
+188 ià(
 som‘hšg
 ->
 tm_mš
  < 60)
 
-192 
+194 
 som‘hšg
 ->
 tm_mš
  = 0;
 
-194 
+196 
 hours
 :
 
-195 
+197 
 som‘hšg
 ->
 tm_hour
 ++;
 
-196 ià(
+198 ià(
 som‘hšg
 ->
 tm_hour
  < 24)
 
-202 
+204 
 som‘hšg
 ->
 tm_hour
  = 0;
 
-204 
+206 
 w“k_days
 :
 
-205 
+207 
 som‘hšg
 ->
 tm_wday
 ++;
 
-206 
+208 
 som‘hšg
 ->
 tm_wday
  %= 7;
 
-207 
+209 
 	`þ—rAùiv™y
 (
 som‘hšg
@@ -17825,17 +18489,17 @@ som‘hšg
 tm_wday
 );
 
-210 
+212 
 aùive
 :
 
-211 if(
+213 if(
 som‘hšg
 ->
 aùive
 )
 
-213 
+215 
 som‘hšg
 ->
 aùive
@@ -17843,7 +18507,7 @@ aùive
 çl£
 ;
 
-217 
+219 
 som‘hšg
 ->
 aùive
@@ -17851,11 +18515,11 @@ aùive
 Œue
 ;
 
-220 
+222 
 	}
 }
 
-232 
+234 
 	$deüem’tPošt
 (
 £tup_¡©e_t
@@ -17867,99 +18531,99 @@ tm
 som‘hšg
 )
 
-234 
+236 
 pošts
 )
 
-236 
+238 
 £cÚds
 :
 
-237 
+239 
 som‘hšg
 ->
 tm_£c
 --;
 
-238 ià(
+240 ià(
 som‘hšg
 ->
 tm_£c
  >= 0)
 
-244 
+246 
 som‘hšg
 ->
 tm_£c
  = 59;
 
-246 
+248 
 mšu‹s
 :
 
-247 
+249 
 som‘hšg
 ->
 tm_mš
 --;
 
-248 ià(
+250 ià(
 som‘hšg
 ->
 tm_mš
  >= 0)
 
-254 
+256 
 som‘hšg
 ->
 tm_mš
  = 59;
 
-256 
+258 
 hours
 :
 
-257 
+259 
 som‘hšg
 ->
 tm_hour
 --;
 
-258 ià(
+260 ià(
 som‘hšg
 ->
 tm_hour
  >= 0)
 
-264 
+266 
 som‘hšg
 ->
 tm_hour
  = 23;
 
-266 
+268 
 w“k_days
 :
 
-267 
+269 
 som‘hšg
 ->
 tm_wday
 --;
 
-268 ià(
+270 ià(
 som‘hšg
 ->
 tm_wday
  < 0)
 
-270 
+272 
 som‘hšg
 ->
 tm_wday
  = 6;
 
-272 
+274 
 	`þ—rAùiv™y
 (
 som‘hšg
@@ -17967,7 +18631,7 @@ som‘hšg
 tm_wday
 );
 
-276 
+278 
 	}
 }
 
@@ -18076,10 +18740,6 @@ boÞ
 ();
 
 39 
-upd©eTime
-();
-
-40 
 šüem’tPošt
 (
 £tup_¡©e_t
@@ -18091,7 +18751,7 @@ tm
 som‘hšg
 );
 
-41 
+40 
 deüem’tPošt
 (
 £tup_¡©e_t
@@ -18102,20 +18762,6 @@ tm
  *
 som‘hšg
 );
-
-43 
-runAÏrm
-(
-ušt8_t
- 
-®¬m
-);
-
-44 
-ušt8_t
- 
-checkAÏrms
-();
 
 	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\variables.c
 
@@ -21733,8 +22379,8 @@ __ýlu¥lus
 1
 .
 0
-33
-2932
+37
+3348
 C:\Users\Alexander\AppData\Roaming\energymicro\Device\EnergyMicro\EFM32GG\Source\GCC\startup_efm32gg.S
 C:\Users\Alexander\AppData\Roaming\energymicro\Device\EnergyMicro\EFM32GG\Source\system_efm32gg.c
 C:\Users\Alexander\AppData\Roaming\energymicro\emlib\src\em_assert.c
@@ -21746,12 +22392,16 @@ C:\Users\Alexander\AppData\Roaming\energymicro\emlib\src\em_lcd.c
 C:\Users\Alexander\AppData\Roaming\energymicro\emlib\src\em_pcnt.c
 C:\Users\Alexander\AppData\Roaming\energymicro\emlib\src\em_rtc.c
 C:\Users\Alexander\AppData\Roaming\energymicro\emlib\src\em_system.c
+C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\ADXL345.c
+C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\ADXL345.h
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\activity_app.c
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\activity_app.h
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\blink.c
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\buttons.c
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\buttons.h
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\globals.h
+C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\main_screen_app.c
+C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\main_screen_app.h
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\pomodoro_app.c
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\pomodoro_app.h
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\setup_alarm_app.c
