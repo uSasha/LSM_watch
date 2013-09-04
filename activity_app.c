@@ -23,8 +23,8 @@ void initSPI(void);
 void initAccel(void);
 void initAccelInterrupt(void);
 
-uint8_t activity[7];
-
+uint16_t activity[MAX_WEEKS][WEEK_DAYS];
+uint32_t average_activity;  
 
 /********************************************//**
  * \brief setup counter to count external pulses
@@ -82,11 +82,15 @@ void initActivity(void)
     initCounter();
 
     // init activity variable
-    uint8_t i;
-    for(i = 0; i < 7; i++)
+    for(uint8_t week = 0; week < 52; week++)
     {
-        activity[i] = 0;
+        for(uint8_t day = 0; day < 7; day++)
+        {
+            activity[week][day] = 0;
+        }
     }
+    
+    average_activity = 0;
     
     initSPI();
     initAccel();
@@ -115,16 +119,17 @@ void initAccelInterrupt(void)
 
 
 /********************************************//**
- * \brief clear daily activity
+ * \brief clear daily activity and count new average_activity
  *
+ * \param week - could be 0 <= week < 52
  * \param wday - day of the week between 0 and 6
- * \param 
  * \return 
  *
  ***********************************************/      
-void clearActivity(uint8_t wday)
+void clearActivity(uint8_t week, uint8_t wday)
 {
-    activity[wday] = 0;
+    average_activity = average_activity * 6 / 7 + activity[week][wday]; // minus average day plus real day
+    activity[week][wday] = 0;
 }
 
 
@@ -140,7 +145,8 @@ void drawActivityScreen(void)
 {
     SegmentLCD_NumberOff();
     SegmentLCD_Write("Actvty");
-    SegmentLCD_Number(activity[currentTime.tm_wday]);
+    SegmentLCD_Number(activity[currentTime.tm_week][currentTime.tm_wday]);
+    // show current day - average activity
 }
 
 
@@ -182,7 +188,7 @@ void PCNT1_IRQHandler(void)
     /* Clear PCNT1 overflow interrupt flag */
     PCNT_IntClear(PCNT1, 0x2);
 
-    activity[currentTime.tm_wday]++;
+    activity[currentTime.tm_week][currentTime.tm_wday]++;
 }
 
 
@@ -237,3 +243,19 @@ void initSPI(void)
   ACCEL_USART->ROUTE = (USART_ROUTE_CLKPEN | USART_ROUTE_TXPEN | USART_ROUTE_RXPEN | ACCER_USART_LOC);
   ACCEL_USART->CMD |= USART_CMD_RXBLOCKEN;  
 }
+
+
+
+/********************************************//**
+ * \brief show small suggestions based on activity statistics
+ *
+ * \param 
+ * \param 
+ * \return 
+ *
+ ***********************************************/    
+void activitySuggestion(void)
+{
+    SegmentLCD_Write("Do More");
+    screen_notification = true;
+}  

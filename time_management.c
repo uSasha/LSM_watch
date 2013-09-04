@@ -205,9 +205,24 @@ void incrementPoint(enum setup_state_t points, struct tm *something)
         }
     case week_days:
         something->tm_wday++;
-        something->tm_wday %= 7;
-        clearActivity(something->tm_wday);
-//      activity[calendar.tm_wday] = 0;   // delete this day activity, othervice we will increment last week activity
+        if(something->tm_wday >= 7)
+        {
+            something->tm_wday = 0;
+            something->tm_week++;
+            if(something->tm_week >= 52)
+            {
+                something->tm_week = 0;     // a year passed
+            }
+        }
+        
+        if(points != week_days)
+        {
+            clearActivity(something->tm_week, something->tm_wday);
+            if((something->tm_wday == 6) ||(something->tm_wday == 5))    // it's weekend
+            {
+                activitySuggestion();
+            }
+        }
         break;
     case active:        // only for alarms
         if(something->active)
@@ -270,9 +285,21 @@ void decrementPoint(enum setup_state_t points, struct tm *something)
         if (something->tm_wday < 0)
         {
             something->tm_wday = 6;
+            something->tm_week--;
+            if(something->tm_week <= 0)
+            {
+                something->tm_week = 51;     // woohoo we invented time machine and now can beat those boys in school
+            }
         }
-        clearActivity(something->tm_wday);
-//      activity[calendar.tm_wday] = 0;   // delete this day activity, othervice we will increment last week activity
+        // TODO add check of current state, if it's time_setup don't do this:
+        if(points != week_days)
+        {
+            clearActivity(something->tm_week, something->tm_wday);
+            if((something->tm_wday == 6) ||(something->tm_wday == 5))    // it's weekend
+            {
+                activitySuggestion();
+            }
+        }
         break;
     }
 }

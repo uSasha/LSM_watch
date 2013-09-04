@@ -21,8 +21,11 @@
 #define ACCEL_CLK_PIN           2
 #define ACCER_USART_LOC         USART_ROUTE_LOCATION_LOC1
 
+#define MAX_WEEKS               52 // a year 
+#define WEEK_DAYS               7  // 7-day week
 
 void initActivity(void);
-void clearActivity(uint8_t wday);
+void clearActivity(uint8_t week, uint8_t wday);
 void activityApp(void);
+void activitySuggestion(void);
 

@@ -144,18 +144,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>initAccel</b> (void)<
 <tr class="memitem:a0902bf13f3d591b647df86e51d6aa2b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="activity__app_8c.html#a0902bf13f3d591b647df86e51d6aa2b7">initActivity</a> (void)</td></tr>
 <tr class="memdesc:a0902bf13f3d591b647df86e51d6aa2b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">init counter and clear all weekly activities  <a href="#a0902bf13f3d591b647df86e51d6aa2b7">More...</a><br/></td></tr>
 <tr class="separator:a0902bf13f3d591b647df86e51d6aa2b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeef2b900caf13e8acee178b1894a7748"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="activity__app_8c.html#aeef2b900caf13e8acee178b1894a7748">clearActivity</a> (uint8_t wday)</td></tr>
-<tr class="memdesc:aeef2b900caf13e8acee178b1894a7748"><td class="mdescLeft">&#160;</td><td class="mdescRight">clear daily activity  <a href="#aeef2b900caf13e8acee178b1894a7748">More...</a><br/></td></tr>
-<tr class="separator:aeef2b900caf13e8acee178b1894a7748"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c28a69595470ca21487c4764f846afd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="activity__app_8c.html#a8c28a69595470ca21487c4764f846afd">clearActivity</a> (uint8_t week, uint8_t wday)</td></tr>
+<tr class="memdesc:a8c28a69595470ca21487c4764f846afd"><td class="mdescLeft">&#160;</td><td class="mdescRight">clear daily activity  <a href="#a8c28a69595470ca21487c4764f846afd">More...</a><br/></td></tr>
+<tr class="separator:a8c28a69595470ca21487c4764f846afd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a792e28484ee2ee4793961084c5b19444"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="activity__app_8c.html#a792e28484ee2ee4793961084c5b19444">activityApp</a> (void)</td></tr>
 <tr class="memdesc:a792e28484ee2ee4793961084c5b19444"><td class="mdescLeft">&#160;</td><td class="mdescRight">main loop of activity app check buttons, change states accordingly and go to EM2 if nothing happens  <a href="#a792e28484ee2ee4793961084c5b19444">More...</a><br/></td></tr>
 <tr class="separator:a792e28484ee2ee4793961084c5b19444"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:aaa77109954e54742479a19111529bf1d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa77109954e54742479a19111529bf1d"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>activity</b> [7]</td></tr>
-<tr class="separator:aaa77109954e54742479a19111529bf1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d9564ea97e65589a65ff03e86da3909"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d9564ea97e65589a65ff03e86da3909"></a>
+uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>activity</b> [MAX_WEEKS][WEEK_DAYS]</td></tr>
+<tr class="separator:a7d9564ea97e65589a65ff03e86da3909"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>log daily activity </p>
@@ -187,7 +187,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>activity</b> [7]</
 
 </div>
 </div>
-<a class="anchor" id="aeef2b900caf13e8acee178b1894a7748"></a>
+<a class="anchor" id="a8c28a69595470ca21487c4764f846afd"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -195,8 +195,18 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>activity</b> [7]</
           <td class="memname">void clearActivity </td>
           <td>(</td>
           <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>wday</em>)</td><td></td>
+          <td class="paramname"><em>week</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>wday</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -204,11 +214,12 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>activity</b> [7]</
 <p>clear daily activity </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">week</td><td>- could be 0 &lt;= week &lt; 52 </td></tr>
     <tr><td class="paramname">wday</td><td>- day of the week between 0 and 6 </td></tr>
-    <tr><td class="paramname">\return</td><td></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -319,7 +330,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>activity</b> [7]</
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="activity__app_8c.html">activity_app.c</a></li>
-    <li class="footer">Generated on Sun Aug 25 2013 20:13:33 for lifestyle monitoring watch by
+    <li class="footer">Generated on Wed Sep 4 2013 22:23:26 for lifestyle monitoring watch by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

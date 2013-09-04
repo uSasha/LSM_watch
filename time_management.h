@@ -23,6 +23,7 @@ struct tm
     uint8_t tm_min;
     uint8_t tm_hour;
     uint8_t tm_wday;
+    uint8_t tm_week;
     bool active;  // only for alarms
 };
 
