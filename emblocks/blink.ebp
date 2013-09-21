@@ -39,38 +39,13 @@
 				</Linker>
 			</Target>
 		</Build>
-		<Unit filename="..\ADXL345.c">
+		<Unit filename="..\..\..\..\..\Device\EnergyMicro\EFM32GG\Source\GCC\startup_efm32gg.S">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\Device\EnergyMicro\EFM32GG\Source\system_efm32gg.c">
 			<Option compilerVar="CC" />
 			<Option virtualFolder="bsp\" />
 		</Unit>
-		<Unit filename="..\ADXL345.h" />
-		<Unit filename="..\activity_app.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\activity_app.h" />
-		<Unit filename="..\blink.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\..\..\..\common\bsp\bsp_bcc.c">
-			<Option compilerVar="CC" />
-			<Option virtualFolder="bsp\" />
-		</Unit>
-		<Unit filename="..\..\..\..\common\bsp\bsp_stk.c">
-			<Option compilerVar="CC" />
-			<Option virtualFolder="bsp\" />
-		</Unit>
-		<Unit filename="..\..\..\..\common\bsp\bsp_stk_leds.c">
-			<Option compilerVar="CC" />
-			<Option virtualFolder="bsp\" />
-		</Unit>
-		<Unit filename="..\..\..\..\common\bsp\bsp_trace.c">
-			<Option compilerVar="CC" />
-			<Option virtualFolder="bsp\" />
-		</Unit>
-		<Unit filename="..\buttons.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\buttons.h" />
 		<Unit filename="..\..\..\..\..\emlib\src\em_assert.c">
 			<Option compilerVar="CC" />
 			<Option virtualFolder="em_lib\" />
@@ -95,6 +70,10 @@
 			<Option compilerVar="CC" />
 			<Option virtualFolder="em_lib\" />
 		</Unit>
+		<Unit filename="..\..\..\..\..\emlib\src\em_letimer.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="em_lib\" />
+		</Unit>
 		<Unit filename="..\..\..\..\..\emlib\src\em_pcnt.c">
 			<Option compilerVar="CC" />
 			<Option virtualFolder="em_lib\" />
@@ -111,20 +90,35 @@
 			<Option compilerVar="CC" />
 			<Option virtualFolder="em_lib\" />
 		</Unit>
+		<Unit filename="..\ADXL345.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="bsp\" />
+		</Unit>
+		<Unit filename="..\ADXL345.h" />
+		<Unit filename="..\activity_app.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\activity_app.h" />
+		<Unit filename="..\blink.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\buttons.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\buttons.h" />
 		<Unit filename="..\globals.h" />
 		<Unit filename="..\main_screen_app.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="..\main_screen_app.h" />
+		<Unit filename="..\pedometer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\pedometer.h" />
 		<Unit filename="..\pomodoro_app.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="..\pomodoro_app.h" />
-		<Unit filename="..\..\..\..\common\drivers\segmentlcd.c">
-			<Option compilerVar="CC" />
-			<Option virtualFolder="bsp\" />
-		</Unit>
-		<Unit filename="..\..\..\..\common\drivers\segmentlcd.h" />
 		<Unit filename="..\setup_alarm_app.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -132,17 +126,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="..\setup_time_app.h" />
-		<Unit filename="..\..\..\..\..\Device\EnergyMicro\EFM32GG\Source\GCC\startup_efm32gg.S">
-			<Option compilerVar="CC" />
-		</Unit>
 		<Unit filename="..\state_machine.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="..\state_machine.h" />
-		<Unit filename="..\..\..\..\..\Device\EnergyMicro\EFM32GG\Source\system_efm32gg.c">
-			<Option compilerVar="CC" />
-			<Option virtualFolder="bsp\" />
-		</Unit>
 		<Unit filename="..\time_management.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -151,6 +138,27 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="..\variables.h" />
+		<Unit filename="..\..\..\..\common\bsp\bsp_bcc.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="bsp\" />
+		</Unit>
+		<Unit filename="..\..\..\..\common\bsp\bsp_stk.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="bsp\" />
+		</Unit>
+		<Unit filename="..\..\..\..\common\bsp\bsp_stk_leds.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="bsp\" />
+		</Unit>
+		<Unit filename="..\..\..\..\common\bsp\bsp_trace.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="bsp\" />
+		</Unit>
+		<Unit filename="..\..\..\..\common\drivers\segmentlcd.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="bsp\" />
+		</Unit>
+		<Unit filename="..\..\..\..\common\drivers\segmentlcd.h" />
 		<Extensions>
 			<code_completion />
 			<debugger>

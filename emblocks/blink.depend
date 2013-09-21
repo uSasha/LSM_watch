@@ -2321,7 +2321,7 @@
 	"clock.h"
 	<stdbool.h>
 
-1378321850 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\activity_app.c
+1379765629 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\activity_app.c
 	"em_pcnt.h"
 	"em_cmu.h"
 	"em_gpio.h"
@@ -2341,7 +2341,7 @@
 1377258777 c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\buttons.h
 	"bsp.h"
 
-1377264738 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\blink.c
+1379766433 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\blink.c
 	<stdint.h>
 	<stdbool.h>
 	"em_device.h"
@@ -2357,13 +2357,14 @@
 	"segmentlcd.h"
 	"pomodoro_app.h"
 	"activity_app.h"
+	"pedometer.h"
 	"variables.h"
 
 1377258751 c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\state_machine.h
 
 1377258515 c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\setup_time_app.h
 
-1377446935 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\buttons.c
+1379767394 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\buttons.c
 	"em_gpio.h"
 	"em_cmu.h"
 	"state_machine.h"
@@ -2449,4 +2450,23 @@
 1377346796 c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\adxl345.h
 
 1377262782 c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\variables.h
+
+1368044095 source:c:\users\alexander\appdata\roaming\energymicro\emlib\src\em_letimer.c
+	"em_letimer.h"
+	"em_cmu.h"
+	"em_assert.h"
+
+1368044094 c:\users\alexander\appdata\roaming\energymicro\emlib\inc\em_letimer.h
+	<stdbool.h>
+	"em_device.h"
+
+1379765984 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\pedometer.c
+	"em_letimer.h"
+	"em_cmu.h"
+	"em_letimer.h"
+	"activity_app.h"
+	"ADXL345.h"
+	"bsp.h"
+
+1379766409 c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\pedometer.h
 

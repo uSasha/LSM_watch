@@ -2,7 +2,7 @@
  * @file activity_app.c
  * @brief log daily activity
  * @author Alexandr D.  sasha.engineer@gmail.com
- * @version 
+ * @version
  ******************************************************************************/
 
 #include "em_pcnt.h"
@@ -24,16 +24,16 @@ void initAccel(void);
 void initAccelInterrupt(void);
 
 uint16_t activity[MAX_WEEKS][WEEK_DAYS];
-uint32_t average_activity;  
+uint32_t average_activity;
 
 /********************************************//**
  * \brief setup counter to count external pulses
  *
  * \param ACTIVITY_PORT - defined in activity.h
  * \param ACTIVITY_PIN  - defined in activity.h
- * \return 
+ * \return
  *
- ***********************************************/      
+ ***********************************************/
 void initCounter(void)
 {
     /* Enabling all necessary clocks */
@@ -72,11 +72,11 @@ void initCounter(void)
 /********************************************//**
  * \brief init counter and clear all weekly activities
  *
- * \param 
- * \param 
- * \return 
+ * \param
+ * \param
+ * \return
  *
- ***********************************************/      
+ ***********************************************/
 void initActivity(void)
 {
     initCounter();
@@ -89,9 +89,9 @@ void initActivity(void)
             activity[week][day] = 0;
         }
     }
-    
+
     average_activity = 0;
-    
+
     initSPI();
     initAccel();
     initAccelInterrupt();   //ADXL345 special
@@ -99,22 +99,22 @@ void initActivity(void)
 
 
 /********************************************//**
- * \brief ADXL can't automatically clear activity interrupt, 
+ * \brief ADXL can't automatically clear activity interrupt,
  *  we have to do it manually
- * \param 
- * \param 
- * \return 
+ * \param
+ * \param
+ * \return
  *
- ***********************************************/      
+ ***********************************************/
 void initAccelInterrupt(void)
 {
     /* Configure interrurp pin from accel, and enable interrupt on rising edge */
     GPIO_PinModeSet(ACCEL_INT_PORT , ACCEL_INT_PIN, gpioModeInput, 0);
-    GPIO_IntConfig(ACCEL_INT_PORT, ACCEL_INT_PIN, true, false, true);  
-    
+    GPIO_IntConfig(ACCEL_INT_PORT, ACCEL_INT_PIN, true, false, true);
+
     /* Clear and enable interrupts */
     NVIC_ClearPendingIRQ(GPIO_EVEN_IRQn);
-    NVIC_EnableIRQ(GPIO_EVEN_IRQn); 
+    NVIC_EnableIRQ(GPIO_EVEN_IRQn);
 }
 
 
@@ -123,9 +123,9 @@ void initAccelInterrupt(void)
  *
  * \param week - could be 0 <= week < 52
  * \param wday - day of the week between 0 and 6
- * \return 
+ * \return
  *
- ***********************************************/      
+ ***********************************************/
 void clearActivity(uint8_t week, uint8_t wday)
 {
     average_activity = average_activity * 6 / 7 + activity[week][wday]; // minus average day plus real day
@@ -136,11 +136,11 @@ void clearActivity(uint8_t week, uint8_t wday)
 /********************************************//**
  * \brief draw and output activity app screen
  *  current version use segment LCD
- * \param 
- * \param 
- * \return 
+ * \param
+ * \param
+ * \return
  *
- ***********************************************/      
+ ***********************************************/
 void drawActivityScreen(void)
 {
     SegmentLCD_NumberOff();
@@ -151,13 +151,13 @@ void drawActivityScreen(void)
 
 
 /********************************************//**
- * \brief main loop of activity app check buttons, 
+ * \brief main loop of activity app check buttons,
  *  change states accordingly and go to EM2 if nothing happens
  *
  * \param void
  * \return void
  *
- ***********************************************/     
+ ***********************************************/
 void activityApp(void)
 {
     if( button == BUTTON_A)
@@ -193,21 +193,21 @@ void PCNT1_IRQHandler(void)
 
 
 /******************************************************************************
- * @brief init accelerometer to output interrupt on any activity 
- * 
+ * @brief init accelerometer to output interrupt on any activity
+ *
  *
  ******************************************************************************/
 void initAccel(void)
 {
-    writeRegister(DATA_FORMAT, 0x01);     // 
-    writeRegister(THRESH_ACT, SENSITIVITY);   // activity  treshold 
-    writeRegister(ACT_INACT_CTL, 0x70);  // define active all axes 
+    writeRegister(DATA_FORMAT, 0x03);     //16g mode
+    writeRegister(THRESH_ACT, SENSITIVITY);   // activity  treshold
+    writeRegister(ACT_INACT_CTL, 0x70);  // define active all axes
     writeRegister(INT_ENABLE, 0x10);      // enable Activity interrupt
     writeRegister(INT_MAP, 0x00);         // all active interrupt to pin 1
     //  writeRegister(BW_RATE, 0x11);         // set lowest possible consumption datarate 23 uA
-    writeRegister(POWER_CTL, 0x08);  // Measurement mode 
-  
-    while( !(values[0] & ACT_INT_MASK) )   
+    writeRegister(POWER_CTL, 0x08);  // Measurement mode
+
+    while( !(values[0] & ACT_INT_MASK) )
     {
         readRegister(INT_SOURCE, 1, values);
     }
@@ -217,7 +217,7 @@ void initAccel(void)
 
 /******************************************************************************
  * @brief init USART1 in SPI mode
- * 
+ *
  *
  ******************************************************************************/
 void initSPI(void)
@@ -225,7 +225,7 @@ void initSPI(void)
   // Setup clock
   CMU_ClockEnable(CMUCLOCK_ACCEL_USART, true);
 
-  // Setup GPIO's 
+  // Setup GPIO's
   GPIO_PinModeSet( ACCEL_MOSI_PORT, ACCEL_MOSI_PIN, gpioModePushPull, 0 );         // mosi
   GPIO_PinModeSet( ACCEL_MISO_PORT, ACCEL_MISO_PIN, gpioModeInput,    0 );         // miso
   GPIO_PinModeSet( ACCEL_CLK_PORT, ACCEL_CLK_PIN, gpioModePushPull, 0 );         // clk
@@ -235,13 +235,13 @@ void initSPI(void)
   USART_InitSync_TypeDef usartInit = USART_INITSYNC_DEFAULT;
   usartInit.baudrate = BAUDRATE;
   usartInit.msbf = true;
-  usartInit.clockMode = usartClockMode3; 	
+  usartInit.clockMode = usartClockMode3;
 
   USART_InitSync(ACCEL_USART, &usartInit);
 
   //route USART1 to expansion header
   ACCEL_USART->ROUTE = (USART_ROUTE_CLKPEN | USART_ROUTE_TXPEN | USART_ROUTE_RXPEN | ACCER_USART_LOC);
-  ACCEL_USART->CMD |= USART_CMD_RXBLOCKEN;  
+  ACCEL_USART->CMD |= USART_CMD_RXBLOCKEN;
 }
 
 
@@ -249,13 +249,13 @@ void initSPI(void)
 /********************************************//**
  * \brief show small suggestions based on activity statistics
  *
- * \param 
- * \param 
- * \return 
+ * \param
+ * \param
+ * \return
  *
- ***********************************************/    
+ ***********************************************/
 void activitySuggestion(void)
 {
     SegmentLCD_Write("Do More");
     screen_notification = true;
-}  
+}

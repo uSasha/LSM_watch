@@ -2,7 +2,7 @@
  * @file buttons.c
  * @brief simple buttons driver
  * @author Alexandr D.  sasha.engineer@gmail.com
- * @version 
+ * @version
  ******************************************************************************/
 
 #include "em_gpio.h"
@@ -10,7 +10,7 @@
 #include "state_machine.h"
 #include "buttons.h"
 #include "time_management.h"
-#include "ADXL345.h"    
+#include "ADXL345.h"
 
 volatile uint8_t button = NO_BUTTON;
 
@@ -20,9 +20,9 @@ volatile uint8_t button = NO_BUTTON;
  *
  * \param BUTTON_x_PORT defined in buttons.h
  * \param BUTTON_x_PIN defined in buttons.h
- * \return 
+ * \return
  *
- ***********************************************/         
+ ***********************************************/
 void initButtons(void)
 {
     CMU_ClockEnable(cmuClock_GPIO, true);
@@ -42,13 +42,13 @@ void initButtons(void)
 
 /********************************************//**
  * \brief handles even half of GPIO interrupts
- *  change button global and clear int flag, turn off screen_notification flag, 
+ *  change button global and clear int flag, turn off screen_notification flag,
  *  which was turned on by runAlarm function
- * \param 
- * \param 
- * \return 
+ * \param
+ * \param
+ * \return
  *
- ***********************************************/                                  
+ ***********************************************/
 void GPIO_EVEN_IRQHandler() // button A was pressed
 {
     if(GPIO_IntGet() & (1 << BUTTON_B_PIN))
@@ -57,35 +57,35 @@ void GPIO_EVEN_IRQHandler() // button A was pressed
         button = BUTTON_B;
         screen_notification = false;
     }else
-   
-    if(GPIO_IntGet() & (1 << ACCEL_INT_PIN))    // NOTE only for ADXL345, 
+
+    if(GPIO_IntGet() & (1 << ACCEL_INT_PIN))    // NOTE only for ADXL345,
                         //because it cant clear activity int automatically
     {
         /* Clear interrupt for GPIO port PB_EVEN_PIN */
         GPIO_IntClear( 1 << ACCEL_INT_PIN );
-        
+
         values[0] = 0;      //read interrupt register to clear interrupt
-        while( !(values[0] & ACT_INT_MASK) )   
+        while( !(values[0] & ACT_INT_MASK) )
         {
           readRegister(INT_SOURCE, 1, values);
         }
     }else
     {
         // wrong interrupt
-        // TODO handle wring IRQ
+        // TODO handle wrong IRQ
     }
 }
 
 
 /********************************************//**
  * \brief handles odd half of GPIO interrupts
- *  change button global and clear int flag, turn off screen_notification flag, 
+ *  change button global and clear int flag, turn off screen_notification flag,
  *  which was turned on by runAlarm function
- * \param 
- * \param 
- * \return 
+ * \param
+ * \param
+ * \return
  *
- ***********************************************/      
+ ***********************************************/
 void GPIO_ODD_IRQHandler()  // button B was pressed
 {
     if(GPIO_IntGet() & (1 << BUTTON_A_PIN))
@@ -96,6 +96,6 @@ void GPIO_ODD_IRQHandler()  // button B was pressed
     }else
     {
         // wrong interrupt
-        // TODO handle wring IRQ
+        // TODO handle wrong IRQ
     }
 }

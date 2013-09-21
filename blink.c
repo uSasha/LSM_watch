@@ -47,6 +47,7 @@
 #include "segmentlcd.h"
 #include "pomodoro_app.h"
 #include "activity_app.h"
+#include "pedometer.h"
 #include "variables.h"
 
 volatile uint32_t msTicks; /* counts 1ms timeTicks */
@@ -78,11 +79,11 @@ void Delay(uint32_t dlyTicks)
 /********************************************//**
  * \brief trace function for energy aware debugging
  *  remove before production
- * \param 
- * \param 
- * \return 
+ * \param
+ * \param
+ * \return
  *
- ***********************************************/      
+ ***********************************************/
 void setupSWO(void)
 {
     /* Enable GPIO Clock. */
@@ -125,11 +126,11 @@ void setupSWO(void)
 
 /** \brief the main function of the project
  *  check current state and switch apps respectively
- * \param 
- * \param 
- * \return 
+ * \param
+ * \param
+ * \return
  *
- */     
+ */
 int main(void)
 {
     /* Chip errata */
@@ -141,11 +142,12 @@ int main(void)
     ////////////////////////////////////////////////////////////////////////
     setupSWO();
     /* Initialize LED driver */
+    initVariables();
     BSP_LedsInit();
     initButtons();
     initClock();
     initActivity();
-    initVariables();
+    initPedometer();
     SegmentLCD_Init(false);  /* Enable LCD without voltage boost */
 
     state = main_screen;

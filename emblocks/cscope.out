@@ -1,4 +1,4 @@
-cscope 15 $HOME\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\emblocks"               0000137881
+cscope 15 $HOME\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\emblocks"               0000157375
 	@C:\Users\Alexander\AppData\Roaming\energymicro\Device\EnergyMicro\EFM32GG\Source\GCC\startup_efm32gg.S
 
 32 .
@@ -13469,6 +13469,862 @@ büsLevñ
 	}
 }
 
+	@C:\Users\Alexander\AppData\Roaming\energymicro\emlib\src\em_letimer.c
+
+33 
+	~"em_Àtimî.h
+"
+
+34 
+	~"em_cmu.h
+"
+
+35 
+	~"em_as£π.h
+"
+
+55 
+	#LETIMER_COMP_REG_VALID
+(
+ªg
+Ë((‘egË<1))
+
+	)
+
+58 
+	#LETIMER_REF_VALID
+(
+ªf
+Ë(‘efË=
+LETIMER0
+)
+
+	)
+
+61 
+	#LETIMER_REP_REG_VALID
+(
+ªg
+Ë((‘egË<1))
+
+	)
+
+72 #i‡
+deföed
+(
+_EFM32_GECKO_FAMILY
+)
+
+89 
+__STATIC_INLINE
+ 
+	$LETIMER_Sync
+(
+LETIMER_Ty≥Def
+ *
+Àtimî
+, 
+uöt32_t
+ 
+mask
+)
+
+93 i‡(
+Àtimî
+->
+FREEZE
+ & 
+LETIMER_FREEZE_REGFREEZE
+)
+
+98 
+Àtimî
+->
+SYNCBUSY
+ & 
+mask
+)
+
+100 
+	}
+}
+
+122 
+uöt32_t
+ 
+	$LETIMER_Com∑ªGë
+(
+LETIMER_Ty≥Def
+ *
+Àtimî
+, 
+comp
+)
+
+124 
+uöt32_t
+ 
+ªt
+;
+
+126 
+	`EFM_ASSERT
+(
+	`LETIMER_REF_VALID
+(
+Àtimî
+Ë&& 
+	`LETIMER_COMP_REG_VALID
+(
+comp
+));
+
+129 
+comp
+)
+
+132 
+ªt
+ = 
+Àtimî
+->
+COMP0
+;
+
+136 
+ªt
+ = 
+Àtimî
+->
+COMP1
+;
+
+141 
+ªt
+ = 0;
+
+145 (
+ªt
+);
+
+146 
+	}
+}
+
+169 
+	$LETIMER_Com∑ªSë
+(
+LETIMER_Ty≥Def
+ *
+Àtimî
+,
+
+170 
+comp
+,
+
+171 
+uöt32_t
+ 
+vÆue
+)
+
+173 vﬁ©ûê
+uöt32_t
+ *
+compReg
+;
+
+175 
+	`EFM_ASSERT
+(
+	`LETIMER_REF_VALID
+(
+Àtimî
+) &&
+
+176 
+	`LETIMER_COMP_REG_VALID
+(
+comp
+) &&
+
+177 ((
+vÆue
+ & ~(
+_LETIMER_COMP0_COMP0_MASK
+ >> 
+_LETIMER_COMP0_COMP0_SHIFT
+)) == 0));
+
+180 
+comp
+)
+
+183 
+compReg
+ = &(
+Àtimî
+->
+COMP0
+);
+
+187 
+compReg
+ = &(
+Àtimî
+->
+COMP1
+);
+
+195 #i‡
+	`deföed
+(
+_EFM32_GECKO_FAMILY
+)
+
+197 
+	`LETIMER_Sync
+(
+Àtimî
+, 
+comp
+ ? 
+LETIMER_SYNCBUSY_COMP1
+ : 
+LETIMER_SYNCBUSY_COMP0
+);
+
+200 *
+compReg
+ = 
+vÆue
+;
+
+201 
+	}
+}
+
+222 
+	$LETIMER_E«bÀ
+(
+LETIMER_Ty≥Def
+ *
+Àtimî
+, 
+boﬁ
+ 
+íabÀ
+)
+
+224 
+	`EFM_ASSERT
+(
+	`LETIMER_REF_VALID
+(
+Àtimî
+));
+
+226 #i‡
+	`deföed
+(
+_EFM32_GECKO_FAMILY
+)
+
+228 
+	`LETIMER_Sync
+(
+Àtimî
+, 
+LETIMER_SYNCBUSY_CMD
+);
+
+231 i‡(
+íabÀ
+)
+
+233 
+Àtimî
+->
+CMD
+ = 
+LETIMER_CMD_START
+;
+
+237 
+Àtimî
+->
+CMD
+ = 
+LETIMER_CMD_STOP
+;
+
+239 
+	}
+}
+
+269 
+	$LETIMER_FªezeE«bÀ
+(
+LETIMER_Ty≥Def
+ *
+Àtimî
+, 
+boﬁ
+ 
+íabÀ
+)
+
+271 i‡(
+íabÀ
+)
+
+282 
+Àtimî
+->
+SYNCBUSY
+)
+
+285 
+Àtimî
+->
+FREEZE
+ = 
+LETIMER_FREEZE_REGFREEZE
+;
+
+289 
+Àtimî
+->
+FREEZE
+ = 0;
+
+291 
+	}
+}
+
+318 
+	$LETIMER_Inô
+(
+LETIMER_Ty≥Def
+ *
+Àtimî
+, c⁄° 
+LETIMER_Inô_Ty≥Def
+ *
+öô
+)
+
+320 
+uöt32_t
+ 
+tmp
+ = 0;
+
+322 
+	`EFM_ASSERT
+(
+	`LETIMER_REF_VALID
+(
+Àtimî
+));
+
+325 i‡(!(
+öô
+->
+íabÀ
+Ë&& (
+Àtimî
+->
+STATUS
+ & 
+LETIMER_STATUS_RUNNING
+))
+
+327 #i‡
+	`deföed
+(
+_EFM32_GECKO_FAMILY
+)
+
+329 
+	`LETIMER_Sync
+(
+Àtimî
+, 
+LETIMER_SYNCBUSY_CMD
+);
+
+331 
+Àtimî
+->
+CMD
+ = 
+LETIMER_CMD_STOP
+;
+
+336 i‡(
+öô
+->
+debugRun
+)
+
+338 
+tmp
+ |
+LETIMER_CTRL_DEBUGRUN
+;
+
+341 i‡(
+öô
+->
+πcComp0E«bÀ
+)
+
+343 
+tmp
+ |
+LETIMER_CTRL_RTCC0TEN
+;
+
+346 i‡(
+öô
+->
+πcComp1E«bÀ
+)
+
+348 
+tmp
+ |
+LETIMER_CTRL_RTCC1TEN
+;
+
+351 i‡(
+öô
+->
+comp0T›
+)
+
+353 
+tmp
+ |
+LETIMER_CTRL_COMP0TOP
+;
+
+356 i‡(
+öô
+->
+bufT›
+)
+
+358 
+tmp
+ |
+LETIMER_CTRL_BUFTOP
+;
+
+361 i‡(
+öô
+->
+out0Pﬁ
+)
+
+363 
+tmp
+ |
+LETIMER_CTRL_OPOL0
+;
+
+366 i‡(
+öô
+->
+out1Pﬁ
+)
+
+368 
+tmp
+ |
+LETIMER_CTRL_OPOL1
+;
+
+371 
+tmp
+ |
+öô
+->
+ufﬂ0
+ << 
+_LETIMER_CTRL_UFOA0_SHIFT
+;
+
+372 
+tmp
+ |
+öô
+->
+ufﬂ1
+ << 
+_LETIMER_CTRL_UFOA1_SHIFT
+;
+
+373 
+tmp
+ |
+öô
+->
+ªpMode
+ << 
+_LETIMER_CTRL_REPMODE_SHIFT
+;
+
+375 #i‡
+	`deföed
+(
+_EFM32_GECKO_FAMILY
+)
+
+377 
+	`LETIMER_Sync
+(
+Àtimî
+, 
+LETIMER_SYNCBUSY_CTRL
+);
+
+379 
+Àtimî
+->
+CTRL
+ = 
+tmp
+;
+
+382 i‡(
+öô
+->
+íabÀ
+ && !(
+Àtimî
+->
+STATUS
+ & 
+LETIMER_STATUS_RUNNING
+))
+
+384 #i‡
+	`deföed
+(
+_EFM32_GECKO_FAMILY
+)
+
+386 
+	`LETIMER_Sync
+(
+Àtimî
+, 
+LETIMER_SYNCBUSY_CMD
+);
+
+388 
+Àtimî
+->
+CMD
+ = 
+LETIMER_CMD_START
+;
+
+390 
+	}
+}
+
+406 
+uöt32_t
+ 
+	$LETIMER_RïótGë
+(
+LETIMER_Ty≥Def
+ *
+Àtimî
+, 
+ªp
+)
+
+408 
+uöt32_t
+ 
+ªt
+;
+
+410 
+	`EFM_ASSERT
+(
+	`LETIMER_REF_VALID
+(
+Àtimî
+Ë&& 
+	`LETIMER_REP_REG_VALID
+(
+ªp
+));
+
+413 
+ªp
+)
+
+416 
+ªt
+ = 
+Àtimî
+->
+REP0
+;
+
+420 
+ªt
+ = 
+Àtimî
+->
+REP1
+;
+
+425 
+ªt
+ = 0;
+
+429 (
+ªt
+);
+
+430 
+	}
+}
+
+453 
+	$LETIMER_RïótSë
+(
+LETIMER_Ty≥Def
+ *
+Àtimî
+,
+
+454 
+ªp
+,
+
+455 
+uöt32_t
+ 
+vÆue
+)
+
+457 vﬁ©ûê
+uöt32_t
+ *
+ªpReg
+;
+
+458 #i‡
+	`deföed
+(
+_EFM32_GECKO_FAMILY
+)
+
+459 
+uöt32_t
+ 
+syncbusy
+;
+
+461 
+	`EFM_ASSERT
+(
+	`LETIMER_REF_VALID
+(
+Àtimî
+) &&
+
+462 
+	`LETIMER_REP_REG_VALID
+(
+ªp
+) &&
+
+463 ((
+vÆue
+ & ~(
+_LETIMER_REP0_REP0_MASK
+ >> 
+_LETIMER_REP0_REP0_SHIFT
+)) == 0));
+
+466 
+ªp
+)
+
+469 
+ªpReg
+ = &(
+Àtimî
+->
+REP0
+);
+
+470 #i‡
+	`deföed
+(
+_EFM32_GECKO_FAMILY
+)
+
+471 
+syncbusy
+ = 
+LETIMER_SYNCBUSY_REP0
+;
+
+476 
+ªpReg
+ = &(
+Àtimî
+->
+REP1
+);
+
+477 #i‡
+	`deföed
+(
+_EFM32_GECKO_FAMILY
+)
+
+478 
+syncbusy
+ = 
+LETIMER_SYNCBUSY_REP1
+;
+
+487 #i‡
+	`deföed
+(
+_EFM32_GECKO_FAMILY
+)
+
+489 
+	`LETIMER_Sync
+(
+Àtimî
+, 
+syncbusy
+);
+
+492 *
+ªpReg
+ = 
+vÆue
+;
+
+493 
+	}
+}
+
+507 
+	$LETIMER_Re£t
+(
+LETIMER_Ty≥Def
+ *
+Àtimî
+)
+
+510 
+	`LETIMER_FªezeE«bÀ
+(
+Àtimî
+, 
+åue
+);
+
+513 
+Àtimî
+->
+CMD
+ = 
+LETIMER_CMD_STOP
+ | 
+LETIMER_CMD_CLEAR
+ |
+
+514 
+LETIMER_CMD_CTO0
+ | 
+LETIMER_CMD_CTO1
+;
+
+515 
+Àtimî
+->
+CTRL
+ = 
+_LETIMER_CTRL_RESETVALUE
+;
+
+516 
+Àtimî
+->
+COMP0
+ = 
+_LETIMER_COMP0_RESETVALUE
+;
+
+517 
+Àtimî
+->
+COMP1
+ = 
+_LETIMER_COMP1_RESETVALUE
+;
+
+518 
+Àtimî
+->
+REP0
+ = 
+_LETIMER_REP0_RESETVALUE
+;
+
+519 
+Àtimî
+->
+REP1
+ = 
+_LETIMER_REP1_RESETVALUE
+;
+
+520 
+Àtimî
+->
+IEN
+ = 
+_LETIMER_IEN_RESETVALUE
+;
+
+521 
+Àtimî
+->
+IFC
+ = 
+_LETIMER_IFC_MASK
+;
+
+525 
+	`LETIMER_FªezeE«bÀ
+(
+Àtimî
+, 
+Ál£
+);
+
+526 
+	}
+}
+
 	@C:\Users\Alexander\AppData\Roaming\energymicro\emlib\src\em_pcnt.c
 
 33 
@@ -15215,6 +16071,1884 @@ p
 	}
 }
 
+	@C:\Users\Alexander\AppData\Roaming\energymicro\emlib\src\em_usart.c
+
+34 
+	~"em_ußπ.h
+"
+
+35 
+	~"em_cmu.h
+"
+
+36 
+	~"em_as£π.h
+"
+
+58 #i‡(
+USART_COUNT
+ == 1)
+
+59 
+	#USART_REF_VALID
+(
+ªf
+Ë(‘efË=
+USART0
+)
+
+	)
+
+61 #ñi‡(
+USART_COUNT
+ == 2)
+
+62 
+	#USART_REF_VALID
+(
+ªf
+Ë((‘efË=
+USART0
+Ë|| (‘efË=
+USART1
+))
+
+	)
+
+64 #ñi‡(
+USART_COUNT
+ == 3)
+
+65 
+	#USART_REF_VALID
+(
+ªf
+Ë((‘efË=
+USART0
+Ë|| (‘efË=
+USART1
+) || \
+
+66 ((
+ªf
+Ë=
+USART2
+))
+
+	)
+
+67 #ñi‡(
+USART_COUNT
+ == 4)
+
+68 
+	#USART_REF_VALID
+(
+ªf
+Ë((‘efË=
+USART0
+Ë|| (‘efË=
+USART1
+) || \
+
+69 ((
+ªf
+Ë=
+USART2
+Ë|| (‘efË=
+USART3
+))
+
+	)
+
+71 #îr‹ 
+Undeföed
+ 
+numbî
+ 
+of
+ 
+USARTs
+.
+
+74 #i‡
+deföed
+(
+USART0
+)
+
+75 
+	#USART_IRDA_VALID
+(
+ªf
+Ë(‘efË=
+USART0
+)
+
+	)
+
+78 #i‡
+deföed
+(
+_EFM32_TINY_FAMILY
+)
+
+79 
+	#USART_I2S_VALID
+(
+ªf
+Ë(‘efË=
+USART1
+)
+
+	)
+
+82 #i‡
+deföed
+(
+_EFM32_GIANT_FAMILY
+Ë|| deföed(
+_EFM32_WONDER_FAMILY
+)
+
+83 
+	#USART_I2S_VALID
+(
+ªf
+Ë((‘efË=
+USART1
+Ë|| (‘efË=
+USART2
+))
+
+	)
+
+86 #i‡(
+UART_COUNT
+ == 1)
+
+87 
+	#UART_REF_VALID
+(
+ªf
+Ë(‘ef)==
+UART0
+)
+
+	)
+
+88 #ñi‡(
+UART_COUNT
+ == 2)
+
+89 
+	#UART_REF_VALID
+(
+ªf
+Ë((‘ef)==
+UART0
+Ë|| (‘ef)==
+UART1
+))
+
+	)
+
+91 
+	#UART_REF_VALID
+(
+ªf
+Ë(0)
+
+	)
+
+123 
+	$USART_BaudøãAsyncSë
+(
+USART_Ty≥Def
+ *
+ußπ
+,
+
+124 
+uöt32_t
+ 
+ªfFªq
+,
+
+125 
+uöt32_t
+ 
+baudøã
+,
+
+126 
+USART_OVS_Ty≥Def
+ 
+ovs
+)
+
+128 
+uöt32_t
+ 
+˛kdiv
+;
+
+129 
+uöt32_t
+ 
+ovîßm∂e
+;
+
+132 
+	`EFM_ASSERT
+(
+baudøã
+);
+
+161 i‡(!
+ªfFªq
+)
+
+163 
+ªfFªq
+ = 
+	`CMU_ClockFªqGë
+(
+cmuClock_HFPER
+);
+
+167 
+ovs
+)
+
+169 
+USART_CTRL_OVS_X16
+:
+
+170 
+	`EFM_ASSERT
+(
+baudøã
+ <(
+ªfFªq
+ / 16));
+
+171 
+ovîßm∂e
+ = 16;
+
+174 
+USART_CTRL_OVS_X8
+:
+
+175 
+	`EFM_ASSERT
+(
+baudøã
+ <(
+ªfFªq
+ / 8));
+
+176 
+ovîßm∂e
+ = 8;
+
+179 
+USART_CTRL_OVS_X6
+:
+
+180 
+	`EFM_ASSERT
+(
+baudøã
+ <(
+ªfFªq
+ / 6));
+
+181 
+ovîßm∂e
+ = 6;
+
+184 
+USART_CTRL_OVS_X4
+:
+
+185 
+	`EFM_ASSERT
+(
+baudøã
+ <(
+ªfFªq
+ / 4));
+
+186 
+ovîßm∂e
+ = 4;
+
+191 
+	`EFM_ASSERT
+(0);
+
+196 
+˛kdiv
+ = 4 * 
+ªfFªq
+ + (
+ovîßm∂e
+ * 
+baudøã
+) / 2;
+
+197 
+˛kdiv
+ /(
+ovîßm∂e
+ * 
+baudøã
+);
+
+198 
+˛kdiv
+ -= 4;
+
+199 
+˛kdiv
+ *= 64;
+
+202 
+	`EFM_ASSERT
+(
+˛kdiv
+ <
+_USART_CLKDIV_MASK
+);
+
+205 
+˛kdiv
+ &
+_USART_CLKDIV_MASK
+;
+
+207 
+ußπ
+->
+CTRL
+ &~
+_USART_CTRL_OVS_MASK
+;
+
+208 
+ußπ
+->
+CTRL
+ |
+ovs
+;
+
+209 
+ußπ
+->
+CLKDIV
+ = 
+˛kdiv
+;
+
+210 
+	}
+}
+
+241 
+uöt32_t
+ 
+	$USART_BaudøãCÆc
+(
+uöt32_t
+ 
+ªfFªq
+,
+
+242 
+uöt32_t
+ 
+˛kdiv
+,
+
+243 
+boﬁ
+ 
+syncmode
+,
+
+244 
+USART_OVS_Ty≥Def
+ 
+ovs
+)
+
+246 
+uöt32_t
+ 
+ovîßm∂e
+;
+
+247 
+uöt32_t
+ 
+divis‹
+;
+
+248 
+uöt32_t
+ 
+Á˘‹
+;
+
+249 
+uöt32_t
+ 
+ªmaödî
+;
+
+250 
+uöt32_t
+ 
+quŸõ¡
+;
+
+251 
+uöt32_t
+ 
+br
+;
+
+254 
+˛kdiv
+ &
+_USART_CLKDIV_MASK
+;
+
+260 i‡(
+syncmode
+)
+
+271 
+ovîßm∂e
+ = 1;
+
+272 
+Á˘‹
+ = 128;
+
+289 
+ovs
+)
+
+291 
+USART_CTRL_OVS_X16
+:
+
+292 
+ovîßm∂e
+ = 1;
+
+293 
+Á˘‹
+ = 256 / 16;
+
+296 
+USART_CTRL_OVS_X8
+:
+
+297 
+ovîßm∂e
+ = 1;
+
+298 
+Á˘‹
+ = 256 / 8;
+
+301 
+USART_CTRL_OVS_X6
+:
+
+302 
+ovîßm∂e
+ = 3;
+
+303 
+Á˘‹
+ = 256 / 2;
+
+307 
+ovîßm∂e
+ = 1;
+
+308 
+Á˘‹
+ = 256 / 4;
+
+336 
+divis‹
+ = 
+ovîßm∂e
+ * (256 + 
+˛kdiv
+);
+
+338 
+quŸõ¡
+ = 
+ªfFªq
+ / 
+divis‹
+;
+
+339 
+ªmaödî
+ = 
+ªfFªq
+ % 
+divis‹
+;
+
+343 
+br
+ = 
+Á˘‹
+ * 
+quŸõ¡
+;
+
+350 
+br
+ +(
+Á˘‹
+ * 
+ªmaödî
+Ë/ 
+divis‹
+;
+
+352  
+br
+;
+
+353 
+	}
+}
+
+370 
+uöt32_t
+ 
+	$USART_BaudøãGë
+(
+USART_Ty≥Def
+ *
+ußπ
+)
+
+372 
+uöt32_t
+ 
+‰eq
+;
+
+373 
+USART_OVS_Ty≥Def
+ 
+ovs
+;
+
+374 
+boﬁ
+ 
+syncmode
+;
+
+376 i‡(
+ußπ
+->
+CTRL
+ & 
+USART_CTRL_SYNC
+)
+
+378 
+syncmode
+ = 
+åue
+;
+
+382 
+syncmode
+ = 
+Ál£
+;
+
+386 
+‰eq
+ = 
+	`CMU_ClockFªqGë
+(
+cmuClock_HFPER
+);
+
+387 
+ovs
+ = (
+USART_OVS_Ty≥Def
+)(
+ußπ
+->
+CTRL
+ & 
+_USART_CTRL_OVS_MASK
+);
+
+388  
+	`USART_BaudøãCÆc
+(
+‰eq
+, 
+ußπ
+->
+CLKDIV
+, 
+syncmode
+, 
+ovs
+);
+
+389 
+	}
+}
+
+419 
+	$USART_BaudøãSyncSë
+(
+USART_Ty≥Def
+ *
+ußπ
+, 
+uöt32_t
+ 
+ªfFªq
+, uöt32_à
+baudøã
+)
+
+421 
+uöt32_t
+ 
+˛kdiv
+;
+
+424 
+	`EFM_ASSERT
+(
+baudøã
+);
+
+453 i‡(!
+ªfFªq
+)
+
+455 
+ªfFªq
+ = 
+	`CMU_ClockFªqGë
+(
+cmuClock_HFPER
+);
+
+459 
+˛kdiv
+ = 2 * 
+ªfFªq
+;
+
+460 
+˛kdiv
+ +
+baudøã
+ - 1;
+
+461 
+˛kdiv
+ /
+baudøã
+;
+
+462 
+˛kdiv
+ -= 4;
+
+463 
+˛kdiv
+ *= 64;
+
+467 
+˛kdiv
+ += 0xc0;
+
+468 
+˛kdiv
+ &= 0xffffff00;
+
+471 
+	`EFM_ASSERT
+(
+˛kdiv
+ <
+_USART_CLKDIV_MASK
+);
+
+474 
+˛kdiv
+ &
+_USART_CLKDIV_DIV_MASK
+;
+
+476 
+ußπ
+->
+CLKDIV
+ = 
+˛kdiv
+;
+
+477 
+	}
+}
+
+495 
+	$USART_E«bÀ
+(
+USART_Ty≥Def
+ *
+ußπ
+, 
+USART_E«bÀ_Ty≥Def
+ 
+íabÀ
+)
+
+497 
+uöt32_t
+ 
+tmp
+;
+
+500 
+	`EFM_ASSERT
+(
+	`USART_REF_VALID
+(
+ußπ
+)||(
+	`UART_REF_VALID
+(usart)));
+
+503 
+tmp
+ = ~((
+uöt32_t
+)(
+íabÀ
+));
+
+504 
+tmp
+ &
+_USART_CMD_RXEN_MASK
+ | 
+_USART_CMD_TXEN_MASK
+;
+
+505 
+ußπ
+->
+CMD
+ = 
+tmp
+ << 1;
+
+508 
+ußπ
+->
+CMD
+ = (
+uöt32_t
+)(
+íabÀ
+);
+
+509 
+	}
+}
+
+535 
+	$USART_InôAsync
+(
+USART_Ty≥Def
+ *
+ußπ
+, c⁄° 
+USART_InôAsync_Ty≥Def
+ *
+öô
+)
+
+538 
+	`EFM_ASSERT
+(
+	`USART_REF_VALID
+(
+ußπ
+)||
+	`UART_REF_VALID
+(usart));
+
+541 
+	`USART_Re£t
+(
+ußπ
+);
+
+543 #i‡
+	`deföed
+(
+_EFM32_GIANT_FAMILY
+Ë|| deföed(
+_EFM32_TINY_FAMILY
+Ë|| deföed(
+_EFM32_WONDER_FAMILY
+)
+
+545 i‡(
+öô
+->
+mvdis
+)
+
+547 
+ußπ
+->
+CTRL
+ |
+USART_CTRL_MVDIS
+;
+
+551 i‡(
+öô
+->
+¥sRxE«bÀ
+)
+
+553 
+ußπ
+->
+INPUT
+ = (
+uöt32_t
+)
+öô
+->
+¥sRxCh
+ | 
+USART_INPUT_RXPRS
+;
+
+558 
+ußπ
+->
+FRAME
+ = (
+uöt32_t
+)(
+öô
+->
+d©abôs
+) |
+
+559 (
+uöt32_t
+)(
+öô
+->
+°›bôs
+) |
+
+560 (
+uöt32_t
+)(
+öô
+->
+∑rôy
+);
+
+563 
+	`USART_BaudøãAsyncSë
+(
+ußπ
+, 
+öô
+->
+ªfFªq
+, inô->
+baudøã
+, inô->
+ovîßm∂ög
+);
+
+566 
+ußπ
+->
+CMD
+ = (
+uöt32_t
+)(
+öô
+->
+íabÀ
+);
+
+567 
+	}
+}
+
+594 
+	$USART_InôSync
+(
+USART_Ty≥Def
+ *
+ußπ
+, c⁄° 
+USART_InôSync_Ty≥Def
+ *
+öô
+)
+
+597 
+	`EFM_ASSERT
+(
+	`USART_REF_VALID
+(
+ußπ
+));
+
+600 
+	`USART_Re£t
+(
+ußπ
+);
+
+603 
+ußπ
+->
+CTRL
+ |(
+USART_CTRL_SYNC
+) |
+
+604 ((
+uöt32_t
+)
+öô
+->
+˛ockMode
+) |
+
+605 (
+öô
+->
+msbf
+ ? 
+USART_CTRL_MSBF
+ : 0);
+
+607 #i‡
+	`deföed
+(
+_EFM32_GIANT_FAMILY
+Ë|| deföed(
+_EFM32_TINY_FAMILY
+Ë|| deföed(
+_EFM32_WONDER_FAMILY
+)
+
+608 
+ußπ
+->
+CTRL
+ |(
+öô
+->
+¥sRxE«bÀ
+ ? 
+USART_INPUT_RXPRS
+ : 0) |
+
+609 (
+öô
+->
+autoTx
+ ? 
+USART_CTRL_AUTOTX
+ : 0);
+
+613 
+ußπ
+->
+FRAME
+ = ((
+uöt32_t
+)(
+öô
+->
+d©abôs
+)) |
+
+614 (
+USART_FRAME_STOPBITS_DEFAULT
+) |
+
+615 (
+USART_FRAME_PARITY_DEFAULT
+);
+
+618 
+	`USART_BaudøãSyncSë
+(
+ußπ
+, 
+öô
+->
+ªfFªq
+, inô->
+baudøã
+);
+
+621 i‡(
+öô
+->
+ma°î
+)
+
+623 
+ußπ
+->
+CMD
+ = 
+USART_CMD_MASTEREN
+;
+
+626 
+ußπ
+->
+CMD
+ = (
+uöt32_t
+)(
+öô
+->
+íabÀ
+);
+
+627 
+	}
+}
+
+656 #i‡
+deföed
+(
+USART0
+)
+
+657 
+	$USART_InôIrDA
+(c⁄° 
+USART_InôIrDA_Ty≥Def
+ *
+öô
+)
+
+660 
+	`USART_InôAsync
+(
+USART0
+, &(
+öô
+->
+async
+));
+
+663 
+USART0
+->
+CTRL
+ |
+USART_CTRL_TXINV
+;
+
+666 i‡(
+öô
+->
+úRxInv
+)
+
+668 
+USART0
+->
+CTRL
+ |
+USART_CTRL_RXINV
+;
+
+672 
+USART0
+->
+IRCTRL
+ |(
+uöt32_t
+)
+öô
+->
+úPw
+ |
+
+673 (
+uöt32_t
+)
+öô
+->
+úPrsSñ
+ |
+
+674 ((
+uöt32_t
+)
+öô
+->
+úFût
+ << 
+_USART_IRCTRL_IRFILT_SHIFT
+) |
+
+675 ((
+uöt32_t
+)
+öô
+->
+úPrsEn
+ << 
+_USART_IRCTRL_IRPRSEN_SHIFT
+);
+
+678 
+USART0
+->
+IRCTRL
+ |
+USART_IRCTRL_IREN
+;
+
+679 
+	}
+}
+
+683 #i‡
+deföed
+(
+_EFM32_GIANT_FAMILY
+Ë|| deföed(
+_EFM32_TINY_FAMILY
+Ë|| deföed(
+_EFM32_WONDER_FAMILY
+)
+
+713 
+	$USART_InôI2s
+(
+USART_Ty≥Def
+ *
+ußπ
+, 
+USART_InôI2s_Ty≥Def
+ *
+öô
+)
+
+715 
+USART_E«bÀ_Ty≥Def
+ 
+íabÀ
+;
+
+718 
+	`EFM_ASSERT
+(
+	`USART_I2S_VALID
+(
+ußπ
+));
+
+721 
+íabÀ
+ = 
+öô
+->
+sync
+.enable;
+
+722 
+öô
+->
+sync
+.
+íabÀ
+ = 
+ußπDißbÀ
+;
+
+725 
+	`USART_InôSync
+(
+ußπ
+, &
+öô
+->
+sync
+);
+
+728 
+ußπ
+->
+I2SCTRL
+ = ((
+uöt32_t
+)
+öô
+->
+f‹m©
+) |
+
+729 ((
+uöt32_t
+)
+öô
+->
+ju°ify
+) |
+
+730 (
+öô
+->
+dñay
+ ? 
+USART_I2SCTRL_DELAY
+ : 0) |
+
+731 (
+öô
+->
+dmaS∂ô
+ ? 
+USART_I2SCTRL_DMASPLIT
+ : 0) |
+
+732 (
+öô
+->
+m⁄o
+ ? 
+USART_I2SCTRL_MONO
+ : 0) |
+
+733 (
+USART_I2SCTRL_EN
+);
+
+735 i‡(
+íabÀ
+ !
+ußπDißbÀ
+)
+
+737 
+	`USART_E«bÀ
+(
+ußπ
+, 
+íabÀ
+);
+
+739 
+	}
+}
+
+751 
+	$USART_InôPrsTriggî
+(
+USART_Ty≥Def
+ *
+ußπ
+, c⁄° 
+USART_PrsTriggîInô_Ty≥Def
+ *
+öô
+)
+
+753 
+uöt32_t
+ 
+åig˘æ
+;
+
+756 
+åig˘æ
+ = 
+ußπ
+->
+TRIGCTRL
+ & ~(
+_USART_TRIGCTRL_RXTEN_MASK
+|
+
+757 
+_USART_TRIGCTRL_TXTEN_MASK
+|
+
+758 #i‡
+	`deföed
+(
+_EFM32_GIANT_FAMILY
+Ë|| deföed(
+_EFM32_WONDER_FAMILY
+)
+
+759 
+_USART_TRIGCTRL_AUTOTXTEN_MASK
+|
+
+761 
+_USART_TRIGCTRL_TSEL_MASK
+);
+
+763 #i‡
+	`deföed
+(
+_EFM32_GIANT_FAMILY
+Ë|| deföed(
+_EFM32_WONDER_FAMILY
+)
+
+764 if(
+öô
+->
+autoTxTriggîE«bÀ
+)
+
+766 
+åig˘æ
+ |
+USART_TRIGCTRL_AUTOTXTEN
+;
+
+769 if(
+öô
+->
+txTriggîE«bÀ
+)
+
+771 
+åig˘æ
+ |
+USART_TRIGCTRL_TXTEN
+;
+
+773 if(
+öô
+->
+rxTriggîE«bÀ
+)
+
+775 
+åig˘æ
+ |
+USART_TRIGCTRL_RXTEN
+;
+
+777 
+åig˘æ
+ |
+öô
+->
+¥sTriggîCh™√l
+;
+
+780 
+ußπ
+->
+TRIGCTRL
+ = 
+åig˘æ
+;
+
+781 
+	}
+}
+
+792 
+	$USART_Re£t
+(
+USART_Ty≥Def
+ *
+ußπ
+)
+
+795 
+	`EFM_ASSERT
+(
+	`USART_REF_VALID
+(
+ußπ
+)||
+	`UART_REF_VALID
+(usart));
+
+798 
+ußπ
+->
+CMD
+ = 
+USART_CMD_RXDIS
+ | 
+USART_CMD_TXDIS
+ | 
+USART_CMD_MASTERDIS
+ |
+
+799 
+USART_CMD_RXBLOCKDIS
+ | 
+USART_CMD_TXTRIDIS
+ | 
+USART_CMD_CLEARTX
+ | 
+USART_CMD_CLEARRX
+;
+
+800 
+ußπ
+->
+CTRL
+ = 
+_USART_CTRL_RESETVALUE
+;
+
+801 
+ußπ
+->
+FRAME
+ = 
+_USART_FRAME_RESETVALUE
+;
+
+802 
+ußπ
+->
+TRIGCTRL
+ = 
+_USART_TRIGCTRL_RESETVALUE
+;
+
+803 
+ußπ
+->
+CLKDIV
+ = 
+_USART_CLKDIV_RESETVALUE
+;
+
+804 
+ußπ
+->
+IEN
+ = 
+_USART_IEN_RESETVALUE
+;
+
+805 
+ußπ
+->
+IFC
+ = 
+_USART_IFC_MASK
+;
+
+806 
+ußπ
+->
+ROUTE
+ = 
+_USART_ROUTE_RESETVALUE
+;
+
+808 i‡(
+	`USART_IRDA_VALID
+(
+ußπ
+))
+
+810 
+ußπ
+->
+IRCTRL
+ = 
+_USART_IRCTRL_RESETVALUE
+;
+
+813 #i‡
+	`deföed
+(
+_EFM32_GIANT_FAMILY
+Ë|| deföed(
+_EFM32_TINY_FAMILY
+Ë|| deföed(
+_EFM32_WONDER_FAMILY
+)
+
+814 
+ußπ
+->
+INPUT
+ = 
+_USART_INPUT_RESETVALUE
+;
+
+816 i‡(
+	`USART_I2S_VALID
+(
+ußπ
+))
+
+818 
+ußπ
+->
+I2SCTRL
+ = 
+_USART_I2SCTRL_RESETVALUE
+;
+
+821 
+	}
+}
+
+845 
+uöt8_t
+ 
+	$USART_Rx
+(
+USART_Ty≥Def
+ *
+ußπ
+)
+
+847 !(
+ußπ
+->
+STATUS
+ & 
+USART_STATUS_RXDATAV
+))
+
+850  (
+uöt8_t
+)(
+ußπ
+->
+RXDATA
+);
+
+851 
+	}
+}
+
+875 
+uöt16_t
+ 
+	$USART_RxDoubÀ
+(
+USART_Ty≥Def
+ *
+ußπ
+)
+
+877 !(
+ußπ
+->
+STATUS
+ & 
+USART_STATUS_RXFULL
+))
+
+880  (
+uöt16_t
+)(
+ußπ
+->
+RXDOUBLE
+);
+
+881 
+	}
+}
+
+905 
+uöt32_t
+ 
+	$USART_RxDoubÀExt
+(
+USART_Ty≥Def
+ *
+ußπ
+)
+
+907 !(
+ußπ
+->
+STATUS
+ & 
+USART_STATUS_RXFULL
+))
+
+910  
+ußπ
+->
+RXDOUBLEX
+;
+
+911 
+	}
+}
+
+935 
+uöt16_t
+ 
+	$USART_RxExt
+(
+USART_Ty≥Def
+ *
+ußπ
+)
+
+937 !(
+ußπ
+->
+STATUS
+ & 
+USART_STATUS_RXDATAV
+))
+
+940  (
+uöt16_t
+)(
+ußπ
+->
+RXDATAX
+);
+
+941 
+	}
+}
+
+963 
+uöt8_t
+ 
+	$USART_SpiTøns„r
+(
+USART_Ty≥Def
+ *
+ußπ
+, 
+uöt8_t
+ 
+d©a
+)
+
+965 !(
+ußπ
+->
+STATUS
+ & 
+USART_STATUS_TXBL
+));
+
+966 
+ußπ
+->
+TXDATA
+ = (
+uöt32_t
+)
+d©a
+;
+
+967 !(
+ußπ
+->
+STATUS
+ & 
+USART_STATUS_TXC
+));
+
+968  (
+uöt8_t
+)(
+ußπ
+->
+RXDATA
+);
+
+969 
+	}
+}
+
+995 
+	$USART_Tx
+(
+USART_Ty≥Def
+ *
+ußπ
+, 
+uöt8_t
+ 
+d©a
+)
+
+998 !(
+ußπ
+->
+STATUS
+ & 
+USART_STATUS_TXBL
+));
+
+999 
+ußπ
+->
+TXDATA
+ = (
+uöt32_t
+)
+d©a
+;
+
+1000 
+	}
+}
+
+1030 
+	$USART_TxDoubÀ
+(
+USART_Ty≥Def
+ *
+ußπ
+, 
+uöt16_t
+ 
+d©a
+)
+
+1033 !(
+ußπ
+->
+STATUS
+ & 
+USART_STATUS_TXBL
+))
+
+1035 
+ußπ
+->
+TXDOUBLE
+ = (
+uöt32_t
+)
+d©a
+;
+
+1036 
+	}
+}
+
+1066 
+	$USART_TxDoubÀExt
+(
+USART_Ty≥Def
+ *
+ußπ
+, 
+uöt32_t
+ 
+d©a
+)
+
+1069 !(
+ußπ
+->
+STATUS
+ & 
+USART_STATUS_TXBL
+))
+
+1071 
+ußπ
+->
+TXDOUBLEX
+ = 
+d©a
+;
+
+1072 
+	}
+}
+
+1094 
+	$USART_TxExt
+(
+USART_Ty≥Def
+ *
+ußπ
+, 
+uöt16_t
+ 
+d©a
+)
+
+1097 !(
+ußπ
+->
+STATUS
+ & 
+USART_STATUS_TXBL
+))
+
+1099 
+ußπ
+->
+TXDATAX
+ = (
+uöt32_t
+)
+d©a
+;
+
+1100 
+	}
+}
+
 	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\ADXL345.c
 
 1 
@@ -15549,13 +18283,27 @@ ADXL345_H_INCLUDED
 
 42 
 	#BAUDRATE
- 10000000
+ 10000
 
 43 
 	#INTS_PER_KM
  1205
 
 44 
+
+	)
+
+45 
+	#ACCEL_INT_PORT
+ 
+gpioP‹tD
+
+
+	)
+
+46 
+	#ACCEL_INT_PIN
+ 4
 
 	)
 
@@ -15596,48 +18344,78 @@ vÆues
 "
 
 11 
-	~"time_m™agemít.h
+	~"em_emu.h
 "
 
 12 
-	~"a˘ivôy_≠p.h
+	~"time_m™agemít.h
 "
 
 13 
-	~"buâ⁄s.h
+	~"a˘ivôy_≠p.h
 "
 
 14 
-	~"öô.h
+	~"buâ⁄s.h
 "
 
 15 
-	~"ac˚l.h
+	~"ADXL345.h
 "
 
-17 
+16 
+	~"£gmíécd.h
+"
+
+17 
+	~"°©e_machöe.h
+"
+
+19 
 öôCou¡î
 ();
 
-18 
+20 
 døwA˘ivôyS¸ìn
 ();
 
-19 
+21 
 PCNT1_IRQH™dÀr
 ();
 
-21 
-uöt8_t
+22 
+öôSPI
+();
+
+23 
+öôAc˚l
+();
+
+24 
+öôAc˚lI¡îru±
+();
+
+26 
+uöt16_t
  
 	ga˘ivôy
-[7];
+[
+MAX_WEEKS
+][
+WEEK_DAYS
+];
 
-32 
+27 
+uöt32_t
+ 
+	gavîage_a˘ivôy
+;
+
+37 
 	$öôCou¡î
 ()
 
-35 
+40 
 	`CMU_ClockE«bÀ
 (
 cmuClock_CORELE
@@ -15645,7 +18423,7 @@ cmuClock_CORELE
 åue
 );
 
-36 
+41 
 	`CMU_ClockE«bÀ
 (
 cmuClock_GPIO
@@ -15653,7 +18431,7 @@ cmuClock_GPIO
 åue
 );
 
-37 
+42 
 	`CMU_ClockE«bÀ
 (
 cmuClock_PCNT1
@@ -15661,7 +18439,7 @@ cmuClock_PCNT1
 åue
 );
 
-40 
+45 
 	`GPIO_PöModeSë
 (
 ACTIVITY_PORT
@@ -15671,45 +18449,45 @@ ACTIVITY_PIN
 gpioModeI≈utPuŒ
 , 0);
 
-43 
+48 
 PCNT_Inô_Ty≥Def
  
 p˙tInô
  =
 
-45 .
+50 .
 mode
  = 
 p˙tModeOvsSögÀ
 ,
 
-46 .
+51 .
 cou¡î
  = 0,
 
-47 .
+52 .
 t›
  = 10,
 
-48 .
+53 .
 √gEdge
  = 
 Ál£
 ,
 
-49 .
+54 .
 cou¡Down
  = 
 Ál£
 ,
 
-50 .
+55 .
 fûãr
  = 
 Ál£
 ,
 
-54 
+59 
 	`PCNT_Inô
 (
 PCNT1
@@ -15717,19 +18495,19 @@ PCNT1
 p˙tInô
 );
 
-57 
+62 
 	`PCNT_I¡E«bÀ
 (
 PCNT1
 , 0x2);
 
-60 
+65 
 	`NVIC_E«bÀIRQ
 (
 PCNT1_IRQn
 );
 
-63 
+68 
 PCNT1
 ->
 ROUTE
@@ -15737,171 +18515,247 @@ ROUTE
 PCNT_ROUTE_LOCATION_LOC0
 ;
 
-64 
+69 
 	}
 }
 
-75 
+80 
 	$öôA˘ivôy
 ()
 
-77 
+82 
 	`öôCou¡î
 ();
 
-80 
+85 
 uöt8_t
  
-i
-;
+wìk
+ = 0; week < 52; week++)
 
-81 
-i
- = 0; i < 7; i++)
+87 
+uöt8_t
+ 
+day
+ = 0; day < 7; day++)
 
-83 
+89 
 a˘ivôy
 [
-i
+wìk
+][
+day
 ] = 0;
 
-85 
+93 
+avîage_a˘ivôy
+ = 0;
+
+95 
+	`öôSPI
+();
+
+96 
+	`öôAc˚l
+();
+
+97 
+	`öôAc˚lI¡îru±
+();
+
+98 
 	}
 }
 
-96 
+109 
+	$öôAc˚lI¡îru±
+()
+
+112 
+	`GPIO_PöModeSë
+(
+ACCEL_INT_PORT
+ , 
+ACCEL_INT_PIN
+, 
+gpioModeI≈ut
+, 0);
+
+113 
+	`GPIO_I¡C⁄fig
+(
+ACCEL_INT_PORT
+, 
+ACCEL_INT_PIN
+, 
+åue
+, 
+Ál£
+,Årue);
+
+116 
+	`NVIC_CÀ¨PídögIRQ
+(
+GPIO_EVEN_IRQn
+);
+
+117 
+	`NVIC_E«bÀIRQ
+(
+GPIO_EVEN_IRQn
+);
+
+118 
+	}
+}
+
+129 
 	$˛órA˘ivôy
 (
 uöt8_t
  
+wìk
+, uöt8_à
 wday
 )
 
-98 
+131 
+avîage_a˘ivôy
+ =ávîage_a˘ivôy * 6 / 7 + 
 a˘ivôy
 [
+wìk
+][
+wday
+];
+
+132 
+a˘ivôy
+[
+wìk
+][
 wday
 ] = 0;
 
-99 
+133 
 	}
 }
 
-110 
+144 
 	$døwA˘ivôyS¸ìn
 ()
 
-112 
+146 
 	`SegmítLCD_NumbîOff
 ();
 
-113 
+147 
 	`SegmítLCD_Wrôe
 ("Actvty");
 
-114 
+148 
 	`SegmítLCD_Numbî
 (
 a˘ivôy
 [
 cuºítTime
 .
+tm_wìk
+][cuºítTime.
 tm_wday
 ]);
 
-115 
+150 
 	}
 }
 
-126 
+161 
 	$a˘ivôyAµ
 ()
 
-128 if–
+163 if–
 buâ⁄
  =
 BUTTON_A
 )
 
-130 
+165 
 buâ⁄
  = 
 NO_BUTTON
 ;
 
-131 
+166 
 	`√xtSèã
 ();
 
-133 if(
+168 if(
 buâ⁄
  =
 BUTTON_B
 )
 
-135 
+170 
 buâ⁄
  = 
 NO_BUTTON
 ;
 
-136 
-	`¥eviousSèã
-();
-
-140 
+175 
 buâ⁄
  = 
 NO_BUTTON
 ;
 
-141 
+176 
 	`døwA˘ivôyS¸ìn
 ();
 
-142 
+177 
 	`EMU_E¡îEM2
 (
 åue
 );
 
-144 
+179 
 	}
 }
 
-151 
+186 
 	$PCNT1_IRQH™dÀr
 ()
 
-154 
+189 
 	`PCNT_I¡CÀ¨
 (
 PCNT1
 , 0x2);
 
-156 
+191 
 a˘ivôy
 [
 cuºítTime
 .
+tm_wìk
+][cuºítTime.
 tm_wday
 ]++;
 
-157 
+192 
 	}
 }
 
-165 
+200 
 	$öôAc˚l
 ()
 
-167 
+202 
 	`wrôeRegi°î
 (
 DATA_FORMAT
 , 0x01);
 
-168 
+203 
 	`wrôeRegi°î
 (
 THRESH_ACT
@@ -15909,39 +18763,53 @@ THRESH_ACT
 SENSITIVITY
 );
 
-169 
+204 
 	`wrôeRegi°î
 (
 ACT_INACT_CTL
 , 0x70);
 
-170 
+205 
 	`wrôeRegi°î
 (
 INT_ENABLE
 , 0x10);
 
-171 
+206 
 	`wrôeRegi°î
 (
 INT_MAP
 , 0x00);
 
-173 
+208 
 	`wrôeRegi°î
 (
 POWER_CTL
 , 0x08);
 
-174 
+210  !(
+vÆues
+[0] & 
+ACT_INT_MASK
+) )
+
+212 
+	`ªadRegi°î
+(
+INT_SOURCE
+, 1, 
+vÆues
+);
+
+214 
 	}
 }
 
-183 
+223 
 	$öôSPI
 ()
 
-186 
+226 
 	`CMU_ClockE«bÀ
 (
 CMUCLOCK_ACCEL_USART
@@ -15949,7 +18817,7 @@ CMUCLOCK_ACCEL_USART
 åue
 );
 
-189 
+229 
 	`GPIO_PöModeSë
 –
 ACCEL_MOSI_PORT
@@ -15959,7 +18827,7 @@ ACCEL_MOSI_PIN
 gpioModePushPuŒ
 , 0 );
 
-190 
+230 
 	`GPIO_PöModeSë
 –
 ACCEL_MISO_PORT
@@ -15969,7 +18837,7 @@ ACCEL_MISO_PIN
 gpioModeI≈ut
 , 0 );
 
-191 
+231 
 	`GPIO_PöModeSë
 –
 ACCEL_CLK_PORT
@@ -15979,7 +18847,7 @@ ACCEL_CLK_PIN
 gpioModePushPuŒ
 , 0 );
 
-192 
+232 
 	`GPIO_PöModeSë
 –
 ACCEL_CS_PORT
@@ -15989,7 +18857,7 @@ ACCEL_CS_PIN
 gpioModePushPuŒ
 , 0 );
 
-195 
+235 
 USART_InôSync_Ty≥Def
  
 ußπInô
@@ -15997,7 +18865,7 @@ ußπInô
 USART_INITSYNC_DEFAULT
 ;
 
-196 
+236 
 ußπInô
 .
 baudøã
@@ -16005,7 +18873,7 @@ baudøã
 BAUDRATE
 ;
 
-197 
+237 
 ußπInô
 .
 msbf
@@ -16013,7 +18881,7 @@ msbf
 åue
 ;
 
-198 
+238 
 ußπInô
 .
 ˛ockMode
@@ -16021,7 +18889,7 @@ ußπInô
 ußπClockMode3
 ;
 
-200 
+240 
 	`USART_InôSync
 (
 ACCEL_USART
@@ -16029,7 +18897,7 @@ ACCEL_USART
 ußπInô
 );
 
-203 
+243 
 ACCEL_USART
 ->
 ROUTE
@@ -16043,7 +18911,7 @@ USART_ROUTE_RXPEN
 ACCER_USART_LOC
 );
 
-204 
+244 
 ACCEL_USART
 ->
 CMD
@@ -16051,7 +18919,25 @@ CMD
 USART_CMD_RXBLOCKEN
 ;
 
-205 
+245 
+	}
+}
+
+257 
+	$a˘ivôySugge°i⁄
+()
+
+259 
+	`SegmítLCD_Wrôe
+("Do More");
+
+260 
+s¸ìn_nŸifiˇti⁄
+ = 
+åue
+;
+
+261 
 	}
 }
 
@@ -16089,86 +18975,118 @@ cmuClock_PCNT1
 
 	)
 
-13 
+12 
 	#ACCEL_USART
+ 
+USART1
+
+
+	)
+
+13 
+	#CMUCLOCK_ACCEL_USART
+ 
+cmuClock_USART1
 
 
 	)
 
 14 
-	#CMUCLOCK_ACCEL_USART
+	#ACCEL_CS_PORT
+ 
+gpioP‹tD
 
 
 	)
 
 15 
-	#ACCEL_CS_PORT
-
+	#ACCEL_CS_PIN
+ 3
 
 	)
 
 16 
-	#ACCEL_CS_PIN
+	#ACCEL_MOSI_PORT
+ 
+gpioP‹tD
 
 
 	)
 
 17 
-	#ACCEL_MOSI_PORT
-
+	#ACCEL_MOSI_PIN
+ 0
 
 	)
 
 18 
-	#ACCEL_MOSI_PIN
+	#ACCEL_MISO_PORT
+ 
+gpioP‹tD
 
 
 	)
 
 19 
-	#ACCEL_MISO_PORT
-
+	#ACCEL_MISO_PIN
+ 1
 
 	)
 
 20 
-	#ACCEL_MISO_PIN
+	#ACCEL_CLK_PORT
+ 
+gpioP‹tD
 
 
 	)
 
 21 
-	#ACCEL_CLK_PORT
-
+	#ACCEL_CLK_PIN
+ 2
 
 	)
 
 22 
-	#ACCEL_CLK_PIN
-
-
-	)
-
-23 
 	#ACCER_USART_LOC
+ 
+USART_ROUTE_LOCATION_LOC1
 
 
 	)
 
-26 
+24 
+	#MAX_WEEKS
+ 52
+
+25 
+	#WEEK_DAYS
+ 7
+
+26 
+
+	)
+
+27 
 öôA˘ivôy
 ();
 
-27 
+28 
 ˛órA˘ivôy
 (
 uöt8_t
  
+wìk
+, uöt8_à
 wday
 );
 
-28 
+29 
 a˘ivôyAµ
+();
+
+30 
+a˘ivôySugge°i⁄
 ();
 
 	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\blink.c
@@ -16222,16 +19140,28 @@ a˘ivôyAµ
 "
 
 47 
+	~"£gmíécd.h
+"
+
+48 
+	~"pomod‹o_≠p.h
+"
+
+49 
 	~"a˘ivôy_≠p.h
 "
 
-49 vﬁ©ûê
+50 
+	~"v¨übÀs.h
+"
+
+52 vﬁ©ûê
 uöt32_t
  
 	gmsTicks
 ;
 
-51 
+54 
 Dñay
 (
 uöt32_t
@@ -16239,19 +19169,19 @@ uöt32_t
 dlyTicks
 );
 
-57 
+60 
 	$SysTick_H™dÀr
 ()
 
-59 
+62 
 msTicks
 ++;
 
-60 
+63 
 	}
 }
 
-67 
+70 
 	$Dñay
 (
 uöt32_t
@@ -16259,19 +19189,19 @@ uöt32_t
 dlyTicks
 )
 
-69 
+72 
 uöt32_t
  
 curTicks
 ;
 
-71 
+74 
 curTicks
  = 
 msTicks
 ;
 
-72 (
+75 (
 msTicks
  - 
 curTicks
@@ -16279,15 +19209,15 @@ curTicks
 dlyTicks
 ) ;
 
-73 
+76 
 	}
 }
 
-83 
+86 
 	$£tupSWO
 ()
 
-86 
+89 
 CMU
 ->
 HFPERCLKEN0
@@ -16295,7 +19225,7 @@ HFPERCLKEN0
 CMU_HFPERCLKEN0_GPIO
 ;
 
-88 
+91 
 GPIO
 ->
 ROUTE
@@ -16303,7 +19233,7 @@ ROUTE
 GPIO_ROUTE_SWOPEN
 ;
 
-89 #i‡
+92 #i‡
 	`deföed
 (
 _EFM32_GIANT_FAMILY
@@ -16313,7 +19243,7 @@ _EFM32_WONDER_FAMILY
 _EFM32_LEOPARD_FAMILY
 )
 
-91 
+94 
 GPIO
 ->
 ROUTE
@@ -16323,7 +19253,7 @@ _GPIO_ROUTE_SWLOCATION_MASK
 GPIO_ROUTE_SWLOCATION_LOC0
 ;
 
-94 
+97 
 GPIO
 ->
 P
@@ -16333,7 +19263,7 @@ MODEL
 _GPIO_P_MODEL_MODE2_MASK
 );
 
-95 
+98 
 GPIO
 ->
 P
@@ -16343,7 +19273,7 @@ MODEL
 GPIO_P_MODEL_MODE2_PUSHPULL
 ;
 
-98 
+101 
 GPIO
 ->
 ROUTE
@@ -16353,7 +19283,7 @@ _GPIO_ROUTE_SWLOCATION_MASK
 GPIO_ROUTE_SWLOCATION_LOC1
 ;
 
-100 
+103 
 GPIO
 ->
 P
@@ -16363,7 +19293,7 @@ MODEH
 _GPIO_P_MODEH_MODE15_MASK
 );
 
-101 
+104 
 GPIO
 ->
 P
@@ -16373,7 +19303,7 @@ MODEH
 GPIO_P_MODEH_MODE15_PUSHPULL
 ;
 
-104 
+107 
 CMU
 ->
 OSCENCMD
@@ -16381,7 +19311,7 @@ OSCENCMD
 CMU_OSCENCMD_AUXHFRCOEN
 ;
 
-106 !(
+109 !(
 CMU
 ->
 STATUS
@@ -16389,13 +19319,13 @@ STATUS
 CMU_STATUS_AUXHFRCORDY
 ));
 
-109 
+112 
 C‹eDebug
 ->
 DHCSR
  |= 1;
 
-110 
+113 
 C‹eDebug
 ->
 DEMCR
@@ -16403,151 +19333,155 @@ DEMCR
 C‹eDebug_DEMCR_TRCENA_Msk
 ;
 
-113 
+116 
 DWT
 ->
 CTRL
  = 0x400113FF;
 
-115 
+118 
 TPI
 ->
 ACPR
  = 0xf;
 
-117 
+120 
 TPI
 ->
 SPPR
  = 2;
 
-119 
+122 
 ITM
 ->
 LAR
  = 0xC5ACCE55;
 
-120 
+123 
 ITM
 ->
 TCR
  = 0x10009;
 
-121 
+124 
 	}
 }
 
-130 
+133 
 	$maö
 ()
 
-133 
+136 
 	`CHIP_Inô
 ();
 
-136 
+139 
 	`BSP_Tø˚ProfûîSëup
 ();
 
-139 
+142 
 	`£tupSWO
 ();
 
-141 
+144 
 	`BSP_LedsInô
 ();
 
-142 
+145 
 	`öôBuâ⁄s
 ();
 
-143 
+146 
 	`öôClock
 ();
 
-144 
+147 
 	`öôA˘ivôy
 ();
 
-145 
+148 
+	`öôPedomëî
+();
+
+149 
 	`öôV¨übÀs
 ();
 
-146 
+150 
 	`SegmítLCD_Inô
 (
 Ál£
 );
 
-148 
+152 
 °©e
  = 
 maö_s¸ìn
 ;
 
-154 if(
+158 if(
 s¸ìn_nŸifiˇti⁄
  =
 åue
 )
 
-156 
+160 
 	`EMU_E¡îEM2
 (
 åue
 );
 
-157 
+161 
 buâ⁄
  = 
 NO_BUTTON
 ;
 
-161 
+165 
 °©e
 )
 
-163 
+167 
 maö_s¸ìn
 :
 
-164 
+168 
 	`maöS¸ìnAµ
 ();
 
-166 
+170 
 pomod‹o_s¸ìn
 :
 
-167 
+171 
 	`pomod‹oAµ
 ();
 
-169 
+173 
 a˘ivôy_s¸ìn
 :
 
-170 
+174 
 	`a˘ivôyAµ
 ();
 
-172 
+176 
 time_£tup_s¸ìn
 :
 
-173 
+177 
 	`£tupTimeAµ
 ();
 
-175 
+179 
 Æ¨m_£tup_s¸ìn
 :
 
-176 
+180 
 	`£tupAœrmAµ
 ();
 
-181 
+185 
 	}
 }
 
@@ -16571,6 +19505,10 @@ time_£tup_s¸ìn
 
 12 
 	~"time_m™agemít.h
+"
+
+13 
+	~"ADXL345.h
 "
 
 15 vﬁ©ûê
@@ -16669,51 +19607,93 @@ GPIO_ODD_IRQn
 	$GPIO_EVEN_IRQH™dÀr
 ()
 
-54 
+54 if(
+	`GPIO_I¡Gë
+(Ë& (1 << 
+BUTTON_B_PIN
+))
+
+56 
 	`GPIO_I¡CÀ¨
 (1 << 
 BUTTON_B_PIN
 );
 
-55 
-buâ⁄
- = 
-BUTTON_A
-;
-
-56 
-s¸ìn_nŸifiˇti⁄
- = 
-Ál£
-;
-
 57 
-	}
-}
-
-69 
-	$GPIO_ODD_IRQH™dÀr
-()
-
-71 
-	`GPIO_I¡CÀ¨
-(1 << 
-BUTTON_A_PIN
-);
-
-72 
 buâ⁄
  = 
 BUTTON_B
 ;
 
-73 
+58 
 s¸ìn_nŸifiˇti⁄
  = 
 Ál£
 ;
 
-74 
+61 if(
+	`GPIO_I¡Gë
+(Ë& (1 << 
+ACCEL_INT_PIN
+))
+
+65 
+	`GPIO_I¡CÀ¨
+–1 << 
+ACCEL_INT_PIN
+ );
+
+67 
+vÆues
+[0] = 0;
+
+68  !(
+vÆues
+[0] & 
+ACT_INT_MASK
+) )
+
+70 
+	`ªadRegi°î
+(
+INT_SOURCE
+, 1, 
+vÆues
+);
+
+77 
+	}
+}
+
+89 
+	$GPIO_ODD_IRQH™dÀr
+()
+
+91 if(
+	`GPIO_I¡Gë
+(Ë& (1 << 
+BUTTON_A_PIN
+))
+
+93 
+	`GPIO_I¡CÀ¨
+(1 << 
+BUTTON_A_PIN
+);
+
+94 
+buâ⁄
+ = 
+BUTTON_A
+;
+
+95 
+s¸ìn_nŸifiˇti⁄
+ = 
+Ál£
+;
+
+101 
 	}
 }
 
@@ -16823,59 +19803,67 @@ time
 	~"buâ⁄s.h
 "
 
-20 
+11 
+	~"°©e_machöe.h
+"
+
+12 
+	~"£gmíécd.h
+"
+
+13 
+	~"em_emu.h
+"
+
+23 
 	$maöS¸ìnAµ
 ()
 
-22 if–
+25 if–
 buâ⁄
  =
 BUTTON_A
 )
 
-24 
+27 
 buâ⁄
  = 
 NO_BUTTON
 ;
 
-25 
+28 
 	`√xtSèã
 ();
 
-27 if(
+30 if(
 buâ⁄
  =
 BUTTON_B
 )
 
-29 
+32 
 buâ⁄
  = 
 NO_BUTTON
 ;
 
-30 
-	`¥eviousSèã
-();
-
-34 
+37 
 buâ⁄
  = 
 NO_BUTTON
 ;
 
-35 
+38 
 	`SegmítLCD_Wrôe
 ("Main");
 
-36 
+39 
 	`EMU_E¡îEM2
 (
 åue
 );
 
-38 
+41 
 	}
 }
 
@@ -16894,6 +19882,334 @@ MAIN_SCREEN_APP_H_INCLUDED
 8 
 maöS¸ìnAµ
 ();
+
+	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\pedometer.c
+
+9 
+	~"em_Àtimî.h
+"
+
+10 
+	~"em_cmu.h
+"
+
+11 
+	~"em_Àtimî.h
+"
+
+12 
+	~"a˘ivôy_≠p.h
+"
+
+13 
+	~"ADXL345.h
+"
+
+15 
+	#LETIMER_TOP
+ 12000
+
+	)
+
+16 
+	#MIN_TIME
+ 10
+
+	)
+
+17 
+	#MAX_TIME
+ 100
+
+	)
+
+19 
+öôPedomëîTimî
+();
+
+21 
+uöt8_t
+ 
+	gac˚lD©a
+[100];
+
+22 
+uöt32_t
+ 
+	g°ïs
+ = 0;
+
+32 
+	$öôPedomëî
+()
+
+35 
+	`öôPedomëîTimî
+();
+
+36 
+	}
+}
+
+38 
+	$öôPedomëîTimî
+()
+
+47 
+	`CMU_ClockE«bÀ
+(
+cmuClock_LETIMER0
+, 
+åue
+);
+
+50 
+	`LETIMER_Com∑ªSë
+(
+LETIMER0
+, 0, 
+LETIMER_TOP
+);
+
+52 
+	`LETIMER_I¡CÀ¨
+(
+LETIMER0
+, 0xFF);
+
+53 
+	`LETIMER_I¡E«bÀ
+(
+LETIMER0
+, 4);
+
+54 
+	`NVIC_E«bÀIRQ
+(
+LETIMER0_IRQn
+);
+
+57 c⁄° 
+LETIMER_Inô_Ty≥Def
+ 
+ÀtimîInô
+ =
+
+59 .
+íabÀ
+ = 
+åue
+,
+
+60 .
+debugRun
+ = 
+Ál£
+,
+
+61 .
+πcComp0E«bÀ
+ = 
+Ál£
+,
+
+62 .
+πcComp1E«bÀ
+ = 
+Ál£
+,
+
+63 .
+comp0T›
+ = 
+åue
+,
+
+64 .
+bufT›
+ = 
+Ál£
+,
+
+65 .
+out0Pﬁ
+ = 0,
+
+66 .
+out1Pﬁ
+ = 0,
+
+67 .
+ufﬂ0
+ = 
+ÀtimîUFOAN⁄e
+,
+
+68 .
+ufﬂ1
+ = 
+ÀtimîUFOAN⁄e
+,
+
+69 .
+ªpMode
+ = 
+ÀtimîRïótFªe
+
+
+73 
+	`LETIMER_Inô
+(
+LETIMER0
+, &
+ÀtimîInô
+);
+
+74 
+	}
+}
+
+77 
+	$LETIMER0_IRQH™dÀr
+()
+
+79 
+uöt8_t
+ 
+i
+ = 0;
+
+80 
+uöt32_t
+ 
+ªsu…
+ = 0;
+
+81 
+uöt32_t
+ 
+ﬁdResu…
+ = 0;
+
+82 
+boﬁ
+ 
+ÀadEdge
+ = 
+Ál£
+;
+
+83 
+uöt16_t
+ 
+timePas£d
+ = 0;
+
+85 
+	`LETIMER_I¡CÀ¨
+(
+LETIMER0
+, 0xFF);
+
+89 
+	`ªadRegi°î
+(
+DATAX0
+, 1, &
+ac˚lD©a
+[
+i
+]);
+
+90 
+ªsu…
+ +
+ac˚lD©a
+[
+i
+];
+
+91 
+i
+++;
+
+93 if–
+i
+ >= 4)
+
+95 
+i
+ = 0;
+
+96 
+ªsu…
+ /= 4;
+
+98 
+ﬁdResu…
+ = 
+ªsu…
+;
+
+99 
+ªsu…
+ = 
+ac˚lD©a
+[
+i
+];
+
+101 if(
+ÀadEdge
+)
+
+103 
+timePas£d
+++;
+
+105 if(
+ªsu…
+ < 
+ﬁdResu…
+)
+
+107 if(
+MIN_TIME
+ < 
+timePas£d
+ < 
+MAX_TIME
+ )
+
+109 
+timePas£d
+ = 0;
+
+110 
+°ïs
+++;
+
+112 
+ÀadEdge
+ = 
+Ál£
+;
+
+118 if–
+ªsu…
+ > 
+ﬁdResu…
+)
+
+120 
+ÀadEdge
+ = 
+åue
+;
+
+124 
+	}
+}
 
 	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\pomodoro_app.c
 
@@ -16921,7 +20237,11 @@ maöS¸ìnAµ
 	~"£gmíécd.h
 "
 
-17 
+16 
+	~"em_emu.h
+"
+
+18 
 upd©ePomod‹oTime
 (
 uöt8_t
@@ -16929,15 +20249,15 @@ uöt8_t
 time
 );
 
-18 
+19 
 °›Pomod‹o
 ();
 
-19 
+20 
 døwPomod‹oS¸ìn
 ();
 
-22 
+23 
 boﬁ
  
 	gpomod‹o_timeout
@@ -16945,27 +20265,27 @@ boﬁ
 Ál£
 ;
 
-24 
+25 
 	epomod‹o_°©e_t
 
 
-26 
+27 
 	mpomod‹o_off
 ,
 
-27 
+28 
 	mpomod‹o_a˘ive
 ,
 
-28 
+29 
 	mpomod‹o_sh‹t_bøke
 ,
 
-29 
+30 
 	mpomod‹o_l⁄g_bøke
 
 
-31 
+32 
 pomod‹o_°©e_t
  
 	gpomod‹o_°©e
@@ -16973,287 +20293,287 @@ pomod‹o_°©e_t
 pomod‹o_off
 ;
 
-42 
+43 
 	$pomod‹oAµ
 ()
 
-44 
+45 
 uöt8_t
  
 pomod‹os
  = 0;
 
-46 
+47 
 pomod‹o_°©e
 )
 
-48 
+49 
 pomod‹o_off
 :
 
-49 if(
+50 if(
 buâ⁄
  =
 BUTTON_B
 )
 
-51 
+52 
 buâ⁄
  = 
 NO_BUTTON
 ;
 
-52 
+53 
 	`upd©ePomod‹oTime
 (
 POMODORO_WORK_TIME
 );
 
-53 
+54 
 pomod‹o_°©e
  = 
 pomod‹o_a˘ive
 ;
 
-56 
+57 
 pomod‹o_a˘ive
 :
 
-57 if(
+58 if(
 buâ⁄
  =
 BUTTON_B
 )
 
-59 
+60 
 buâ⁄
  = 
 NO_BUTTON
 ;
 
-60 
+61 
 pomod‹os
  = 0;
 
-61 
+62 
 	`°›Pomod‹o
 ();
 
-63 if(
+64 if(
 pomod‹o_timeout
  =
 åue
 )
 
-65 
+66 
 pomod‹o_timeout
  = 
 Ál£
 ;
 
-66 
+67 
 pomod‹os
 ++;
 
-67 if(
+68 if(
 pomod‹os
  >
 POMODOROS_TO_LONG_BRAKE
 )
 
-69 
+70 
 pomod‹os
  = 0;
 
-70 
+71 
 	`upd©ePomod‹oTime
 (
 LONG_BRAKE_TIME
 );
 
-71 
+72 
 pomod‹o_°©e
  = 
 pomod‹o_l⁄g_bøke
 ;
 
-75 
+76 
 	`upd©ePomod‹oTime
 (
 SHORT_BRAKE_TIME
 );
 
-76 
+77 
 pomod‹o_°©e
  = 
 pomod‹o_sh‹t_bøke
 ;
 
-80 
+81 
 pomod‹o_sh‹t_bøke
 :
 
-81 if(
+82 if(
 buâ⁄
  =
 BUTTON_B
 )
 
-83 
+84 
 buâ⁄
  = 
 NO_BUTTON
 ;
 
-84 
+85 
 	`°›Pomod‹o
 ();
 
-86 if(
+87 if(
 pomod‹o_timeout
  =
 åue
 )
 
-88 
+89 
 pomod‹o_timeout
  = 
 Ál£
 ;
 
-89 
+90 
 	`upd©ePomod‹oTime
 (
 POMODORO_WORK_TIME
 );
 
-90 
+91 
 pomod‹o_°©e
  = 
 pomod‹o_a˘ive
 ;
 
-93 
+94 
 pomod‹o_l⁄g_bøke
 :
 
-94 if(
+95 if(
 buâ⁄
  =
 BUTTON_B
 )
 
-96 
+97 
 buâ⁄
  = 
 NO_BUTTON
 ;
 
-97 
+98 
 	`°›Pomod‹o
 ();
 
-99 if(
+100 if(
 pomod‹o_timeout
  =
 åue
 )
 
-101 
+102 
 pomod‹o_timeout
  = 
 Ál£
 ;
 
-102 
+103 
 	`upd©ePomod‹oTime
 (
 POMODORO_WORK_TIME
 );
 
-103 
+104 
 pomod‹o_°©e
  = 
 pomod‹o_a˘ive
 ;
 
-108 if–
+109 if–
 buâ⁄
  =
 BUTTON_A
 )
 
-110 
+111 
 buâ⁄
  = 
 NO_BUTTON
 ;
 
-111 
+112 
 	`√xtSèã
 ();
 
-115 
+116 
 buâ⁄
  = 
 NO_BUTTON
 ;
 
-116 
+117 
 	`døwPomod‹oS¸ìn
 ();
 
-117 
+118 
 	`EMU_E¡îEM2
 (
 åue
 );
 
-119 
+120 
 	}
 }
 
-130 
+131 
 	$døwPomod‹oS¸ìn
 ()
 
-132 
+133 
 pomod‹o_°©e
 )
 
-134 
+135 
 pomod‹o_a˘ive
 :
 
-135 
+136 
 	`SegmítLCD_Wrôe
 ("Work");
 
-137 
+138 
 pomod‹o_sh‹t_bøke
 :
 
-138 
+139 
 	`SegmítLCD_Wrôe
 ("Break");
 
-140 
+141 
 pomod‹o_l⁄g_bøke
 :
 
-141 
+142 
 	`SegmítLCD_Wrôe
 ("Break");
 
-143 
+144 
 pomod‹o_off
 :
 
-144 
+145 
 	`SegmítLCD_Wrôe
 ("OFF");
 
-147 
+148 
 öt8_t
  
 time_bef‹e_√xt_°©e
@@ -17265,35 +20585,35 @@ tm_mö
 cuºítTime
 .tm_min;
 
-148 if(
+149 if(
 time_bef‹e_√xt_°©e
  < 0)
 
-150 
+151 
 time_bef‹e_√xt_°©e
  += 59;
 
-152 if(
+153 if(
 pomod‹o_°©e
  !
 pomod‹o_off
 )
 
-154 
+155 
 	`SegmítLCD_Numbî
 (
 time_bef‹e_√xt_°©e
 );
 
-158 
+159 
 	`SegmítLCD_NumbîOff
 ();
 
-160 
+161 
 	}
 }
 
-171 
+172 
 	$upd©ePomod‹oTime
 (
 uöt8_t
@@ -17301,7 +20621,7 @@ uöt8_t
 time
 )
 
-173 
+174 
 pomod‹o
 .
 a˘ive
@@ -17309,7 +20629,7 @@ a˘ive
 åue
 ;
 
-174 
+175 
 pomod‹o
 .
 tm_£c
@@ -17317,7 +20637,7 @@ tm_£c
 cuºítTime
 .tm_sec;
 
-176 if(
+177 if(
 cuºítTime
 .
 tm_mö
@@ -17325,7 +20645,7 @@ tm_mö
 time
  >= 59)
 
-178 
+179 
 pomod‹o
 .
 tm_mö
@@ -17335,7 +20655,7 @@ cuºítTime
 time
  - 59;
 
-179 
+180 
 pomod‹o
 .
 tm_hour
@@ -17343,7 +20663,7 @@ tm_hour
 cuºítTime
 .tm_hour;
 
-180 
+181 
 	`ö¸emítPoöt
 (
 hours
@@ -17351,13 +20671,13 @@ hours
 pomod‹o
 );
 
-181 
+182 
 pomod‹o
 .
 tm_wday
  = 0;
 
-185 
+186 
 pomod‹o
 .
 tm_mö
@@ -17367,7 +20687,7 @@ cuºítTime
 time
 ;
 
-186 
+187 
 pomod‹o
 .
 tm_hour
@@ -17375,21 +20695,21 @@ tm_hour
 cuºítTime
 .tm_hour;
 
-188 
+189 
 	}
 }
 
-199 
+200 
 	$°›Pomod‹o
 ()
 
-201 
+202 
 pomod‹o_°©e
  = 
 pomod‹o_off
 ;
 
-202 
+203 
 pomod‹o
 .
 a˘ive
@@ -17397,21 +20717,21 @@ a˘ive
 Ál£
 ;
 
-203 
+204 
 	}
 }
 
-215 
+216 
 	$checkPomod‹o
 ()
 
-217 if(
+218 if(
 pomod‹o
 .
 a˘ive
  &&
 
-218 (
+219 (
 pomod‹o
 .
 tm_£c
@@ -17419,7 +20739,7 @@ tm_£c
 cuºítTime
 .tm_sec) &&
 
-219 (
+220 (
 pomod‹o
 .
 tm_mö
@@ -17427,7 +20747,7 @@ tm_mö
 cuºítTime
 .tm_min) &&
 
-220 (
+221 (
 pomod‹o
 .
 tm_hour
@@ -17435,19 +20755,19 @@ tm_hour
 cuºítTime
 .tm_hour))
 
-222 
+223 
 pomod‹o_timeout
  = 
 åue
 ;
 
-223 
+224 
 °©e
  = 
 pomod‹o_s¸ìn
 ;
 
-225 
+226 
 	}
 }
 
@@ -17491,6 +20811,10 @@ POMODORO_H_INCLUDED
 checkPomod‹o
 ();
 
+14 
+pomod‹oAµ
+();
+
 	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\setup_alarm_app.c
 
 10 
@@ -17509,7 +20833,15 @@ checkPomod‹o
 	~"£gmíécd.h
 "
 
-15 
+14 
+	~"°©e_machöe.h
+"
+
+15 
+	~"em_emu.h
+"
+
+17 
 	#FIRST_SETUP_STATE
  
 möuãs
@@ -17517,7 +20849,7 @@ möuãs
 
 	)
 
-16 
+18 
 	#LAST_SETUP_STATE
  
 a˘ive
@@ -17525,7 +20857,7 @@ a˘ive
 
 	)
 
-19 
+21 
 tm
  * 
 	gp_Æ¨m
@@ -17533,16 +20865,232 @@ tm
 Æ¨m1
 ;
 
-22 
+24 
 døwSëupAœrmS¸ìn
 ();
 
-23 
+25 
 √xtAœrmSëupSèã
 ();
 
-34 
+26 
+døwSëupAœrmS¸ìn
+();
+
+37 
 	$£tupAœrmAµ
+()
+
+39 if–
+buâ⁄
+ =
+BUTTON_A
+)
+
+41 
+buâ⁄
+ = 
+NO_BUTTON
+;
+
+42 
+	`√xtSèã
+();
+
+44 if(
+buâ⁄
+ =
+BUTTON_B
+)
+
+46 
+buâ⁄
+ = 
+NO_BUTTON
+;
+
+47 
+	`√xtAœrmSëupSèã
+();
+
+49 if(
+buâ⁄
+ =
+BUTTON_C
+)
+
+51 
+buâ⁄
+ = 
+NO_BUTTON
+;
+
+53 if(
+˛ock_£tup_°©e
+ =
+a˘ive
+)
+
+55 if(
+p_Æ¨m
+->
+a˘ive
+ =
+åue
+)
+
+57 
+p_Æ¨m
+->
+a˘ive
+ = 
+Ál£
+;
+
+61 
+p_Æ¨m
+->
+a˘ive
+ = 
+åue
+;
+
+66 
+	`ö¸emítPoöt
+(
+˛ock_£tup_°©e
+, 
+p_Æ¨m
+);
+
+71 
+buâ⁄
+ = 
+NO_BUTTON
+;
+
+72 
+	`døwSëupAœrmS¸ìn
+();
+
+73 
+	`EMU_E¡îEM2
+(
+åue
+);
+
+75 
+	}
+}
+
+86 
+	$√xtAœrmSëupSèã
+()
+
+88 if(
+˛ock_£tup_°©e
+ =
+LAST_SETUP_STATE
+)
+
+90 
+˛ock_£tup_°©e
+ = 
+FIRST_SETUP_STATE
+;
+
+94 
+˛ock_£tup_°©e
+++;
+
+96 
+	}
+}
+
+107 
+	$døwSëupAœrmS¸ìn
+()
+
+109 
+	`SegmítLCD_NumbîOff
+();
+
+110 if(
+p_Æ¨m
+ =&
+Æ¨m1
+)
+
+112 
+	`SegmítLCD_Wrôe
+("Alarm_1");
+
+116 
+	`SegmítLCD_Wrôe
+("Alarm_2");
+
+118 
+	}
+}
+
+	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\setup_time_app.c
+
+10 
+	~"buâ⁄s.h
+"
+
+11 
+	~"£tup_time_≠p.h
+"
+
+12 
+	~"b•.h
+"
+
+13 
+	~"time_m™agemít.h
+"
+
+14 
+	~"°©e_machöe.h
+"
+
+15 
+	~"£gmíécd.h
+"
+
+16 
+	~"em_emu.h
+"
+
+18 
+	#FIRST_SETUP_STATE
+ 
+möuãs
+
+
+	)
+
+19 
+	#LAST_SETUP_STATE
+ 
+wìk_days
+
+
+	)
+
+21 
+√xtTimeSëupSèã
+();
+
+23 
+£tup_°©e_t
+ 
+	g˛ock_£tup_°©e
+;
+
+34 
+	$£tupTimeAµ
 ()
 
 36 if–
@@ -17574,7 +21122,7 @@ NO_BUTTON
 ;
 
 44 
-	`√xtAœrmSëupSèã
+	`√xtTimeSëupSèã
 ();
 
 46 if(
@@ -17589,207 +21137,7 @@ buâ⁄
 NO_BUTTON
 ;
 
-50 if(
-˛ock_£tup_°©e
- =
-a˘ive
-)
-
-52 if(
-p_Æ¨m
-->
-a˘ive
- =
-åue
-)
-
-54 
-p_Æ¨m
-->
-a˘ive
- = 
-Ál£
-;
-
-58 
-p_Æ¨m
-->
-a˘ive
- = 
-åue
-;
-
-63 
-	`ö¸emítPoöt
-(
-˛ock_£tup_°©e
-, 
-p_Æ¨m
-);
-
-68 
-buâ⁄
- = 
-NO_BUTTON
-;
-
-69 
-	`døwSëupAœrmS¸ìn
-();
-
-70 
-	`EMU_E¡îEM2
-(
-åue
-);
-
-72 
-	}
-}
-
-83 
-	$√xtAœrmSëupSèã
-()
-
-85 if(
-˛ock_£tup_°©e
- =
-LAST_SETUP_STATE
-)
-
-87 
-˛ock_£tup_°©e
- = 
-FIRST_SETUP_STATE
-;
-
-91 
-˛ock_£tup_°©e
-++;
-
-93 
-	}
-}
-
-104 
-	$døwSëupAœrmS¸ìn
-()
-
-106 
-	`SegmítLCD_NumbîOff
-();
-
-107 if(
-p_Æ¨m
- =&
-Æ¨m1
-)
-
-109 
-	`SegmítLCD_Wrôe
-("Alarm_1");
-
-113 
-	`SegmítLCD_Wrôe
-("Alarm_2");
-
-115 
-	}
-}
-
-	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\setup_time_app.c
-
-10 
-	~"buâ⁄s.h
-"
-
-11 
-	~"£tup_time_≠p.h
-"
-
-12 
-	~"b•.h
-"
-
-13 
-	~"time_m™agemít.h
-"
-
-16 
-	#FIRST_SETUP_STATE
- 
-möuãs
-
-
-	)
-
-17 
-	#LAST_SETUP_STATE
- 
-wìk_days
-
-
-	)
-
-19 
-√xtTimeSëupSèã
-();
-
-21 
-£tup_°©e_t
- 
-	g˛ock_£tup_°©e
-;
-
-32 
-	$£tupTimeAµ
-()
-
-34 if–
-buâ⁄
- =
-BUTTON_A
-)
-
-36 
-buâ⁄
- = 
-NO_BUTTON
-;
-
-37 
-	`√xtSèã
-();
-
-39 if(
-buâ⁄
- =
-BUTTON_B
-)
-
-41 
-buâ⁄
- = 
-NO_BUTTON
-;
-
-42 
-	`√xtTimeSëupSèã
-();
-
-44 if(
-buâ⁄
- =
-BUTTON_C
-)
-
-46 
-buâ⁄
- = 
-NO_BUTTON
-;
-
-47 
+49 
 	`ö¸emítPoöt
 (
 ˛ock_£tup_°©e
@@ -17797,51 +21145,51 @@ NO_BUTTON
 cuºítTime
 );
 
-51 
+53 
 	`SegmítLCD_NumbîOff
 ();
 
-52 
+54 
 buâ⁄
  = 
 NO_BUTTON
 ;
 
-53 
+55 
 	`SegmítLCD_Wrôe
 ("Setup_T");
 
-54 
+56 
 	`EMU_E¡îEM2
 (
 åue
 );
 
-56 
+58 
 	}
 }
 
-68 
+70 
 	$√xtTimeSëupSèã
 ()
 
-70 if(
+72 if(
 ˛ock_£tup_°©e
  =
 wìk_days
 )
 
-72 
+74 
 ˛ock_£tup_°©e
  = 
 möuãs
 ;
 
-76 
+78 
 ˛ock_£tup_°©e
 ++;
 
-78 
+80 
 	}
 }
 
@@ -18475,31 +21823,73 @@ somëhög
 tm_wday
 ++;
 
-208 
+208 if(
 somëhög
 ->
 tm_wday
- %= 7;
+ >= 7)
 
-209 
+210 
+somëhög
+->
+tm_wday
+ = 0;
+
+211 
+somëhög
+->
+tm_wìk
+++;
+
+212 if(
+somëhög
+->
+tm_wìk
+ >= 52)
+
+214 
+somëhög
+->
+tm_wìk
+ = 0;
+
+218 if(
+poöts
+ !
+wìk_days
+)
+
+220 
 	`˛órA˘ivôy
 (
 somëhög
 ->
+tm_wìk
+, somëhög->
 tm_wday
 );
 
-212 
+221 if((
+somëhög
+->
+tm_wday
+ == 6) ||(something->tm_wday == 5))
+
+223 
+	`a˘ivôySugge°i⁄
+();
+
+227 
 a˘ive
 :
 
-213 if(
+228 if(
 somëhög
 ->
 a˘ive
 )
 
-215 
+230 
 somëhög
 ->
 a˘ive
@@ -18507,7 +21897,7 @@ a˘ive
 Ál£
 ;
 
-219 
+234 
 somëhög
 ->
 a˘ive
@@ -18515,11 +21905,11 @@ a˘ive
 åue
 ;
 
-222 
+237 
 	}
 }
 
-234 
+249 
 	$de¸emítPoöt
 (
 £tup_°©e_t
@@ -18531,107 +21921,143 @@ tm
 somëhög
 )
 
-236 
+251 
 poöts
 )
 
-238 
+253 
 £c⁄ds
 :
 
-239 
+254 
 somëhög
 ->
 tm_£c
 --;
 
-240 i‡(
+255 i‡(
 somëhög
 ->
 tm_£c
  >= 0)
 
-246 
+261 
 somëhög
 ->
 tm_£c
  = 59;
 
-248 
+263 
 möuãs
 :
 
-249 
+264 
 somëhög
 ->
 tm_mö
 --;
 
-250 i‡(
+265 i‡(
 somëhög
 ->
 tm_mö
  >= 0)
 
-256 
+271 
 somëhög
 ->
 tm_mö
  = 59;
 
-258 
+273 
 hours
 :
 
-259 
+274 
 somëhög
 ->
 tm_hour
 --;
 
-260 i‡(
+275 i‡(
 somëhög
 ->
 tm_hour
  >= 0)
 
-266 
+281 
 somëhög
 ->
 tm_hour
  = 23;
 
-268 
+283 
 wìk_days
 :
 
-269 
+284 
 somëhög
 ->
 tm_wday
 --;
 
-270 i‡(
+285 i‡(
 somëhög
 ->
 tm_wday
  < 0)
 
-272 
+287 
 somëhög
 ->
 tm_wday
  = 6;
 
-274 
+288 
+somëhög
+->
+tm_wìk
+--;
+
+289 if(
+somëhög
+->
+tm_wìk
+ <= 0)
+
+291 
+somëhög
+->
+tm_wìk
+ = 51;
+
+295 if(
+poöts
+ !
+wìk_days
+)
+
+297 
 	`˛órA˘ivôy
 (
 somëhög
 ->
+tm_wìk
+, somëhög->
 tm_wday
 );
 
-278 
+298 if((
+somëhög
+->
+tm_wday
+ == 6) ||(something->tm_wday == 5))
+
+300 
+	`a˘ivôySugge°i⁄
+();
+
+305 
 	}
 }
 
@@ -18685,61 +22111,75 @@ s¸ìn_nŸifiˇti⁄
 	stm
 
 
-22 
+22 
+uöt8_t
+ 
 	mtm_£c
 ;
 
-23 
+23 
+uöt8_t
+ 
 	mtm_mö
 ;
 
-24 
+24 
+uöt8_t
+ 
 	mtm_hour
 ;
 
-25 
+25 
+uöt8_t
+ 
 	mtm_wday
 ;
 
 26 
+uöt8_t
+ 
+	mtm_wìk
+;
+
+27 
 boﬁ
  
 	ma˘ive
 ;
 
-29 
+30 
 £tup_°©e_t
  
 ˛ock_£tup_°©e
 ;
 
-30 
+31 
 	e£tup_°©e_t
  { 
 	m£c⁄ds
 ,
 
-31 
+32 
 	mmöuãs
 ,
 
-32 
+33 
 	mhours
 ,
 
-33 
+34 
 	mwìk_days
 ,
 
-34 
+35 
 	ma˘ive
 
 
-38 
+39 
 öôClock
 ();
 
-39 
+40 
 ö¸emítPoöt
 (
 £tup_°©e_t
@@ -18751,7 +22191,7 @@ tm
 somëhög
 );
 
-40 
+41 
 de¸emítPoöt
 (
 £tup_°©e_t
@@ -18773,9 +22213,9 @@ somëhög
 	~<°dboﬁ.h
 >
 
-23 
+23 
 	$öôV¨übÀs
-()
+()
 
 25 
 cuºítTime
@@ -18908,6 +22348,22 @@ a˘ive
 48 
 	}
 }
+
+	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\variables.h
+
+1 #i‚de‡
+VARIABLES_H_INCLUDED
+
+
+2 
+	#VARIABLES_H_INCLUDED
+
+
+	)
+
+8 
+öôV¨übÀs
+();
 
 	@C:\Users\Alexander\AppData\Roaming\energymicro\kits\common\bsp\bsp_bcc.c
 
@@ -22325,17 +25781,17 @@ u£Boo°
 
 66 
 SegmítLCD_LowîHex
-–
+(
 uöt32_t
  
 num
- );
+);
 
 67 
 SegmítLCD_LowîNumbî
-–
+(
 num
- );
+);
 
 68 
 SegmítLCD_Numbî
@@ -22379,8 +25835,8 @@ __˝lu•lus
 1
 .
 0
-37
-3348
+41
+3690
 C:\Users\Alexander\AppData\Roaming\energymicro\Device\EnergyMicro\EFM32GG\Source\GCC\startup_efm32gg.S
 C:\Users\Alexander\AppData\Roaming\energymicro\Device\EnergyMicro\EFM32GG\Source\system_efm32gg.c
 C:\Users\Alexander\AppData\Roaming\energymicro\emlib\src\em_assert.c
@@ -22389,9 +25845,11 @@ C:\Users\Alexander\AppData\Roaming\energymicro\emlib\src\em_ebi.c
 C:\Users\Alexander\AppData\Roaming\energymicro\emlib\src\em_emu.c
 C:\Users\Alexander\AppData\Roaming\energymicro\emlib\src\em_gpio.c
 C:\Users\Alexander\AppData\Roaming\energymicro\emlib\src\em_lcd.c
+C:\Users\Alexander\AppData\Roaming\energymicro\emlib\src\em_letimer.c
 C:\Users\Alexander\AppData\Roaming\energymicro\emlib\src\em_pcnt.c
 C:\Users\Alexander\AppData\Roaming\energymicro\emlib\src\em_rtc.c
 C:\Users\Alexander\AppData\Roaming\energymicro\emlib\src\em_system.c
+C:\Users\Alexander\AppData\Roaming\energymicro\emlib\src\em_usart.c
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\ADXL345.c
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\ADXL345.h
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\activity_app.c
@@ -22402,6 +25860,7 @@ C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\globals.h
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\main_screen_app.c
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\main_screen_app.h
+C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\pedometer.c
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\pomodoro_app.c
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\pomodoro_app.h
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\setup_alarm_app.c
@@ -22412,6 +25871,7 @@ C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\time_management.c
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\time_management.h
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\variables.c
+C:\Users\Alexander\AppData\Roaming\energymicro\kits\EFM32GG_STK3700\my_projects\LSM_watch\variables.h
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\common\bsp\bsp_bcc.c
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\common\bsp\bsp_stk.c
 C:\Users\Alexander\AppData\Roaming\energymicro\kits\common\bsp\bsp_stk_leds.c
