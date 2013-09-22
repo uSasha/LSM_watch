@@ -16,6 +16,8 @@
 #define LETIMER_TOP 327
 #define MIN_TIME 10
 #define MAX_TIME 100
+#define STEP_TIME_VARIATION 0.3
+#define MIN_THRESHOLD 55555
 
 void initPedometerTimer(void);
 
@@ -87,6 +89,7 @@ void LETIMER0_IRQHandler(void)
     static uint32_t threshold = 0;
     static bool leadEdge = false;
     static uint32_t timePassed = 0;
+    static uint32_t oldTimePassed = 0;
 
     LETIMER_IntClear(LETIMER0, 0xFF);         // clear all flags
 
@@ -121,17 +124,27 @@ void LETIMER0_IRQHandler(void)
 
             if((result < oldResult)  && (result > threshold))
             {
-                if(MIN_TIME <  timePassed < MAX_TIME)
+                if((MIN_TIME < timePassed) && (timePassed < MAX_TIME))
                 {
-                    steps++;
+                    if((oldTimePassed * (1.0 - STEP_TIME_VARIATION) < timePassed)
+                      && (timePassed < oldTimePassed * (1.0 + STEP_TIME_VARIATION)))
+                    {
+                        int rofl = oldTimePassed * (float)(1 - STEP_TIME_VARIATION);
+                        steps++;
+                        BSP_LedSet(1);
+                    }
+
+                    oldTimePassed = timePassed;
+
                     threshold = result/2;
-                    //////////////// test
-                    BSP_LedSet(1);
-//                    BSP_LedClear(0);
-                    //////////////// test
-                    // lock step incrementavion until result > oldResult
+                    if(threshold < MIN_THRESHOLD)
+                    {
+                        threshold = MIN_THRESHOLD;
+                    }
+
                     leadEdge = false;
                 }
+
                 timePassed = 0;
             }else
             {
@@ -143,8 +156,6 @@ void LETIMER0_IRQHandler(void)
             if( result > oldResult)
             {
                 leadEdge = true;
-//                BSP_LedClear(1);
-  //              BSP_LedSet(0);
             }
         }
     }

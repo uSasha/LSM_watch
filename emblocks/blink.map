@@ -1,5 +1,17 @@
 Archive member included because of file (symbol)
 
+c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_addsubdf3.o)
+                              .\obj\pedometer.o (__aeabi_ui2d)
+c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_muldivdf3.o)
+                              .\obj\pedometer.o (__aeabi_dmul)
+c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_cmpdf2.o)
+                              .\obj\pedometer.o (__aeabi_dcmplt)
+c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_addsubsf3.o)
+                              .\obj\pedometer.o (__aeabi_ui2f)
+c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_muldivsf3.o)
+                              .\obj\pedometer.o (__aeabi_fmul)
+c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_fixsfsi.o)
+                              .\obj\pedometer.o (__aeabi_f2iz)
 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__atexit.o)
                               c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m/crt0.o (__register_exitproc)
 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-exit.o)
@@ -431,6 +443,18 @@ Discarded input sections
                 0x00000000      0x180 .\obj\segmentlcd.o
  .text.SegmentLCD_UnsignedHex
                 0x00000000       0xf8 .\obj\segmentlcd.o
+ .data          0x00000000        0x0 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_addsubdf3.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_addsubdf3.o)
+ .data          0x00000000        0x0 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_muldivdf3.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_muldivdf3.o)
+ .data          0x00000000        0x0 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_cmpdf2.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_cmpdf2.o)
+ .data          0x00000000        0x0 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_addsubsf3.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_addsubsf3.o)
+ .data          0x00000000        0x0 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_muldivsf3.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_muldivsf3.o)
+ .data          0x00000000        0x0 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_fixsfsi.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_fixsfsi.o)
  .text          0x00000000        0x0 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__atexit.o)
  .data          0x00000000        0x0 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__atexit.o)
  .bss           0x00000000        0x0 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__atexit.o)
@@ -491,7 +515,7 @@ LOAD c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-non
 LOAD c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtbegin.o
 LOAD c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m/crt0.o
 
-.text           0x00000000     0x5a78
+.text           0x00000000     0x6930
  *(.isr_vector)
  .isr_vector    0x00000000      0x100 .\obj\startup_efm32gg.o
                 0x00000000                __isr_vector
@@ -799,144 +823,204 @@ LOAD c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-non
  .text.initPedometerTimer
                 0x00003ab0       0x8c .\obj\pedometer.o
                 0x00003ab0                initPedometerTimer
+ *fill*         0x00003b3c        0x4 
  .text.LETIMER0_IRQHandler
-                0x00003b3c      0x298 .\obj\pedometer.o
-                0x00003b3c                LETIMER0_IRQHandler
+                0x00003b40      0x3a0 .\obj\pedometer.o
+                0x00003b40                LETIMER0_IRQHandler
  .text.pomodoroApp
-                0x00003dd4      0x210 .\obj\pomodoro_app.o
-                0x00003dd4                pomodoroApp
+                0x00003ee0      0x210 .\obj\pomodoro_app.o
+                0x00003ee0                pomodoroApp
  .text.drawPomodoroScreen
-                0x00003fe4       0xb4 .\obj\pomodoro_app.o
-                0x00003fe4                drawPomodoroScreen
+                0x000040f0       0xb4 .\obj\pomodoro_app.o
+                0x000040f0                drawPomodoroScreen
  .text.updatePomodoroTime
-                0x00004098       0xcc .\obj\pomodoro_app.o
-                0x00004098                updatePomodoroTime
+                0x000041a4       0xcc .\obj\pomodoro_app.o
+                0x000041a4                updatePomodoroTime
  .text.stopPomodoro
-                0x00004164       0x20 .\obj\pomodoro_app.o
-                0x00004164                stopPomodoro
+                0x00004270       0x20 .\obj\pomodoro_app.o
+                0x00004270                stopPomodoro
  .text.checkPomodoro
-                0x00004184       0x74 .\obj\pomodoro_app.o
-                0x00004184                checkPomodoro
+                0x00004290       0x74 .\obj\pomodoro_app.o
+                0x00004290                checkPomodoro
  .text.setupAlarmApp
-                0x000041f8       0xe4 .\obj\setup_alarm_app.o
-                0x000041f8                setupAlarmApp
+                0x00004304       0xe4 .\obj\setup_alarm_app.o
+                0x00004304                setupAlarmApp
  .text.nextAlarmSetupState
-                0x000042dc       0x38 .\obj\setup_alarm_app.o
-                0x000042dc                nextAlarmSetupState
+                0x000043e8       0x38 .\obj\setup_alarm_app.o
+                0x000043e8                nextAlarmSetupState
  .text.drawSetupAlarmScreen
-                0x00004314       0x38 .\obj\setup_alarm_app.o
-                0x00004314                drawSetupAlarmScreen
+                0x00004420       0x38 .\obj\setup_alarm_app.o
+                0x00004420                drawSetupAlarmScreen
  .text.setupTimeApp
-                0x0000434c       0xac .\obj\setup_time_app.o
-                0x0000434c                setupTimeApp
+                0x00004458       0xac .\obj\setup_time_app.o
+                0x00004458                setupTimeApp
  .text.nextTimeSetupState
-                0x000043f8       0x38 .\obj\setup_time_app.o
-                0x000043f8                nextTimeSetupState
+                0x00004504       0x38 .\obj\setup_time_app.o
+                0x00004504                nextTimeSetupState
  .text.nextState
-                0x00004430       0x4c .\obj\state_machine.o
-                0x00004430                nextState
+                0x0000453c       0x4c .\obj\state_machine.o
+                0x0000453c                nextState
  .text.NVIC_EnableIRQ
-                0x0000447c       0x30 .\obj\time_management.o
+                0x00004588       0x30 .\obj\time_management.o
  .text.RTC_IntClear
-                0x000044ac       0x14 .\obj\time_management.o
+                0x000045b8       0x14 .\obj\time_management.o
  .text.RTC_IntEnable
-                0x000044c0       0x20 .\obj\time_management.o
+                0x000045cc       0x20 .\obj\time_management.o
  .text.initClock
-                0x000044e0       0x90 .\obj\time_management.o
-                0x000044e0                initClock
+                0x000045ec       0x90 .\obj\time_management.o
+                0x000045ec                initClock
  .text.RTC_IRQHandler
-                0x00004570       0x34 .\obj\time_management.o
-                0x00004570                RTC_IRQHandler
+                0x0000467c       0x34 .\obj\time_management.o
+                0x0000467c                RTC_IRQHandler
  .text.updateTime
-                0x000045a4       0x14 .\obj\time_management.o
-                0x000045a4                updateTime
+                0x000046b0       0x14 .\obj\time_management.o
+                0x000046b0                updateTime
  .text.checkAlarms
-                0x000045b8      0x10c .\obj\time_management.o
-                0x000045b8                checkAlarms
+                0x000046c4      0x10c .\obj\time_management.o
+                0x000046c4                checkAlarms
  .text.runAlarm
-                0x000046c4       0x80 .\obj\time_management.o
-                0x000046c4                runAlarm
+                0x000047d0       0x80 .\obj\time_management.o
+                0x000047d0                runAlarm
  .text.incrementPoint
-                0x00004744      0x12c .\obj\time_management.o
-                0x00004744                incrementPoint
+                0x00004850      0x12c .\obj\time_management.o
+                0x00004850                incrementPoint
  .text.initVariables
-                0x00004870      0x11c .\obj\variables.o
-                0x00004870                initVariables
+                0x0000497c      0x11c .\obj\variables.o
+                0x0000497c                initVariables
  .text.GPIO_PinOutClear
-                0x0000498c       0x5c .\obj\bsp_stk_leds.o
+                0x00004a98       0x5c .\obj\bsp_stk_leds.o
  .text.GPIO_PinOutSet
-                0x000049e8       0x5c .\obj\bsp_stk_leds.o
+                0x00004af4       0x5c .\obj\bsp_stk_leds.o
  .text.BSP_LedsInit
-                0x00004a44       0x74 .\obj\bsp_stk_leds.o
-                0x00004a44                BSP_LedsInit
+                0x00004b50       0x74 .\obj\bsp_stk_leds.o
+                0x00004b50                BSP_LedsInit
  .text.BSP_LedClear
-                0x00004ab8       0x4c .\obj\bsp_stk_leds.o
-                0x00004ab8                BSP_LedClear
+                0x00004bc4       0x4c .\obj\bsp_stk_leds.o
+                0x00004bc4                BSP_LedClear
  .text.BSP_LedSet
-                0x00004b04       0x4c .\obj\bsp_stk_leds.o
-                0x00004b04                BSP_LedSet
+                0x00004c10       0x4c .\obj\bsp_stk_leds.o
+                0x00004c10                BSP_LedSet
  .text.BSP_TraceSwoSetup
-                0x00004b50      0x114 .\obj\bsp_trace.o
-                0x00004b50                BSP_TraceSwoSetup
+                0x00004c5c      0x114 .\obj\bsp_trace.o
+                0x00004c5c                BSP_TraceSwoSetup
  .text.BSP_TraceProfilerSetup
-                0x00004c64       0x28 .\obj\bsp_trace.o
-                0x00004c64                BSP_TraceProfilerSetup
+                0x00004d70       0x28 .\obj\bsp_trace.o
+                0x00004d70                BSP_TraceProfilerSetup
  .text.LCD_FreezeEnable
-                0x00004c8c       0x34 .\obj\segmentlcd.o
+                0x00004d98       0x34 .\obj\segmentlcd.o
  .text.LCD_SyncBusyDelay
-                0x00004cc0       0x1c .\obj\segmentlcd.o
+                0x00004dcc       0x1c .\obj\segmentlcd.o
  .text.LCD_IntDisable
-                0x00004cdc       0x24 .\obj\segmentlcd.o
+                0x00004de8       0x24 .\obj\segmentlcd.o
  .text.SegmentLCD_AllOff
-                0x00004d00      0x124 .\obj\segmentlcd.o
-                0x00004d00                SegmentLCD_AllOff
+                0x00004e0c      0x124 .\obj\segmentlcd.o
+                0x00004e0c                SegmentLCD_AllOff
  .text.SegmentLCD_AlphaNumberOff
-                0x00004e24      0x114 .\obj\segmentlcd.o
-                0x00004e24                SegmentLCD_AlphaNumberOff
+                0x00004f30      0x114 .\obj\segmentlcd.o
+                0x00004f30                SegmentLCD_AlphaNumberOff
  .text.SegmentLCD_Init
-                0x00004f38       0xe4 .\obj\segmentlcd.o
-                0x00004f38                SegmentLCD_Init
+                0x00005044       0xe4 .\obj\segmentlcd.o
+                0x00005044                SegmentLCD_Init
  .text.SegmentLCD_Number
-                0x0000501c      0x174 .\obj\segmentlcd.o
-                0x0000501c                SegmentLCD_Number
+                0x00005128      0x174 .\obj\segmentlcd.o
+                0x00005128                SegmentLCD_Number
  .text.SegmentLCD_NumberOff
-                0x00005190       0x78 .\obj\segmentlcd.o
-                0x00005190                SegmentLCD_NumberOff
+                0x0000529c       0x78 .\obj\segmentlcd.o
+                0x0000529c                SegmentLCD_NumberOff
  .text.SegmentLCD_Write
-                0x00005208      0x100 .\obj\segmentlcd.o
-                0x00005208                SegmentLCD_Write
+                0x00005314      0x100 .\obj\segmentlcd.o
+                0x00005314                SegmentLCD_Write
+ .text          0x00005414      0x370 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_addsubdf3.o)
+                0x00005414                __aeabi_drsub
+                0x0000541c                __aeabi_dsub
+                0x0000541c                __subdf3
+                0x00005420                __aeabi_dadd
+                0x00005420                __adddf3
+                0x00005698                __floatunsidf
+                0x00005698                __aeabi_ui2d
+                0x000056b8                __floatsidf
+                0x000056b8                __aeabi_i2d
+                0x000056dc                __aeabi_f2d
+                0x000056dc                __extendsfdf2
+                0x00005718                __floatundidf
+                0x00005718                __aeabi_ul2d
+                0x00005728                __floatdidf
+                0x00005728                __aeabi_l2d
+ .text          0x00005784      0x424 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_muldivdf3.o)
+                0x00005784                __aeabi_dmul
+                0x00005784                __muldf3
+                0x000059d8                __divdf3
+                0x000059d8                __aeabi_ddiv
+ .text          0x00005ba8      0x110 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_cmpdf2.o)
+                0x00005ba8                __gtdf2
+                0x00005ba8                __gedf2
+                0x00005bb0                __ltdf2
+                0x00005bb0                __ledf2
+                0x00005bb8                __nedf2
+                0x00005bb8                __eqdf2
+                0x00005bb8                __cmpdf2
+                0x00005c34                __aeabi_cdrcmple
+                0x00005c44                __aeabi_cdcmpeq
+                0x00005c44                __aeabi_cdcmple
+                0x00005c54                __aeabi_dcmpeq
+                0x00005c68                __aeabi_dcmplt
+                0x00005c7c                __aeabi_dcmple
+                0x00005c90                __aeabi_dcmpge
+                0x00005ca4                __aeabi_dcmpgt
+ .text          0x00005cb8      0x21c c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_addsubsf3.o)
+                0x00005cb8                __aeabi_frsub
+                0x00005cc0                __subsf3
+                0x00005cc0                __aeabi_fsub
+                0x00005cc4                __aeabi_fadd
+                0x00005cc4                __addsf3
+                0x00005e24                __aeabi_ui2f
+                0x00005e24                __floatunsisf
+                0x00005e2c                __aeabi_i2f
+                0x00005e2c                __floatsisf
+                0x00005e48                __aeabi_ul2f
+                0x00005e48                __floatundisf
+                0x00005e58                __aeabi_l2f
+                0x00005e58                __floatdisf
+ .text          0x00005ed4      0x2a0 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_muldivsf3.o)
+                0x00005ed4                __mulsf3
+                0x00005ed4                __aeabi_fmul
+                0x0000603c                __aeabi_fdiv
+                0x0000603c                __divsf3
+ .text          0x00006174       0x4c c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_fixsfsi.o)
+                0x00006174                __aeabi_f2iz
+                0x00006174                __fixsfsi
  .text.__register_exitproc
-                0x00005308       0xb0 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__atexit.o)
-                0x00005308                __register_exitproc
- .text.exit     0x000053b8       0x20 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-exit.o)
-                0x000053b8                exit
+                0x000061c0       0xb0 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__atexit.o)
+                0x000061c0                __register_exitproc
+ .text.exit     0x00006270       0x20 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-exit.o)
+                0x00006270                exit
  .text.__libc_fini_array
-                0x000053d8       0x2c c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-fini.o)
-                0x000053d8                __libc_fini_array
+                0x00006290       0x2c c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-fini.o)
+                0x00006290                __libc_fini_array
  .text.__libc_init_array
-                0x00005404       0x50 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-init.o)
-                0x00005404                __libc_init_array
- .text.memset   0x00005454       0x94 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
-                0x00005454                memset
- .text.strlen   0x000054e8       0x60 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strlen.o)
-                0x000054e8                strlen
+                0x000062bc       0x50 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-init.o)
+                0x000062bc                __libc_init_array
+ .text.memset   0x0000630c       0x94 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
+                0x0000630c                memset
+ .text.strlen   0x000063a0       0x60 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strlen.o)
+                0x000063a0                strlen
  .text.startup.register_fini
-                0x00005548       0x14 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__call_atexit.o)
+                0x00006400       0x14 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__call_atexit.o)
  .text.__call_exitprocs
-                0x0000555c       0xd8 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__call_atexit.o)
-                0x0000555c                __call_exitprocs
- .text.atexit   0x00005634        0xc c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-atexit.o)
-                0x00005634                atexit
- .text._exit    0x00005640        0x4 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libnosys.a(_exit.o)
-                0x00005640                _exit
+                0x00006414       0xd8 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__call_atexit.o)
+                0x00006414                __call_exitprocs
+ .text.atexit   0x000064ec        0xc c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-atexit.o)
+                0x000064ec                atexit
+ .text._exit    0x000064f8        0x4 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libnosys.a(_exit.o)
+                0x000064f8                _exit
  *(.init)
- .init          0x00005644        0x4 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crti.o
-                0x00005644                _init
- .init          0x00005648        0x8 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtn.o
+ .init          0x000064fc        0x4 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crti.o
+                0x000064fc                _init
+ .init          0x00006500        0x8 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtn.o
  *(.fini)
- .fini          0x00005650        0x4 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crti.o
-                0x00005650                _fini
- .fini          0x00005654        0x8 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtn.o
+ .fini          0x00006508        0x4 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crti.o
+                0x00006508                _fini
+ .fini          0x0000650c        0x8 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtn.o
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -948,74 +1032,74 @@ LOAD c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-non
  *(SORT(.dtors.*))
  *(.dtors)
  *(.rodata*)
- .rodata        0x0000565c       0x24 .\obj\em_cmu.o
- .rodata        0x00005680       0x24 .\obj\em_gpio.o
- .rodata        0x000056a4       0x24 .\obj\em_lcd.o
- .rodata        0x000056c8       0x28 .\obj\em_letimer.o
- .rodata        0x000056f0       0x24 .\obj\em_pcnt.o
- .rodata        0x00005714       0x24 .\obj\em_rtc.o
- .rodata        0x00005738       0x28 .\obj\em_system.o
- .rodata        0x00005760       0x24 .\obj\em_usart.o
- .rodata        0x00005784       0x24 .\obj\adxl345.o
- .rodata        0x000057a8       0x28 .\obj\activity_app.o
- .rodata        0x000057d0        0x8 .\obj\main_screen_app.o
- .rodata        0x000057d8        0xc .\obj\pedometer.o
- .rodata        0x000057e4       0x14 .\obj\pomodoro_app.o
- .rodata        0x000057f8       0x10 .\obj\setup_alarm_app.o
- .rodata        0x00005808        0x8 .\obj\setup_time_app.o
- .rodata        0x00005810       0x14 .\obj\time_management.o
- .rodata        0x00005824       0x24 .\obj\bsp_stk_leds.o
+ .rodata        0x00006514       0x24 .\obj\em_cmu.o
+ .rodata        0x00006538       0x24 .\obj\em_gpio.o
+ .rodata        0x0000655c       0x24 .\obj\em_lcd.o
+ .rodata        0x00006580       0x28 .\obj\em_letimer.o
+ .rodata        0x000065a8       0x24 .\obj\em_pcnt.o
+ .rodata        0x000065cc       0x24 .\obj\em_rtc.o
+ .rodata        0x000065f0       0x28 .\obj\em_system.o
+ .rodata        0x00006618       0x24 .\obj\em_usart.o
+ .rodata        0x0000663c       0x24 .\obj\adxl345.o
+ .rodata        0x00006660       0x28 .\obj\activity_app.o
+ .rodata        0x00006688        0x8 .\obj\main_screen_app.o
+ .rodata        0x00006690        0xc .\obj\pedometer.o
+ .rodata        0x0000669c       0x14 .\obj\pomodoro_app.o
+ .rodata        0x000066b0       0x10 .\obj\setup_alarm_app.o
+ .rodata        0x000066c0        0x8 .\obj\setup_time_app.o
+ .rodata        0x000066c8       0x14 .\obj\time_management.o
+ .rodata        0x000066dc       0x24 .\obj\bsp_stk_leds.o
  .rodata.ledArray
-                0x00005848       0x10 .\obj\bsp_stk_leds.o
+                0x00006700       0x10 .\obj\bsp_stk_leds.o
  .rodata.EFM_Display
-                0x00005858      0x120 .\obj\segmentlcd.o
+                0x00006710      0x120 .\obj\segmentlcd.o
  .rodata.EFM_Alphabet
-                0x00005978       0xb8 .\obj\segmentlcd.o
+                0x00006830       0xb8 .\obj\segmentlcd.o
  .rodata.EFM_Numbers
-                0x00005a30       0x24 .\obj\segmentlcd.o
+                0x000068e8       0x24 .\obj\segmentlcd.o
  .rodata.signIndex
-                0x00005a54        0x2 .\obj\segmentlcd.o
- *fill*         0x00005a56        0x2 
+                0x0000690c        0x2 .\obj\segmentlcd.o
+ *fill*         0x0000690e        0x2 
  .rodata.lcdInit
-                0x00005a58       0x14 .\obj\segmentlcd.o
+                0x00006910       0x14 .\obj\segmentlcd.o
  .rodata.str1.4
-                0x00005a6c        0x4 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-impure.o)
+                0x00006924        0x4 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-impure.o)
  .rodata._global_impure_ptr
-                0x00005a70        0x4 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-impure.o)
-                0x00005a70                _global_impure_ptr
+                0x00006928        0x4 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-impure.o)
+                0x00006928                _global_impure_ptr
  *(.eh_frame*)
- .eh_frame      0x00005a74        0x0 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtbegin.o
- .eh_frame      0x00005a74        0x4 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtend.o
+ .eh_frame      0x0000692c        0x0 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtbegin.o
+ .eh_frame      0x0000692c        0x4 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtend.o
 
-.glue_7         0x00005a78        0x0
+.glue_7         0x00006930        0x0
  .glue_7        0x00000000        0x0 linker stubs
 
-.glue_7t        0x00005a78        0x0
+.glue_7t        0x00006930        0x0
  .glue_7t       0x00000000        0x0 linker stubs
 
-.vfp11_veneer   0x00005a78        0x0
+.vfp11_veneer   0x00006930        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x00005a78        0x0
+.v4_bx          0x00006930        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x00005a78        0x0
+.iplt           0x00006930        0x0
  .iplt          0x00000000        0x0 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x00005a78                __exidx_start = .
+                0x00006930                __exidx_start = .
 
-.ARM.exidx      0x00005a78        0x8
+.ARM.exidx      0x00006930        0x8
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x00005a78        0x8 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m/crt0.o
-                0x00005a80                __exidx_end = .
-                0x00005a80                __etext = .
+ .ARM.exidx     0x00006930        0x8 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+                0x00006938                __exidx_end = .
+                0x00006938                __etext = .
 
-.rel.dyn        0x00005a80        0x0
+.rel.dyn        0x00006938        0x0
  .rel.iplt      0x00000000        0x0 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtbegin.o
 
-.data           0x20000000      0x444 load address 0x00005a80
+.data           0x20000000      0x444 load address 0x00006938
                 0x20000000                __data_start__ = .
  *(vtable)
  *(.data*)
@@ -1050,13 +1134,13 @@ LOAD c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-non
                 0x20000444                . = ALIGN (0x4)
                 0x20000444                __data_end__ = .
 
-.jcr            0x20000444        0x0 load address 0x00005ec4
+.jcr            0x20000444        0x0 load address 0x00006d7c
  .jcr           0x20000444        0x0 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtbegin.o
 
-.igot.plt       0x20000444        0x0 load address 0x00005ec4
+.igot.plt       0x20000444        0x0 load address 0x00006d7c
  .igot.plt      0x00000000        0x0 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtbegin.o
 
-.bss            0x20000444      0x3c6 load address 0x00005ec4
+.bss            0x20000444      0x3ca load address 0x00006d7c
                 0x20000444                __bss_start__ = .
  *(.bss*)
  .bss           0x20000444       0x1c c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtbegin.o
@@ -1084,40 +1168,42 @@ LOAD c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-non
                 0x20000484        0x4 .\obj\pedometer.o
  .bss.threshold.5884
                 0x20000488        0x4 .\obj\pedometer.o
+ .bss.oldTimePassed.5887
+                0x2000048c        0x4 .\obj\pedometer.o
  .bss.pomodoro_timeout
-                0x2000048c        0x1 .\obj\pomodoro_app.o
-                0x2000048c                pomodoro_timeout
+                0x20000490        0x1 .\obj\pomodoro_app.o
+                0x20000490                pomodoro_timeout
  .bss.pomodoro_state
-                0x2000048d        0x1 .\obj\pomodoro_app.o
+                0x20000491        0x1 .\obj\pomodoro_app.o
  .bss.pomodoros.6023
-                0x2000048e        0x1 .\obj\pomodoro_app.o
- .bss.state     0x2000048f        0x1 .\obj\state_machine.o
-                0x2000048f                state
+                0x20000492        0x1 .\obj\pomodoro_app.o
+ .bss.state     0x20000493        0x1 .\obj\state_machine.o
+                0x20000493                state
  .bss.screen_notification
-                0x20000490        0x1 .\obj\time_management.o
-                0x20000490                screen_notification
+                0x20000494        0x1 .\obj\time_management.o
+                0x20000494                screen_notification
  *(COMMON)
- *fill*         0x20000491        0x3 
- COMMON         0x20000494        0x4 .\obj\system_efm32gg.o
-                0x20000494                SystemCoreClock
- COMMON         0x20000498        0xa .\obj\adxl345.o
-                0x20000498                values
- *fill*         0x200004a2        0x2 
- COMMON         0x200004a4      0x2dc .\obj\activity_app.o
-                0x200004a4                activity
-                0x2000077c                average_activity
- COMMON         0x20000780        0x4 .\obj\blink.o
-                0x20000780                msTicks
- COMMON         0x20000784       0x64 .\obj\pedometer.o
-                0x20000784                accelData
- COMMON         0x200007e8        0x4 .\obj\setup_time_app.o
-                0x200007e8                clock_setup_state
- COMMON         0x200007ec       0x1e .\obj\time_management.o
-                0x200007ec                pomodoro
-                0x200007f4                alarm2
-                0x200007fc                currentTime
-                0x20000804                alarm1
-                0x2000080a                __bss_end__ = .
+ *fill*         0x20000495        0x3 
+ COMMON         0x20000498        0x4 .\obj\system_efm32gg.o
+                0x20000498                SystemCoreClock
+ COMMON         0x2000049c        0xa .\obj\adxl345.o
+                0x2000049c                values
+ *fill*         0x200004a6        0x2 
+ COMMON         0x200004a8      0x2dc .\obj\activity_app.o
+                0x200004a8                activity
+                0x20000780                average_activity
+ COMMON         0x20000784        0x4 .\obj\blink.o
+                0x20000784                msTicks
+ COMMON         0x20000788       0x64 .\obj\pedometer.o
+                0x20000788                accelData
+ COMMON         0x200007ec        0x4 .\obj\setup_time_app.o
+                0x200007ec                clock_setup_state
+ COMMON         0x200007f0       0x1e .\obj\time_management.o
+                0x200007f0                pomodoro
+                0x200007f8                alarm2
+                0x20000800                currentTime
+                0x20000808                alarm1
+                0x2000080e                __bss_end__ = .
 
 .heap           0x20000810      0xc00
                 0x20000810                __end__ = .
@@ -1239,29 +1325,41 @@ OUTPUT(blink.elf elf32-littlearm)
  .ARM.attributes
                 0x0000057b       0x33 .\obj\segmentlcd.o
  .ARM.attributes
-                0x000005ae       0x2d c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__atexit.o)
+                0x000005ae       0x1d c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_addsubdf3.o)
  .ARM.attributes
-                0x000005db       0x2d c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-exit.o)
+                0x000005cb       0x1d c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_muldivdf3.o)
  .ARM.attributes
-                0x00000608       0x2d c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-fini.o)
+                0x000005e8       0x1d c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_cmpdf2.o)
  .ARM.attributes
-                0x00000635       0x2d c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-impure.o)
+                0x00000605       0x1d c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_addsubsf3.o)
  .ARM.attributes
-                0x00000662       0x2d c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-init.o)
+                0x00000622       0x1d c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_muldivsf3.o)
  .ARM.attributes
-                0x0000068f       0x2d c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
+                0x0000063f       0x1d c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_fixsfsi.o)
  .ARM.attributes
-                0x000006bc       0x2d c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strlen.o)
+                0x0000065c       0x2d c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__atexit.o)
  .ARM.attributes
-                0x000006e9       0x2d c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__call_atexit.o)
+                0x00000689       0x2d c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-exit.o)
  .ARM.attributes
-                0x00000716       0x2d c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-atexit.o)
+                0x000006b6       0x2d c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-fini.o)
  .ARM.attributes
-                0x00000743       0x2d c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libnosys.a(_exit.o)
+                0x000006e3       0x2d c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-impure.o)
  .ARM.attributes
-                0x00000770       0x2d c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtend.o
+                0x00000710       0x2d c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-init.o)
  .ARM.attributes
-                0x0000079d       0x1d c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtn.o
+                0x0000073d       0x2d c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
+ .ARM.attributes
+                0x0000076a       0x2d c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strlen.o)
+ .ARM.attributes
+                0x00000797       0x2d c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__call_atexit.o)
+ .ARM.attributes
+                0x000007c4       0x2d c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-atexit.o)
+ .ARM.attributes
+                0x000007f1       0x2d c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libnosys.a(_exit.o)
+ .ARM.attributes
+                0x0000081e       0x2d c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtend.o
+ .ARM.attributes
+                0x0000084b       0x1d c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtn.o
 
 .comment        0x00000000       0x4e
  .comment       0x00000000       0x4e .\obj\system_efm32gg.o
@@ -1292,7 +1390,7 @@ OUTPUT(blink.elf elf32-littlearm)
  .comment       0x00000000       0x4f .\obj\bsp_trace.o
  .comment       0x00000000       0x4f .\obj\segmentlcd.o
 
-.debug_line     0x00000000     0x4351
+.debug_line     0x00000000     0x4361
  .debug_line    0x00000000       0xc0 .\obj\startup_efm32gg.o
  .debug_line    0x000000c0      0x247 .\obj\system_efm32gg.o
  .debug_line    0x00000307       0x59 .\obj\em_assert.o
@@ -1310,18 +1408,18 @@ OUTPUT(blink.elf elf32-littlearm)
  .debug_line    0x000028ff      0x268 .\obj\blink.o
  .debug_line    0x00002b67      0x247 .\obj\buttons.o
  .debug_line    0x00002dae      0x10e .\obj\main_screen_app.o
- .debug_line    0x00002ebc      0x219 .\obj\pedometer.o
- .debug_line    0x000030d5      0x1da .\obj\pomodoro_app.o
- .debug_line    0x000032af      0x157 .\obj\setup_alarm_app.o
- .debug_line    0x00003406      0x13e .\obj\setup_time_app.o
- .debug_line    0x00003544      0x139 .\obj\state_machine.o
- .debug_line    0x0000367d      0x2de .\obj\time_management.o
- .debug_line    0x0000395b      0x11c .\obj\variables.o
- .debug_line    0x00003a77      0x2e7 .\obj\bsp_stk_leds.o
- .debug_line    0x00003d5e      0x198 .\obj\bsp_trace.o
- .debug_line    0x00003ef6      0x45b .\obj\segmentlcd.o
+ .debug_line    0x00002ebc      0x229 .\obj\pedometer.o
+ .debug_line    0x000030e5      0x1da .\obj\pomodoro_app.o
+ .debug_line    0x000032bf      0x157 .\obj\setup_alarm_app.o
+ .debug_line    0x00003416      0x13e .\obj\setup_time_app.o
+ .debug_line    0x00003554      0x139 .\obj\state_machine.o
+ .debug_line    0x0000368d      0x2de .\obj\time_management.o
+ .debug_line    0x0000396b      0x11c .\obj\variables.o
+ .debug_line    0x00003a87      0x2e7 .\obj\bsp_stk_leds.o
+ .debug_line    0x00003d6e      0x198 .\obj\bsp_trace.o
+ .debug_line    0x00003f06      0x45b .\obj\segmentlcd.o
 
-.debug_info     0x00000000     0xb264
+.debug_info     0x00000000     0xb28d
  .debug_info    0x00000000       0xd2 .\obj\startup_efm32gg.o
  .debug_info    0x000000d2      0x543 .\obj\system_efm32gg.o
  .debug_info    0x00000615       0x7a .\obj\em_assert.o
@@ -1339,18 +1437,18 @@ OUTPUT(blink.elf elf32-littlearm)
  .debug_info    0x00006205      0xbec .\obj\blink.o
  .debug_info    0x00006df1      0x826 .\obj\buttons.o
  .debug_info    0x00007617       0xcf .\obj\main_screen_app.o
- .debug_info    0x000076e6      0x86d .\obj\pedometer.o
- .debug_info    0x00007f53      0x296 .\obj\pomodoro_app.o
- .debug_info    0x000081e9      0x1b6 .\obj\setup_alarm_app.o
- .debug_info    0x0000839f      0x18e .\obj\setup_time_app.o
- .debug_info    0x0000852d      0x140 .\obj\state_machine.o
- .debug_info    0x0000866d      0x86c .\obj\time_management.o
- .debug_info    0x00008ed9      0x150 .\obj\variables.o
- .debug_info    0x00009029      0x733 .\obj\bsp_stk_leds.o
- .debug_info    0x0000975c      0xaea .\obj\bsp_trace.o
- .debug_info    0x0000a246     0x101e .\obj\segmentlcd.o
+ .debug_info    0x000076e6      0x896 .\obj\pedometer.o
+ .debug_info    0x00007f7c      0x296 .\obj\pomodoro_app.o
+ .debug_info    0x00008212      0x1b6 .\obj\setup_alarm_app.o
+ .debug_info    0x000083c8      0x18e .\obj\setup_time_app.o
+ .debug_info    0x00008556      0x140 .\obj\state_machine.o
+ .debug_info    0x00008696      0x86c .\obj\time_management.o
+ .debug_info    0x00008f02      0x150 .\obj\variables.o
+ .debug_info    0x00009052      0x733 .\obj\bsp_stk_leds.o
+ .debug_info    0x00009785      0xaea .\obj\bsp_trace.o
+ .debug_info    0x0000a26f     0x101e .\obj\segmentlcd.o
 
-.debug_abbrev   0x00000000     0x244d
+.debug_abbrev   0x00000000     0x2456
  .debug_abbrev  0x00000000       0x14 .\obj\startup_efm32gg.o
  .debug_abbrev  0x00000014      0x16d .\obj\system_efm32gg.o
  .debug_abbrev  0x00000181       0x65 .\obj\em_assert.o
@@ -1368,16 +1466,16 @@ OUTPUT(blink.elf elf32-littlearm)
  .debug_abbrev  0x000014dd      0x1d5 .\obj\blink.o
  .debug_abbrev  0x000016b2      0x181 .\obj\buttons.o
  .debug_abbrev  0x00001833       0x7a .\obj\main_screen_app.o
- .debug_abbrev  0x000018ad      0x1b3 .\obj\pedometer.o
- .debug_abbrev  0x00001a60       0xf9 .\obj\pomodoro_app.o
- .debug_abbrev  0x00001b59       0xe0 .\obj\setup_alarm_app.o
- .debug_abbrev  0x00001c39       0xd9 .\obj\setup_time_app.o
- .debug_abbrev  0x00001d12       0xa3 .\obj\state_machine.o
- .debug_abbrev  0x00001db5      0x1da .\obj\time_management.o
- .debug_abbrev  0x00001f8f       0x98 .\obj\variables.o
- .debug_abbrev  0x00002027      0x151 .\obj\bsp_stk_leds.o
- .debug_abbrev  0x00002178      0x156 .\obj\bsp_trace.o
- .debug_abbrev  0x000022ce      0x17f .\obj\segmentlcd.o
+ .debug_abbrev  0x000018ad      0x1bc .\obj\pedometer.o
+ .debug_abbrev  0x00001a69       0xf9 .\obj\pomodoro_app.o
+ .debug_abbrev  0x00001b62       0xe0 .\obj\setup_alarm_app.o
+ .debug_abbrev  0x00001c42       0xd9 .\obj\setup_time_app.o
+ .debug_abbrev  0x00001d1b       0xa3 .\obj\state_machine.o
+ .debug_abbrev  0x00001dbe      0x1da .\obj\time_management.o
+ .debug_abbrev  0x00001f98       0x98 .\obj\variables.o
+ .debug_abbrev  0x00002030      0x151 .\obj\bsp_stk_leds.o
+ .debug_abbrev  0x00002181      0x156 .\obj\bsp_trace.o
+ .debug_abbrev  0x000022d7      0x17f .\obj\segmentlcd.o
 
 .debug_aranges  0x00000000      0x988
  .debug_aranges
@@ -1435,7 +1533,7 @@ OUTPUT(blink.elf elf32-littlearm)
  .debug_aranges
                 0x000008d8       0xb0 .\obj\segmentlcd.o
 
-.debug_loc      0x00000000     0x1e10
+.debug_loc      0x00000000     0x1e1c
  .debug_loc     0x00000000       0xb0 .\obj\system_efm32gg.o
  .debug_loc     0x000000b0       0x20 .\obj\em_assert.o
  .debug_loc     0x000000d0      0x470 .\obj\em_cmu.o
@@ -1452,14 +1550,14 @@ OUTPUT(blink.elf elf32-littlearm)
  .debug_loc     0x000014d0       0x6c .\obj\blink.o
  .debug_loc     0x0000153c       0xcc .\obj\buttons.o
  .debug_loc     0x00001608       0x20 .\obj\main_screen_app.o
- .debug_loc     0x00001628       0xcc .\obj\pedometer.o
- .debug_loc     0x000016f4       0x78 .\obj\pomodoro_app.o
- .debug_loc     0x0000176c       0x40 .\obj\setup_alarm_app.o
- .debug_loc     0x000017ac       0x20 .\obj\setup_time_app.o
- .debug_loc     0x000017cc      0x15c .\obj\time_management.o
- .debug_loc     0x00001928      0x1e4 .\obj\bsp_stk_leds.o
- .debug_loc     0x00001b0c       0x2c .\obj\bsp_trace.o
- .debug_loc     0x00001b38      0x2d8 .\obj\segmentlcd.o
+ .debug_loc     0x00001628       0xd8 .\obj\pedometer.o
+ .debug_loc     0x00001700       0x78 .\obj\pomodoro_app.o
+ .debug_loc     0x00001778       0x40 .\obj\setup_alarm_app.o
+ .debug_loc     0x000017b8       0x20 .\obj\setup_time_app.o
+ .debug_loc     0x000017d8      0x15c .\obj\time_management.o
+ .debug_loc     0x00001934      0x1e4 .\obj\bsp_stk_leds.o
+ .debug_loc     0x00001b18       0x2c .\obj\bsp_trace.o
+ .debug_loc     0x00001b44      0x2d8 .\obj\segmentlcd.o
 
 .debug_ranges   0x00000000      0x7c8
  .debug_ranges  0x00000000       0x58 .\obj\system_efm32gg.o
@@ -1489,7 +1587,7 @@ OUTPUT(blink.elf elf32-littlearm)
  .debug_ranges  0x00000710       0x18 .\obj\bsp_trace.o
  .debug_ranges  0x00000728       0xa0 .\obj\segmentlcd.o
 
-.debug_str      0x00000000     0x38d2
+.debug_str      0x00000000     0x38e5
  .debug_str     0x00000000      0x39b .\obj\system_efm32gg.o
                                 0x3ff (size before relaxing)
  .debug_str     0x0000039b       0x39 .\obj\em_assert.o
@@ -1522,28 +1620,28 @@ OUTPUT(blink.elf elf32-littlearm)
                                 0x959 (size before relaxing)
  .debug_str     0x000030a3       0x23 .\obj\main_screen_app.o
                                 0x15f (size before relaxing)
- .debug_str     0x000030c6       0xbf .\obj\pedometer.o
-                                0x8c9 (size before relaxing)
- .debug_str     0x00003185      0x133 .\obj\pomodoro_app.o
+ .debug_str     0x000030c6       0xd2 .\obj\pedometer.o
+                                0x8dc (size before relaxing)
+ .debug_str     0x00003198      0x133 .\obj\pomodoro_app.o
                                 0x314 (size before relaxing)
- .debug_str     0x000032b8       0x6d .\obj\setup_alarm_app.o
+ .debug_str     0x000032cb       0x6d .\obj\setup_alarm_app.o
                                 0x204 (size before relaxing)
- .debug_str     0x00003325       0x34 .\obj\setup_time_app.o
+ .debug_str     0x00003338       0x34 .\obj\setup_time_app.o
                                 0x1e9 (size before relaxing)
- .debug_str     0x00003359       0x2b .\obj\state_machine.o
+ .debug_str     0x0000336c       0x2b .\obj\state_machine.o
                                 0x204 (size before relaxing)
- .debug_str     0x00003384       0xa7 .\obj\time_management.o
+ .debug_str     0x00003397       0xa7 .\obj\time_management.o
                                 0x902 (size before relaxing)
- .debug_str     0x0000342b       0x1d .\obj\variables.o
+ .debug_str     0x0000343e       0x1d .\obj\variables.o
                                 0x1a2 (size before relaxing)
- .debug_str     0x00003448       0xc2 .\obj\bsp_stk_leds.o
+ .debug_str     0x0000345b       0xc2 .\obj\bsp_stk_leds.o
                                 0x6de (size before relaxing)
- .debug_str     0x0000350a       0x55 .\obj\bsp_trace.o
+ .debug_str     0x0000351d       0x55 .\obj\bsp_trace.o
                                 0x4e0 (size before relaxing)
- .debug_str     0x0000355f      0x373 .\obj\segmentlcd.o
+ .debug_str     0x00003572      0x373 .\obj\segmentlcd.o
                                 0xc50 (size before relaxing)
 
-.debug_frame    0x00000000     0x167c
+.debug_frame    0x00000000     0x1680
  .debug_frame   0x00000000       0xd0 .\obj\system_efm32gg.o
  .debug_frame   0x000000d0       0x24 .\obj\em_assert.o
  .debug_frame   0x000000f4      0x2e4 .\obj\em_cmu.o
@@ -1560,22 +1658,22 @@ OUTPUT(blink.elf elf32-littlearm)
  .debug_frame   0x00000dcc       0x74 .\obj\blink.o
  .debug_frame   0x00000e40       0xa4 .\obj\buttons.o
  .debug_frame   0x00000ee4       0x28 .\obj\main_screen_app.o
- .debug_frame   0x00000f0c       0x94 .\obj\pedometer.o
- .debug_frame   0x00000fa0       0x78 .\obj\pomodoro_app.o
- .debug_frame   0x00001018       0x50 .\obj\setup_alarm_app.o
- .debug_frame   0x00001068       0x38 .\obj\setup_time_app.o
- .debug_frame   0x000010a0       0x30 .\obj\state_machine.o
- .debug_frame   0x000010d0       0xec .\obj\time_management.o
- .debug_frame   0x000011bc       0x20 .\obj\variables.o
- .debug_frame   0x000011dc      0x118 .\obj\bsp_stk_leds.o
- .debug_frame   0x000012f4       0x38 .\obj\bsp_trace.o
- .debug_frame   0x0000132c      0x1c8 .\obj\segmentlcd.o
- .debug_frame   0x000014f4       0x34 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__atexit.o)
- .debug_frame   0x00001528       0x28 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-exit.o)
- .debug_frame   0x00001550       0x2c c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-fini.o)
- .debug_frame   0x0000157c       0x2c c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-init.o)
- .debug_frame   0x000015a8       0x2c c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
- .debug_frame   0x000015d4       0x20 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strlen.o)
- .debug_frame   0x000015f4       0x48 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__call_atexit.o)
- .debug_frame   0x0000163c       0x20 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-atexit.o)
- .debug_frame   0x0000165c       0x20 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libnosys.a(_exit.o)
+ .debug_frame   0x00000f0c       0x98 .\obj\pedometer.o
+ .debug_frame   0x00000fa4       0x78 .\obj\pomodoro_app.o
+ .debug_frame   0x0000101c       0x50 .\obj\setup_alarm_app.o
+ .debug_frame   0x0000106c       0x38 .\obj\setup_time_app.o
+ .debug_frame   0x000010a4       0x30 .\obj\state_machine.o
+ .debug_frame   0x000010d4       0xec .\obj\time_management.o
+ .debug_frame   0x000011c0       0x20 .\obj\variables.o
+ .debug_frame   0x000011e0      0x118 .\obj\bsp_stk_leds.o
+ .debug_frame   0x000012f8       0x38 .\obj\bsp_trace.o
+ .debug_frame   0x00001330      0x1c8 .\obj\segmentlcd.o
+ .debug_frame   0x000014f8       0x34 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__atexit.o)
+ .debug_frame   0x0000152c       0x28 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-exit.o)
+ .debug_frame   0x00001554       0x2c c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-fini.o)
+ .debug_frame   0x00001580       0x2c c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-init.o)
+ .debug_frame   0x000015ac       0x2c c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
+ .debug_frame   0x000015d8       0x20 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-strlen.o)
+ .debug_frame   0x000015f8       0x48 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-__call_atexit.o)
+ .debug_frame   0x00001640       0x20 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-atexit.o)
+ .debug_frame   0x00001660       0x20 c:/program files (x86)/emblocks/1.21/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libnosys.a(_exit.o)

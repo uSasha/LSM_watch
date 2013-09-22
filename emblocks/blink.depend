@@ -2460,7 +2460,7 @@
 	<stdbool.h>
 	"em_device.h"
 
-1379765984 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\pedometer.c
+1379873839 source:c:\users\alexander\appdata\roaming\energymicro\kits\efm32gg_stk3700\my_projects\lsm_watch\pedometer.c
 	"em_letimer.h"
 	"em_cmu.h"
 	"em_letimer.h"
