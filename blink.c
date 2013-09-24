@@ -50,6 +50,7 @@
 #include "pedometer.h"
 #include "variables.h"
 
+
 volatile uint32_t msTicks; /* counts 1ms timeTicks */
 
 void Delay(uint32_t dlyTicks);
@@ -152,7 +153,7 @@ int main(void)
 
     state = main_screen;
 
-    /* Infinite blink loop */
+
     while (1)
     {
         //NOTE maybe button A(change state) must be checked here

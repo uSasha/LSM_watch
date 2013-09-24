@@ -8,21 +8,24 @@
 
 #include "em_letimer.h"
 #include "em_cmu.h"
+#include "em_emu.h"
 #include "em_letimer.h"
 #include "activity_app.h"
 #include "ADXL345.h"
 #include "bsp.h"
 
-#define LETIMER_TOP 327
+#define LETIMER_TOP 655
 #define MIN_TIME 10
 #define MAX_TIME 100
 #define STEP_TIME_VARIATION 0.3
 #define MIN_THRESHOLD 55555
+#define SMOOTH_FACTOR 4
 
 void initPedometerTimer(void);
 
 uint8_t accelData[100];
 uint32_t steps = 0;
+
 
 /********************************************//**
  * \brief turn on and setup accelerometer and timer interrupt
@@ -38,6 +41,15 @@ void initPedometer(void)
     initPedometerTimer();
 }
 
+
+/********************************************//**
+ * \brief turn on LETIMER0 to produce interrupts every 20mS
+ *
+ * \param
+ * \param
+ * \return
+ *
+ ***********************************************/
 void initPedometerTimer(void)
 {
     /* Enable necessary clocks */
@@ -78,12 +90,20 @@ void initPedometerTimer(void)
 }
 
 
+/********************************************//**
+ * \brief on LETIMER0 int measure accel values and run them thru
+ * step recognition algorithm
+ * \param
+ * \param
+ * \return
+ *
+ ***********************************************/
 void LETIMER0_IRQHandler(void)
 {
     static uint32_t i = 0;
     static uint32_t oldResult = 0;
     static uint32_t result = 0;
-    static uint32_t lol = 0;
+    uint32_t tempResultX = 0;
     static uint32_t minResult = 0;
     static uint32_t maxResult = 0;
     static uint32_t threshold = 0;
@@ -93,51 +113,40 @@ void LETIMER0_IRQHandler(void)
 
     LETIMER_IntClear(LETIMER0, 0xFF);         // clear all flags
 
-    readRegister(DATAX0, 1, &accelData[i]);
-    lol += accelData[i];
+    readRegister(DATAX0, 4, &accelData[i]);
+    tempResultX += accelData[i];
     readRegister(DATAX1, 1, &accelData[i]);
-    lol += accelData[i] << 8;
-    i++;
-//TODO find rhythmic moves
-//TODO implement minimum threshold value
-    if( i >= 4)
+    tempResultX += accelData[i] << 8;
+
+//    i++;
+
+    if( i >= SMOOTH_FACTOR)             // smooth acceleration graph
     {
         i = 0;
-        lol /= 4;
+        tempResultX /= SMOOTH_FACTOR;
 
         oldResult = result;
-        result = lol;
-        lol = 0;
-
-        if(result < minResult)
-        {
-            minResult = result;
-        }else
-        if(result > maxResult)
-        {
-            maxResult = result;
-        }
+        result = tempResultX;
 
         if(leadEdge)
         {
             timePassed++;
 
-            if((result < oldResult)  && (result > threshold))
+            if((result < oldResult)  && (result > threshold))   // catch peak
             {
-                if((MIN_TIME < timePassed) && (timePassed < MAX_TIME))
+                if((MIN_TIME < timePassed) && (timePassed < MAX_TIME))  // check time for one step
                 {
-                    if((oldTimePassed * (1.0 - STEP_TIME_VARIATION) < timePassed)
+                    if((oldTimePassed * (1.0 - STEP_TIME_VARIATION) < timePassed)   // are steps rhythmic?
                       && (timePassed < oldTimePassed * (1.0 + STEP_TIME_VARIATION)))
                     {
-                        int rofl = oldTimePassed * (float)(1 - STEP_TIME_VARIATION);
                         steps++;
-                        BSP_LedSet(1);
+                        BSP_LedSet(1);  //NOTE remove after debug
                     }
 
                     oldTimePassed = timePassed;
 
-                    threshold = result/2;
-                    if(threshold < MIN_THRESHOLD)
+                    threshold = result/2;   // threshold is dynamic
+                    if(threshold < MIN_THRESHOLD)   // but not too much
                     {
                         threshold = MIN_THRESHOLD;
                     }
@@ -148,10 +157,9 @@ void LETIMER0_IRQHandler(void)
                 timePassed = 0;
             }else
             {
-                BSP_LedClear(1);
+                BSP_LedClear(1); //NOTE remove after debug
             }
-        }
-        else
+        }else
         {
             if( result > oldResult)
             {

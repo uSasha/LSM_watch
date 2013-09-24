@@ -42,7 +42,7 @@
 #define BAUDRATE        10000    //spi baudrate
 #define INTS_PER_KM     1205    //aproximate number of interrupt per km
 
-#define ACCEL_INT_PORT          gpioPortD   
+#define ACCEL_INT_PORT          gpioPortD
 #define ACCEL_INT_PIN           4
 
 void readRegister(char registerAddress, int numBytes, char * values);
